@@ -225,11 +225,15 @@ def migrate_dfr_v050_to_v060(dfr_component):
 ###### MAIN JOB #########
 #########################
 
+from pathlib import Path
+
+current_dir = Path(__file__).resolve().parent
+
 
 # Load the uploaded file
-base_path = r"C:\Users\karinaliauw\Downloads\MSPYX-728 - Upgrade\python\01_Data"
+base_path = current_dir.parent / "01_Data"
 # DFR BCMine farmers test: 
-file_path = base_path + r"\DFR_BCMine\DFR.json"
+file_path = base_path / "DFR_BCMine/DFR.json"
 # regen farmers test: MSPYX-653_regen
 #file_path = base_path + r"\DFR_RegenFarmers\test4input.json"
 
@@ -241,7 +245,7 @@ migrate_general_dfr = migrate_general_v_050_to_v_060(dfr_component)
 migrated_dfr = migrate_dfr_v050_to_v060(migrate_general_dfr)
 
 ## DFR BCMine farmers test: 
-migrated_dfr_path = base_path + r"\DFR_BCMine\DFR_migrated_v060_test_v5.json"
+migrated_dfr_path = base_path / "DFR_BCMine/DFR_migrated_v060_test_v6.json"
 # regen farmers test: MSPYX-653_regen
 #migrated_dfr_path = base_path + r"\DFR_RegenFarmers\test4input-python5.json"
 with open(migrated_dfr_path, "w") as f:
