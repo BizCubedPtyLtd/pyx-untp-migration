@@ -1,0 +1,588 @@
+[
+  {
+    "name": "(Upstream) Issue DFR - Copper Mine",
+    "id": "produce_product",
+    "components": [
+      {
+        "name": "JsonForm",
+        "type": "EntryData",
+        "props": {
+          "schema": {
+            "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+          },
+          "data": {
+            "type": [
+              "DigitalFacilityRecord",
+              "VerifiableCredential"
+            ],
+            "@context": [
+              "https://www.w3.org/ns/credentials/v2",
+              "https://test.uncefact.org/vocabulary/untp/dfr/0.6.0/"
+            ],
+            "id": "http://localhost:3000/gs1/414/9359502000119",
+            "issuer": {
+              "type": [
+                "CredentialIssuer"
+              ],
+              "id": "did:web:uncefact.github.io:project-vckit:test-and-development",
+              "name": "Test Copper Mine",
+              "otherIdentifier": [
+                {
+                  "type": [
+                    "Identifier"
+                  ],
+                  "id": "https://id.gs1.org/01/09520123456788/21/12345",
+                  "name": "EV battery 300Ah.",
+                  "registeredId": "90664869327",
+                  "idScheme": {
+                    "type": [
+                      "IdentifierScheme"
+                    ],
+                    "id": "https://id.gs1.org/01/",
+                    "name": "Global Trade Identification Number (GTIN)"
+                  }
+                },
+                {
+                  "type": [
+                    "Identifier"
+                  ],
+                  "id": "https://id.gs1.org/01/09520123456788/21/12345",
+                  "name": "EV battery 300Ah.",
+                  "registeredId": "90664869327",
+                  "idScheme": {
+                    "type": [
+                      "IdentifierScheme"
+                    ],
+                    "id": "https://id.gs1.org/01/",
+                    "name": "Global Trade Identification Number (GTIN)"
+                  }
+                }
+              ]
+            },
+            "credentialSubject": {
+              "type": [
+                "FacilityRecord"
+              ],
+              "facility": {
+                "type": [
+                  "Facility"
+                ],
+                "id": "http://localhost:3000/gs1/414/9359502000119",
+                "name": "TEST Copper Mine",
+                "description": "TEST Copper Mine Produces Copper Concentrate",
+                "countryOfOperation": "CA",
+                "address": {
+                  "streetAddress": "11 Test Road",
+                  "postalCode": "M3M 0A9",
+                  "addressLocality": "Toronto(TEST)",
+                  "addressRegion": "BC",
+                  "addressCountry": "CA"
+                },
+                "locationInformation": {
+                  "plusCode": "https://plus.codes/87M2MJ36+WM",
+                  "geoLocation": {
+                    "type": "Point",
+                    "coordinates": [
+                      3.141579,
+                      3.141579
+                    ]
+                  },
+                  "geoBoundary": {
+                    "type": "Polygon",
+                    "coordinates": [
+                      [
+                        [
+                          3.141579,
+                          3.141579
+                        ]
+                      ]
+                    ]
+                  }
+                },
+                "conformityClaim": [
+                  {
+                    "type": [
+                      "Claim",
+                      "Declaration"
+                    ],
+                    "assessmentDate": "2024-11-11",
+                    "id": "https://coppermark.org/wp-content/uploads/2023/10/RRA-v3.0-Criteria-Guide_2023.pdf",
+                    "assessmentCriteria": [
+                      {
+                        "type": [
+                          "Criterion"
+                        ],
+                        "id": "https://coppermark.org/wp-content/uploads/2023/10/RRA-v3.0-Criteria-Guide_2023.pdf",
+                        "name": "RISK READINESS ASSESSMENT CRITERIA GUIDE"
+                      }
+                    ],
+                    "conformance": true,
+                    "conformityTopic": "governance.compliance",
+                    "conformityEvidence": {
+                      "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_02?linkType=gs1:certificationInfo",
+                      "linkName": "CopperMark Certified Facility",
+                      "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+                      "hashDigest": "6239119",
+                      "hashMethod": "SHA-256",
+                      "encryptionMethod": "AES"
+                    }
+                  },
+                  {
+                    "type": [
+                      "Claim",
+                      "Declaration"
+                    ],
+                    "assessmentDate": "2024-11-11",
+                    "id": "https://mining.ca/wp-content/uploads/dlm_uploads/2024/05/FINAL-2020-Protocol-Biodiversity.pdf",
+                    "assessmentCriteria": [
+                      {
+                        "type": [
+                          "Criterion"
+                        ],
+                        "id": "https://mining.ca/wp-content/uploads/dlm_uploads/2024/05/FINAL-2020-Protocol-Biodiversity.pdf",
+                        "name": "Towards Sustainable Mining Protocol"
+                      }
+                    ],
+                    "conformance": true,
+                    "conformityTopic": "governance.compliance",
+                    "conformityEvidence": {
+                      "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_01?linkType=gs1:certificationInfo",
+                      "linkName": "Towards Sustainable Mining (TSM) Certified Facility",
+                      "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+                      "hashDigest": "6239119",
+                      "hashMethod": "SHA-256",
+                      "encryptionMethod": "AES"
+                    }
+                  },
+                  {
+                    "type": [
+                      "Claim",
+                      "Declaration"
+                    ],
+                    "assessmentDate": "2024-11-11",
+                    "id": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96293_01",
+                    "assessmentCriteria": [
+                      {
+                        "type": [
+                          "Criterion"
+                        ],
+                        "id": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96293_01",
+                        "name": "Mines Act Permit"
+                      }
+                    ],
+                    "conformance": true,
+                    "conformityTopic": "governance.compliance",
+                    "conformityEvidence": {
+                      "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_03?linkType=gs1:certificationInfo",
+                      "linkName": "Facility permitted to operate in BC under Mines Act",
+                      "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+                      "hashDigest": "6239119",
+                      "hashMethod": "SHA-256",
+                      "encryptionMethod": "AES"
+                    }
+                  }
+                ],
+                "operatedByParty": {
+                  "id": "http://localhost:3000/gs1/01/09359502000119/21/DIA_01?linkType=gs1:registryEntry",
+                  "name": "TEST Mining Permitted Entity",
+                  "registeredId": "09359502000119.21.DIA_01"
+                },
+                "facilityAlsoKnownAs": [
+                  {
+                    "id": "http://localhost:3000/gs1/01/09359502000119/21/DCC_03?linkType=gs1:certificationInfo",
+                    "name": "Mine Permit Number",
+                    "registeredId": "09359502000119.21.DCC_03"
+                  }
+                ]
+              }
+            }
+          },
+          "constructData": {
+            "mappingFields": [],
+            "dummyFields": [],
+            "generationFields": [
+              {
+                "path": "/eventID",
+                "handler": "generateIdWithSerialNumber"
+              }
+            ]
+          },
+          "className": "json-form",
+          "style": {
+            "margin": "40px auto",
+            "paddingTop": "20px",
+            "width": "80%"
+          }
+        }
+      },
+      {
+        "name": "CustomButton",
+        "type": "Submit",
+        "props": {}
+      }
+    ],
+    "services": [
+      {
+        "name": "processDigitalFacilityRecord",
+        "parameters": [
+          {
+            "vckit": {
+              "vckitAPIUrl": "http://localhost:3332/v2",
+              "issuer": {
+                "id": "did:web:uncefact.github.io:project-vckit:test-and-development",
+                "name": "Test Copper Mine"
+              },
+              "headers": {
+                "Authorization": "Bearer test123"
+              }
+            },
+            "digitalFacilityRecord": {
+              "context": [
+                "https://test.uncefact.org/vocabulary/untp/dfr/0.6.0/"
+              ],
+              "renderTemplate": [
+                {
+                  "type": "WebRenderingTemplate2022",
+                  "template": "{0.6.0 render template}"
+                }
+              ],
+              "type": [
+                "DigitalFacilityRecord"
+              ],
+              "dlrLinkTitle": "DigitalFacilityRecord",
+              "dlrVerificationPage": "http://localhost:3003/verify"
+            },
+            "dlr": {
+              "dlrAPIUrl": "http://localhost:3000",
+              "dlrAPIKey": "test123",
+              "namespace": "gs1",
+              "linkRegisterPath": "/api/resolver"
+            },
+            "storage": {
+              "url": "http://localhost:3334/v1/documents",
+              "params": {
+                "bucket": "verifiable-credentials"
+              },
+              "options": {
+                "method": "POST",
+                "headers": {
+                  "Content-Type": "application/json"
+                }
+              }
+            },
+            "identifierKeyPath": "/id"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": [
+      "FacilityRecord"
+    ],
+    "facility": {
+      "type": [
+        "Facility"
+      ],
+      "id": "http://localhost:3000/gs1/414/9359502000119",
+      "name": "TEST Copper Mine",
+      "description": "TEST Copper Mine Produces Copper Concentrate",
+      "countryOfOperation": "CA",
+      "address": {
+        "streetAddress": "11 Test Road",
+        "postalCode": "M3M 0A9",
+        "addressLocality": "Toronto(TEST)",
+        "addressRegion": "BC",
+        "addressCountry": "CA"
+      },
+      "locationInformation": {
+        "plusCode": "https://plus.codes/87M2MJ36+WM",
+        "geoLocation": {
+          "type": "Point",
+          "coordinates": [
+            3.141579,
+            3.141579
+          ]
+        },
+        "geoBoundary": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                3.141579,
+                3.141579
+              ]
+            ]
+          ]
+        }
+      },
+      "conformityClaim": [
+        {
+          "type": [
+            "Claim",
+            "Declaration"
+          ],
+          "assessmentDate": "2024-11-11",
+          "id": "https://coppermark.org/wp-content/uploads/2023/10/RRA-v3.0-Criteria-Guide_2023.pdf",
+          "assessmentCriteria": [
+            {
+              "type": [
+                "Criterion"
+              ],
+              "id": "https://coppermark.org/wp-content/uploads/2023/10/RRA-v3.0-Criteria-Guide_2023.pdf",
+              "name": "RISK READINESS ASSESSMENT CRITERIA GUIDE"
+            }
+          ],
+          "conformance": true,
+          "conformityTopic": "governance.compliance",
+          "conformityEvidence": {
+            "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_02?linkType=gs1:certificationInfo",
+            "linkName": "CopperMark Certified Facility",
+            "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+            "hashDigest": "6239119",
+            "hashMethod": "SHA-256",
+            "encryptionMethod": "AES"
+          }
+        },
+        {
+          "type": [
+            "Claim",
+            "Declaration"
+          ],
+          "assessmentDate": "2024-11-11",
+          "id": "https://mining.ca/wp-content/uploads/dlm_uploads/2024/05/FINAL-2020-Protocol-Biodiversity.pdf",
+          "assessmentCriteria": [
+            {
+              "type": [
+                "Criterion"
+              ],
+              "id": "https://mining.ca/wp-content/uploads/dlm_uploads/2024/05/FINAL-2020-Protocol-Biodiversity.pdf",
+              "name": "Towards Sustainable Mining Protocol"
+            }
+          ],
+          "conformance": true,
+          "conformityTopic": "governance.compliance",
+          "conformityEvidence": {
+            "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_01?linkType=gs1:certificationInfo",
+            "linkName": "Towards Sustainable Mining (TSM) Certified Facility",
+            "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+            "hashDigest": "6239119",
+            "hashMethod": "SHA-256",
+            "encryptionMethod": "AES"
+          }
+        },
+        {
+          "type": [
+            "Claim",
+            "Declaration"
+          ],
+          "assessmentDate": "2024-11-11",
+          "id": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96293_01",
+          "assessmentCriteria": [
+            {
+              "type": [
+                "Criterion"
+              ],
+              "id": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96293_01",
+              "name": "Mines Act Permit"
+            }
+          ],
+          "conformance": true,
+          "conformityTopic": "governance.compliance",
+          "conformityEvidence": {
+            "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_03?linkType=gs1:certificationInfo",
+            "linkName": "Facility permitted to operate in BC under Mines Act",
+            "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+            "hashDigest": "6239119",
+            "hashMethod": "SHA-256",
+            "encryptionMethod": "AES"
+          }
+        }
+      ],
+      "operatedByParty": {
+        "id": "http://localhost:3000/gs1/01/09359502000119/21/DIA_01?linkType=gs1:registryEntry",
+        "name": "TEST Mining Permitted Entity",
+        "registeredId": "09359502000119.21.DIA_01"
+      },
+      "facilityAlsoKnownAs": [
+        {
+          "id": "http://localhost:3000/gs1/01/09359502000119/21/DCC_03?linkType=gs1:certificationInfo",
+          "name": "Mine Permit Number",
+          "registeredId": "09359502000119.21.DCC_03"
+        }
+      ]
+    }
+  },
+  {
+    "type": [
+      "Facility"
+    ],
+    "id": "http://localhost:3000/gs1/414/9359502000119",
+    "registeredId": "9359502000119",
+    "description": "TEST Copper Mine Produces Copper Concentrate",
+    "name": "TEST Copper Mine",
+    "idScheme": {
+      "type": [
+        "IdentifierScheme"
+      ],
+      "id": "https://id.gs1.org/414/",
+      "name": "Global Location Number (GLN)"
+    },
+    "countryOfOperation": "CA",
+    "processCategory": [
+      {
+        "type": [
+          "Classification"
+        ],
+        "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/14210",
+        "code": "14210",
+        "name": "Copper ores and concentrates",
+        "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+        "schemeName": "UN Central Product Classification (CPC)"
+      }
+    ],
+    "operatedByParty": {
+      "type": [
+        "Identifier"
+      ],
+      "id": "http://localhost:3000/gs1/01/09359502000119/21/DIA_01?linkType=gs1:registryEntry",
+      "name": "TEST Mining Permitted Entity",
+      "registeredId": "09359502000119.21.DIA_01",
+      "idScheme": {
+        "type": [
+          "IdentifierScheme"
+        ],
+        "id": "https://id.gs1.org/01/",
+        "name": "Global Trade Identification Number (GTIN)"
+      }
+    },
+    "otherIdentifier": [
+      {
+        "type": [
+          "Identifier"
+        ],
+        "id": "http://localhost:3000/gs1/01/09359502000119/21/DCC_03?linkType=gs1:certificationInfo",
+        "name": "Mine Permit Number",
+        "registeredId": "09359502000119.21.DCC_03",
+        "idScheme": {
+          "type": [
+            "IdentifierScheme"
+          ],
+          "id": "https://orgbook.gov.bc.ca/entity/BC0827622/type/registration.registries.ca/credential/6028369",
+          "name": "Mines Act Permit Number"
+        }
+      }
+    ],
+    "address": {
+      "streetAddress": "11 Test Road",
+      "postalCode": "M3M 0A9",
+      "addressLocality": "Toronto(TEST)",
+      "addressRegion": "BC",
+      "addressCountry": "CA"
+    },
+    "locationInformation": {
+      "plusCode": "https://plus.codes/87M2MJ36+WM",
+      "geoLocation": {
+        "type": "Point",
+        "coordinates": [
+          3.141579,
+          3.141579
+        ]
+      },
+      "geoBoundary": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.141579,
+              3.141579
+            ]
+          ]
+        ]
+      }
+    },
+    "conformityClaim": [
+      {
+        "type": [
+          "Claim",
+          "Declaration"
+        ],
+        "assessmentDate": "2024-11-11",
+        "id": "https://coppermark.org/wp-content/uploads/2023/10/RRA-v3.0-Criteria-Guide_2023.pdf",
+        "assessmentCriteria": [
+          {
+            "type": [
+              "Criterion"
+            ],
+            "id": "https://coppermark.org/wp-content/uploads/2023/10/RRA-v3.0-Criteria-Guide_2023.pdf",
+            "name": "RISK READINESS ASSESSMENT CRITERIA GUIDE"
+          }
+        ],
+        "conformance": true,
+        "conformityTopic": "governance.compliance",
+        "conformityEvidence": {
+          "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_02?linkType=gs1:certificationInfo",
+          "linkName": "CopperMark Certified Facility",
+          "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+          "hashDigest": "6239119",
+          "hashMethod": "SHA-256",
+          "encryptionMethod": "AES"
+        }
+      },
+      {
+        "type": [
+          "Claim",
+          "Declaration"
+        ],
+        "assessmentDate": "2024-11-11",
+        "id": "https://mining.ca/wp-content/uploads/dlm_uploads/2024/05/FINAL-2020-Protocol-Biodiversity.pdf",
+        "assessmentCriteria": [
+          {
+            "type": [
+              "Criterion"
+            ],
+            "id": "https://mining.ca/wp-content/uploads/dlm_uploads/2024/05/FINAL-2020-Protocol-Biodiversity.pdf",
+            "name": "Towards Sustainable Mining Protocol"
+          }
+        ],
+        "conformance": true,
+        "conformityTopic": "governance.compliance",
+        "conformityEvidence": {
+          "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_01?linkType=gs1:certificationInfo",
+          "linkName": "Towards Sustainable Mining (TSM) Certified Facility",
+          "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+          "hashDigest": "6239119",
+          "hashMethod": "SHA-256",
+          "encryptionMethod": "AES"
+        }
+      },
+      {
+        "type": [
+          "Claim",
+          "Declaration"
+        ],
+        "assessmentDate": "2024-11-11",
+        "id": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96293_01",
+        "assessmentCriteria": [
+          {
+            "type": [
+              "Criterion"
+            ],
+            "id": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96293_01",
+            "name": "Mines Act Permit"
+          }
+        ],
+        "conformance": true,
+        "conformityTopic": "governance.compliance",
+        "conformityEvidence": {
+          "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_03?linkType=gs1:certificationInfo",
+          "linkName": "Facility permitted to operate in BC under Mines Act",
+          "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+          "hashDigest": "6239119",
+          "hashMethod": "SHA-256",
+          "encryptionMethod": "AES"
+        }
+      }
+    ]
+  }
+]
