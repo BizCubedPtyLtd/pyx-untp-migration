@@ -1,4 +1,6 @@
 import json
+from pathlib import Path
+from typing import Dict, Any, List
 
 # ---------- Base Class ----------
 class CredentialTransformer:
@@ -12,21 +14,22 @@ class CredentialTransformer:
         """Default transform, to be overridden by subclasses."""
         raise NotImplementedError("Subclasses must implement this method.")
 
+
 # ---------- DFR Transformer ----------
 class DFRTransformer(CredentialTransformer):
     def transform(self) -> Dict[str, Any]:
         # Apply general migrations first
-        self.component = GeneralMigrator.migrate_general_v_050_to_v_060(self.component)
+        # self.component = GeneralMigrator.migrate_general_v_050_to_v_060(self.component)
         
         # Specific DFR data model changes
         data = self.component["props"]["data"]
-        
+        print('data',  data)
         # 1. Update @context
         data["@context"] = [
             "https://www.w3.org/ns/credentials/v2",
             "https://test.uncefact.org/vocabulary/untp/dfr/0.6.0/"
         ]
-        
+        print('inside2')
         # 2. Credential Subject Structure
         credential_subject = data.get("credentialSubject", {})
         facility = {k: v for k, v in credential_subject.items() if k != "conformityClaim"}
@@ -102,17 +105,54 @@ class DFRTransformer(CredentialTransformer):
                     vckit_issuer = vckit.get('issuer', {})
                     if "otherIdentifier" in vckit_issuer:
                         self._pop_and_replace_key(vckit_issuer, "otherIdentifier", "issuerAlsoKnownAs")
+
+        print("self.component:", self.component)
         
         return self.component
     
-    def _pop_and_replace_key(self, d: Dict[str, Any], old_key: str, new_key: str) -> Any:
+    def _pop_and_replace_key(self, d: Dict[str, Any], old_key: str, new_key: str):
+        """
+        Works like dict.pop(), but renames the key in-place
+        while keeping its original position in the dict. For example:
+        pop_and_replace_key(
+            facility_new,         # d → the dict to modify
+            "otherIdentifier",    # old_key → the key we want to change
+            "facilityAlsoKnownAs" # new_key → the new name for the key
+        )
+        Before:
+
+        {
+            "otherIdentifier": [...],
+            "address": {...},
+            "locationInformation": {...}
+        }
+        After:
+
+        {
+            "facilityAlsoKnownAs": [...],
+            "address": {...},
+            "locationInformation": {...}
+        }
+        """
         if old_key not in d:
             return None
-        value = d.pop(old_key)
-        d[new_key] = value
+        # value = d.pop(old_key)
+        # d[new_key] = value
+
+        value = d[old_key]
+        new_dict = {}
+        for k, v in d.items():
+            if k == old_key:
+                new_dict[new_key] = v
+            else:
+                new_dict[k] = v
+
+        d.clear()
+        d.update(new_dict)
+
         return value
     
-    def _clean_identifier_list(self, identifier: Any, remove_fields: List[str] = None) -> Any:
+    def _clean_identifier_list(self, identifier: Any, remove_fields: List[str] = None):
         if remove_fields is None:
             remove_fields = ["type", "idScheme"]
         if isinstance(identifier, list):
