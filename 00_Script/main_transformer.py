@@ -58,9 +58,13 @@ class AppConfigProcessor:
                 components = feature.get("components", [])
                 services = feature.get("services", [])
                 #print('services111',services)
+
+                # Initialize credential_type to None
+                credential_type = None
+
                 for component in components: # update component
                     #print('component1',component)
-                    if component.get("type") == "EntryData":
+                    if component.get("type") == "EntryData": #only process 
                         if component.get("name") == "LocalStorageLoader": #to identify 2 types of json types "LocalStorageLoader/NestedComponents" and standard "JsonForm"
                             nestedcomponents = component['props']['nestedComponents']
                             #print(type(nestedcomponents))
@@ -82,24 +86,29 @@ class AppConfigProcessor:
                         #     credential_type = "DCC"
                         else:
                             continue  # Skip unknown
-                    
                         transformer = TransformerFactory.get_transformer(credential_type, component)
                         transformed_component = transformer.transform()
                         # Update the component in place
                         component.update(transformed_component)
                 # json_list.append(component)
+                print('credential_type', credential_type)
+                if credential_type:
+                    for service in services: # update services 
+                        if service['name'].startswith('process'):
+                            # apply transformation for services
+                            print('service', service)
+                            transformer = TransformerFactory.get_transformer(credential_type, service)
+                            print(transformer)
+                            transformed_component = transformer.transform_services()
+                            # Update the component in place
+                            service.update(transformed_component)
 
-                for service in services: # update services 
-                    # apply transformation for services
-                    transformed_component = transformer.transform_services()
-                    # Update the component in place
-                    service.update(transformed_component)
-
-                    # apply general transformation
-                    transformed_component = GeneralMigrator.migrate_general_v_050_to_v_060(service)
-                    # Update the component in place
-                    service.update(transformed_component)
-        
+                            # apply general transformation
+                            transformed_component = GeneralMigrator.migrate_general_v_050_to_v_060(service)
+                            # Update the component in place
+                            service.update(transformed_component)
+                else:
+                    print("No valid credential type found.")
         return self.config_data #, json_list
 
 
