@@ -49,6 +49,7 @@ class AppConfigProcessor:
 
     def process(self) -> Dict[str, Any]:
         # The entire config is migrated, as transformations affect components and services
+        # json_list = []
         apps = self.config_data.get("apps", [])
         
         for app in apps:
@@ -56,13 +57,13 @@ class AppConfigProcessor:
             for feature in features:
                 components = feature.get("components", [])
                 services = feature.get("services", [])
-                print('services111',services)
-                for component in components:
-                    print('component1',component)
+                #print('services111',services)
+                for component in components: # update component
+                    #print('component1',component)
                     if component.get("type") == "EntryData":
                         if component.get("name") == "LocalStorageLoader": #to identify 2 types of json types "LocalStorageLoader/NestedComponents" and standard "JsonForm"
                             nestedcomponents = component['props']['nestedComponents']
-                            print(type(nestedcomponents))
+                            #print(type(nestedcomponents))
                             if len(nestedcomponents) == 1:
                                 schema_url = nestedcomponents[0]["props"]["schema"]["url"]
                             else:
@@ -71,10 +72,10 @@ class AppConfigProcessor:
                         else:
                             schema_url = component["props"]["schema"]["url"]
                         # Detect type from schema URL
-                        print(schema_url)
+                        #print(schema_url)
                         if "DigitalFacilityRecord" in schema_url:
                             credential_type = "DFR"
-                            print('inside')
+                            #print('inside')
                         # elif "DigitalProductPassport" in schema_url:
                         #     credential_type = "DPP"
                         # elif "DigitalConformityCredential" in schema_url:
@@ -86,14 +87,20 @@ class AppConfigProcessor:
                         transformed_component = transformer.transform()
                         # Update the component in place
                         component.update(transformed_component)
+                # json_list.append(component)
 
-                for service in services:
+                for service in services: # update services 
+                    # apply transformation for services
+                    transformed_component = transformer.transform_services()
+                    # Update the component in place
+                    service.update(transformed_component)
+
                     # apply general transformation
                     transformed_component = GeneralMigrator.migrate_general_v_050_to_v_060(service)
                     # Update the component in place
                     service.update(transformed_component)
         
-        return self.config_data
+        return self.config_data #, json_list
 
 
 
@@ -115,13 +122,17 @@ class TransformerFactory:
 # ---------- Example Usage ----------
 if __name__ == "__main__":
     current_dir = Path(__file__).resolve().parent
-    print(current_dir)
+    #print(current_dir)
     processor = AppConfigProcessor(current_dir.parent / "01_Data/app-config/RBTP" / "app-config.json")
     output = processor.process()
 
     output_path = current_dir.parent / "01_Data/app-config/RBTP" / "transformed-app-config.json"
     with open(output_path, "w") as f:
         json.dump(output, f, indent=2)
+    
+    # output_path_testing = current_dir.parent / "01_Data/app-config/RBTP" / "dfr-transformed-app-config.json"
+    # with open(output_path_testing, "w") as f:
+    #     json.dump(for_testing, f, indent=2)
 
     print("Transformation complete!")
 

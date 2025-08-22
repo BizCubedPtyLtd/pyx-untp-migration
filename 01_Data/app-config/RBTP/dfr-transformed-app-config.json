@@ -1,0 +1,4017 @@
+[
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/osh/01/TR2024025DPJ8Q9",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/osh/01/TR2024025DPJ8Q9",
+          "registeredId": "TR2024025DPJ8Q9",
+          "description": "TEST Copper Mine Produces Copper Concentrate",
+          "name": "TEST Copper Mine",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://opensupplyhub.org/facilities/",
+            "name": "Open Supply Hub"
+          },
+          "countryOfOperation": "CA",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/14210",
+              "code": "14210",
+              "name": "Copper ores and concentrates",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://localhost:3000/gs1/01/09359502000119/21/DIA_01?linkType=gs1:registryEntry",
+            "name": "TEST Mining Permitted Entity",
+            "registeredId": "09359502000119.21.DIA_01"
+          },
+          "facilityAlsoKnownAs": [
+            {
+              "id": "http://localhost:3000/gs1/01/09359502000119/21/DCC_03?linkType=gs1:certificationInfo",
+              "name": "Mine Permit Number",
+              "registeredId": "09359502000119.21.DCC_03"
+            }
+          ],
+          "address": {
+            "streetAddress": "11 Test Road",
+            "postalCode": "M3M 0A9",
+            "addressLocality": "Toronto(TEST)",
+            "addressRegion": "BC",
+            "addressCountry": "CA"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/87M2MJ36+WM",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                3.141579,
+                3.141579
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    3.141579,
+                    3.141579
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://coppermark.org/wp-content/uploads/2023/10/RRA-v3.0-Criteria-Guide_2023.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://coppermark.org/wp-content/uploads/2023/10/RRA-v3.0-Criteria-Guide_2023.pdf",
+                "name": "RISK READINESS ASSESSMENT CRITERIA GUIDE",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_02?linkType=gs1:certificationInfo",
+              "linkName": "CopperMark Certified Facility",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          },
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://mining.ca/wp-content/uploads/dlm_uploads/2024/05/FINAL-2020-Protocol-Biodiversity.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://mining.ca/wp-content/uploads/dlm_uploads/2024/05/FINAL-2020-Protocol-Biodiversity.pdf",
+                "name": "Towards Sustainable Mining Protocol",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "Towards Sustainable Mining (TSM) Certified Facility",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          },
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96293_01",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96293_01",
+                "name": "Mines Act Permit",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_03?linkType=gs1:certificationInfo",
+              "linkName": "Facility permitted to operate in BC under Mines Act",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/9359502000119",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/9359502000119",
+          "registeredId": "9359502000119",
+          "description": "TEST Copper Mine Produces Copper Concentrate",
+          "name": "TEST Copper Mine",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "CA",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/14210",
+              "code": "14210",
+              "name": "Copper ores and concentrates",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://localhost:3000/gs1/01/09359502000119/21/DIA_01?linkType=gs1:registryEntry",
+            "name": "TEST Mining Permitted Entity",
+            "registeredId": "09359502000119.21.DIA_01"
+          },
+          "facilityAlsoKnownAs": [
+            {
+              "id": "http://localhost:3000/gs1/01/09359502000119/21/DCC_03?linkType=gs1:certificationInfo",
+              "name": "Mine Permit Number",
+              "registeredId": "09359502000119.21.DCC_03"
+            }
+          ],
+          "address": {
+            "streetAddress": "11 Test Road",
+            "postalCode": "M3M 0A9",
+            "addressLocality": "Toronto(TEST)",
+            "addressRegion": "BC",
+            "addressCountry": "CA"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/87M2MJ36+WM",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                3.141579,
+                3.141579
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    3.141579,
+                    3.141579
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://coppermark.org/wp-content/uploads/2023/10/RRA-v3.0-Criteria-Guide_2023.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://coppermark.org/wp-content/uploads/2023/10/RRA-v3.0-Criteria-Guide_2023.pdf",
+                "name": "RISK READINESS ASSESSMENT CRITERIA GUIDE",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_02?linkType=gs1:certificationInfo",
+              "linkName": "CopperMark Certified Facility",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          },
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://mining.ca/wp-content/uploads/dlm_uploads/2024/05/FINAL-2020-Protocol-Biodiversity.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://mining.ca/wp-content/uploads/dlm_uploads/2024/05/FINAL-2020-Protocol-Biodiversity.pdf",
+                "name": "Towards Sustainable Mining Protocol",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "Towards Sustainable Mining (TSM) Certified Facility",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          },
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96293_01",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96293_01",
+                "name": "Mines Act Permit",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_03?linkType=gs1:certificationInfo",
+              "linkName": "Facility permitted to operate in BC under Mines Act",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/9359502000126",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/9359502000126",
+          "registeredId": "9359502000126",
+          "description": "TEST Copper Smelter Produces Copper Cathodes",
+          "name": "TEST Copper Smelter",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "CA",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/41413",
+              "code": "41413",
+              "name": "Refined copper and copper alloys, unwrought; master alloys of copper",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://example.com/90664869327",
+            "name": "TEST Smelter Parent",
+            "registeredId": "90664869327"
+          },
+          "address": {
+            "streetAddress": "99 Test Road",
+            "postalCode": "M3M 0A9",
+            "addressLocality": "Toronto(TEST)",
+            "addressRegion": "BC",
+            "addressCountry": "CA"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/87M2MJ36+WM",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                3.141579,
+                3.141579
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    3.141579,
+                    3.141579
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://coppermark.org/wp-content/uploads/2023/10/RRA-v3.0-Criteria-Guide_2023.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://coppermark.org/wp-content/uploads/2023/10/RRA-v3.0-Criteria-Guide_2023.pdf",
+                "name": "RISK READINESS ASSESSMENT CRITERIA GUIDE",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502000126/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "CopperMark Certified Facility",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          },
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.responsiblemineralsinitiative.org/media/docs/Public%20Reports/CMOC%20Kisanfu%20Public%20Report.pdf",
+            "referenceStandard": {
+              "type": [
+                "Standard"
+              ],
+              "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+              "name": "Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
+              "issuingParty": {
+                "type": [
+                  "Identifier"
+                ],
+                "id": "https://www.responsiblemineralsinitiative.org/",
+                "name": "Responsible Minerals Initiative",
+                "registeredId": "123456789",
+                "idScheme": {
+                  "type": [
+                    "IdentifierScheme"
+                  ],
+                  "id": "https://find-and-update.company-information.service.gov.uk/",
+                  "name": "Company Registration Number (CRN)"
+                }
+              },
+              "issueDate": "2024-10-17"
+            },
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+                "name": "Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "declaredValue": [
+              {
+                "metricName": "Sourcing from High-Risk Supply Chains",
+                "metricValue": {},
+                "score": "No"
+              }
+            ],
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502000126/21/RMAP_DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "Copper Cathode Produced at RMI Certified Facility",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/9359502000164",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/9359502000164",
+          "registeredId": "9359502000164",
+          "description": "TEST Lithium Refinery Produces Refined Lithium",
+          "name": "TEST Lithium Refinery",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "CA",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/41413",
+              "code": "41413",
+              "name": "Crude of Refined Lithium Products",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://example.com/90664869327",
+            "name": "TEST Refinery Parent",
+            "registeredId": "90664869327"
+          },
+          "address": {
+            "streetAddress": "99 Test Road",
+            "postalCode": "M3M 0A9",
+            "addressLocality": "Toronto(TEST)",
+            "addressRegion": "BC",
+            "addressCountry": "CA"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/87M2MJ36+WM",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                3.141579,
+                3.141579
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    3.141579,
+                    3.141579
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.responsiblemineralsinitiative.org/media/docs/Public%20Reports/CMOC%20Kisanfu%20Public%20Report.pdf",
+            "referenceStandard": {
+              "type": [
+                "Standard"
+              ],
+              "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+              "name": "Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
+              "issuingParty": {
+                "type": [
+                  "Identifier"
+                ],
+                "id": "https://www.responsiblemineralsinitiative.org/",
+                "name": "Responsible Minerals Initiative",
+                "registeredId": "123456789",
+                "idScheme": {
+                  "type": [
+                    "IdentifierScheme"
+                  ],
+                  "id": "https://find-and-update.company-information.service.gov.uk/",
+                  "name": "Company Registration Number (CRN)"
+                }
+              },
+              "issueDate": "2024-10-17"
+            },
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+                "name": "Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              },
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+                "name": "Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502000164/21/RMAP_DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "Responsible Mining Assurance Credential for Lithium Refinery",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/9359502000171",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/9359502000171",
+          "registeredId": "9359502000171",
+          "description": "TEST Electronic Manufacturer Facility Manufactures Electronic Goods",
+          "name": "TEST Electronic Manufacturer",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "CA",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/41413",
+              "code": "41413",
+              "name": "Electronic Goods",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://example.com/90664869327",
+            "name": "TEST Electronic Manufacturer Parent",
+            "registeredId": "90664869327"
+          },
+          "address": {
+            "streetAddress": "99 Test Road",
+            "postalCode": "M3M 0A9",
+            "addressLocality": "Toronto(TEST)",
+            "addressRegion": "BC",
+            "addressCountry": "CA"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/87M2MJ36+WM",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                3.141579,
+                3.141579
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    3.141579,
+                    3.141579
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-03-15",
+            "declaredValue": [
+              {
+                "metricName": "GHG emissions intensity",
+                "metricValue": {
+                  "value": 10,
+                  "unit": "KGM"
+                },
+                "score": "BB",
+                "accuracy": 0.05
+              }
+            ],
+            "id": "https://products.example-company.com/09520123456788/declarations/12345",
+            "referenceStandard": {
+              "type": [
+                "Standard"
+              ],
+              "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf",
+              "name": "GBA Battery Passport Greenhouse Gas Rulebook - V.2.0",
+              "issuingParty": {
+                "type": [
+                  "Identifier"
+                ],
+                "id": "https://www.globalbattery.org/",
+                "name": "Global Battery Alliance",
+                "registeredId": "123456789",
+                "idScheme": {
+                  "type": [
+                    "IdentifierScheme"
+                  ],
+                  "id": "https://id.gs1.org/01/",
+                  "name": "Global Trade Identification Number (GTIN)"
+                }
+              },
+              "issueDate": "2023-12-05"
+            },
+            "referenceRegulation": {
+              "type": [
+                "Regulation"
+              ],
+              "id": "https://www.legislation.gov.au/F2008L02309/latest/versions",
+              "name": "National Greenhouse and Energy Reporting (Measurement) Determination",
+              "jurisdictionCountry": "Enumeration Value",
+              "administeredBy": {
+                "type": [
+                  "Identifier"
+                ],
+                "id": "https://www.legislation.gov.au/",
+                "name": "Australian Government - Federal Register of Legislation",
+                "registeredId": "90664869327",
+                "idScheme": {
+                  "type": [
+                    "IdentifierScheme"
+                  ],
+                  "id": "https://id.gs1.org/01/",
+                  "name": "Global Trade Identification Number (GTIN)"
+                }
+              },
+              "effectiveDate": "2024-03-20"
+            },
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf#BatteryAssembly",
+                "name": "GBA Battery rule book v2.0 battery assembly guidelines.",
+                "thresholdValues": [
+                  {
+                    "metricName": "GHG emissions intensity",
+                    "metricValue": {
+                      "value": 10,
+                      "unit": "KGM"
+                    },
+                    "score": "BB",
+                    "accuracy": 0.05
+                  },
+                  {
+                    "metricName": "GHG emissions intensity",
+                    "metricValue": {
+                      "value": 10,
+                      "unit": "KGM"
+                    },
+                    "score": "BB",
+                    "accuracy": 0.05
+                  }
+                ],
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              },
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf#BatteryAssembly",
+                "name": "GBA Battery rule book v2.0 battery assembly guidelines.",
+                "thresholdValues": [
+                  {
+                    "metricName": "GHG emissions intensity",
+                    "metricValue": {
+                      "value": 10,
+                      "unit": "KGM"
+                    },
+                    "score": "BB",
+                    "accuracy": 0.05
+                  },
+                  {
+                    "metricName": "GHG emissions intensity",
+                    "metricValue": {
+                      "value": 10,
+                      "unit": "KGM"
+                    },
+                    "score": "BB",
+                    "accuracy": 0.05
+                  }
+                ],
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "declaredValues": [
+              {
+                "metricName": "GHG emissions intensity",
+                "metricValue": {
+                  "value": 10,
+                  "unit": "KGM"
+                },
+                "score": "BB",
+                "accuracy": 0.05
+              },
+              {
+                "metricName": "GHG emissions intensity",
+                "metricValue": {
+                  "value": 10,
+                  "unit": "KGM"
+                },
+                "score": "BB",
+                "accuracy": 0.05
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "https://files.example-certifier.com/1234567.json",
+              "linkName": "GBA rule book conformity certificate",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/9359502000119",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/9359502000119",
+          "registeredId": "9359502000119",
+          "description": "TEST Copper Mine Produces Copper Concentrate",
+          "name": "TEST Copper Mine",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "CA",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/14210",
+              "code": "14210",
+              "name": "Copper ores and concentrates",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://localhost:3000/gs1/01/09359502000119/21/DIA_01?linkType=gs1:registryEntry",
+            "name": "TEST Mining Permitted Entity",
+            "registeredId": "09359502000119.21.DIA_01"
+          },
+          "facilityAlsoKnownAs": [
+            {
+              "id": "http://localhost:3000/gs1/01/09359502000119/21/DCC_03?linkType=gs1:certificationInfo",
+              "name": "Mine Permit Number",
+              "registeredId": "09359502000119.21.DCC_03"
+            }
+          ],
+          "address": {
+            "streetAddress": "11 Test Road",
+            "postalCode": "M3M 0A9",
+            "addressLocality": "Toronto(TEST)",
+            "addressRegion": "BC",
+            "addressCountry": "CA"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/87M2MJ36+WM",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                3.141579,
+                3.141579
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    3.141579,
+                    3.141579
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://coppermark.org/wp-content/uploads/2023/10/RRA-v3.0-Criteria-Guide_2023.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://coppermark.org/wp-content/uploads/2023/10/RRA-v3.0-Criteria-Guide_2023.pdf",
+                "name": "RISK READINESS ASSESSMENT CRITERIA GUIDE",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_02?linkType=gs1:certificationInfo",
+              "linkName": "CopperMark Certified Facility",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          },
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://mining.ca/wp-content/uploads/dlm_uploads/2024/05/FINAL-2020-Protocol-Biodiversity.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://mining.ca/wp-content/uploads/dlm_uploads/2024/05/FINAL-2020-Protocol-Biodiversity.pdf",
+                "name": "Towards Sustainable Mining Protocol",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "Towards Sustainable Mining (TSM) Certified Facility",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          },
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96293_01",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/96293_01",
+                "name": "Mines Act Permit",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502000119/21/DCC_03?linkType=gs1:certificationInfo",
+              "linkName": "Facility permitted to operate in BC under Mines Act",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/9359502000126",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/9359502000126",
+          "registeredId": "9359502000126",
+          "description": "TEST Copper Smelter Produces Copper Cathodes",
+          "name": "TEST Copper Smelter",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "CA",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/41413",
+              "code": "41413",
+              "name": "Refined copper and copper alloys, unwrought; master alloys of copper",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://example.com/90664869327",
+            "name": "TEST Smelter Parent",
+            "registeredId": "90664869327"
+          },
+          "address": {
+            "streetAddress": "99 Test Road",
+            "postalCode": "M3M 0A9",
+            "addressLocality": "Toronto(TEST)",
+            "addressRegion": "BC",
+            "addressCountry": "CA"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/87M2MJ36+WM",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                3.141579,
+                3.141579
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    3.141579,
+                    3.141579
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://coppermark.org/wp-content/uploads/2023/10/RRA-v3.0-Criteria-Guide_2023.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://coppermark.org/wp-content/uploads/2023/10/RRA-v3.0-Criteria-Guide_2023.pdf",
+                "name": "RISK READINESS ASSESSMENT CRITERIA GUIDE",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502000126/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "CopperMark Certified Facility",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          },
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.responsiblemineralsinitiative.org/media/docs/Public%20Reports/CMOC%20Kisanfu%20Public%20Report.pdf",
+            "referenceStandard": {
+              "type": [
+                "Standard"
+              ],
+              "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+              "name": "Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
+              "issuingParty": {
+                "type": [
+                  "Identifier"
+                ],
+                "id": "https://www.responsiblemineralsinitiative.org/",
+                "name": "Responsible Minerals Initiative",
+                "registeredId": "123456789",
+                "idScheme": {
+                  "type": [
+                    "IdentifierScheme"
+                  ],
+                  "id": "https://find-and-update.company-information.service.gov.uk/",
+                  "name": "Company Registration Number (CRN)"
+                }
+              },
+              "issueDate": "2024-10-17"
+            },
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+                "name": "Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "declaredValue": [
+              {
+                "metricName": "Sourcing from High-Risk Supply Chains",
+                "metricValue": {},
+                "score": "No"
+              }
+            ],
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502000126/21/RMAP_DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "Copper Cathode Produced at RMI Certified Facility",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/9359502000164",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/9359502000164",
+          "registeredId": "9359502000164",
+          "description": "TEST Lithium Refinery Produces Refined Lithium",
+          "name": "TEST Lithium Refinery",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "CA",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/41413",
+              "code": "41413",
+              "name": "Crude of Refined Lithium Products",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://example.com/90664869327",
+            "name": "TEST Refinery Parent",
+            "registeredId": "90664869327"
+          },
+          "address": {
+            "streetAddress": "99 Test Road",
+            "postalCode": "M3M 0A9",
+            "addressLocality": "Toronto(TEST)",
+            "addressRegion": "BC",
+            "addressCountry": "CA"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/87M2MJ36+WM",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                3.141579,
+                3.141579
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    3.141579,
+                    3.141579
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.responsiblemineralsinitiative.org/media/docs/Public%20Reports/CMOC%20Kisanfu%20Public%20Report.pdf",
+            "referenceStandard": {
+              "type": [
+                "Standard"
+              ],
+              "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+              "name": "Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
+              "issuingParty": {
+                "type": [
+                  "Identifier"
+                ],
+                "id": "https://www.responsiblemineralsinitiative.org/",
+                "name": "Responsible Minerals Initiative",
+                "registeredId": "123456789",
+                "idScheme": {
+                  "type": [
+                    "IdentifierScheme"
+                  ],
+                  "id": "https://find-and-update.company-information.service.gov.uk/",
+                  "name": "Company Registration Number (CRN)"
+                }
+              },
+              "issueDate": "2024-10-17"
+            },
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+                "name": "Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              },
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+                "name": "Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "declaredValue": [
+              {
+                "metricName": "Sourcing from High-Risk Supply Chains",
+                "metricValue": {},
+                "score": "No"
+              }
+            ],
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502111164/21/RMAP_DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "Refined Lithium Produced at RMI Certified Lithium Refinery",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/9359502000171",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/9359502000171",
+          "registeredId": "9359502000171",
+          "description": "TEST Electronic Manufacturer Facility Manufactures Electronic Goods",
+          "name": "TEST Electronic Manufacturer",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "CA",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/41413",
+              "code": "41413",
+              "name": "Electronic Goods",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://example.com/90664869327",
+            "name": "TEST Electronic Manufacturer Parent",
+            "registeredId": "90664869327"
+          },
+          "address": {
+            "streetAddress": "99 Test Road",
+            "postalCode": "M3M 0A9",
+            "addressLocality": "Toronto(TEST)",
+            "addressRegion": "BC",
+            "addressCountry": "CA"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/87M2MJ36+WM",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                3.141579,
+                3.141579
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    3.141579,
+                    3.141579
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-03-15",
+            "declaredValue": [
+              {
+                "metricName": "GHG emissions intensity",
+                "metricValue": {
+                  "value": 10,
+                  "unit": "KGM"
+                },
+                "score": "BB",
+                "accuracy": 0.05
+              }
+            ],
+            "id": "https://products.example-company.com/09520123456788/declarations/12345",
+            "referenceStandard": {
+              "type": [
+                "Standard"
+              ],
+              "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf",
+              "name": "GBA Battery Passport Greenhouse Gas Rulebook - V.2.0",
+              "issuingParty": {
+                "type": [
+                  "Identifier"
+                ],
+                "id": "https://www.globalbattery.org/",
+                "name": "Global Battery Alliance",
+                "registeredId": "123456789",
+                "idScheme": {
+                  "type": [
+                    "IdentifierScheme"
+                  ],
+                  "id": "https://id.gs1.org/01/",
+                  "name": "Global Trade Identification Number (GTIN)"
+                }
+              },
+              "issueDate": "2023-12-05"
+            },
+            "referenceRegulation": {
+              "type": [
+                "Regulation"
+              ],
+              "id": "https://www.legislation.gov.au/F2008L02309/latest/versions",
+              "name": "National Greenhouse and Energy Reporting (Measurement) Determination",
+              "jurisdictionCountry": "Enumeration Value",
+              "administeredBy": {
+                "type": [
+                  "Identifier"
+                ],
+                "id": "https://www.legislation.gov.au/",
+                "name": "Australian Government - Federal Register of Legislation",
+                "registeredId": "90664869327",
+                "idScheme": {
+                  "type": [
+                    "IdentifierScheme"
+                  ],
+                  "id": "https://id.gs1.org/01/",
+                  "name": "Global Trade Identification Number (GTIN)"
+                }
+              },
+              "effectiveDate": "2024-03-20"
+            },
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf#BatteryAssembly",
+                "name": "GBA Battery rule book v2.0 battery assembly guidelines.",
+                "thresholdValues": [
+                  {
+                    "metricName": "GHG emissions intensity",
+                    "metricValue": {
+                      "value": 10,
+                      "unit": "KGM"
+                    },
+                    "score": "BB",
+                    "accuracy": 0.05
+                  },
+                  {
+                    "metricName": "GHG emissions intensity",
+                    "metricValue": {
+                      "value": 10,
+                      "unit": "KGM"
+                    },
+                    "score": "BB",
+                    "accuracy": 0.05
+                  }
+                ],
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              },
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf#BatteryAssembly",
+                "name": "GBA Battery rule book v2.0 battery assembly guidelines.",
+                "thresholdValues": [
+                  {
+                    "metricName": "GHG emissions intensity",
+                    "metricValue": {
+                      "value": 10,
+                      "unit": "KGM"
+                    },
+                    "score": "BB",
+                    "accuracy": 0.05
+                  },
+                  {
+                    "metricName": "GHG emissions intensity",
+                    "metricValue": {
+                      "value": 10,
+                      "unit": "KGM"
+                    },
+                    "score": "BB",
+                    "accuracy": 0.05
+                  }
+                ],
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "declaredValues": [
+              {
+                "metricName": "GHG emissions intensity",
+                "metricValue": {
+                  "value": 10,
+                  "unit": "KGM"
+                },
+                "score": "BB",
+                "accuracy": 0.05
+              },
+              {
+                "metricName": "GHG emissions intensity",
+                "metricValue": {
+                  "value": 10,
+                  "unit": "KGM"
+                },
+                "score": "BB",
+                "accuracy": 0.05
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "https://files.example-certifier.com/1234567.json",
+              "linkName": "GBA rule book conformity certificate",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/09359502222016",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/09359502222016",
+          "registeredId": "09359502222016",
+          "description": "Kasala Mining Limited Produces Copper Concentrate",
+          "name": "Kasala Mining Limited",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "DRC",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/14210",
+              "code": "14210",
+              "name": "Copper ores and concentrates",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://localhost:3000/gs1/01/update_some_id/21/DIA_01?linkType=gs1:registryEntry",
+            "name": "TEST Mining Permitted Entity",
+            "registeredId": "update_some_id.21.DIA_01"
+          },
+          "facilityAlsoKnownAs": [
+            {}
+          ],
+          "address": {
+            "streetAddress": "11 Test Road",
+            "postalCode": "123456",
+            "addressLocality": "Congo(TEST)",
+            "addressRegion": "DRC",
+            "addressCountry": "DRC"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/87M2MJ36+WM",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                123.456,
+                123.456
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    123.456,
+                    123.456
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.a-mla.org/en/country/law/7",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.a-mla.org/en/country/law/7",
+                "name": "Congolese Mining Code",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502222016/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "Mining Permit for Kasala Mining Limited in DRC",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          },
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://responsiblemining.net/wp-content/uploads/2024/11/IRMA-Standard-Guidance-V1.3-Updated-2024-November_EN.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://responsiblemining.net/wp-content/uploads/2024/11/IRMA-Standard-Guidance-V1.3-Updated-2024-November_EN.pdf",
+                "name": "IRMA Standard for Responsible Mining 1.0\u2013Guidance Document",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502222016/21/DCC_02?linkType=gs1:certificationInfo",
+              "linkName": "Initiative for Responsible Mining Assurance Credential for Kasala Mining Limited in DRC",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/09359502222023",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/09359502222023",
+          "registeredId": "09359502222023",
+          "description": "Cobalt Mine in Morocco produces Cobalt Concentrate",
+          "name": "Atlas Cobalt SARL",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "Mar",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/14210",
+              "code": "14210",
+              "name": "Cobalt ores and concentrates",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://localhost:3000/gs1/01/update_some_id/21/DIA_01?linkType=gs1:registryEntry",
+            "name": "TEST Mining Permitted Entity",
+            "registeredId": "update_some_id.21.DIA_01"
+          },
+          "facilityAlsoKnownAs": [],
+          "address": {
+            "streetAddress": "111 Test Road",
+            "postalCode": "123456",
+            "addressLocality": "Morocco(TEST)",
+            "addressRegion": "Mar",
+            "addressCountry": "Mar"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/location_data",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                123.456,
+                123.456
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    123.456,
+                    123.456
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.mem.gov.ma/en/Pages/TextesReglementaires.aspx",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.mem.gov.ma/en/Pages/TextesReglementaires.aspx",
+                "name": "Moroccan Mining Regulatory Laws",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502222023/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "Mining Permit for Atlas Cobalt SARL in Morocco",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          },
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://responsiblemining.net/wp-content/uploads/2024/11/IRMA-Standard-Guidance-V1.3-Updated-2024-November_EN.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://responsiblemining.net/wp-content/uploads/2024/11/IRMA-Standard-Guidance-V1.3-Updated-2024-November_EN.pdf",
+                "name": "IRMA Standard for Responsible Mining 1.0\u2013Guidance Document",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502222023/21/DCC_02?linkType=gs1:certificationInfo",
+              "linkName": "Initiative for Responsible Mining Assurance Credential for Atlas Cobalt SARL in Morocco",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/09359502222085",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/09359502222085",
+          "registeredId": "09359502222085",
+          "description": "Cobalt Mine in Botswana produces Cobalt Concentrate",
+          "name": "Okavango Cobalt Ltd.",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "Mar",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/14210",
+              "code": "14210",
+              "name": "Cobalt ores and concentrates",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://localhost:3000/gs1/01/update_some_id/21/DIA_01?linkType=gs1:registryEntry",
+            "name": "TEST Mining Permitted Entity",
+            "registeredId": "update_some_id.21.DIA_01"
+          },
+          "facilityAlsoKnownAs": [],
+          "address": {
+            "streetAddress": "111 Test Road",
+            "postalCode": "123456",
+            "addressLocality": "Botswana(TEST)",
+            "addressRegion": "Mar",
+            "addressCountry": "Mar"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/location_data",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                123.456,
+                123.456
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    123.456,
+                    123.456
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://botswanalaws.com/StatutesActpdf/1999Actpdf/MINES%20AND%20MINERALS%20ACT,%2017%20OF%201999.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://botswanalaws.com/StatutesActpdf/1999Actpdf/MINES%20AND%20MINERALS%20ACT,%2017%20OF%201999.pdf",
+                "name": "Mines and Minerals Act, 1999",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502222085/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "Mining Permit for Okavango Cobalt Ltd. in Botswana",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          },
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://responsiblemining.net/wp-content/uploads/2024/11/IRMA-Standard-Guidance-V1.3-Updated-2024-November_EN.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://responsiblemining.net/wp-content/uploads/2024/11/IRMA-Standard-Guidance-V1.3-Updated-2024-November_EN.pdf",
+                "name": "IRMA Standard for Responsible Mining 1.0\u2013Guidance Document",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502222085/21/DCC_02?linkType=gs1:certificationInfo",
+              "linkName": "Initiative for Responsible Mining Assurance Credential for Okavango Cobalt Ltd. Mine in Botswana",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/09359502222030",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/09359502222030",
+          "registeredId": "09359502222030",
+          "description": "Northshore Smelting Corp. Produces Crude Copper",
+          "name": "Northshore Smelting Corp.",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "Canada",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/41413",
+              "code": "41413",
+              "name": "Refined copper and copper alloys, unwrought; master alloys of copper",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://example.com/90664869327",
+            "name": "TEST Smelter Parent",
+            "registeredId": "90664869327"
+          },
+          "address": {
+            "streetAddress": "99 Test Road",
+            "postalCode": "M3M 0A9",
+            "addressLocality": "Toronto(TEST)",
+            "addressRegion": "BC",
+            "addressCountry": "CA"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/87M2MJ36+WM",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                1.2345,
+                1.2345
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    1.2345,
+                    1.2345
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+                "name": "Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502222030/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "RMAP Credential for Smelter in Canada",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/09359502222047",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/09359502222047",
+          "registeredId": "09359502222047",
+          "description": "Smelter in Norway produces Crude Cobalt",
+          "name": "FjordMetall AS",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "Norway",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/14210",
+              "code": "14210",
+              "name": "Cobalt ores and concentrates",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://localhost:3000/gs1/01/update_some_id/21/DIA_01?linkType=gs1:registryEntry",
+            "name": "TEST Smelting Permitted Entity",
+            "registeredId": "update_some_id.21.DIA_01"
+          },
+          "facilityAlsoKnownAs": [],
+          "address": {
+            "streetAddress": "111 Test Road",
+            "postalCode": "123456",
+            "addressLocality": "Norway(TEST)",
+            "addressRegion": "Norway",
+            "addressCountry": "Norway"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/location_data",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                123.456,
+                123.456
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    123.456,
+                    123.456
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+                "name": "Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502222047/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "RMAP Credential for Smelter in Norway",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/09359502222054",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/09359502222054",
+          "registeredId": "09359502222054",
+          "description": "Refinery in China",
+          "name": "Zhongke Refining Ltd.",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "CN",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/14210",
+              "code": "14210",
+              "name": "Cobalt ores and concentrates",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://localhost:3000/gs1/01/update_some_id/21/DIA_01?linkType=gs1:registryEntry",
+            "name": "TEST Refinery Permitted Entity",
+            "registeredId": "update_some_id.21.DIA_01"
+          },
+          "facilityAlsoKnownAs": [],
+          "address": {
+            "streetAddress": "111 Test Road",
+            "postalCode": "123456",
+            "addressLocality": "China(TEST)",
+            "addressRegion": "CN",
+            "addressCountry": "CN"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/location_data",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                123.456,
+                123.456
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    123.456,
+                    123.456
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.update_id.com",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.update_assessment_criteria_id.com",
+                "name": "Some Act Permit",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502222054/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "RMAP Credential",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/09359502222061",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/09359502222061",
+          "registeredId": "09359502222061",
+          "description": "Recycler Facility Produces Recycled Materials",
+          "name": "UrbanCore Recycling Inc.",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "CA",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/41413",
+              "code": "41413",
+              "name": "Recycled Materials",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://example.com/90664869327",
+            "name": "Recycler Facility",
+            "registeredId": "90664869327"
+          },
+          "address": {
+            "streetAddress": "99 Test Road",
+            "postalCode": "M3M 0A9",
+            "addressLocality": "Toronto(TEST)",
+            "addressRegion": "BC",
+            "addressCountry": "CA"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/87M2MJ36+WM",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                1.2345,
+                1.2345
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    1.2345,
+                    1.2345
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+                "name": "Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502222061/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "RMAP Credential for Recycler in Canada",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/09359502233016",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/09359502233016",
+          "registeredId": "09359502233016",
+          "description": "Kasala Mining Limited Produces Copper Concentrate",
+          "name": "Kasala Mining Limited",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "DRC",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/14210",
+              "code": "14210",
+              "name": "Copper ores and concentrates",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://localhost:3000/gs1/01/09359502233016/21/DIA_01?linkType=gs1:registryEntry",
+            "name": "TEST Mining Permitted Entity",
+            "registeredId": "09359502233016.21.DIA_01"
+          },
+          "facilityAlsoKnownAs": [
+            {}
+          ],
+          "address": {
+            "streetAddress": "11 Test Road",
+            "postalCode": "123456",
+            "addressLocality": "Congo(TEST)",
+            "addressRegion": "DRC",
+            "addressCountry": "DRC"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/87M2MJ36+WM",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                123.456,
+                123.456
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    123.456,
+                    123.456
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.a-mla.org/en/country/law/7",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.a-mla.org/en/country/law/7",
+                "name": "Congolese Mining Code",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502233016/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "Mining Permit for Kasala Mining Limited in DRC",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          },
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://responsiblemining.net/wp-content/uploads/2024/11/IRMA-Standard-Guidance-V1.3-Updated-2024-November_EN.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://responsiblemining.net/wp-content/uploads/2024/11/IRMA-Standard-Guidance-V1.3-Updated-2024-November_EN.pdf",
+                "name": "IRMA Standard for Responsible Mining 1.0\u2013Guidance Document",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502233016/21/DCC_02?linkType=gs1:certificationInfo",
+              "linkName": "Initiative for Responsible Mining Assurance Credential for Kasala Mining Limited in DRC",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/09359502233023",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/09359502233023",
+          "registeredId": "09359502233023",
+          "description": "Cobalt Mine in Morocco produces Cobalt Concentrate",
+          "name": "Atlas Cobalt SARL",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "Mar",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/14210",
+              "code": "14210",
+              "name": "Cobalt ores and concentrates",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://localhost:3000/gs1/01/update_some_id/21/DIA_01?linkType=gs1:registryEntry",
+            "name": "TEST Mining Permitted Entity",
+            "registeredId": "update_some_id.21.DIA_01"
+          },
+          "facilityAlsoKnownAs": [],
+          "address": {
+            "streetAddress": "111 Test Road",
+            "postalCode": "123456",
+            "addressLocality": "Morocco(TEST)",
+            "addressRegion": "Mar",
+            "addressCountry": "Mar"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/location_data",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                123.456,
+                123.456
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    123.456,
+                    123.456
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.mem.gov.ma/en/Pages/TextesReglementaires.aspx",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.mem.gov.ma/en/Pages/TextesReglementaires.aspx",
+                "name": "Moroccan Mining Regulatory Laws",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502233023/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "Mining Permit for Atlas Cobalt SARL in Morocco",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          },
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://responsiblemining.net/wp-content/uploads/2024/11/IRMA-Standard-Guidance-V1.3-Updated-2024-November_EN.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://responsiblemining.net/wp-content/uploads/2024/11/IRMA-Standard-Guidance-V1.3-Updated-2024-November_EN.pdf",
+                "name": "IRMA Standard for Responsible Mining 1.0\u2013Guidance Document",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502233023/21/DCC_02?linkType=gs1:certificationInfo",
+              "linkName": "Initiative for Responsible Mining Assurance Credential for Atlas Cobalt SARL in Morocco",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/09359502233085",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/09359502233085",
+          "registeredId": "09359502233085",
+          "description": "Cobalt Mine in Botswana produces Cobalt Concentrate",
+          "name": "Okavango Cobalt Ltd.",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "Mar",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/14210",
+              "code": "14210",
+              "name": "Cobalt ores and concentrates",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://localhost:3000/gs1/01/update_some_id/21/DIA_01?linkType=gs1:registryEntry",
+            "name": "TEST Mining Permitted Entity",
+            "registeredId": "update_some_id.21.DIA_01"
+          },
+          "facilityAlsoKnownAs": [],
+          "address": {
+            "streetAddress": "111 Test Road",
+            "postalCode": "123456",
+            "addressLocality": "Botswana(TEST)",
+            "addressRegion": "Mar",
+            "addressCountry": "Mar"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/location_data",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                123.456,
+                123.456
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    123.456,
+                    123.456
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://botswanalaws.com/StatutesActpdf/1999Actpdf/MINES%20AND%20MINERALS%20ACT,%2017%20OF%201999.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://botswanalaws.com/StatutesActpdf/1999Actpdf/MINES%20AND%20MINERALS%20ACT,%2017%20OF%201999.pdf",
+                "name": "Mines and Minerals Act, 1999",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502233085/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "Mining Permit for Okavango Cobalt Ltd. in Botswana",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          },
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://responsiblemining.net/wp-content/uploads/2024/11/IRMA-Standard-Guidance-V1.3-Updated-2024-November_EN.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://responsiblemining.net/wp-content/uploads/2024/11/IRMA-Standard-Guidance-V1.3-Updated-2024-November_EN.pdf",
+                "name": "IRMA Standard for Responsible Mining 1.0\u2013Guidance Document",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502233085/21/DCC_02?linkType=gs1:certificationInfo",
+              "linkName": "Initiative for Responsible Mining Assurance Credential for Okavango Cobalt Ltd. in Botswana",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/09359502233030",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/09359502233030",
+          "registeredId": "09359502233030",
+          "description": "Northshore Smelting Corp. Produces Crude Copper",
+          "name": "Northshore Smelting Corp.",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "Canada",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/41413",
+              "code": "41413",
+              "name": "Refined copper and copper alloys, unwrought; master alloys of copper",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://example.com/90664869327",
+            "name": "TEST Smelter Parent",
+            "registeredId": "90664869327"
+          },
+          "address": {
+            "streetAddress": "99 Test Road",
+            "postalCode": "M3M 0A9",
+            "addressLocality": "Toronto(TEST)",
+            "addressRegion": "BC",
+            "addressCountry": "CA"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/87M2MJ36+WM",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                1.2345,
+                1.2345
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    1.2345,
+                    1.2345
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+                "name": "Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502233030/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "RMAP Credential for Smelter in Canada",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/09359502233047",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/09359502233047",
+          "registeredId": "09359502233047",
+          "description": "Smelter in Norway produces Crude Cobalt",
+          "name": "FjordMetall AS",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "Norway",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/14210",
+              "code": "14210",
+              "name": "Cobalt ores and concentrates",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://localhost:3000/gs1/01/update_some_id/21/DIA_01?linkType=gs1:registryEntry",
+            "name": "TEST Smelting Permitted Entity",
+            "registeredId": "update_some_id.21.DIA_01"
+          },
+          "facilityAlsoKnownAs": [],
+          "address": {
+            "streetAddress": "111 Test Road",
+            "postalCode": "123456",
+            "addressLocality": "Norway(TEST)",
+            "addressRegion": "Norway",
+            "addressCountry": "Norway"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/location_data",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                123.456,
+                123.456
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    123.456,
+                    123.456
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+                "name": "Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502233047/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "RMAP Credential for Smelter in Norway",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/09359502233054",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/09359502233054",
+          "registeredId": "09359502233054",
+          "description": "Refinery in China",
+          "name": "Zhongke Refining Ltd.",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "CN",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/14210",
+              "code": "14210",
+              "name": "Cobalt ores and concentrates",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://localhost:3000/gs1/01/update_some_id/21/DIA_01?linkType=gs1:registryEntry",
+            "name": "TEST Refinery Permitted Entity",
+            "registeredId": "update_some_id.21.DIA_01"
+          },
+          "facilityAlsoKnownAs": [],
+          "address": {
+            "streetAddress": "111 Test Road",
+            "postalCode": "123456",
+            "addressLocality": "China(TEST)",
+            "addressRegion": "CN",
+            "addressCountry": "CN"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/location_data",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                123.456,
+                123.456
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    123.456,
+                    123.456
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.update_id.com",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.update_assessment_criteria_id.com",
+                "name": "Some Act Permit",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502233054/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "RMAP Credential",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/09359502233061",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/09359502233061",
+          "registeredId": "09359502233061",
+          "description": "Recycler Facility Produces Recycled Materials",
+          "name": "UrbanCore Recycling Inc.",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "CA",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/41413",
+              "code": "41413",
+              "name": "Recycled Materials",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://example.com/90664869327",
+            "name": "Recycler Facility",
+            "registeredId": "90664869327"
+          },
+          "address": {
+            "streetAddress": "99 Test Road",
+            "postalCode": "M3M 0A9",
+            "addressLocality": "Toronto(TEST)",
+            "addressRegion": "BC",
+            "addressCountry": "CA"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/87M2MJ36+WM",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                1.2345,
+                1.2345
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    1.2345,
+                    1.2345
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-11-11",
+            "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/ResponsibleMineralsAssuranceProcess_Standard_AllMinerals_EN_09152024.pdf",
+                "name": "Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "http://localhost:3000/gs1/01/09359502233061/21/DCC_01?linkType=gs1:certificationInfo",
+              "linkName": "RMAP Credential for Recycler in Canada",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  },
+  {
+    "name": "JsonForm",
+    "type": "EntryData",
+    "props": {
+      "schema": {
+        "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
+      },
+      "data": {
+        "id": "http://localhost:3000/gs1/414/9359502000280",
+        "type": [
+          "FacilityRecord"
+        ],
+        "facility": {
+          "type": [
+            "Facility"
+          ],
+          "id": "http://localhost:3000/gs1/414/9359502000280",
+          "registeredId": "9359502000280",
+          "description": "TEST Electronic Manufacturer Facility Manufactures Electronic Goods",
+          "name": "TEST Electronic Manufacturer",
+          "idScheme": {
+            "type": [
+              "IdentifierScheme"
+            ],
+            "id": "https://id.gs1.org/414/",
+            "name": "Global Location Number (GLN)"
+          },
+          "countryOfOperation": "CA",
+          "processCategory": [
+            {
+              "type": [
+                "Classification"
+              ],
+              "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/41413",
+              "code": "41413",
+              "name": "Electronic Goods",
+              "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+              "schemeName": "UN Central Product Classification (CPC)"
+            }
+          ],
+          "operatedByParty": {
+            "id": "http://example.com/90664869327",
+            "name": "TEST Electronic Manufacturer Parent",
+            "registeredId": "90664869327"
+          },
+          "address": {
+            "streetAddress": "99 Test Road",
+            "postalCode": "M3M 0A9",
+            "addressLocality": "Toronto(TEST)",
+            "addressRegion": "BC",
+            "addressCountry": "CA"
+          },
+          "locationInformation": {
+            "plusCode": "https://plus.codes/87M2MJ36+WM",
+            "geoLocation": {
+              "type": "Point",
+              "coordinates": [
+                3.141579,
+                3.141579
+              ]
+            },
+            "geoBoundary": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    3.141579,
+                    3.141579
+                  ]
+                ]
+              ]
+            }
+          }
+        },
+        "conformityClaim": [
+          {
+            "type": [
+              "Claim",
+              "Declaration"
+            ],
+            "assessmentDate": "2024-03-15",
+            "declaredValue": [
+              {
+                "metricName": "GHG emissions intensity",
+                "metricValue": {
+                  "value": 10,
+                  "unit": "KGM"
+                },
+                "score": "BB",
+                "accuracy": 0.05
+              }
+            ],
+            "id": "https://products.example-company.com/09520123456788/declarations/12345",
+            "referenceStandard": {
+              "type": [
+                "Standard"
+              ],
+              "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf",
+              "name": "GBA Battery Passport Greenhouse Gas Rulebook - V.2.0",
+              "issuingParty": {
+                "type": [
+                  "Identifier"
+                ],
+                "id": "https://www.globalbattery.org/",
+                "name": "Global Battery Alliance",
+                "registeredId": "123456789",
+                "idScheme": {
+                  "type": [
+                    "IdentifierScheme"
+                  ],
+                  "id": "https://id.gs1.org/01/",
+                  "name": "Global Trade Identification Number (GTIN)"
+                }
+              },
+              "issueDate": "2023-12-05"
+            },
+            "referenceRegulation": {
+              "type": [
+                "Regulation"
+              ],
+              "id": "https://www.legislation.gov.au/F2008L02309/latest/versions",
+              "name": "National Greenhouse and Energy Reporting (Measurement) Determination",
+              "jurisdictionCountry": "Enumeration Value",
+              "administeredBy": {
+                "type": [
+                  "Identifier"
+                ],
+                "id": "https://www.legislation.gov.au/",
+                "name": "Australian Government - Federal Register of Legislation",
+                "registeredId": "90664869327",
+                "idScheme": {
+                  "type": [
+                    "IdentifierScheme"
+                  ],
+                  "id": "https://id.gs1.org/01/",
+                  "name": "Global Trade Identification Number (GTIN)"
+                }
+              },
+              "effectiveDate": "2024-03-20"
+            },
+            "assessmentCriteria": [
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf#BatteryAssembly",
+                "name": "GBA Battery rule book v2.0 battery assembly guidelines.",
+                "thresholdValues": [
+                  {
+                    "metricName": "GHG emissions intensity",
+                    "metricValue": {
+                      "value": 10,
+                      "unit": "KGM"
+                    },
+                    "score": "BB",
+                    "accuracy": 0.05
+                  },
+                  {
+                    "metricName": "GHG emissions intensity",
+                    "metricValue": {
+                      "value": 10,
+                      "unit": "KGM"
+                    },
+                    "score": "BB",
+                    "accuracy": 0.05
+                  }
+                ],
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              },
+              {
+                "type": [
+                  "Criterion"
+                ],
+                "id": "https://www.globalbattery.org/media/publications/gba-rulebook-v2.0-master.pdf#BatteryAssembly",
+                "name": "GBA Battery rule book v2.0 battery assembly guidelines.",
+                "thresholdValues": [
+                  {
+                    "metricName": "GHG emissions intensity",
+                    "metricValue": {
+                      "value": 10,
+                      "unit": "KGM"
+                    },
+                    "score": "BB",
+                    "accuracy": 0.05
+                  },
+                  {
+                    "metricName": "GHG emissions intensity",
+                    "metricValue": {
+                      "value": 10,
+                      "unit": "KGM"
+                    },
+                    "score": "BB",
+                    "accuracy": 0.05
+                  }
+                ],
+                "description": "Default description",
+                "conformityTopic": "environment.emissions",
+                "status": "proposed",
+                "subCriterion": []
+              }
+            ],
+            "declaredValues": [
+              {
+                "metricName": "GHG emissions intensity",
+                "metricValue": {
+                  "value": 10,
+                  "unit": "KGM"
+                },
+                "score": "BB",
+                "accuracy": 0.05
+              },
+              {
+                "metricName": "GHG emissions intensity",
+                "metricValue": {
+                  "value": 10,
+                  "unit": "KGM"
+                },
+                "score": "BB",
+                "accuracy": 0.05
+              }
+            ],
+            "conformance": true,
+            "conformityTopic": "environment.emissions",
+            "conformityEvidence": {
+              "linkURL": "https://files.example-certifier.com/1234567.json",
+              "linkName": "GBA rule book conformity certificate",
+              "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+              "hashDigest": "6239119",
+              "hashMethod": "SHA-256",
+              "encryptionMethod": "AES"
+            }
+          }
+        ]
+      },
+      "constructData": {
+        "mappingFields": [],
+        "dummyFields": [],
+        "generationFields": [
+          {
+            "path": "/eventID",
+            "handler": "generateIdWithSerialNumber"
+          }
+        ]
+      },
+      "className": "json-form",
+      "style": {
+        "margin": "40px auto",
+        "paddingTop": "20px",
+        "width": "80%"
+      }
+    }
+  }
+]
