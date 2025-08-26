@@ -8,7 +8,7 @@ from typing import Dict, Any, List
 
 current_dir = Path(__file__).resolve().parent
     #print(current_dir)
-input_path = (current_dir.parent.parent / "01_Data/app-config/RBTP" / "transformed-app-config.json")
+input_path = (current_dir.parent.parent / "01_Data/app-config/RBTP" / "transformed-app-config-v3.json")
 
 with open(input_path, "r") as f:
     config_data = json.load(f)
@@ -17,7 +17,7 @@ apps = config_data.get("apps", [])
 
 credential_request = 'DFR'
 json_list = [] # initialises json list for output
-
+i=1
 for app in apps:
     features = app.get("features", [])
     for feature in features:
@@ -57,9 +57,13 @@ for app in apps:
         if credential_type == credential_request:
             print(feature)
             print('credential_type', credential_type)
+            feature['name'] += f" {str(i)}"
             json_list.append(feature)
+            i += 1
 
 
-output_path = current_dir.parent.parent / "01_Data/app-config/RBTP" / "transformed-app-config-dfr-only.json"
+output_path = current_dir.parent.parent / "01_Data/app-config/RBTP" / "transformed-app-config-dfr-only-v3.json"
 with open(output_path, "w") as f:
     json.dump(json_list, f, indent=2)
+
+# THE ABOVE ONLY OUTPUTS THE DFRS/ can't test them in test-untp if they're in the same file

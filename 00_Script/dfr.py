@@ -74,7 +74,33 @@ class DFRTransformer(CredentialTransformer):
                 criterion["status"] = "proposed"
                 criterion["subCriterion"] = []
             claim["conformityTopic"] = "environment.emissions"
+
+        # Phase 2 change to resolve JSON-LD issue and UNTP Schema Validation in the tests-untp playground
+        # JSON-LD issue: removes type in conformityClaim -> referenceStandard -> issuingParty
+        for claim in conformity_claim:
+            reference_standard = claim.get('referenceStandard', {})
+            if "issuingParty" in reference_standard:
+                del reference_standard["issuingParty"]["type"]
+                print('inside json-ld issue fix')
+
+        # UNTP Schema Validation: adds credentialSubject -> ConformityClaim -> declaredValue -> metricValue (if empty, add "unit" and "value")
+        for claim in conformity_claim:
+            declared_value = claim.get('declaredValue', {})
+            print(declared_value)
+            for declared in declared_value:
+                if not declared.get("metricValue"):
+                    declared["metricValue"] = {"unit": "", "value": 0}
+                    print('inside untp schema validation')
+
+        # UNTP Schema Validation: if facilityAlsoKnownAs doesn't contain any values, for example facilityAlsoKnownAs = [{}], then change it to []
+        if "facilityAlsoKnownAs" in facility_new and (not facility_new["facilityAlsoKnownAs"] or all(not v for v in facility_new["facilityAlsoKnownAs"])):
+            facility_new["facilityAlsoKnownAs"] = []
+            print('inside untp schema validation 2')
+        # UNTP JSON-LD configuration: if facilityAlsoKnownAs not in facility, then add the field "facilityAlsoKnownAs": []
+        if "facilityAlsoKnownAs" not in facility_new:
+            facility_new["facilityAlsoKnownAs"] = []
         
+
         # Reference Implementation Updates
         # 1. Schema URL
         schema = self.component["props"]["schema"]

@@ -135,11 +135,11 @@ if __name__ == "__main__":
     processor = AppConfigProcessor(current_dir.parent / "01_Data/app-config/RBTP" / "app-config.json")
     output = processor.process()
 
-    output_path = current_dir.parent / "01_Data/app-config/RBTP" / "transformed-app-config.json"
+    output_path = current_dir.parent / "01_Data/app-config/RBTP" / "transformed-app-config-v3.json"
     with open(output_path, "w") as f:
         json.dump(output, f, indent=2)
     
-    # output_path_testing = current_dir.parent / "01_Data/app-config/RBTP" / "dfr-transformed-app-config.json"
+    # output_path_testing = current_dir.parent / "01_Data/app-config/RBTP" / "dfr-transformed-app-config-v3.json"
     # with open(output_path_testing, "w") as f:
     #     json.dump(for_testing, f, indent=2)
 
