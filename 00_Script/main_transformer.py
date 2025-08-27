@@ -135,7 +135,7 @@ if __name__ == "__main__":
     processor = AppConfigProcessor(current_dir.parent / "01_Data/app-config/RBTP" / "app-config.json")
     output = processor.process()
 
-    output_path = current_dir.parent / "01_Data/app-config/RBTP" / "transformed-app-config-v3.json"
+    output_path = current_dir.parent / "01_Data/app-config/RBTP" / "transformed-app-config-v4.json"
     with open(output_path, "w") as f:
         json.dump(output, f, indent=2)
     
