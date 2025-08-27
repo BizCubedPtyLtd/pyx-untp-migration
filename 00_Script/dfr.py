@@ -97,6 +97,9 @@ class DFRTransformer(CredentialTransformer):
 
         # UNTP Schema Validation: adds credentialSubject -> ConformityClaim -> declaredValue -> metricValue (if empty, add "unit" and "value")
         for claim in conformity_claim:
+            # JSON-LD schema: if the name is declaredValues instead of declaredValue, change the name
+            if "declaredValues" in claim:
+                claim["declaredValue"] = claim.pop("declaredValues")
             declared_value = claim.get('declaredValue', {})
             print(declared_value)
             for declared in declared_value:

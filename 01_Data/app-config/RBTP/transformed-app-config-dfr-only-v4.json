@@ -1090,6 +1090,15 @@
                     },
                     "score": "BB",
                     "accuracy": 0.05
+                  },
+                  {
+                    "metricName": "GHG emissions intensity",
+                    "metricValue": {
+                      "value": 10,
+                      "unit": "KGM"
+                    },
+                    "score": "BB",
+                    "accuracy": 0.05
                   }
                 ],
                 "id": "https://products.example-company.com/09520123456788/declarations/12345",
@@ -1174,26 +1183,6 @@
                       "score": "BB",
                       "accuracy": 0.05
                     }
-                  }
-                ],
-                "declaredValues": [
-                  {
-                    "metricName": "GHG emissions intensity",
-                    "metricValue": {
-                      "value": 10,
-                      "unit": "KGM"
-                    },
-                    "score": "BB",
-                    "accuracy": 0.05
-                  },
-                  {
-                    "metricName": "GHG emissions intensity",
-                    "metricValue": {
-                      "value": 10,
-                      "unit": "KGM"
-                    },
-                    "score": "BB",
-                    "accuracy": 0.05
                   }
                 ],
                 "conformance": true,
@@ -2129,6 +2118,15 @@
                     },
                     "score": "BB",
                     "accuracy": 0.05
+                  },
+                  {
+                    "metricName": "GHG emissions intensity",
+                    "metricValue": {
+                      "value": 10,
+                      "unit": "KGM"
+                    },
+                    "score": "BB",
+                    "accuracy": 0.05
                   }
                 ],
                 "id": "https://products.example-company.com/09520123456788/declarations/12345",
@@ -2213,26 +2211,6 @@
                       "score": "BB",
                       "accuracy": 0.05
                     }
-                  }
-                ],
-                "declaredValues": [
-                  {
-                    "metricName": "GHG emissions intensity",
-                    "metricValue": {
-                      "value": 10,
-                      "unit": "KGM"
-                    },
-                    "score": "BB",
-                    "accuracy": 0.05
-                  },
-                  {
-                    "metricName": "GHG emissions intensity",
-                    "metricValue": {
-                      "value": 10,
-                      "unit": "KGM"
-                    },
-                    "score": "BB",
-                    "accuracy": 0.05
                   }
                 ],
                 "conformance": true,
@@ -5296,6 +5274,15 @@
                     },
                     "score": "BB",
                     "accuracy": 0.05
+                  },
+                  {
+                    "metricName": "GHG emissions intensity",
+                    "metricValue": {
+                      "value": 10,
+                      "unit": "KGM"
+                    },
+                    "score": "BB",
+                    "accuracy": 0.05
                   }
                 ],
                 "id": "https://products.example-company.com/09520123456788/declarations/12345",
@@ -5380,26 +5367,6 @@
                       "score": "BB",
                       "accuracy": 0.05
                     }
-                  }
-                ],
-                "declaredValues": [
-                  {
-                    "metricName": "GHG emissions intensity",
-                    "metricValue": {
-                      "value": 10,
-                      "unit": "KGM"
-                    },
-                    "score": "BB",
-                    "accuracy": 0.05
-                  },
-                  {
-                    "metricName": "GHG emissions intensity",
-                    "metricValue": {
-                      "value": 10,
-                      "unit": "KGM"
-                    },
-                    "score": "BB",
-                    "accuracy": 0.05
                   }
                 ],
                 "conformance": true,
