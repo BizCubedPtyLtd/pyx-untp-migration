@@ -1,4 +1,3 @@
-
 import json
 from pathlib import Path
 from typing import Dict, Any, List
@@ -8,18 +7,14 @@ from dfr import DFRTransformer, CredentialTransformer
 
 # ---------- Base Class ----------
 class GeneralMigrator:
-    @staticmethod
+    @staticmethod # does not require self parameter
     def migrate_general_v_050_to_v_060(services: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Applies general migration rules from 0.5.0 to 0.6.0.
+        Applies general migration rules from 0.5.0 to 0.6.0 for services.
         - Update service URLs to /api/1.0.0.
-        - Change linkRegisterPath for IDR Service.
+        - Change dlrAPIUrl and linkRegisterPath for IDR Service.
         """
-        
-        # print('componentttt', component)
         parameters = services.get('parameters',[])
-        # print('component', component)
-        # print('parameters', services)
        
         for param in parameters:
             # Storage Service
@@ -57,17 +52,14 @@ class AppConfigProcessor:
             for feature in features:
                 components = feature.get("components", [])
                 services = feature.get("services", [])
-                #print('services111',services)
 
                 # Initialize credential_type to None
                 credential_type = None
 
                 for component in components: # update component
-                    #print('component1',component)
                     if component.get("type") == "EntryData": #only process 
                         if component.get("name") == "LocalStorageLoader": #to identify 2 types of json types "LocalStorageLoader/NestedComponents" and standard "JsonForm"
                             nestedcomponents = component['props']['nestedComponents']
-                            #print(type(nestedcomponents))
                             if len(nestedcomponents) == 1:
                                 schema_url = nestedcomponents[0]["props"]["schema"]["url"]
                             else:
@@ -76,10 +68,8 @@ class AppConfigProcessor:
                         else:
                             schema_url = component["props"]["schema"]["url"]
                         # Detect type from schema URL
-                        #print(schema_url)
                         if "DigitalFacilityRecord" in schema_url:
                             credential_type = "DFR"
-                            #print('inside')
                         # elif "DigitalProductPassport" in schema_url:
                         #     credential_type = "DPP"
                         # elif "DigitalConformityCredential" in schema_url:
@@ -91,18 +81,15 @@ class AppConfigProcessor:
                         # Update the component in place
                         component.update(transformed_component)
                 # json_list.append(component)
-                print('credential_type', credential_type)
+
                 if credential_type:
                     for service in services: # update services 
                         if service['name'].startswith('process'):
                             # apply transformation for services
-                            print('service', service)
                             transformer = TransformerFactory.get_transformer(credential_type, service)
-                            print(transformer)
                             transformed_component = transformer.transform_services()
                             # Update the component in place
                             service.update(transformed_component)
-
                             # apply general transformation
                             transformed_component = GeneralMigrator.migrate_general_v_050_to_v_060(service)
                             # Update the component in place
@@ -129,20 +116,23 @@ class TransformerFactory:
 
 
 # ---------- Example Usage ----------
+'''
+This code takes input app-config.json, iterates through the apps & features, identifies credential type and applies transformations.
+This code outputs the transofmred app-config.json
+'''
 if __name__ == "__main__":
     current_dir = Path(__file__).resolve().parent
-    #print(current_dir)
-    processor = AppConfigProcessor(current_dir.parent / "01_Data/app-config/RBTP" / "app-config.json")
+
+    input_folder_name = "01_Data/app-config/RBTP"
+    file_name = "app-config.json"
+    output_file_name = "transformed-app-config-v5.json"
+    processor = AppConfigProcessor(current_dir.parent / input_folder_name / file_name)
     output = processor.process()
 
-    output_path = current_dir.parent / "01_Data/app-config/RBTP" / "transformed-app-config-v4.json"
+    output_path = current_dir.parent / input_folder_name / output_file_name
     with open(output_path, "w") as f:
         json.dump(output, f, indent=2)
     
-    # output_path_testing = current_dir.parent / "01_Data/app-config/RBTP" / "dfr-transformed-app-config-v3.json"
-    # with open(output_path_testing, "w") as f:
-    #     json.dump(for_testing, f, indent=2)
-
     print("Transformation complete!")
 
 
