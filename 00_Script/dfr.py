@@ -18,20 +18,21 @@ class CredentialTransformer:
 class DFRTransformer(CredentialTransformer):
     def transform(self) -> Dict[str, Any]:
         '''
-        This function transforms data in "components"
+        This function transforms data in "components" 
         '''
         # Apply general migrations first
         # self.component = GeneralMigrator.migrate_general_v_050_to_v_060(self.component)
         
-        # Specific DFR data model changes
+        # Specific DFR data model changes for "component"
         data = self.component["props"]["data"]
-        # 1. Update @context
-        data["@context"] = [
-            "https://www.w3.org/ns/credentials/v2",
-            "https://test.uncefact.org/vocabulary/untp/dfr/0.6.0/"
-        ]
 
-        # 2. Credential Subject Structure
+        # # 1. Update @context - not needed
+        # data["@context"] = [
+        #     "https://www.w3.org/ns/credentials/v2",
+        #     "https://test.uncefact.org/vocabulary/untp/dfr/0.6.0/"
+        # ]
+
+        # 2. Credential Subject Structure: adds "type": ["FacilityRecord"] to the original structure
         credential_subject = data.get("credentialSubject", {})
         facility = {k: v for k, v in credential_subject.items() if k != "conformityClaim"}
         new_credential_subject = {
@@ -41,23 +42,23 @@ class DFRTransformer(CredentialTransformer):
         }
         data["credentialSubject"] = new_credential_subject
         
-        # 3. Issuer Identifier Structure
+        # 3. Issuer Identifier Structure: updates "otherIdentifier" to "facilityAlsoKnownAs"
         issuer = data.get('issuer', {})
         if "otherIdentifier" in issuer:
             self._pop_and_replace_key(issuer, "otherIdentifier", "facilityAlsoKnownAs")
         
-        # 4. Facility Structure
+        # 4. Facility Structure: 
         facility_new = new_credential_subject.get('facility', {})
         if "otherIdentifier" in facility_new:
-            clean_data = self._pop_and_replace_key(facility_new, "otherIdentifier", "facilityAlsoKnownAs")
-            clean_data = self._clean_identifier_list(clean_data, ["type", "idScheme"])
+            clean_data = self._pop_and_replace_key(facility_new, "otherIdentifier", "facilityAlsoKnownAs") # renames "otherIdentifier" to "facilityAlsoKnownAs" and retains the position
+            clean_data = self._clean_identifier_list(clean_data, ["type", "idScheme"]) # removes "type" and "idScheme" from clean_data
             facility_new["facilityAlsoKnownAs"] = clean_data
         
         operated_by_party = facility_new.get('operatedByParty', {})
-        clean_data2 = self._clean_identifier_list(operated_by_party, ["type", "idScheme"])
+        clean_data2 = self._clean_identifier_list(operated_by_party, ["type", "idScheme"])  # removes "type" and "idScheme" from operated_by_party
         facility_new["operatedByParty"] = clean_data2
         
-        # Conformity Claim Updates
+        # Conformity Claim Updates: adds extra fields, such as description, conformityTopic, status, subCriterion for each Conformity Claim
         conformity_claim = new_credential_subject.get('conformityClaim', [])
         for claim in conformity_claim:
             assessment_criteria = claim.get('assessmentCriteria', [])
@@ -66,12 +67,17 @@ class DFRTransformer(CredentialTransformer):
                 criterion["conformityTopic"] = "environment.emissions"
                 criterion["status"] = "proposed"
                 criterion["subCriterion"] = []
-                #fixes UNTP Schema Validation
+
+                #fixes UNTP Schema Validation issue: changes criterion['thresholdValues'] to criterion['thresholdValue']
                 #if there is thresholdValue, changes criterion['thresholdValues'] to criterion['thresholdValue'] and inside the array [], takes only the first value as {}
                 if "thresholdValues" in criterion:
                     criterion["thresholdValue"] = criterion.pop("thresholdValues", [{}])[0]
+                    
             claim["conformityTopic"] = "environment.emissions"
         
+
+        #################################################################################################
+        # The below code addresses the JSON-LD and UNTP schema validation issues found during testing in phase 2
         # Phase 2 change to resolve JSON-LD issue and UNTP Schema Validation in the tests-untp playground
         # JSON-LD issue: removes type in conformityClaim -> referenceStandard -> issuingParty
         for claim in conformity_claim:
@@ -100,11 +106,10 @@ class DFRTransformer(CredentialTransformer):
         # UNTP JSON-LD configuration: if facilityAlsoKnownAs not in facility, then add the field "facilityAlsoKnownAs": []
         if "facilityAlsoKnownAs" not in facility_new:
             facility_new["facilityAlsoKnownAs"] = []
-
-        # UNTP Schema validation: 
+        #################################################################################################
 
         # Reference Implementation Updates
-        # 1. Schema URL
+        # 1. Updates Schema URL to v0.6.0
         schema = self.component["props"]["schema"]
         schema["url"] = "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
         
@@ -117,9 +122,18 @@ class DFRTransformer(CredentialTransformer):
 
     def transform_services(self) -> Dict[str, Any]:
         '''
-        This function transforms data in "Services"
+        Transforms the 'Services' section of the features.
+
+        This function updates services for credential migration:
+        - Sets the context for digitalFacilityRecord to the new vocabulary URL.
+        - Updates the renderTemplate for each service with a new HTML template.
+        - Cleans up type fields in renderTemplate items.
+        - Renames 'otherIdentifier' to 'issuerAlsoKnownAs' in vckit issuer if present.
+
+        Returns:
+            Dict[str, Any]: The updated dictionary.
         '''
-        # 2. Context in Services
+        # 2. Context in Services updates
         parameters = self.component.get('parameters', [])
         for param in parameters: #iterate through services
             digital_facility_record = param.get('digitalFacilityRecord')
@@ -131,15 +145,18 @@ class DFRTransformer(CredentialTransformer):
             render_template = digital_facility_record.get('renderTemplate',[])
             for item in render_template: #iterates through renderTemplate
                 item["template"] = hbs_template
-            if "@type" in item and "type" in item:
+
+            # Removes duplicated type fields in renderTemplate
+            if "@type" in item and "type" in item: # if both are present, delete "@type"
                 del item["@type"]
-            elif "@type" in item and "type" not in item:
+            elif "@type" in item and "type" not in item: # if only "@type" is present, change the field name to "type"
                 item["type"] = item.pop("@type")
             
+
             vckit = param.get('vckit')
             if vckit:
                 vckit_issuer = vckit.get('issuer', {})
-                if "otherIdentifier" in vckit_issuer:
+                if "otherIdentifier" in vckit_issuer: # Updates 'otherIdentifier' to 'issuerAlsoKnownAs' and retains the position
                     self._pop_and_replace_key(vckit_issuer, "otherIdentifier", "issuerAlsoKnownAs")
 
         return self.component
@@ -184,6 +201,20 @@ class DFRTransformer(CredentialTransformer):
         return value
     
     def _clean_identifier_list(self, identifier: Any, remove_fields: List[str] = None):
+        """
+        Removes specified fields from dictionaries within a list or from a single dictionary.
+
+        This function is used to clean up identifier objects by removing unwanted fields
+        (such as "type" and "idScheme") from each dictionary in a list, or directly from a dictionary.
+
+        Args:
+            identifier (Any): The identifier to clean, can be a list of dicts or a single dict.
+            remove_fields (List[str], optional): List of field names to remove. Defaults to ["type", "idScheme"].
+
+        Returns:
+            Any: The cleaned identifier (list or dict).
+
+        """
         if remove_fields is None:
             remove_fields = ["type", "idScheme"]
         if isinstance(identifier, list):
@@ -197,6 +228,22 @@ class DFRTransformer(CredentialTransformer):
         return identifier
     
     def _flatten_credential_subject(self, data: Dict[str, Any], field_flatten: str) -> Dict[str, Any]:
+        """
+        Flattens a nested dictionary field into the parent dictionary.
+
+        This function removes the specified field (`field_flatten`) from `data`,
+        and merges its key-value pairs into the top-level of `data`.
+        Useful for flattening structures like 'credentialSubject' so its contents
+        are directly accessible in the parent dictionary.
+
+        Args:
+            data (Dict[str, Any]): The dictionary to flatten.
+            field_flatten (str): The key of the nested dictionary to flatten.
+
+        Returns:
+            Dict[str, Any]: The updated, flattened dictionary.
+        """
+
         if field_flatten in data:
             cs = data.pop(field_flatten)
             data.update(cs)
