@@ -49,11 +49,11 @@ class DTETransformer(CredentialTransformer):
                 clean_data = self._pop_and_replace_key(data, "sourcePartyId", "sourceParty")
                 clean_data = self._pop_and_replace_key(clean_data, "destinationPartyId", "destinationParty")
             
-            self.component["props"]["data"] = clean_data
+                self.component["props"]["data"] = clean_data
 
         # Flatten credentialSubject and clean top-level data
         component_data = self.component["props"]["data"]
-        self._clean_identifier_list(component_data, ['type', '@context', 'issuer'])
+        self._clean_identifier_list(component_data, ['@context', 'issuer'])
         self._flatten_credential_subject(component_data, 'credentialSubject')
 
         return self.component
