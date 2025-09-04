@@ -54,7 +54,6 @@ class DTETransformer(CredentialTransformer):
         # Flatten credentialSubject and clean top-level data
         component_data = self.component["props"]["data"]
         self._clean_identifier_list(component_data, ['@context', 'issuer'])
-        self._flatten_credential_subject(component_data, 'credentialSubject')
 
         return self.component
     

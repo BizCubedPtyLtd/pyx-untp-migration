@@ -149,7 +149,7 @@ if __name__ == "__main__":
 
     input_folder_name = "01_Data/DTE_RBTP"
     file_name = "app-config.json"
-    output_file_name = "transformed-DTE-app-config-test1.json"
+    output_file_name = "transformed-DTE-app-config-test2.json"
     
     ###########################################################
 
