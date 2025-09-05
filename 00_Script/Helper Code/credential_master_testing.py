@@ -11,8 +11,14 @@ from typing import Dict, Any, List
 ############## PARAMETERS & VARIABLES #####################
 
 current_dir = Path(__file__).resolve().parent
-input_path = (current_dir.parent.parent / "01_Data/app-config/RBTP" / "transformed-app-config-v4.json")
-credential_request = 'DFR'
+credential_request = 'DTE'
+
+input_folder_name = "01_Data/app-config"
+brand_name = 'BCMine'
+input_file_name = "transformed-DTE-app-config-test-v2.json"
+output_file_name = f"transformed-app-config-{credential_request}-only-v2.json"
+
+input_path = (current_dir.parent.parent / input_folder_name / brand_name / credential_request / input_file_name)
 
 ###########################################################
 
@@ -45,8 +51,8 @@ for app in apps:
                 # Detect type from schema URL
                 if "DigitalFacilityRecord" in schema_url:
                     credential_type = "DFR"
-                # elif "DigitalTraceabilityEvent" in schema_url:
-                #     credential_type = "DTE"
+                elif "traceabilityEvents" in schema_url:
+                    credential_type = "DTE"
                 # elif "DigitalProductPassport" in schema_url:
                 #     credential_type = "DPP"
                 # elif "DigitalConformityCredential" in schema_url:
@@ -64,7 +70,7 @@ for app in apps:
             i += 1
 
 
-output_path = current_dir.parent.parent / "01_Data/app-config/RBTP" / "transformed-app-config-dfr-only-v4.json"
+output_path = current_dir.parent.parent / input_folder_name / brand_name / credential_request / output_file_name
 with open(output_path, "w") as f:
     json.dump(json_list, f, indent=2)
 

@@ -1,8 +1,9 @@
 import json
 from pathlib import Path
 from typing import Dict, Any, List
-from dfr import DFRTransformer, CredentialTransformer
+from dfr import DFRTransformer
 from dte import DTETransformer
+from general_function import CredentialTransformer
 
 
 # ---------- Base Class ----------
@@ -147,16 +148,18 @@ if __name__ == "__main__":
 
     current_dir = Path(__file__).resolve().parent
 
-    input_folder_name = "01_Data/DTE_RBTP"
+    input_folder_name = "01_Data/app-config"
+    brand_name = 'BCMine'
     file_name = "app-config.json"
-    output_file_name = "transformed-DTE-app-config-test2.json"
+    testing_folder = 'DTE'
+    output_file_name = "transformed-DTE-app-config-test-v2.json"
     
     ###########################################################
 
-    processor = AppConfigProcessor(current_dir.parent / input_folder_name / file_name)
+    processor = AppConfigProcessor(current_dir.parent / input_folder_name / brand_name / file_name)
     output = processor.process()
 
-    output_path = current_dir.parent / input_folder_name / output_file_name
+    output_path = current_dir.parent / input_folder_name / brand_name / testing_folder / output_file_name
     with open(output_path, "w") as f:
         json.dump(output, f, indent=2)
     

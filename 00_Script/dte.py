@@ -1,18 +1,7 @@
 import json
 from pathlib import Path
 from typing import Dict, Any, List
-
-# ---------- Base Class ----------
-class CredentialTransformer:
-    def __init__(self, component: Dict[str, Any]):
-        """
-        Initialize with the entire component dict, as transformations may affect props, data, services, etc.
-        """
-        self.component = component
-
-    def transform(self) -> Dict[str, Any]:
-        """Default transform, to be overridden by subclasses."""
-        raise NotImplementedError("Subclasses must implement this method.")
+from general_function import CredentialTransformer
 
 # ---------- DTE Transformer ----------
 class DTETransformer(CredentialTransformer):
@@ -41,6 +30,7 @@ class DTETransformer(CredentialTransformer):
             None
         )
         schema["url"] = schema_url_0_6_0[event_type]
+        print('event type:', event_type)
 
         # 3. Form Data Structure Updates (Transaction Event)
         if "type" in data:
@@ -54,6 +44,15 @@ class DTETransformer(CredentialTransformer):
         # Flatten credentialSubject and clean top-level data
         component_data = self.component["props"]["data"]
         self._clean_identifier_list(component_data, ['@context', 'issuer'])
+
+        # JSON-LD issue: if event_type = 'TransformationEvent', then remove destinationparty and sourceparty if they are present
+        if event_type == 'TransformationEvent':
+            print('inside json ld issue')
+            for key in list(data.keys()):
+                if key.lower() in ['destinationparty', 'destinationpartyid']:
+                    data.pop(key)
+                if key.lower() in ['sourceparty', 'sourcepartyid']:
+                    data.pop(key)
 
         return self.component
     

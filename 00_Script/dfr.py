@@ -1,18 +1,7 @@
 import json
 from pathlib import Path
 from typing import Dict, Any, List
-
-# ---------- Base Class ----------
-class CredentialTransformer:
-    def __init__(self, component: Dict[str, Any]):
-        """
-        Initialize with the entire component dict, as transformations may affect props, data, services, etc.
-        """
-        self.component = component
-
-    def transform(self) -> Dict[str, Any]:
-        """Default transform, to be overridden by subclasses."""
-        raise NotImplementedError("Subclasses must implement this method.")
+from general_function import CredentialTransformer
 
 # ---------- DFR Transformer ----------
 class DFRTransformer(CredentialTransformer):
