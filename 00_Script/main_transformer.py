@@ -149,10 +149,10 @@ if __name__ == "__main__":
     current_dir = Path(__file__).resolve().parent
 
     input_folder_name = "01_Data/app-config"
-    brand_name = 'BCMine'
+    brand_name = 'RegenFarmers'
     file_name = "app-config.json"
     testing_folder = 'DTE'
-    output_file_name = "transformed-DTE-app-config-test-v2.json"
+    output_file_name = "transformed-DTE-app-config-test-v3.json"
     
     ###########################################################
 

@@ -26,7 +26,7 @@ class CredentialTransformer:
 
         {
             "otherIdentifier": [...],
-            "address": {...},
+            "address": {...},s
             "locationInformation": {...}
         }
         After:
