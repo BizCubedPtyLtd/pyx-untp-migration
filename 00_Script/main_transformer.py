@@ -1,8 +1,9 @@
 import json
 from pathlib import Path
 from typing import Dict, Any, List
-from dfr import DFRTransformer, CredentialTransformer
-
+from dfr import DFRTransformer
+from dte import DTETransformer
+from general_function import CredentialTransformer
 
 
 # ---------- Base Class ----------
@@ -75,8 +76,10 @@ class AppConfigProcessor:
                         # Detect type from schema URL
                         if "DigitalFacilityRecord" in schema_url:
                             credential_type = "DFR"
-                        # elif "DigitalTraceabilityEvent" in schema_url:
-                        #     credential_type = "DTE"
+                            print("DFR FOUND")
+                        elif "traceabilityEvents" in schema_url:
+                            credential_type = "DTE"
+                            print("DTE FOUND")
                         # elif "DigitalProductPassport" in schema_url:
                         #     credential_type = "DPP"
                         # elif "DigitalConformityCredential" in schema_url:
@@ -120,11 +123,11 @@ class TransformerFactory:
         This function takes credential_type and retrieves the appropriate transformer for a given credential type.
         '''
         transformers = {
-            "DFR": DFRTransformer
+            "DFR": DFRTransformer,
+            "DTE": DTETransformer
             # "DPP": DPPTransformer,
             # "DCC": DCCTransformer,
             # "DIA": DIATransformer,
-            # "DTE": DTETransformer
         }
         # If the credential type is in the dictionary keys, extracts the value to get transformer name
         # For example: if "DFR" is in the dictionary keys, then get the transformer name
@@ -145,16 +148,18 @@ if __name__ == "__main__":
 
     current_dir = Path(__file__).resolve().parent
 
-    input_folder_name = "01_Data/app-config/RBTP"
+    input_folder_name = "01_Data/app-config"
+    brand_name = 'RegenFarmers'
     file_name = "app-config.json"
-    output_file_name = "transformed-app-config-v5.json"
+    testing_folder = 'DTE'
+    output_file_name = "transformed-DTE-app-config-test-v3.json"
     
     ###########################################################
 
-    processor = AppConfigProcessor(current_dir.parent / input_folder_name / file_name)
+    processor = AppConfigProcessor(current_dir.parent / input_folder_name / brand_name / file_name)
     output = processor.process()
 
-    output_path = current_dir.parent / input_folder_name / output_file_name
+    output_path = current_dir.parent / input_folder_name / brand_name / testing_folder / output_file_name
     with open(output_path, "w") as f:
         json.dump(output, f, indent=2)
     
