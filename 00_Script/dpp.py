@@ -51,10 +51,85 @@ class DPPTransformer(CredentialTransformer):
         if "otherIdentifier" in issuer:
             self._pop_and_replace_key(issuer, "otherIdentifier", "issuerAlsoKnownAs")
         
-        # 4. 
+        # 4. Party Structure Changes:
+        product = new_credential_subject.get('product', {})
+
+        
+        # Removed idScheme from the product object itself, as it’s no longer required in the inline structure.
+        if "idScheme" in product:
+            del product["idScheme"]
+
+        '''removed the nested idScheme structure from producedByParty and producedAtFacility.
+        removed 'type' from producedByParty and producedAtFacility.
+        '''
+        producedByParty = product.get('producedByParty', {})
+        if "type" in producedByParty:
+            del producedByParty["type"]
+            print('deleted')
+        if "idScheme" in producedByParty:
+            del producedByParty["idScheme"]
+        # new_credential_subject["producedByParty"] = producedByParty
+
+        producedAtFacility = product.get('producedAtFacility', {})
+        if "type" in producedAtFacility:
+            del producedAtFacility["type"]
+        if "idScheme" in producedAtFacility:
+            del producedAtFacility["idScheme"]
+        
+        # Added characteristics property as an extension point for industry-specific attributes.
+        new_credential_subject["product"]["characteristics"] = {
+            "type": ["Characteristics"],
+            "capacity": "0 Ah"
+        }
+
+        '''
+        5. Material Structure Changes
+        Key Changes:
+
+        Renamed massAmount to mass and recycledAmount to recycledMassFraction.
+        Simplified issuingParty in the Standard and administeredBy in Regulation by removing the nested idScheme structure.
+
+        '''
+        materialsProvenance = new_credential_subject.get('materialsProvenance', {})
+        if "type" in materialsProvenance:
+            del materialsProvenance["type"]
+        if "massAmount" in materialsProvenance:
+            materialsProvenance["mass"] = materialsProvenance.pop("massAmount")
+            if "type" in materialsProvenance['mass']:
+                del materialsProvenance['mass']['type']
+        if "recycledAmount" in materialsProvenance:
+            materialsProvenance["recycledMassFraction"] = materialsProvenance.pop("recycledAmount")
+
+        # credentialSubject - conformityClaim - issuingParty structure change (Standard schema)
+        # changes issuingParty to issuerAlsoKnownAs
+        # Removes Type and idScheme
+        conformityClaim = new_credential_subject.get('conformityClaim', {})
+        if "issuingParty" in conformityClaim:
+            conformityClaim["issuerAlsoKnownAs"] = conformityClaim.pop("issuingParty")
+            if "type" in conformityClaim["issuerAlsoKnownAs"]:
+                del conformityClaim["issuerAlsoKnownAs"]["type"]
+            if "idScheme" in conformityClaim["issuerAlsoKnownAs"]:
+                del conformityClaim["issuerAlsoKnownAs"]["idScheme"]
+
+        # credentialSubject - conformityClaim - administeredBy structure change (Regulation schema)
+        # Removes Type and idScheme from referenceStandard.issuingParty and referenceRegulation.administeredBy
+        if "referenceStandard" in conformityClaim:
+            reference_standard = conformityClaim["referenceStandard"]
+            if isinstance(reference_standard, dict) and "issuingParty" in reference_standard:
+            self._clean_identifier_list(reference_standard["issuingParty"])
+        if "referenceRegulation" in conformityClaim:
+            reference_regulation = conformityClaim["referenceRegulation"]
+            if isinstance(reference_regulation, dict) and "administeredBy" in reference_regulation:
+            self._clean_identifier_list(reference_regulation["administeredBy"])
+            if "administeredBy" in conformityClaim:
+            administeredBy = conformityClaim.get("administeredBy", {})
+            if "type" in administeredBy:
+                del administeredBy["type"]
+            if "idScheme" in administeredBy:
+                del administeredBy["idScheme"]
+            conformityClaim["administeredBy"] = administeredBy
 
         return self.component
-    
     
     def transform_services(self) -> Dict[str, Any]:
         '''

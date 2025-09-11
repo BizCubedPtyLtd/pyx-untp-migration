@@ -599,7 +599,13 @@
                     ],
                     "id": "example:product/1234",
                     "product": {
-                      "granularityLevel": "item"
+                      "granularityLevel": "item",
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
+                      }
                     },
                     "conformityClaim": []
                   }
@@ -4959,13 +4965,6 @@
                             "id": "http://localhost:3000/gs1/01/09359502000119/21/DPP_01",
                             "name": "Copper Concentrate",
                             "registeredId": "09359502000119.21.DPP_01",
-                            "idScheme": {
-                              "type": [
-                                "IdentifierScheme"
-                              ],
-                              "id": "https://id.gs1.org/01/",
-                              "name": "Global Trade Identification Number (GTIN)"
-                            },
                             "batchNumber": "20241111",
                             "description": "Concentrated Copper Solution following separation from Copper Ore.",
                             "productCategory": [
@@ -4981,34 +4980,14 @@
                               }
                             ],
                             "producedByParty": {
-                              "type": [
-                                "Identifier"
-                              ],
                               "id": "http://localhost:3000/gs1/414/9359502000119",
                               "name": "TEST Copper Mine",
-                              "registeredId": "9359502000119",
-                              "idScheme": {
-                                "type": [
-                                  "IdentifierScheme"
-                                ],
-                                "id": "https://www.bcregistry.gov.bc.ca/",
-                                "name": "Business Number"
-                              }
+                              "registeredId": "9359502000119"
                             },
                             "producedAtFacility": {
-                              "type": [
-                                "Identifier"
-                              ],
                               "id": "http://localhost:3000/gs1/414/9359502000119?linkType=gs1:locationInfo",
                               "name": "TEST Copper Mine",
-                              "registeredId": "9359502000119",
-                              "idScheme": {
-                                "type": [
-                                  "IdentifierScheme"
-                                ],
-                                "id": "https://id.gs1.org/414/",
-                                "name": "Global Location Number (GLN)"
-                              }
+                              "registeredId": "9359502000119"
                             },
                             "productionDate": "2024-11-11",
                             "productImage": {
@@ -5076,6 +5055,12 @@
                               "recycledContent": 0.0,
                               "utilityFactor": 1,
                               "materialCircularityIndicator": 0
+                            },
+                            "characteristics": {
+                              "type": [
+                                "Characteristics"
+                              ],
+                              "capacity": "0 Ah"
                             }
                           },
                           "conformityClaim": [
@@ -8620,13 +8605,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502000140/21/DPP_01",
                       "name": "Lithium Concentrate",
                       "registeredId": "09359502000140.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "batchNumber": "20241111",
                       "description": "Concentrated Lithium Solution following separation from Lithium Ore.",
                       "productCategory": [
@@ -8642,34 +8620,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000140",
                         "name": "TEST Lithium Mine",
-                        "registeredId": "9359502000140",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.bcregistry.gov.bc.ca/",
-                          "name": "Business Number"
-                        }
+                        "registeredId": "9359502000140"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000140?linkType=gs1:locationInfo",
                         "name": "TEST Lithium Mine",
-                        "registeredId": "9359502000140",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/414/",
-                          "name": "Global Location Number (GLN)"
-                        }
+                        "registeredId": "9359502000140"
                       },
                       "productionDate": "2024-11-11",
                       "productImage": {
@@ -8728,6 +8686,12 @@
                         "recycledContent": 0.0,
                         "utilityFactor": 1,
                         "materialCircularityIndicator": 0
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
@@ -9063,13 +9027,6 @@
                             "id": "http://localhost:3000/gs1/01/09359502000126/21/DPP_01",
                             "name": "Copper Cathode",
                             "registeredId": "09359502000126.21.DPP_01",
-                            "idScheme": {
-                              "type": [
-                                "IdentifierScheme"
-                              ],
-                              "id": "https://id.gs1.org/01/",
-                              "name": "Global Trade Identification Number (GTIN)"
-                            },
                             "batchNumber": "20241111",
                             "description": "Sheets of High Purity Copper called cathodes to be used in products for everyday use.",
                             "productCategory": [
@@ -9085,34 +9042,14 @@
                               }
                             ],
                             "producedByParty": {
-                              "type": [
-                                "Identifier"
-                              ],
                               "id": "http://example.com/119632691",
                               "name": "TEST Smelter Parent",
-                              "registeredId": "119632691",
-                              "idScheme": {
-                                "type": [
-                                  "IdentifierScheme"
-                                ],
-                                "id": "https://www.bcregistry.gov.bc.ca/",
-                                "name": "Business Number"
-                              }
+                              "registeredId": "119632691"
                             },
                             "producedAtFacility": {
-                              "type": [
-                                "Identifier"
-                              ],
                               "id": "http://localhost:3000/gs1/414/9359502000126?linkType=gs1:locationInfo",
                               "name": "TEST Copper Smelter",
-                              "registeredId": "9359502000126",
-                              "idScheme": {
-                                "type": [
-                                  "IdentifierScheme"
-                                ],
-                                "id": "https://id.gs1.org/414/",
-                                "name": "Global Location Number (GLN)"
-                              }
+                              "registeredId": "9359502000126"
                             },
                             "productionDate": "2024-11-11",
                             "productImage": {
@@ -9192,7 +9129,13 @@
                                 },
                                 "recycledAmount": 0.5
                               }
-                            ]
+                            ],
+                            "characteristics": {
+                              "type": [
+                                "Characteristics"
+                              ],
+                              "capacity": "0 Ah"
+                            }
                           },
                           "conformityClaim": [
                             {
@@ -10906,13 +10849,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502000164/21/DPP_01",
                       "name": "Refined Lithium",
                       "registeredId": "09359502000164.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "batchNumber": "20241111",
                       "description": "Crude or refined lithium products or a lithium product for direct use in a downstream manufacturing process",
                       "productCategory": [
@@ -10928,34 +10864,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://example.com/119632691",
                         "name": "TEST Refinery Parent",
-                        "registeredId": "119632691",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.bcregistry.gov.bc.ca/",
-                          "name": "Business Number"
-                        }
+                        "registeredId": "119632691"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000164?linkType=gs1:locationInfo",
                         "name": "TEST Lithium Refinery",
-                        "registeredId": "9359502000164",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/414/",
-                          "name": "Global Location Number (GLN)"
-                        }
+                        "registeredId": "9359502000164"
                       },
                       "productionDate": "2024-11-11",
                       "productImage": {
@@ -11035,7 +10951,13 @@
                           },
                           "recycledAmount": 0.5
                         }
-                      ]
+                      ],
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
+                      }
                     },
                     "conformityClaim": [
                       {
@@ -12665,13 +12587,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502000133/21/DPP_01",
                       "name": "Laptop Battery 3.7V 5000mAh",
                       "registeredId": "09359502000133",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "LPB12345678",
                       "batchNumber": "202504-LB01",
                       "productImage": {
@@ -12700,34 +12615,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://example.com/9359502000200",
                         "name": "Example Laptop Battery Co.",
-                        "registeredId": "9359502000200",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "9359502000200"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://example.com/facility/9359502000200",
                         "name": "Example Laptop Battery Facility",
-                        "registeredId": "9359502000200",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "9359502000200"
                       },
                       "dimensions": {
                         "weight": {
@@ -12846,6 +12741,12 @@
                             "encryptionMethod": "AES"
                           }
                         ]
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
@@ -13595,13 +13496,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502000195/21/LaptopScreen_DPP01",
                       "name": "Sample Generic Laptop Screen",
                       "registeredId": "09359502000195",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "LPSCR12345678",
                       "batchNumber": "202504-LS01",
                       "productImage": {
@@ -13630,34 +13524,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502000195?linkType=gs1:locationInfo",
                         "name": "Example Laptop Screen Manufacturing Co.",
-                        "registeredId": "09359502000195",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502000195"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502000195?linkType=gs1:locationInfo",
                         "name": "Example Laptop Screen Facility",
-                        "registeredId": "09359502000195",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502000195"
                       },
                       "dimensions": {
                         "weight": {
@@ -13771,6 +13645,12 @@
                             "encryptionMethod": "AES"
                           }
                         ]
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
@@ -14025,13 +13905,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502000201/21/Keyboard_DPP01",
                       "name": "Laptop Keyboard - QWERTY Layout",
                       "registeredId": "09359502000201",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "KEYB98765432",
                       "batchNumber": "202504-KB01",
                       "productImage": {
@@ -14060,34 +13933,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502000201?linkType=gs1:locationInfo",
                         "name": "Example Keyboard Manufacturing Co.",
-                        "registeredId": "09359502000201",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502000201"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502000201?linkType=gs1:locationInfo",
                         "name": "Example Keyboard Assembly Facility",
-                        "registeredId": "09359502000201",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502000201"
                       },
                       "dimensions": {
                         "weight": {
@@ -14216,6 +14069,12 @@
                             "encryptionMethod": "AES"
                           }
                         ]
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
@@ -14470,13 +14329,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502000218/21/LaptopCasing_DPP01",
                       "name": "Laptop Casing - Polycarbonate Shell",
                       "registeredId": "09359502000218",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "CAS98765432",
                       "batchNumber": "202504-CS01",
                       "productImage": {
@@ -14505,34 +14357,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502000218?linkType=gs1:locationInfo",
                         "name": "Example Casing Manufacturing Co.",
-                        "registeredId": "09359502000218",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502000218"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502000218?linkType=gs1:locationInfo",
                         "name": "Example Casing Production Facility",
-                        "registeredId": "09359502000218",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502000218"
                       },
                       "dimensions": {
                         "weight": {
@@ -14661,6 +14493,12 @@
                             "encryptionMethod": "AES"
                           }
                         ]
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
@@ -15074,13 +14912,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502000171/21/EGP_01",
                       "name": "Sample Generic Laptop (14-inch)",
                       "registeredId": "09359502000171.21.EGP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "SGL-20240425-001",
                       "batchNumber": "SGLB-0424",
                       "productImage": {
@@ -15109,34 +14940,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000171?linkType=gs1:locationInfo",
                         "name": "Example Manufacturing Co.",
-                        "registeredId": "9359502000171",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "9359502000171"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000171?linkType=gs1:locationInfo",
                         "name": "Example Electronics Assembly Facility",
-                        "registeredId": "9359502000171",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "9359502000171"
                       },
                       "dimensions": {
                         "weight": {
@@ -15255,6 +15066,12 @@
                             "encryptionMethod": "AES"
                           }
                         ]
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
@@ -15917,13 +15734,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502000188/21/DPP_01",
                       "name": "Recycled Electronic Goods",
                       "registeredId": "09359502000188.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "12345678",
                       "batchNumber": "6789",
                       "productImage": {
@@ -15952,34 +15762,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000188?linkType=gs1:locationInfo",
                         "name": "Recycler Facility",
-                        "registeredId": "9359502000188",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "9359502000188"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000188?linkType=gs1:locationInfo",
                         "name": "Recycler Facility",
-                        "registeredId": "9359502000188",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "9359502000188"
                       },
                       "dimensions": {
                         "weight": {
@@ -16093,6 +15883,12 @@
                             "encryptionMethod": "AES"
                           }
                         ]
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
@@ -16629,13 +16425,6 @@
                             "id": "http://localhost:3000/gs1/01/09359502000119/21/DPP_01",
                             "name": "Copper Concentrate",
                             "registeredId": "09359502000119.21.DPP_01",
-                            "idScheme": {
-                              "type": [
-                                "IdentifierScheme"
-                              ],
-                              "id": "https://id.gs1.org/01/",
-                              "name": "Global Trade Identification Number (GTIN)"
-                            },
                             "batchNumber": "20241111",
                             "description": "Concentrated Copper Solution following separation from Copper Ore.",
                             "productCategory": [
@@ -16651,34 +16440,14 @@
                               }
                             ],
                             "producedByParty": {
-                              "type": [
-                                "Identifier"
-                              ],
                               "id": "http://localhost:3000/gs1/414/9359502000119",
                               "name": "TEST Copper Mine",
-                              "registeredId": "9359502000119",
-                              "idScheme": {
-                                "type": [
-                                  "IdentifierScheme"
-                                ],
-                                "id": "https://www.bcregistry.gov.bc.ca/",
-                                "name": "Business Number"
-                              }
+                              "registeredId": "9359502000119"
                             },
                             "producedAtFacility": {
-                              "type": [
-                                "Identifier"
-                              ],
                               "id": "http://localhost:3000/gs1/414/9359502000119?linkType=gs1:locationInfo",
                               "name": "TEST Copper Mine",
-                              "registeredId": "9359502000119",
-                              "idScheme": {
-                                "type": [
-                                  "IdentifierScheme"
-                                ],
-                                "id": "https://id.gs1.org/414/",
-                                "name": "Global Location Number (GLN)"
-                              }
+                              "registeredId": "9359502000119"
                             },
                             "productionDate": "2024-11-11",
                             "productImage": {
@@ -16746,6 +16515,12 @@
                               "recycledContent": 0.0,
                               "utilityFactor": 1,
                               "materialCircularityIndicator": 0
+                            },
+                            "characteristics": {
+                              "type": [
+                                "Characteristics"
+                              ],
+                              "capacity": "0 Ah"
                             }
                           },
                           "conformityClaim": [
@@ -20152,13 +19927,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502111140/21/DPP_01",
                       "name": "Lithium Concentrate",
                       "registeredId": "09359502111140.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "batchNumber": "20241111",
                       "description": "Concentrated Lithium Solution following separation from Lithium Ore.",
                       "productCategory": [
@@ -20174,34 +19942,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000140",
                         "name": "TEST Lithium Mine",
-                        "registeredId": "9359502000140",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.bcregistry.gov.bc.ca/",
-                          "name": "Business Number"
-                        }
+                        "registeredId": "9359502000140"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000140?linkType=gs1:locationInfo",
                         "name": "TEST Lithium Mine",
-                        "registeredId": "9359502000140",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/414/",
-                          "name": "Global Location Number (GLN)"
-                        }
+                        "registeredId": "9359502000140"
                       },
                       "productionDate": "2024-11-11",
                       "productImage": {
@@ -20269,6 +20017,12 @@
                         "recycledContent": 0.0,
                         "utilityFactor": 1,
                         "materialCircularityIndicator": 0
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
@@ -20742,13 +20496,6 @@
                             "id": "http://localhost:3000/gs1/01/09359502000126/21/DPP_01",
                             "name": "Copper Cathode",
                             "registeredId": "09359502000126.21.DPP_01",
-                            "idScheme": {
-                              "type": [
-                                "IdentifierScheme"
-                              ],
-                              "id": "https://id.gs1.org/01/",
-                              "name": "Global Trade Identification Number (GTIN)"
-                            },
                             "batchNumber": "20241111",
                             "description": "Sheets of High Purity Copper called cathodes to be used in products for everyday use.",
                             "productCategory": [
@@ -20764,34 +20511,14 @@
                               }
                             ],
                             "producedByParty": {
-                              "type": [
-                                "Identifier"
-                              ],
                               "id": "http://example.com/119632691",
                               "name": "TEST Smelter Parent",
-                              "registeredId": "119632691",
-                              "idScheme": {
-                                "type": [
-                                  "IdentifierScheme"
-                                ],
-                                "id": "https://www.bcregistry.gov.bc.ca/",
-                                "name": "Business Number"
-                              }
+                              "registeredId": "119632691"
                             },
                             "producedAtFacility": {
-                              "type": [
-                                "Identifier"
-                              ],
                               "id": "http://localhost:3000/gs1/414/9359502000126?linkType=gs1:locationInfo",
                               "name": "TEST Copper Smelter",
-                              "registeredId": "9359502000126",
-                              "idScheme": {
-                                "type": [
-                                  "IdentifierScheme"
-                                ],
-                                "id": "https://id.gs1.org/414/",
-                                "name": "Global Location Number (GLN)"
-                              }
+                              "registeredId": "9359502000126"
                             },
                             "productionDate": "2024-11-11",
                             "productImage": {
@@ -20871,7 +20598,13 @@
                                 },
                                 "recycledAmount": 0.5
                               }
-                            ]
+                            ],
+                            "characteristics": {
+                              "type": [
+                                "Characteristics"
+                              ],
+                              "capacity": "0 Ah"
+                            }
                           },
                           "conformityClaim": [
                             {
@@ -21964,13 +21697,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502111164/21/DPP_01",
                       "name": "Refined Lithium",
                       "registeredId": "09359502111164.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "batchNumber": "20241111",
                       "description": "Crude or refined lithium products or a lithium product for direct use in a downstream manufacturing process",
                       "productCategory": [
@@ -21986,34 +21712,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://example.com/119632691",
                         "name": "TEST Refinery Parent",
-                        "registeredId": "119632691",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.bcregistry.gov.bc.ca/",
-                          "name": "Business Number"
-                        }
+                        "registeredId": "119632691"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000164?linkType=gs1:locationInfo",
                         "name": "TEST Lithium Refinery",
-                        "registeredId": "9359502000164",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/414/",
-                          "name": "Global Location Number (GLN)"
-                        }
+                        "registeredId": "9359502000164"
                       },
                       "productionDate": "2024-11-11",
                       "productImage": {
@@ -22093,7 +21799,13 @@
                           },
                           "recycledAmount": 0.5
                         }
-                      ]
+                      ],
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
+                      }
                     },
                     "conformityClaim": [
                       {
@@ -23256,13 +22968,6 @@
                             "id": "http://localhost:3000/gs1/01/09359502111133/21/DPP_01",
                             "name": "Laptop Battery 3.7V 5000mAh",
                             "registeredId": "09359502111133",
-                            "idScheme": {
-                              "type": [
-                                "IdentifierScheme"
-                              ],
-                              "id": "https://id.gs1.org/01/",
-                              "name": "Global Trade Identification Number (GTIN)"
-                            },
                             "serialNumber": "LPB12345678",
                             "batchNumber": "202504-LB01",
                             "productImage": {
@@ -23291,34 +22996,14 @@
                               }
                             ],
                             "producedByParty": {
-                              "type": [
-                                "Identifier"
-                              ],
                               "id": "http://example.com/9359502000200",
                               "name": "Example Laptop Battery Co.",
-                              "registeredId": "9359502000200",
-                              "idScheme": {
-                                "type": [
-                                  "IdentifierScheme"
-                                ],
-                                "id": "https://id.gs1.org/01/",
-                                "name": "Global Trade Identification Number (GTIN)"
-                              }
+                              "registeredId": "9359502000200"
                             },
                             "producedAtFacility": {
-                              "type": [
-                                "Identifier"
-                              ],
                               "id": "http://example.com/facility/9359502000200",
                               "name": "Example Laptop Battery Facility",
-                              "registeredId": "9359502000200",
-                              "idScheme": {
-                                "type": [
-                                  "IdentifierScheme"
-                                ],
-                                "id": "https://id.gs1.org/01/",
-                                "name": "Global Trade Identification Number (GTIN)"
-                              }
+                              "registeredId": "9359502000200"
                             },
                             "dimensions": {
                               "weight": {
@@ -23437,6 +23122,12 @@
                                   "encryptionMethod": "AES"
                                 }
                               ]
+                            },
+                            "characteristics": {
+                              "type": [
+                                "Characteristics"
+                              ],
+                              "capacity": "0 Ah"
                             }
                           },
                           "conformityClaim": [
@@ -24359,13 +24050,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502111195/21/LaptopScreen_DPP01",
                       "name": "Sample Generic Laptop Screen",
                       "registeredId": "09359502111195",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "LPSCR12345678",
                       "batchNumber": "202504-LS01",
                       "productImage": {
@@ -24394,34 +24078,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502111195?linkType=gs1:locationInfo",
                         "name": "Example Laptop Screen Manufacturing Co.",
-                        "registeredId": "09359502111195",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502111195"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502111195?linkType=gs1:locationInfo",
                         "name": "Example Laptop Screen Facility",
-                        "registeredId": "09359502111195",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502111195"
                       },
                       "dimensions": {
                         "weight": {
@@ -24535,6 +24199,12 @@
                             "encryptionMethod": "AES"
                           }
                         ]
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
@@ -24927,13 +24597,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502111201/21/Keyboard_DPP01",
                       "name": "Laptop Keyboard - QWERTY Layout",
                       "registeredId": "09359502111201",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "KEYB98765432",
                       "batchNumber": "202504-KB01",
                       "productImage": {
@@ -24962,34 +24625,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502111201?linkType=gs1:locationInfo",
                         "name": "Example Keyboard Manufacturing Co.",
-                        "registeredId": "09359502111201",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502111201"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502111201?linkType=gs1:locationInfo",
                         "name": "Example Keyboard Assembly Facility",
-                        "registeredId": "09359502111201",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502111201"
                       },
                       "dimensions": {
                         "weight": {
@@ -25118,6 +24761,12 @@
                             "encryptionMethod": "AES"
                           }
                         ]
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
@@ -25510,13 +25159,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502111218/21/LaptopCasing_DPP01",
                       "name": "Laptop Casing - Polycarbonate Shell",
                       "registeredId": "09359502111218",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "CAS98765432",
                       "batchNumber": "202504-CS01",
                       "productImage": {
@@ -25545,34 +25187,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502111218?linkType=gs1:locationInfo",
                         "name": "Example Casing Manufacturing Co.",
-                        "registeredId": "09359502111218",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502111218"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502111218?linkType=gs1:locationInfo",
                         "name": "Example Casing Production Facility",
-                        "registeredId": "09359502111218",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502111218"
                       },
                       "dimensions": {
                         "weight": {
@@ -25701,6 +25323,12 @@
                             "encryptionMethod": "AES"
                           }
                         ]
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
@@ -26252,13 +25880,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502111171/21/EGP_01",
                       "name": "Sample Generic Laptop (14-inch)",
                       "registeredId": "09359502111171.21.EGP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "SGL-20240425-001",
                       "batchNumber": "SGLB-0424",
                       "productImage": {
@@ -26287,34 +25908,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000171?linkType=gs1:locationInfo",
                         "name": "Example Manufacturing Co.",
-                        "registeredId": "9359502000171",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "9359502000171"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000171?linkType=gs1:locationInfo",
                         "name": "Example Electronics Assembly Facility",
-                        "registeredId": "9359502000171",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "9359502000171"
                       },
                       "dimensions": {
                         "weight": {
@@ -26433,6 +26034,12 @@
                             "encryptionMethod": "AES"
                           }
                         ]
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
@@ -27233,13 +26840,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502111188/21/DPP_01",
                       "name": "Recycled Electronic Goods",
                       "registeredId": "09359502111188.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "12345678",
                       "batchNumber": "6789",
                       "productImage": {
@@ -27268,34 +26868,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000188?linkType=gs1:locationInfo",
                         "name": "Recycler Facility",
-                        "registeredId": "9359502000188",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "9359502000188"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000188?linkType=gs1:locationInfo",
                         "name": "Recycler Facility",
-                        "registeredId": "9359502000188",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "9359502000188"
                       },
                       "dimensions": {
                         "weight": {
@@ -27409,6 +26989,12 @@
                             "encryptionMethod": "AES"
                           }
                         ]
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
@@ -28201,13 +27787,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502222016/21/DPP_01",
                       "name": "Copper Concentrate",
                       "registeredId": "09359502222016.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "batchNumber": "20241111",
                       "description": "Concentrated Copper Solution following separation from Copper Ore.",
                       "productCategory": [
@@ -28223,34 +27802,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502222016",
                         "name": "Kasala Mining Limited",
-                        "registeredId": "09359502222016",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.some_scheme_link.com/",
-                          "name": "Business Number"
-                        }
+                        "registeredId": "09359502222016"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502222016?linkType=gs1:locationInfo",
                         "name": "Kasala Mining Limited",
-                        "registeredId": "09359502222016",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/414/",
-                          "name": "Global Location Number (GLN)"
-                        }
+                        "registeredId": "09359502222016"
                       },
                       "productionDate": "2024-11-11",
                       "productImage": {
@@ -28283,7 +27842,13 @@
                           }
                         ]
                       },
-                      "circularityScorecard": {}
+                      "circularityScorecard": {},
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
+                      }
                     },
                     "conformityClaim": []
                   }
@@ -29482,13 +29047,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502222023/21/DPP_01",
                       "name": "Cobalt Concentrate (Mined in Morocco)",
                       "registeredId": "09359502222023.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "batchNumber": "20252222",
                       "description": "Cobalt Concentrate",
                       "productCategory": [
@@ -29504,34 +29062,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502222023",
                         "name": "Cobalt Mine in Morocco",
-                        "registeredId": "09359502222023",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.update_registry_website.com/",
-                          "name": "Some Business Number"
-                        }
+                        "registeredId": "09359502222023"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502222023?linkType=gs1:locationInfo",
                         "name": "Atlas Cobalt SARL",
-                        "registeredId": "09359502222023",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/414/",
-                          "name": "Global Location Number (GLN)"
-                        }
+                        "registeredId": "09359502222023"
                       },
                       "productionDate": "2025-11-11",
                       "productImage": {
@@ -29556,7 +29094,13 @@
                           }
                         ]
                       },
-                      "circularityScorecard": {}
+                      "circularityScorecard": {},
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
+                      }
                     },
                     "conformityClaim": []
                   }
@@ -30755,13 +30299,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502222085/21/DPP_01",
                       "name": "Cobalt Concentrate (Mined in Botswana)",
                       "registeredId": "09359502222085.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "batchNumber": "20252222",
                       "description": "Cobalt Concentrate",
                       "productCategory": [
@@ -30777,34 +30314,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502222085",
                         "name": "Cobalt Mine in Botswana",
-                        "registeredId": "09359502222085",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.update_registry_website.com/",
-                          "name": "Some Business Number"
-                        }
+                        "registeredId": "09359502222085"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502222085?linkType=gs1:locationInfo",
                         "name": "Okavango Cobalt Ltd.",
-                        "registeredId": "09359502222085",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/414/",
-                          "name": "Global Location Number (GLN)"
-                        }
+                        "registeredId": "09359502222085"
                       },
                       "productionDate": "2025-11-11",
                       "productImage": {
@@ -30829,7 +30346,13 @@
                           }
                         ]
                       },
-                      "circularityScorecard": {}
+                      "circularityScorecard": {},
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
+                      }
                     },
                     "conformityClaim": []
                   }
@@ -32028,13 +31551,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502222030/21/DPP_01",
                       "name": "Crude Copper",
                       "registeredId": "09359502222030.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "batchNumber": "20241111",
                       "description": "Crude Copper",
                       "productCategory": [
@@ -32050,34 +31566,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502222030",
                         "name": "Northshore Smelting Corp.",
-                        "registeredId": "09359502222030",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.bcregistry.gov.bc.ca/",
-                          "name": "Business Number"
-                        }
+                        "registeredId": "09359502222030"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502222030?linkType=gs1:locationInfo",
                         "name": "Northshore Smelting Corp.",
-                        "registeredId": "09359502222030",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/414/",
-                          "name": "Global Location Number (GLN)"
-                        }
+                        "registeredId": "09359502222030"
                       },
                       "productionDate": "2024-11-11",
                       "productImage": {
@@ -32117,6 +31613,12 @@
                         "recycledContent": 0.0,
                         "utilityFactor": 1,
                         "materialCircularityIndicator": 0
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": []
@@ -33630,13 +33132,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502222047/21/DPP_01",
                       "name": "Crude Cobalt",
                       "registeredId": "09359502222047.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "batchNumber": "20252222",
                       "description": "Cobalt Smelting",
                       "productCategory": [
@@ -33652,34 +33147,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502222047",
                         "name": "Cobalt Smelter in Norway",
-                        "registeredId": "09359502222047",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.update_registry_website.com/",
-                          "name": "Some Business Number"
-                        }
+                        "registeredId": "09359502222047"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502222047?linkType=gs1:locationInfo",
                         "name": "FjordMetall AS",
-                        "registeredId": "09359502222047",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/414/",
-                          "name": "Global Location Number (GLN)"
-                        }
+                        "registeredId": "09359502222047"
                       },
                       "productionDate": "2025-11-11",
                       "productImage": {
@@ -33704,7 +33179,13 @@
                           }
                         ]
                       },
-                      "circularityScorecard": {}
+                      "circularityScorecard": {},
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
+                      }
                     },
                     "conformityClaim": []
                   }
@@ -35224,13 +34705,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502222054/21/DPP_01",
                       "name": "Cobalt Powder",
                       "registeredId": "09359502222054.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "batchNumber": "2025123123",
                       "description": "Batch of Cobalt Powder",
                       "productCategory": [
@@ -35246,34 +34720,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502222054",
                         "name": "Refinery in China",
-                        "registeredId": "09359502222054",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.update_registry_website.com/",
-                          "name": "Some Business Number"
-                        }
+                        "registeredId": "09359502222054"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502222054?linkType=gs1:locationInfo",
                         "name": "Zhongke Refining Ltd.",
-                        "registeredId": "09359502222054",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/414/",
-                          "name": "Global Location Number (GLN)"
-                        }
+                        "registeredId": "09359502222054"
                       },
                       "productionDate": "2025-11-11",
                       "productImage": {
@@ -35298,7 +34752,13 @@
                           }
                         ]
                       },
-                      "circularityScorecard": {}
+                      "circularityScorecard": {},
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
+                      }
                     },
                     "conformityClaim": []
                   }
@@ -36913,13 +36373,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502222061/21/DPP_01",
                       "name": "Refined Cobalt Metal",
                       "registeredId": "09359502222061.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "12345678",
                       "batchNumber": "6789",
                       "productImage": {
@@ -36948,34 +36401,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502222061?linkType=gs1:locationInfo",
                         "name": "Recycling Facility in Canada",
-                        "registeredId": "09359502222061",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502222061"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502222061?linkType=gs1:locationInfo",
                         "name": "UrbanCore Recycling Inc.",
-                        "registeredId": "09359502222061",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502222061"
                       },
                       "dimensions": {
                         "weight": {
@@ -37089,6 +36522,12 @@
                             "encryptionMethod": "AES"
                           }
                         ]
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": []
@@ -38731,13 +38170,6 @@
                       ],
                       "id": "http://localhost:3000/gs1/01/09359502233016/21/DPP_01",
                       "registeredId": "09359502233016.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "batchNumber": "20241111",
                       "description": "Concentrated Copper Solution following separation from Copper Ore.",
                       "productCategory": [
@@ -38753,32 +38185,12 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502233016",
                         "name": "Kasala Mining Limited",
-                        "registeredId": "09359502233016",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.some_scheme_link.com/",
-                          "name": "Business Number"
-                        }
+                        "registeredId": "09359502233016"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
-                        "registeredId": "",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/414/",
-                          "name": "Global Location Number (GLN)"
-                        }
+                        "registeredId": ""
                       },
                       "productionDate": "2024-11-11",
                       "productImage": {
@@ -38803,7 +38215,13 @@
                           }
                         ]
                       },
-                      "circularityScorecard": {}
+                      "circularityScorecard": {},
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
+                      }
                     },
                     "conformityClaim": []
                   }
@@ -39985,13 +39403,6 @@
                       ],
                       "id": "http://localhost:3000/gs1/01/09359502233023/21/DPP_01",
                       "registeredId": "09359502233023.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "batchNumber": "20252222",
                       "description": "Cobalt Concentrate",
                       "productCategory": [
@@ -40007,32 +39418,12 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502233023",
                         "name": "Cobalt Mine in Morocco",
-                        "registeredId": "09359502233023",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.update_registry_website.com/",
-                          "name": "Some Business Number"
-                        }
+                        "registeredId": "09359502233023"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
-                        "registeredId": "",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/414/",
-                          "name": "Global Location Number (GLN)"
-                        }
+                        "registeredId": ""
                       },
                       "productionDate": "2025-11-11",
                       "productImage": {
@@ -40048,7 +39439,13 @@
                         "verifiedRatio": 0.5,
                         "traceabilityEvent": []
                       },
-                      "circularityScorecard": {}
+                      "circularityScorecard": {},
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
+                      }
                     },
                     "conformityClaim": []
                   }
@@ -41230,13 +40627,6 @@
                       ],
                       "id": "http://localhost:3000/gs1/01/09359502233085/21/DPP_01",
                       "registeredId": "09359502233085.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "batchNumber": "20252222",
                       "description": "Cobalt Concentrate",
                       "productCategory": [
@@ -41252,32 +40642,12 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502233085",
                         "name": "Cobalt Mine in Botswana",
-                        "registeredId": "09359502233085",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.update_registry_website.com/",
-                          "name": "Some Business Number"
-                        }
+                        "registeredId": "09359502233085"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
-                        "registeredId": "",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/414/",
-                          "name": "Global Location Number (GLN)"
-                        }
+                        "registeredId": ""
                       },
                       "productionDate": "2025-11-11",
                       "productImage": {
@@ -41293,7 +40663,13 @@
                         "verifiedRatio": 0.5,
                         "traceabilityEvent": []
                       },
-                      "circularityScorecard": {}
+                      "circularityScorecard": {},
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
+                      }
                     },
                     "conformityClaim": []
                   }
@@ -42475,13 +41851,6 @@
                       ],
                       "id": "http://localhost:3000/gs1/01/09359502233030/21/DPP_01",
                       "registeredId": "09359502233030.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "batchNumber": "20241111",
                       "description": "Crude Copper",
                       "productCategory": [
@@ -42497,32 +41866,12 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502233030",
                         "name": "Northshore Smelting Corp.",
-                        "registeredId": "09359502233030",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.bcregistry.gov.bc.ca/",
-                          "name": "Business Number"
-                        }
+                        "registeredId": "09359502233030"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
-                        "registeredId": "",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/414/",
-                          "name": "Global Location Number (GLN)"
-                        }
+                        "registeredId": ""
                       },
                       "productionDate": "2024-11-11",
                       "productImage": {
@@ -42553,6 +41902,12 @@
                         "recycledContent": 0.0,
                         "utilityFactor": 1,
                         "materialCircularityIndicator": 0
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": []
@@ -44042,13 +43397,6 @@
                       ],
                       "id": "http://localhost:3000/gs1/01/09359502233047/21/DPP_01",
                       "registeredId": "09359502233047.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "batchNumber": "20252222",
                       "description": "Cobalt Smelting",
                       "productCategory": [
@@ -44064,32 +43412,12 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502233047",
                         "name": "Cobalt Smelter in Norway",
-                        "registeredId": "09359502233047",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.update_registry_website.com/",
-                          "name": "Some Business Number"
-                        }
+                        "registeredId": "09359502233047"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
-                        "registeredId": "",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/414/",
-                          "name": "Global Location Number (GLN)"
-                        }
+                        "registeredId": ""
                       },
                       "productionDate": "2025-11-11",
                       "productImage": {
@@ -44105,7 +43433,13 @@
                         "verifiedRatio": 0.5,
                         "traceabilityEvent": []
                       },
-                      "circularityScorecard": {}
+                      "circularityScorecard": {},
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
+                      }
                     },
                     "conformityClaim": []
                   }
@@ -45594,13 +44928,6 @@
                       ],
                       "id": "http://localhost:3000/gs1/01/09359502233054/21/DPP_01",
                       "registeredId": "09359502233054.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "batchNumber": "2025123123",
                       "description": "Batch of Cobalt Powder",
                       "productCategory": [
@@ -45616,32 +44943,12 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502233054",
                         "name": "Refinery in China",
-                        "registeredId": "09359502233054",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.update_registry_website.com/",
-                          "name": "Some Business Number"
-                        }
+                        "registeredId": "09359502233054"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
-                        "registeredId": "",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/414/",
-                          "name": "Global Location Number (GLN)"
-                        }
+                        "registeredId": ""
                       },
                       "productionDate": "2025-11-11",
                       "productImage": {
@@ -45657,7 +44964,13 @@
                         "verifiedRatio": 1,
                         "traceabilityEvent": []
                       },
-                      "circularityScorecard": {}
+                      "circularityScorecard": {},
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
+                      }
                     },
                     "conformityClaim": []
                   }
@@ -47255,13 +46568,6 @@
                       ],
                       "id": "http://localhost:3000/gs1/01/09359502233061/21/DPP_01",
                       "registeredId": "09359502233061.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "12345678",
                       "batchNumber": "6789",
                       "productImage": {
@@ -47290,32 +46596,12 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502233061?linkType=gs1:locationInfo",
                         "name": "Recycling Facility in Canada",
-                        "registeredId": "09359502233061",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502233061"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
-                        "registeredId": "",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": ""
                       },
                       "dimensions": {
                         "weight": {
@@ -47420,6 +46706,12 @@
                         "valueChainProcess": "Recycling",
                         "verifiedRatio": 0.5,
                         "traceabilityEvent": []
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": []
@@ -48968,13 +48260,6 @@
                             "id": "http://localhost:3000/gs1/01/09359502111144/21/DPP_01",
                             "name": "Laptop Battery 3.7V 5000mAh",
                             "registeredId": "09359502111144",
-                            "idScheme": {
-                              "type": [
-                                "IdentifierScheme"
-                              ],
-                              "id": "https://id.gs1.org/01/",
-                              "name": "Global Trade Identification Number (GTIN)"
-                            },
                             "serialNumber": "LPB12345678",
                             "batchNumber": "202504-LB01",
                             "productImage": {
@@ -49003,34 +48288,14 @@
                               }
                             ],
                             "producedByParty": {
-                              "type": [
-                                "Identifier"
-                              ],
                               "id": "http://example.com/9359502000200",
                               "name": "Example Laptop Battery Co.",
-                              "registeredId": "9359502000200",
-                              "idScheme": {
-                                "type": [
-                                  "IdentifierScheme"
-                                ],
-                                "id": "https://id.gs1.org/01/",
-                                "name": "Global Trade Identification Number (GTIN)"
-                              }
+                              "registeredId": "9359502000200"
                             },
                             "producedAtFacility": {
-                              "type": [
-                                "Identifier"
-                              ],
                               "id": "http://example.com/facility/9359502000200",
                               "name": "Example Laptop Battery Facility",
-                              "registeredId": "9359502000200",
-                              "idScheme": {
-                                "type": [
-                                  "IdentifierScheme"
-                                ],
-                                "id": "https://id.gs1.org/01/",
-                                "name": "Global Trade Identification Number (GTIN)"
-                              }
+                              "registeredId": "9359502000200"
                             },
                             "dimensions": {
                               "weight": {
@@ -49149,6 +48414,12 @@
                                   "encryptionMethod": "AES"
                                 }
                               ]
+                            },
+                            "characteristics": {
+                              "type": [
+                                "Characteristics"
+                              ],
+                              "capacity": "0 Ah"
                             }
                           },
                           "conformityClaim": [
@@ -49490,13 +48761,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502111290/21/LaptopScreen_DPP01",
                       "name": "Sample Generic Laptop Screen",
                       "registeredId": "09359502111290",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "LPSCR12345678",
                       "batchNumber": "202504-LS01",
                       "productImage": {
@@ -49525,34 +48789,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502111195?linkType=gs1:locationInfo",
                         "name": "Example Laptop Screen Manufacturing Co.",
-                        "registeredId": "09359502111195",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502111195"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502111195?linkType=gs1:locationInfo",
                         "name": "Example Laptop Screen Facility",
-                        "registeredId": "09359502111195",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502111195"
                       },
                       "dimensions": {
                         "weight": {
@@ -49666,6 +48910,12 @@
                             "encryptionMethod": "AES"
                           }
                         ]
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
@@ -50058,13 +49308,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502111309/21/Keyboard_DPP01",
                       "name": "Laptop Keyboard - QWERTY Layout",
                       "registeredId": "09359502111309",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "KEYB98765432",
                       "batchNumber": "202504-KB01",
                       "productImage": {
@@ -50093,34 +49336,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502111201?linkType=gs1:locationInfo",
                         "name": "Example Keyboard Manufacturing Co.",
-                        "registeredId": "09359502111201",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502111201"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502111201?linkType=gs1:locationInfo",
                         "name": "Example Keyboard Assembly Facility",
-                        "registeredId": "09359502111201",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502111201"
                       },
                       "dimensions": {
                         "weight": {
@@ -50249,6 +49472,12 @@
                             "encryptionMethod": "AES"
                           }
                         ]
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
@@ -50641,13 +49870,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502111420/21/LaptopCasing_DPP01",
                       "name": "Laptop Casing - Polycarbonate Shell",
                       "registeredId": "09359502111420",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "CAS98765432",
                       "batchNumber": "202504-CS01",
                       "productImage": {
@@ -50676,34 +49898,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502111218?linkType=gs1:locationInfo",
                         "name": "Example Casing Manufacturing Co.",
-                        "registeredId": "09359502111218",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502111218"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/09359502111218?linkType=gs1:locationInfo",
                         "name": "Example Casing Production Facility",
-                        "registeredId": "09359502111218",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "09359502111218"
                       },
                       "dimensions": {
                         "weight": {
@@ -50832,6 +50034,12 @@
                             "encryptionMethod": "AES"
                           }
                         ]
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
@@ -51383,13 +50591,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502111280/21/EGP_01",
                       "name": "Sample Generic Laptop (14-inch)",
                       "registeredId": "09359502111171.21.EGP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "SGL-20240425-001",
                       "batchNumber": "SGLB-0424",
                       "productImage": {
@@ -51418,34 +50619,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000280?linkType=gs1:locationInfo",
                         "name": "Example Manufacturing Co.",
-                        "registeredId": "9359502000280",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "9359502000280"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000280?linkType=gs1:locationInfo",
                         "name": "Example Electronics Assembly Facility",
-                        "registeredId": "9359502000280",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "9359502000280"
                       },
                       "dimensions": {
                         "weight": {
@@ -51564,6 +50745,12 @@
                             "encryptionMethod": "AES"
                           }
                         ]
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
@@ -52226,13 +51413,6 @@
                       "id": "http://localhost:3000/gs1/01/09359502111211/21/DPP_01",
                       "name": "Recycled Electronic Goods",
                       "registeredId": "09359502111211.21.DPP_01",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      },
                       "serialNumber": "12345678",
                       "batchNumber": "6789",
                       "productImage": {
@@ -52261,34 +51441,14 @@
                         }
                       ],
                       "producedByParty": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000188?linkType=gs1:locationInfo",
                         "name": "Recycler Facility",
-                        "registeredId": "9359502000188",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "9359502000188"
                       },
                       "producedAtFacility": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "http://localhost:3000/gs1/414/9359502000188?linkType=gs1:locationInfo",
                         "name": "Recycler Facility",
-                        "registeredId": "9359502000188",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "9359502000188"
                       },
                       "dimensions": {
                         "weight": {
@@ -52402,6 +51562,12 @@
                             "encryptionMethod": "AES"
                           }
                         ]
+                      },
+                      "characteristics": {
+                        "type": [
+                          "Characteristics"
+                        ],
+                        "capacity": "0 Ah"
                       }
                     },
                     "conformityClaim": [
