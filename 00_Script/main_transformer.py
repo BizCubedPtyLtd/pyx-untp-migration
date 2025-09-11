@@ -1,10 +1,12 @@
 import json
 from pathlib import Path
 from typing import Dict, Any, List
+from dfr import CredentialTransformer
 from dfr import DFRTransformer
 from dte import DTETransformer
-from general_function import CredentialTransformer
-
+from dpp import DPPTransformer
+from collections import defaultdict
+import pandas as pd
 
 # ---------- Base Class ----------
 class GeneralMigrator:
@@ -50,7 +52,7 @@ class AppConfigProcessor:
         # This function processes the app configuration and applies necessary transformations.
         # json_list = []
         apps = self.config_data.get("apps", [])
-        
+        count = defaultdict(int)
         for app in apps:
             features = app.get("features", [])
             for feature in features:
@@ -67,23 +69,30 @@ class AppConfigProcessor:
                         if component.get("name") == "LocalStorageLoader": 
                             nestedcomponents = component['props']['nestedComponents']
                             if len(nestedcomponents) == 1: # Assumes single nested component
+                                #print('inside nested components')
                                 schema_url = nestedcomponents[0]["props"]["schema"]["url"]
                             else:
-                                print('Multiple nested components found. Please investigate')
+                                #print('Multiple nested components found. Please investigate')
                                 break
                         else:
                             schema_url = component["props"]["schema"]["url"]
                         # Detect type from schema URL
                         if "DigitalFacilityRecord" in schema_url:
                             credential_type = "DFR"
+                            count['DFR'] += 1
                             print("DFR FOUND")
+                            print(schema_url)
                         elif "traceabilityEvents" in schema_url:
                             credential_type = "DTE"
+                            count['DTE'] += 1
                             print("DTE FOUND")
-                        # elif "DigitalProductPassport" in schema_url:
-                        #     credential_type = "DPP"
+                        elif "DigitalProductPassport" in schema_url:
+                            print(schema_url)
+                            credential_type = "DPP"
+                            count['DPP'] += 1
+                            print("DPP FOUND")
                         # elif "DigitalConformityCredential" in schema_url:
-                        #     credential_type = "DCC"
+                        #      credential_type = "DCC"
                         # elif "DigitalIdentityAnchor" in schema_url:
                         #     credential_type = "DIA"
                         else:
@@ -91,17 +100,28 @@ class AppConfigProcessor:
                             continue  # Skip unknown
                         
                         # This transformer applies structural changes to "apps" -> "features" -> "components"
-                        transformer = TransformerFactory.get_transformer(credential_type, component) # Gets the transformer name, such as DFRTransformer
-                        transformed_component = transformer.transform()
-                        # Update the component in place
-                        component.update(transformed_component)
-
+                        if component.get("name") == 'LocalStorageLoader': # If nestedcomponent, then pass the nestedcomponents. Change the type from localstorageloader to standard jsonform 
+                            transformer = TransformerFactory.get_transformer(credential_type, nestedcomponents[0]) # Gets the transformer name, such as DFRTransformer
+                            transformed_component = transformer.transform()
+                            nestedcomponents[0].update(transformed_component)
+                            # Update the component in place
+                            print('transformed_component', nestedcomponents)
+                        else: # If standard JsonForm, then pass the component
+                            transformer = TransformerFactory.get_transformer(credential_type, component) # Gets the transformer name, such as DFRTransformer
+                            transformed_component = transformer.transform()
+                            
+                            # Update the component in place
+                            component.update(transformed_component)
+                            
+                            #print('component updated', component)
                 if credential_type: # If a valid credential type was found
                     # The below transformer applies structural changes to "apps" -> "features" -> "services"
                     for service in services: # update services 
                         if service['name'].startswith('process'):
                             # Apply transformation for services specific to the credential types
                             transformer = TransformerFactory.get_transformer(credential_type, service)
+                            # initialize the class
+                            print('transformer', transformer)
                             transformed_component = transformer.transform_services()
                             # Update the component in place
                             service.update(transformed_component)
@@ -111,7 +131,7 @@ class AppConfigProcessor:
                             service.update(transformed_component)
                 else:
                     print("No valid credential type found.")
-        return self.config_data #, json_list
+        return self.config_data, count #, json_list
 
 
 
@@ -124,14 +144,15 @@ class TransformerFactory:
         '''
         transformers = {
             "DFR": DFRTransformer,
-            "DTE": DTETransformer
-            # "DPP": DPPTransformer,
+            "DTE": DTETransformer,
+            "DPP": DPPTransformer
             # "DCC": DCCTransformer,
             # "DIA": DIATransformer,
         }
         # If the credential type is in the dictionary keys, extracts the value to get transformer name
         # For example: if "DFR" is in the dictionary keys, then get the transformer name
         if credential_type in transformers: 
+            print('transformer found for', transformers[credential_type])
             return transformers[credential_type](component) # Returns the value of input key
         else:
             raise ValueError(f"Unknown credential type: {credential_type}")
@@ -149,20 +170,22 @@ if __name__ == "__main__":
     current_dir = Path(__file__).resolve().parent
 
     input_folder_name = "01_Data/app-config"
-    brand_name = 'RegenFarmers'
+    brand_name = 'RBTP'
     file_name = "app-config.json"
-    testing_folder = 'DTE'
-    output_file_name = "transformed-DTE-app-config-test-v3.json"
+    testing_folder = 'DPP'
+    output_file_name = f"transformed-{testing_folder}-app-config-test.json"
     
     ###########################################################
 
     processor = AppConfigProcessor(current_dir.parent / input_folder_name / brand_name / file_name)
-    output = processor.process()
+    output, count = processor.process()
 
     output_path = current_dir.parent / input_folder_name / brand_name / testing_folder / output_file_name
     with open(output_path, "w") as f:
         json.dump(output, f, indent=2)
-    
+
+    df = pd.DataFrame(list(count.items()), columns=['Type', 'Count'])
+    print('List of transformed credential types: \n', df)
     print("Transformation complete!")
 
 

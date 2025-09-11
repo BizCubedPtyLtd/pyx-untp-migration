@@ -11,15 +11,15 @@ from typing import Dict, Any, List
 ############## PARAMETERS & VARIABLES #####################
 
 current_dir = Path(__file__).resolve().parent
-credential_request = 'DTE'
+credential_request = 'DPP'
 
 input_folder_name = "01_Data/app-config"
-brand_name = 'RegenFarmers'
-input_file_name = "transformed-DTE-app-config-test-v2.json"
-output_file_name = f"transformed-app-config-{credential_request}-only-v2.json"
+brand_name = 'RBTP'
+input_file_name = f"transformed-{credential_request}-app-config-test.json"
+output_file_name = f"transformed-app-config-{credential_request}-only.json"
 
 input_path = (current_dir.parent.parent / input_folder_name / brand_name / credential_request / input_file_name)
-
+print('input_path', input_path)
 ###########################################################
 
 
@@ -49,12 +49,14 @@ for app in apps:
                 else:
                     schema_url = component["props"]["schema"]["url"]
                 # Detect type from schema URL
+                print('schema_url', schema_url)
                 if "DigitalFacilityRecord" in schema_url:
                     credential_type = "DFR"
                 elif "traceabilityEvents" in schema_url:
                     credential_type = "DTE"
-                # elif "DigitalProductPassport" in schema_url:
-                #     credential_type = "DPP"
+                elif "DigitalProductPassport" in schema_url:
+                    credential_type = "DPP"
+                    print('DPP FOUND')
                 # elif "DigitalConformityCredential" in schema_url:
                 #     credential_type = "DCC"
                 # elif "DigitalIdentityAnchor" in schema_url:
@@ -74,4 +76,5 @@ output_path = current_dir.parent.parent / input_folder_name / brand_name / crede
 with open(output_path, "w") as f:
     json.dump(json_list, f, indent=2)
 
+print('Count of transformed credentials:', len(json_list))
 # THE ABOVE ONLY OUTPUTS THE DFRS, can't test them in test-untp if they're in the same file
