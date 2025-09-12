@@ -173,7 +173,7 @@ if __name__ == "__main__":
     brand_name = 'RBTP'
     file_name = "app-config.json"
     testing_folder = 'DPP'
-    output_file_name = f"transformed-{testing_folder}-app-config-test.json"
+    output_file_name = f"transformed-{testing_folder}-app-config-test-v3.json"
     
     ###########################################################
 

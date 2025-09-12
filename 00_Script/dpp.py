@@ -27,14 +27,18 @@ class DPPTransformer(CredentialTransformer):
         print(self.component["props"])
         data = self.component["props"]["data"]
 
-        # Reference Implementation Updates
+        ## Reference Implementation Updates
         # 1. Updates Schema URL to v0.6.0
         schema = self.component["props"]["schema"]
         schema["url"] = "https://jargon.sh/user/unece/DigitalProductPassport/v/0.6.0/artefacts/jsonSchemas/ProductPassport.json?class=ProductPassport"
         
+        # # 2. Context configuration changes
+        # data['@context'] = ["https://test.uncefact.org/vocabulary/untp/dpp/0.6.0/"]
+
+        ## Data Model Changes 
         print("schema['url']:", schema["url"])
     
-        # 2. Credential Subject Structure: adds "type": ["ProductPassport"] to the original structure, added "granularityLevel": "item" to product
+        # 2*. Credential Subject Structure: adds "type": ["ProductPassport"] to the original structure, added "granularityLevel": "item" to product
         credential_subject = data.get("credentialSubject", {})
         product = {k: v for k, v in credential_subject.items() if k != "conformityClaim"}
         product["granularityLevel"] = "item"
@@ -46,12 +50,12 @@ class DPPTransformer(CredentialTransformer):
         }
         data["credentialSubject"] = new_credential_subject
         
-        # 3. Issuer Identifier Structure: The issuer’s otherIdentifier property is replaced with issuerAlsoKnownAs, simplifying the structure by removing the idScheme reference.
+        # 3*. Issuer Identifier Structure: The issuer’s otherIdentifier property is replaced with issuerAlsoKnownAs, simplifying the structure by removing the idScheme reference.
         issuer = data.get('issuer', {})
         if "otherIdentifier" in issuer:
             self._pop_and_replace_key(issuer, "otherIdentifier", "issuerAlsoKnownAs")
         
-        # 4. Party Structure Changes:
+        # 4.* Party Structure Changes:
         product = new_credential_subject.get('product', {})
 
         
@@ -90,44 +94,66 @@ class DPPTransformer(CredentialTransformer):
         Simplified issuingParty in the Standard and administeredBy in Regulation by removing the nested idScheme structure.
 
         '''
-        materialsProvenance = new_credential_subject.get('materialsProvenance', {})
-        if "type" in materialsProvenance:
-            del materialsProvenance["type"]
-        if "massAmount" in materialsProvenance:
-            materialsProvenance["mass"] = materialsProvenance.pop("massAmount")
-            if "type" in materialsProvenance['mass']:
-                del materialsProvenance['mass']['type']
-        if "recycledAmount" in materialsProvenance:
-            materialsProvenance["recycledMassFraction"] = materialsProvenance.pop("recycledAmount")
+        materialsProvenance = product.get('materialsProvenance', {})
+        #print('!!!!!!!!!!!!materialsProvenance', materialsProvenance)
+        for material in materialsProvenance:
+            if "type" in material:
+                del material["type"]
+            if "massAmount" in material:
+                material["mass"] = material.pop("massAmount")
+                if "type" in material['mass']:
+                    del material['mass']['type']
+            if "recycledAmount" in material:
+                material["recycledMassFraction"] = material.pop("recycledAmount")
+
 
         # credentialSubject - conformityClaim - issuingParty structure change (Standard schema)
         # changes issuingParty to issuerAlsoKnownAs
         # Removes Type and idScheme
         conformityClaim = new_credential_subject.get('conformityClaim', {})
-        if "issuingParty" in conformityClaim:
-            conformityClaim["issuerAlsoKnownAs"] = conformityClaim.pop("issuingParty")
-            if "type" in conformityClaim["issuerAlsoKnownAs"]:
-                del conformityClaim["issuerAlsoKnownAs"]["type"]
-            if "idScheme" in conformityClaim["issuerAlsoKnownAs"]:
-                del conformityClaim["issuerAlsoKnownAs"]["idScheme"]
+        #print("!!!!!!!!!!!!conformityClaim", conformityClaim)
+        for claim in conformityClaim:
+            referencestandard = claim.get("referenceStandard", {})
+            #print('!!!!! referencestandard', referencestandard)
+            if "issuingParty" in referencestandard:
+                #print("!!!!!!!!!! inside")
+                referencestandard["issuerAlsoKnownAs"] = referencestandard.pop("issuingParty")
+                clean_data = self._clean_identifier_list(referencestandard["issuerAlsoKnownAs"])
+                referencestandard["issuerAlsoKnownAs"] = clean_data
+                if "type" in referencestandard["issuerAlsoKnownAs"]:
+                    del referencestandard["issuerAlsoKnownAs"]["type"]
+                if "idScheme" in referencestandard["issuerAlsoKnownAs"]:
+                    del referencestandard["issuerAlsoKnownAs"]["idScheme"]
 
-        # credentialSubject - conformityClaim - administeredBy structure change (Regulation schema)
-        # Removes Type and idScheme from referenceStandard.issuingParty and referenceRegulation.administeredBy
-        if "referenceStandard" in conformityClaim:
-            reference_standard = conformityClaim["referenceStandard"]
-            if isinstance(reference_standard, dict) and "issuingParty" in reference_standard:
-            self._clean_identifier_list(reference_standard["issuingParty"])
-        if "referenceRegulation" in conformityClaim:
-            reference_regulation = conformityClaim["referenceRegulation"]
-            if isinstance(reference_regulation, dict) and "administeredBy" in reference_regulation:
-            self._clean_identifier_list(reference_regulation["administeredBy"])
-            if "administeredBy" in conformityClaim:
-            administeredBy = conformityClaim.get("administeredBy", {})
-            if "type" in administeredBy:
-                del administeredBy["type"]
-            if "idScheme" in administeredBy:
-                del administeredBy["idScheme"]
-            conformityClaim["administeredBy"] = administeredBy
+            # credentialSubject - conformityClaim - administeredBy structure change (Regulation schema)
+            # Removes Type and idScheme from referenceStandard.issuingParty and referenceRegulation.administeredBy
+            referenceregulation = claim.get("referenceRegulation", {})
+            if "administeredBy" in referenceregulation:
+                clean_data = self._clean_identifier_list(referenceregulation["administeredBy"])
+                referenceregulation["administeredBy"] = clean_data
+        
+            '''
+            6. Criterion Structure Enhancement
+            Key Changes:
+
+            Criterion now includes additional fields: description, conformityTopic, status, subCriterion, thresholdValue (replacing thresholdValues), performanceLevel, and tags. The thresholdValues property has been renamed to thresholdValue to reflect a singular metric focus per criterion. The subCriterion property allows for hierarchical structuring, enabling a criterion to reference subordinate criteria.
+            issuingParty in the Standard and administeredBy in Regulation by removing the nested idScheme structure.
+
+            '''
+            assessmentCriteria = claim.get('assessmentCriteria', {})
+            for assessment in assessmentCriteria:
+                print('!!!!!!!!!!!!!!!assessment', assessment)
+                new_column_added = {
+                    "description":"",
+                    "conformityTopic":"",
+                    "status":"",
+                    "subCriterion":"",
+                    "performanceLevel":"",
+                    "tags": ""
+                }
+                assessment.update(new_column_added)
+                if "thresholdValues" in assessment:
+                    assessment["thresholdValue"] = assessment.pop("thresholdValues", [])[0]
 
         return self.component
     
