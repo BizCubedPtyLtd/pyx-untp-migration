@@ -438,27 +438,10 @@
         ]
       },
       {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "orchard_facility_dpps",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
         "name": "getValueFromLocalStorage",
         "parameters": [
           {
             "storageKey": "orchard_facility_dpps"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
           }
         ]
       }
@@ -771,15 +754,6 @@
         ]
       },
       {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_upstream_copper_concentrate_dpp",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
         "name": "getValueFromLocalStorage",
         "parameters": [
           {
@@ -1040,15 +1014,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_upstream_lithium_mine_dpp",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
           }
         ]
       }
@@ -1376,15 +1341,6 @@
         ]
       },
       {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "smelter_dpps",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
         "name": "getValueFromLocalStorage",
         "parameters": [
           {
@@ -1679,15 +1635,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_refined_lithium_dpp",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
           }
         ]
       }
@@ -2469,27 +2416,10 @@
         ]
       },
       {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_downstream_dpp_laptop_screen",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
         "name": "getValueFromLocalStorage",
         "parameters": [
           {
             "storageKey": "rmi_downstream_dpp_laptop_screen"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
           }
         ]
       }
@@ -2857,27 +2787,10 @@
         ]
       },
       {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_downstream_dpp_laptop_keyboard",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
         "name": "getValueFromLocalStorage",
         "parameters": [
           {
             "storageKey": "rmi_downstream_dpp_laptop_keyboard"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
           }
         ]
       }
@@ -3245,27 +3158,10 @@
         ]
       },
       {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_downstream_dpp_laptop_casing",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
         "name": "getValueFromLocalStorage",
         "parameters": [
           {
             "storageKey": "rmi_downstream_dpp_laptop_casing"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
           }
         ]
       }
@@ -3619,15 +3515,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_downstream_electronic_goods_passport",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
           }
         ]
       }
@@ -4087,15 +3974,6 @@
         ]
       },
       {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_recycling_dpp_recycled_electronic_goods",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
         "name": "getValueFromLocalStorage",
         "parameters": [
           {
@@ -4412,15 +4290,6 @@
         ]
       },
       {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "copper_concentrate_dpps",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
         "name": "getValueFromLocalStorage",
         "parameters": [
           {
@@ -4690,15 +4559,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_lithium_mine_dpp",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
           }
         ]
       }
@@ -5026,15 +4886,6 @@
         ]
       },
       {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "smelter_dpps",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
         "name": "getValueFromLocalStorage",
         "parameters": [
           {
@@ -5329,15 +5180,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "refined_lithium_dpp",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
           }
         ]
       }
@@ -5778,27 +5620,10 @@
         ]
       },
       {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "battery_dpps",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
         "name": "getValueFromLocalStorage",
         "parameters": [
           {
             "storageKey": "battery_dpps"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
           }
         ]
       }
@@ -6151,27 +5976,10 @@
         ]
       },
       {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_screen",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
         "name": "getValueFromLocalStorage",
         "parameters": [
           {
             "storageKey": "pilot_001_downstream_dpp_laptop_screen"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
           }
         ]
       }
@@ -6539,27 +6347,10 @@
         ]
       },
       {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_keyboard",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
         "name": "getValueFromLocalStorage",
         "parameters": [
           {
             "storageKey": "pilot_001_downstream_dpp_laptop_keyboard"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
           }
         ]
       }
@@ -6927,27 +6718,10 @@
         ]
       },
       {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_casing",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
         "name": "getValueFromLocalStorage",
         "parameters": [
           {
             "storageKey": "pilot_001_downstream_dpp_laptop_casing"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
           }
         ]
       }
@@ -7301,15 +7075,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_electronic_goods_passport",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
           }
         ]
       }
@@ -7765,15 +7530,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_recycling_dpp_recycled_electronic_goods",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
           }
         ]
       },
@@ -10780,27 +10536,10 @@
         ]
       },
       {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "battery_dpps",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
         "name": "getValueFromLocalStorage",
         "parameters": [
           {
             "storageKey": "battery_dpps"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
           }
         ]
       }
@@ -11153,27 +10892,10 @@
         ]
       },
       {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_screen",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
         "name": "getValueFromLocalStorage",
         "parameters": [
           {
             "storageKey": "pilot_001_downstream_dpp_laptop_screen"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
           }
         ]
       }
@@ -11541,27 +11263,10 @@
         ]
       },
       {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_keyboard",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
         "name": "getValueFromLocalStorage",
         "parameters": [
           {
             "storageKey": "pilot_001_downstream_dpp_laptop_keyboard"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
           }
         ]
       }
@@ -11929,27 +11634,10 @@
         ]
       },
       {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_casing",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
         "name": "getValueFromLocalStorage",
         "parameters": [
           {
             "storageKey": "pilot_001_downstream_dpp_laptop_casing"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
           }
         ]
       }
@@ -12303,15 +11991,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_electronic_goods_passport",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
           }
         ]
       }
@@ -12767,15 +12446,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_recycling_dpp_recycled_electronic_goods",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
           }
         ]
       },

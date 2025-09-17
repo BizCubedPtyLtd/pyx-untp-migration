@@ -473,31 +473,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "orchard_facility_dpps",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "orchard_facility_dpps"
-                }
-              ]
-            },
-            {
-              "name": "findFirstMatchingKeyValue",
-              "parameters": [
-                {
-                  "targetKey": "credentialSubject"
-                }
-              ]
             }
           ]
         }
@@ -4626,14 +4601,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -4682,15 +4649,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_upstream_dte_copper_concentrate",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -5001,23 +4959,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_upstream_copper_concentrate_dpp",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_upstream_copper_concentrate_dpp"
-                }
-              ]
             }
           ]
         },
@@ -5089,14 +5030,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -5145,15 +5078,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_upstream_dte_copper_concentrate",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -8595,15 +8519,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_upstream_lithium_mine_dpp",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
             }
           ]
         },
@@ -8678,14 +8593,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -8734,15 +8641,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_midstream_dte_smelter_transformation_event",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -9066,23 +8964,6 @@
                     }
                   },
                   "identifierKeyPath": "/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "smelter_dpps",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "smelter_dpps"
                 }
               ]
             }
@@ -10483,14 +10364,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -10539,15 +10412,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_midstream_dte_refined_lithium",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -10838,15 +10702,6 @@
                     }
                   },
                   "identifierKeyPath": "/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_refined_lithium_dpp",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
                 }
               ]
             }
@@ -12217,14 +12072,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -12273,15 +12120,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "battery_transformation_event",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -13504,31 +13342,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_downstream_dpp_laptop_screen",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_downstream_dpp_laptop_screen"
-                }
-              ]
-            },
-            {
-              "name": "findFirstMatchingKeyValue",
-              "parameters": [
-                {
-                  "targetKey": "credentialSubject"
-                }
-              ]
             }
           ]
         },
@@ -13890,31 +13703,6 @@
                     }
                   },
                   "identifierKeyPath": "/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_downstream_dpp_laptop_keyboard",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_downstream_dpp_laptop_keyboard"
-                }
-              ]
-            },
-            {
-              "name": "findFirstMatchingKeyValue",
-              "parameters": [
-                {
-                  "targetKey": "credentialSubject"
                 }
               ]
             }
@@ -14280,31 +14068,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_downstream_dpp_laptop_casing",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_downstream_dpp_laptop_casing"
-                }
-              ]
-            },
-            {
-              "name": "findFirstMatchingKeyValue",
-              "parameters": [
-                {
-                  "targetKey": "credentialSubject"
-                }
-              ]
             }
           ]
         },
@@ -14397,14 +14160,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processAssociationEvent",
               "parameters": [
                 {
@@ -14453,15 +14208,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_downstream_dte_electronic_good_association_event",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -14815,15 +14561,6 @@
                     }
                   },
                   "identifierKeyPath": "/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_downstream_electronic_goods_passport",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
                 }
               ]
             }
@@ -15182,14 +14919,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -15239,15 +14968,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_recycling_recycled_electronic_good_transformation_event",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -15705,23 +15425,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_recycling_dpp_recycled_electronic_goods",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "rmi_recycling_dpp_recycled_electronic_goods"
-                }
-              ]
             }
           ]
         }
@@ -15817,14 +15520,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -15873,15 +15568,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_dte_copper_concentrate",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -16190,23 +15876,6 @@
                     }
                   },
                   "identifierKeyPath": "/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "copper_concentrate_dpps",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "copper_concentrate_dpps"
                 }
               ]
             }
@@ -19657,15 +19326,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_lithium_mine_dpp",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
             }
           ]
         },
@@ -19737,14 +19397,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -19793,15 +19445,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_dte_lithium_concentrate",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -19878,14 +19521,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -19934,15 +19569,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_midstream_dte_copper_cathode",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -20266,23 +19892,6 @@
                     }
                   },
                   "identifierKeyPath": "/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "smelter_dpps",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "smelter_dpps"
                 }
               ]
             }
@@ -21062,14 +20671,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -21118,15 +20719,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_midstream_dte_refined_lithium",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -21419,15 +21011,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "refined_lithium_dpp",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
             }
           ]
         },
@@ -21499,14 +21082,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -21555,15 +21130,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_dte_refined_lithium",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -22323,14 +21889,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -22379,15 +21937,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "battery_transformation_event",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -22826,31 +22375,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "battery_dpps",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "battery_dpps"
-                }
-              ]
-            },
-            {
-              "name": "findFirstMatchingKeyValue",
-              "parameters": [
-                {
-                  "targetKey": "credentialSubject"
-                }
-              ]
             }
           ]
         },
@@ -22922,14 +22446,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -22978,15 +22494,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_sale_battery",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -23780,31 +23287,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dpp_laptop_screen",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dpp_laptop_screen"
-                }
-              ]
-            },
-            {
-              "name": "findFirstMatchingKeyValue",
-              "parameters": [
-                {
-                  "targetKey": "credentialSubject"
-                }
-              ]
             }
           ]
         },
@@ -23876,14 +23358,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -23932,15 +23406,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dte_sale_laptop_screen",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -24306,31 +23771,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dpp_laptop_keyboard",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dpp_laptop_keyboard"
-                }
-              ]
-            },
-            {
-              "name": "findFirstMatchingKeyValue",
-              "parameters": [
-                {
-                  "targetKey": "credentialSubject"
-                }
-              ]
             }
           ]
         },
@@ -24402,14 +23842,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -24458,15 +23890,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dte_sale_laptop_keyboard",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -24832,31 +24255,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dpp_laptop_casing",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dpp_laptop_casing"
-                }
-              ]
-            },
-            {
-              "name": "findFirstMatchingKeyValue",
-              "parameters": [
-                {
-                  "targetKey": "credentialSubject"
-                }
-              ]
             }
           ]
         },
@@ -24928,14 +24326,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -24984,15 +24374,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dte_sale_laptop_casing",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -25087,14 +24468,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processAssociationEvent",
               "parameters": [
                 {
@@ -25143,15 +24516,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dte_electronic_good_association_event",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -25507,15 +24871,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_electronic_goods_passport",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
             }
           ]
         },
@@ -25869,14 +25224,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -25925,15 +25272,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dte_electronic_goods",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -26010,14 +25348,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -26067,15 +25397,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_recycling_recycled_electronic_good_transformation_event",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -26533,23 +25854,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_recycling_dpp_recycled_electronic_goods",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_recycling_dpp_recycled_electronic_goods"
-                }
-              ]
             }
           ]
         },
@@ -26624,14 +25928,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -26681,15 +25977,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_recycled_electronic_goods_transformation_event",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -26786,14 +26073,6 @@
             }
           ],
           "services": [
-            {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
             {
               "name": "processTransformationEventOnly",
               "parameters": [
@@ -26915,14 +26194,6 @@
             }
           ],
           "services": [
-            {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
             {
               "name": "processTransformationEventOnly",
               "parameters": [
@@ -28172,14 +27443,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -29420,14 +28683,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -30667,14 +29922,6 @@
             }
           ],
           "services": [
-            {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
             {
               "name": "processTransformationEventOnly",
               "parameters": [
@@ -32245,14 +31492,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -33813,14 +33052,6 @@
             }
           ],
           "services": [
-            {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
             {
               "name": "processTransformationEventOnly",
               "parameters": [
@@ -35476,14 +34707,6 @@
             }
           ],
           "services": [
-            {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
             {
               "name": "processTransformationEventOnly",
               "parameters": [
@@ -37154,14 +36377,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -37266,14 +36481,6 @@
             }
           ],
           "services": [
-            {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
             {
               "name": "processTransformationEventOnly",
               "parameters": [
@@ -38499,14 +37706,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -39722,14 +38921,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -40944,14 +40135,6 @@
             }
           ],
           "services": [
-            {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
             {
               "name": "processTransformationEventOnly",
               "parameters": [
@@ -42490,14 +41673,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -44019,14 +43194,6 @@
             }
           ],
           "services": [
-            {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
             {
               "name": "processTransformationEventOnly",
               "parameters": [
@@ -45657,14 +44824,6 @@
             }
           ],
           "services": [
-            {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
             {
               "name": "processTransformationEventOnly",
               "parameters": [
@@ -47329,14 +46488,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -47385,15 +46536,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "battery_transformation_event",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -47832,31 +46974,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "battery_dpps",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "battery_dpps"
-                }
-              ]
-            },
-            {
-              "name": "findFirstMatchingKeyValue",
-              "parameters": [
-                {
-                  "targetKey": "credentialSubject"
-                }
-              ]
             }
           ]
         },
@@ -48205,31 +47322,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dpp_laptop_screen",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dpp_laptop_screen"
-                }
-              ]
-            },
-            {
-              "name": "findFirstMatchingKeyValue",
-              "parameters": [
-                {
-                  "targetKey": "credentialSubject"
-                }
-              ]
             }
           ]
         },
@@ -48301,14 +47393,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -48357,15 +47441,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dte_sale_laptop_screen",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -48731,31 +47806,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dpp_laptop_keyboard",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dpp_laptop_keyboard"
-                }
-              ]
-            },
-            {
-              "name": "findFirstMatchingKeyValue",
-              "parameters": [
-                {
-                  "targetKey": "credentialSubject"
-                }
-              ]
             }
           ]
         },
@@ -48827,14 +47877,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -48883,15 +47925,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dte_sale_laptop_keyboard",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -49257,31 +48290,6 @@
                   "identifierKeyPath": "/id"
                 }
               ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dpp_laptop_casing",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dpp_laptop_casing"
-                }
-              ]
-            },
-            {
-              "name": "findFirstMatchingKeyValue",
-              "parameters": [
-                {
-                  "targetKey": "credentialSubject"
-                }
-              ]
             }
           ]
         },
@@ -49353,14 +48361,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -49409,15 +48409,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dte_sale_laptop_casing",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -49512,14 +48503,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processAssociationEvent",
               "parameters": [
                 {
@@ -49568,15 +48551,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_dte_electronic_good_association_event",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -49930,15 +48904,6 @@
                     }
                   },
                   "identifierKeyPath": "/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_downstream_electronic_goods_passport",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
                 }
               ]
             }
@@ -50297,14 +49262,6 @@
           ],
           "services": [
             {
-              "name": "convertObjectToArray1Item",
-              "parameters": [
-                {
-                  "path": "/data"
-                }
-              ]
-            },
-            {
               "name": "processTransformationEventOnly",
               "parameters": [
                 {
@@ -50354,15 +49311,6 @@
                     }
                   },
                   "identifierKeyPath": "/0/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_recycling_recycled_electronic_good_transformation_event",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
                 }
               ]
             }
@@ -50818,23 +49766,6 @@
                     }
                   },
                   "identifierKeyPath": "/id"
-                }
-              ]
-            },
-            {
-              "name": "mergeToLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_recycling_dpp_recycled_electronic_goods",
-                  "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-                }
-              ]
-            },
-            {
-              "name": "getValueFromLocalStorage",
-              "parameters": [
-                {
-                  "storageKey": "pilot_001_recycling_dpp_recycled_electronic_goods"
                 }
               ]
             }

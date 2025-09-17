@@ -11,13 +11,10 @@
             "url": "https://jargon.sh/user/unece/DigitalProductPassport/v/0.6.0/artefacts/jsonSchemas/ProductPassport.json?class=ProductPassport"
           },
           "data": {
-            "id": "",
+            "id": "http://localhost:3000/gs1/01/09520123456788/21/TEST_DPP01",
             "name": "TEST: EcoCharge Lithium-Ion Battery",
             "registeredId": "09359502000034",
             "idScheme": {
-              "type": [
-                "IdentifierScheme"
-              ],
               "id": "https://id.gs1.org/01/",
               "name": "Global Trade Identification Number (GTIN)"
             },
@@ -70,16 +67,10 @@
               }
             ],
             "producedByParty": {
-              "type": [
-                "Identifier"
-              ],
               "id": "https://id.example-company.com/party/6789",
               "name": "Example Manufacturing Co."
             },
             "producedAtFacility": {
-              "type": [
-                "Identifier"
-              ],
               "id": "https://id.example-company.com/facility/123",
               "name": "Green Acres Battery Factory"
             },
@@ -126,9 +117,6 @@
             },
             "materialsProvenance": [
               {
-                "type": [
-                  "Material"
-                ],
                 "name": "Material",
                 "originCountry": "AU",
                 "materialType": {
@@ -139,17 +127,14 @@
                   "name": "Lithium"
                 },
                 "massFraction": 20,
-                "massAmount": {
+                "hazardous": false,
+                "mass": {
                   "value": 1.0,
                   "unit": "kg"
                 },
-                "recycledAmount": 0,
-                "hazardous": false
+                "recycledMassFraction": 0
               },
               {
-                "type": [
-                  "Material"
-                ],
                 "name": "Material",
                 "originCountry": "AU",
                 "materialType": {
@@ -160,11 +145,6 @@
                   "name": "Lithium"
                 },
                 "massFraction": 20,
-                "massAmount": {
-                  "value": 1.0,
-                  "unit": "kg"
-                },
-                "recycledAmount": 10,
                 "hazardous": true,
                 "materialSafetyInformation": {
                   "type": [
@@ -173,52 +153,261 @@
                   "linkURL": "https://example.com/safety-info/lithium-spodumene.pdf",
                   "linkName": "Material Safety Data Sheet",
                   "linkType": "https://test.uncefact.org/vocabulary/linkTypes/safetyData"
+                },
+                "mass": {
+                  "value": 1.0,
+                  "unit": "kg"
+                },
+                "recycledMassFraction": 10
+              },
+              {
+                "name": "Material",
+                "originCountry": "AU",
+                "materialType": {
+                  "type": [
+                    "Classification"
+                  ],
+                  "id": "https://unfc.org/material-type/Lithium",
+                  "name": "Lithium"
+                },
+                "massFraction": 20,
+                "hazardous": false,
+                "mass": {
+                  "value": 1.0,
+                  "unit": "kg"
+                },
+                "recycledMassFraction": 0
+              },
+              {
+                "name": "Material",
+                "originCountry": "AU",
+                "materialType": {
+                  "type": [
+                    "Classification"
+                  ],
+                  "id": "https://unfc.org/material-type/Lithium",
+                  "name": "Lithium"
+                },
+                "massFraction": 20,
+                "hazardous": false,
+                "mass": {
+                  "value": 1.0,
+                  "unit": "kg"
+                },
+                "recycledMassFraction": 0
+              }
+            ],
+            "conformityClaim": [
+              {
+                "type": [
+                  "Claim",
+                  "Declaration"
+                ],
+                "assessmentDate": "2025-02-21",
+                "declaredValue": [
+                  {
+                    "metricName": "Sourcing from High-Risk Supply Chains",
+                    "metricValue": {
+                      "unit": "",
+                      "value": 0
+                    },
+                    "score": "No"
+                  }
+                ],
+                "id": "https://www.responsiblemineralsinitiative.org/media/docs/Public%20Reports/PT%20Arsed%20Public%20Report.pdf",
+                "referenceStandard": {
+                  "type": [
+                    "Standard"
+                  ],
+                  "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/Responsible%20Minerals%20Assurance%20Process_Standard_SnTa_EN.pdf",
+                  "name": "Responsible Minerals Assurance Process Tin and Tantalum Standard",
+                  "issuingParty": {
+                    "id": "https://www.responsiblemineralsinitiative.org/",
+                    "name": "Responsible Minerals Initiative",
+                    "registeredId": "123456789"
+                  },
+                  "issueDate": "2020-01-01"
+                },
+                "referenceRegulation": {
+                  "type": [
+                    "Regulation"
+                  ],
+                  "id": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0821",
+                  "name": "European Union Responsible Minerals Regulation (EU Regulation 2017/821)",
+                  "jurisdictionCountry": "European Union",
+                  "administeredBy": {
+                    "id": "https://europa.eu",
+                    "name": "European Union"
+                  },
+                  "effectiveDate": "2017-06-01"
+                },
+                "assessmentCriteria": [
+                  {
+                    "type": [
+                      "Criterion"
+                    ],
+                    "id": "https://www.responsiblemineralsinitiative.org/media/docs/standards/Responsible%20Minerals%20Assurance%20Process_Standard_SnTa_EN.pdf",
+                    "name": "TEST: Responsible Minerals Assurance Process Tin and Tantalum Standard",
+                    "description": "",
+                    "conformityTopic": "environment.emissions",
+                    "status": "active",
+                    "subCriterion": [],
+                    "performanceLevel": "",
+                    "tags": ""
+                  }
+                ],
+                "conformance": true,
+                "conformityTopic": "governance.compliance",
+                "conformityEvidence": {
+                  "type": [
+                    "SecureLink",
+                    "Link"
+                  ],
+                  "linkURL": "http://localhost:3000/gs1/01/09359502000041/21/RMICTEST_CID005067",
+                  "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+                  "hashMethod": "SHA-256",
+                  "linkName": "EcoCharge Lithium-Ion Battery Produced at RMI Certified Facility A",
+                  "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+                  "encryptionMethod": "AES"
                 }
               },
               {
                 "type": [
-                  "Material"
+                  "Claim",
+                  "Declaration"
                 ],
-                "name": "Material",
-                "originCountry": "AU",
-                "materialType": {
+                "assessmentDate": "2024-03-18",
+                "id": "https://www.responsiblebusiness.org/media/docs/RBA-SVAP-CM-Overview.pdf",
+                "referenceStandard": {
                   "type": [
-                    "Classification"
+                    "Standard"
                   ],
-                  "id": "https://unfc.org/material-type/Lithium",
-                  "name": "Lithium"
+                  "id": "https://www.responsiblebusiness.org/media/docs/RBA-SVAP-CM-Overview.pdf",
+                  "name": "OVERVIEW OF SPECIALTY VALIDATED ASSESSMENT PROGRAM (SVAP) ON CHEMICAL MANAGEMENT",
+                  "issuingParty": {
+                    "id": "https://www.responsiblebusiness.org/",
+                    "name": "Responsible Business Alliance",
+                    "registeredId": "123456789"
+                  },
+                  "issueDate": "2024-04-10"
                 },
-                "massFraction": 20,
-                "massAmount": {
-                  "value": 1.0,
-                  "unit": "kg"
+                "referenceRegulation": {
+                  "type": [
+                    "Regulation"
+                  ],
+                  "id": "https://ec.europa.eu/environment/chemicals/reach/reach_en.htm",
+                  "name": "REACH (Registration, Evaluation, Authorization, and Restriction of Chemicals)",
+                  "jurisdictionCountry": "European Union",
+                  "administeredBy": {
+                    "id": "https://ec.europa.eu/environment",
+                    "name": "European Commission"
+                  },
+                  "effectiveDate": "2007-06-01"
                 },
-                "recycledAmount": 0,
-                "hazardous": false
+                "assessmentCriteria": [
+                  {
+                    "type": [
+                      "Criterion"
+                    ],
+                    "id": "https://www.responsiblebusiness.org/media/docs/RBA-SVAP-CM-Overview.pdf",
+                    "name": "SVAP - Health & Safety",
+                    "description": "",
+                    "conformityTopic": "environment.emissions",
+                    "status": "active",
+                    "subCriterion": [],
+                    "performanceLevel": "",
+                    "tags": ""
+                  }
+                ],
+                "conformance": true,
+                "conformityTopic": "governance.compliance",
+                "conformityEvidence": {
+                  "type": [
+                    "SecureLink",
+                    "Link"
+                  ],
+                  "linkURL": "http://localhost:3000/gs1/01/09359502000034/21/REICTEST_01",
+                  "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+                  "hashMethod": "SHA-256",
+                  "linkName": "EcoCharge Lithium-Ion Battery Produced at REI Certified Facility A",
+                  "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+                  "encryptionMethod": "AES"
+                }
               },
               {
                 "type": [
-                  "Material"
+                  "Claim",
+                  "Declaration"
                 ],
-                "name": "Material",
-                "originCountry": "AU",
-                "materialType": {
+                "assessmentDate": "2025-03-18",
+                "declaredValue": [
+                  {
+                    "metricName": "Have a detailed, comprehensive documented policy prohibiting the use of any type of forced, bonded (including debt bondage) or indentured labor, involuntary or exploitative prison labor, slavery, or trafficking of persons.",
+                    "metricValue": {
+                      "unit": "",
+                      "value": 0
+                    },
+                    "score": "No"
+                  }
+                ],
+                "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
+                "referenceStandard": {
                   "type": [
-                    "Classification"
+                    "Standard"
                   ],
-                  "id": "https://unfc.org/material-type/Lithium",
-                  "name": "Lithium"
+                  "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
+                  "name": "RBA VAP Standard V8.0.1",
+                  "issuingParty": {
+                    "id": "https://www.responsiblebusiness.org/",
+                    "name": "Responsible Business Alliance (RBA)",
+                    "registeredId": "123456789"
+                  },
+                  "issueDate": "2024-01-01"
                 },
-                "massFraction": 20,
-                "massAmount": {
-                  "value": 1.0,
-                  "unit": "kg"
+                "referenceRegulation": {
+                  "type": [
+                    "Regulation"
+                  ],
+                  "id": "https://www.responsiblebusiness.org/media/docs/RBACodeofConduct8.0_English.pdf",
+                  "name": "RESPONSIBLE BUSINESS ALLIANCE CODE OF CONDUCT - LABOR",
+                  "jurisdictionCountry": "Global",
+                  "administeredBy": {
+                    "id": "https://www.responsiblebusiness.org/",
+                    "name": "Responsible Business Alliance (RBA)"
+                  },
+                  "effectiveDate": "2024-01-01"
                 },
-                "recycledAmount": 0,
-                "hazardous": false
+                "assessmentCriteria": [
+                  {
+                    "type": [
+                      "Criterion"
+                    ],
+                    "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
+                    "name": "Prohibition of Forced Labor",
+                    "description": "",
+                    "conformityTopic": "environment.emissions",
+                    "status": "active",
+                    "subCriterion": [],
+                    "performanceLevel": "",
+                    "tags": ""
+                  }
+                ],
+                "conformance": true,
+                "conformityTopic": "environment.emissions",
+                "conformityEvidence": {
+                  "type": [
+                    "SecureLink",
+                    "Link"
+                  ],
+                  "linkURL": "http://localhost:3000/gs1/01/09359502000249/21/RLIC_TEST01",
+                  "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+                  "hashMethod": "SHA-256",
+                  "linkName": "EcoCharge Lithium-Ion Battery Produced at RLI Certified Facility A",
+                  "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+                  "encryptionMethod": "AES"
+                }
               }
             ],
-            "conformityClaim": [],
             "circularityScorecard": {
               "type": [
                 "CircularityPerformance"
@@ -334,16 +523,110 @@
               "ProductPassport"
             ],
             "product": {
+              "type": [
+                "Product"
+              ],
+              "id": "http://localhost:3000/gs1/01/09520123456788/21/TEST_DPP01",
+              "name": "TEST: EcoCharge Lithium-Ion Battery",
+              "registeredId": "09359502000034",
+              "idScheme": {
+                "id": "https://id.gs1.org/01/",
+                "name": "Global Trade Identification Number (GTIN)"
+              },
+              "serialNumber": "12345678",
+              "batchNumber": "6789",
+              "productImage": {
+                "type": [
+                  "Link"
+                ],
+                "linkURL": "https://c.animaapp.com/b3vf2M20/img/pp-header@2x.png",
+                "linkName": "EV Battery 300Ah Image"
+              },
+              "description": "The EcoCharge EC-5000 Lithium-Ion Battery is a high-capacity, 5000mAh battery designed for performance and sustainability. Manufactured with responsibly sourced materials and a 95% recyclability rate, it reduces lifecycle emissions through eco-friendly production and verified recycling programs.",
+              "productCategory": [
+                {
+                  "type": [
+                    "Classification"
+                  ],
+                  "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/46410",
+                  "code": "46410",
+                  "name": "Primary cells",
+                  "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+                  "schemeName": "UN Central Product Classification (CPC)"
+                },
+                {
+                  "type": [
+                    "Classification"
+                  ],
+                  "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/46410",
+                  "code": "46410",
+                  "name": "Primary batteries",
+                  "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+                  "schemeName": "UN Central Product Classification (CPC)"
+                }
+              ],
+              "furtherInformation": [
+                {
+                  "type": [
+                    "Link"
+                  ],
+                  "linkURL": "https://example-company.com/product-information/1234567",
+                  "linkName": "Name of document that is further information"
+                },
+                {
+                  "type": [
+                    "Link"
+                  ],
+                  "linkURL": "https://example-company.com/product-information/1234567",
+                  "linkName": "Name of additional document that is further information"
+                }
+              ],
+              "producedByParty": {
+                "id": "https://id.example-company.com/party/6789",
+                "name": "Example Manufacturing Co."
+              },
+              "producedAtFacility": {
+                "id": "https://id.example-company.com/facility/123",
+                "name": "Green Acres Battery Factory"
+              },
+              "dimensions": {
+                "type": [
+                  "Dimension"
+                ],
+                "weight": {
+                  "value": 10,
+                  "unit": "kg"
+                },
+                "length": {
+                  "value": 90,
+                  "unit": "mm"
+                },
+                "width": {
+                  "value": 60,
+                  "unit": "mm"
+                },
+                "height": {
+                  "value": 10,
+                  "unit": "mm"
+                },
+                "volume": {
+                  "value": 7.5,
+                  "unit": "L"
+                }
+              },
+              "characteristic": {
+                "Battery status": "Recycled",
+                "Battery cell type": "Prismatic",
+                "Number of cells per battery": "180",
+                "Total energy": "100kwh"
+              },
+              "productionDate": "2024-04-24",
+              "countryOfProduction": "Australia",
               "characteristics": {
                 "type": [
                   "Characteristics"
                 ],
                 "capacity": "0 Ah"
-              },
-              "name": "",
-              "producedAtFacility": {
-                "id": "",
-                "name": ""
               }
             }
           },
@@ -434,31 +717,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "orchard_facility_dpps",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "orchard_facility_dpps"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
           }
         ]
       }
@@ -769,23 +1027,6 @@
             "identifierKeyPath": "/id"
           }
         ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_upstream_copper_concentrate_dpp",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_upstream_copper_concentrate_dpp"
-          }
-        ]
       }
     ]
   },
@@ -1040,15 +1281,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_upstream_lithium_mine_dpp",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
           }
         ]
       }
@@ -1374,23 +1606,6 @@
             "identifierKeyPath": "/id"
           }
         ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "smelter_dpps",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "smelter_dpps"
-          }
-        ]
       }
     ]
   },
@@ -1679,15 +1894,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_refined_lithium_dpp",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
           }
         ]
       }
@@ -2467,31 +2673,6 @@
             "identifierKeyPath": "/id"
           }
         ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_downstream_dpp_laptop_screen",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_downstream_dpp_laptop_screen"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
-          }
-        ]
       }
     ]
   },
@@ -2853,31 +3034,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_downstream_dpp_laptop_keyboard",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_downstream_dpp_laptop_keyboard"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
           }
         ]
       }
@@ -3243,31 +3399,6 @@
             "identifierKeyPath": "/id"
           }
         ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_downstream_dpp_laptop_casing",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_downstream_dpp_laptop_casing"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
-          }
-        ]
       }
     ]
   },
@@ -3619,15 +3750,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_downstream_electronic_goods_passport",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
           }
         ]
       }
@@ -4085,23 +4207,6 @@
             "identifierKeyPath": "/id"
           }
         ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_recycling_dpp_recycled_electronic_goods",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "rmi_recycling_dpp_recycled_electronic_goods"
-          }
-        ]
       }
     ]
   },
@@ -4410,23 +4515,6 @@
             "identifierKeyPath": "/id"
           }
         ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "copper_concentrate_dpps",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "copper_concentrate_dpps"
-          }
-        ]
       }
     ]
   },
@@ -4690,15 +4778,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_lithium_mine_dpp",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
           }
         ]
       }
@@ -5024,23 +5103,6 @@
             "identifierKeyPath": "/id"
           }
         ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "smelter_dpps",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "smelter_dpps"
-          }
-        ]
       }
     ]
   },
@@ -5329,15 +5391,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "refined_lithium_dpp",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
           }
         ]
       }
@@ -5776,31 +5829,6 @@
             "identifierKeyPath": "/id"
           }
         ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "battery_dpps",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "battery_dpps"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
-          }
-        ]
       }
     ]
   },
@@ -6147,31 +6175,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_screen",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_screen"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
           }
         ]
       }
@@ -6537,31 +6540,6 @@
             "identifierKeyPath": "/id"
           }
         ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_keyboard",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_keyboard"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
-          }
-        ]
       }
     ]
   },
@@ -6925,31 +6903,6 @@
             "identifierKeyPath": "/id"
           }
         ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_casing",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_casing"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
-          }
-        ]
       }
     ]
   },
@@ -7301,15 +7254,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_electronic_goods_passport",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
           }
         ]
       }
@@ -7765,23 +7709,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_recycling_dpp_recycled_electronic_goods",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_recycling_dpp_recycled_electronic_goods"
           }
         ]
       }
@@ -10778,31 +10705,6 @@
             "identifierKeyPath": "/id"
           }
         ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "battery_dpps",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "battery_dpps"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
-          }
-        ]
       }
     ]
   },
@@ -11149,31 +11051,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_screen",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_screen"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
           }
         ]
       }
@@ -11539,31 +11416,6 @@
             "identifierKeyPath": "/id"
           }
         ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_keyboard",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_keyboard"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
-          }
-        ]
       }
     ]
   },
@@ -11927,31 +11779,6 @@
             "identifierKeyPath": "/id"
           }
         ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_casing",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_dpp_laptop_casing"
-          }
-        ]
-      },
-      {
-        "name": "findFirstMatchingKeyValue",
-        "parameters": [
-          {
-            "targetKey": "credentialSubject"
-          }
-        ]
       }
     ]
   },
@@ -12303,15 +12130,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_downstream_electronic_goods_passport",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
           }
         ]
       }
@@ -12767,23 +12585,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_recycling_dpp_recycled_electronic_goods",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "pilot_001_recycling_dpp_recycled_electronic_goods"
           }
         ]
       }

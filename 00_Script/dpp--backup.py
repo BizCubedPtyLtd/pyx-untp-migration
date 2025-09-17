@@ -51,9 +51,6 @@ class DPPTransformer(CredentialTransformer):
     
         # 2*. Credential Subject Structure: adds "type": ["ProductPassport"] to the original structure, added "granularityLevel": "item" to product
         credential_subject = data.get("credentialSubject", {})
-        if credential_subject == {}:
-            # get the credential_subject data from data
-            credential_subject = data
         product = {k: v for k, v in credential_subject.items() if k != "conformityClaim"}
         product["granularityLevel"] = "item"
         new_credential_subject = {
@@ -300,6 +297,14 @@ class DPPTransformer(CredentialTransformer):
                 vckit_issuer = vckit.get('issuer', {})
                 if "otherIdentifier" in vckit_issuer: # Updates 'otherIdentifier' to 'issuerAlsoKnownAs' and retains the position
                     self._pop_and_replace_key(vckit_issuer, "otherIdentifier", "issuerAlsoKnownAs")
+
+
+            # #removes mergeToLocalStorage and getValueFromLocalStorage
+            # if param['name'] == 'mergeToLocalStorage':
+            #     del param
+            # if param['name'] == 'getValueFromLocalStorage':
+            #     del param
+
         return self.component
 
     
