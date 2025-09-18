@@ -23,38 +23,206 @@ class DPPTransformer(CredentialTransformer):
         This function transforms data in "components" 
         '''
         
+        ## TO RESOLVE: NestedComponents / LocalStorageLoader showing blank on issuing page. remove name, type, props, storagekey and flattens nestedcomponents to component
+        if self.component['name'] == 'LocalStorageLoader':
+            clean_data = self._clean_identifier_list(self.component, ['name', 'type'])
+            self.component = clean_data
+            self.component = self.component['props']['nestedComponents'][0]
+
         # Specific DFR data model changes for "component"
-        print(self.component["props"])
         data = self.component["props"]["data"]
 
-        # Reference Implementation Updates
+        ## Reference Implementation Updates
         # 1. Updates Schema URL to v0.6.0
         schema = self.component["props"]["schema"]
         schema["url"] = "https://jargon.sh/user/unece/DigitalProductPassport/v/0.6.0/artefacts/jsonSchemas/ProductPassport.json?class=ProductPassport"
         
-        print("schema['url']:", schema["url"])
-    
-        # 2. Credential Subject Structure: adds "type": ["ProductPassport"] to the original structure, added "granularityLevel": "item" to product
+
+        ## Data Model Changes 
+        # 2*. Credential Subject Structure: adds "type": ["ProductPassport"] to the original structure, added "granularityLevel": "item" to product
         credential_subject = data.get("credentialSubject", {})
+        if credential_subject == {}:
+            # get the credential_subject data from data
+            credential_subject = data
         product = {k: v for k, v in credential_subject.items() if k != "conformityClaim"}
         product["granularityLevel"] = "item"
         new_credential_subject = {
             "type": ["ProductPassport"],
-            "id": "example:product/1234",
+            "id": credential_subject.get("id", ""),
             "product": product,
             "conformityClaim": credential_subject.get("conformityClaim", [])
         }
         data["credentialSubject"] = new_credential_subject
-        
-        # 3. Issuer Identifier Structure: The issuer’s otherIdentifier property is replaced with issuerAlsoKnownAs, simplifying the structure by removing the idScheme reference.
+
+        # 3*. Issuer Identifier Structure: The issuer’s otherIdentifier property is replaced with issuerAlsoKnownAs, simplifying the structure by removing the idScheme reference.
         issuer = data.get('issuer', {})
         if "otherIdentifier" in issuer:
             self._pop_and_replace_key(issuer, "otherIdentifier", "issuerAlsoKnownAs")
         
-        # 4. 
+        # 4.* Party Structure Changes:
+        product = new_credential_subject.get('product', {})
+
+        
+        # Removed "type" in idScheme from the product object itself, as it’s no longer required in the inline structure.
+        if "idScheme" in product:
+            if "type" in product["idScheme"]:
+                del product["idScheme"]["type"]
+
+        '''removed the nested idScheme structure from producedByParty and producedAtFacility.
+        removed 'type' and 'idscheme' from producedByParty and producedAtFacility.
+        '''
+        producedByParty = product.get('producedByParty', {})
+        self._clean_identifier_list(producedByParty)
+
+        producedAtFacility = product.get('producedAtFacility', {})
+        self._clean_identifier_list(producedAtFacility)
+        
+        # Added characteristics property as an extension point for industry-specific attributes.
+        new_credential_subject["product"]["characteristics"] = {
+            "type": ["Characteristics"],
+            "capacity": "0 Ah"
+        }
+
+        '''
+        5. Material Structure Changes
+        Key Changes:
+
+        Renamed massAmount to mass and recycledAmount to recycledMassFraction.
+        Simplified issuingParty in the Standard and administeredBy in Regulation by removing the nested idScheme structure.
+
+        '''
+        materialsProvenance = product.get('materialsProvenance', {})
+        for material in materialsProvenance:
+            if "type" in material:
+                del material["type"]
+            if "massAmount" in material:
+                material["mass"] = material.pop("massAmount")
+                if "type" in material['mass']:
+                    del material['mass']['type']
+            if "recycledAmount" in material:
+                material["recycledMassFraction"] = material.pop("recycledAmount")
+
+        # Change CredentialSubject
+        # credentialSubject - conformityClaim - issuingParty structure change (Standard schema)
+        # changes issuingParty to issuerAlsoKnownAs
+        # Removes Type and idScheme
+        conformityClaim = new_credential_subject.get('conformityClaim', {})
+        for claim in conformityClaim:
+            referencestandard = claim.get("referenceStandard", {})
+            if "issuingParty" in referencestandard:
+                # referencestandard["issuerAlsoKnownAs"] = referencestandard.pop("issuingParty")
+                clean_data = self._clean_identifier_list(referencestandard["issuingParty"])
+                referencestandard["issuingParty"] = clean_data
+                if "type" in referencestandard["issuingParty"]:
+                    del referencestandard["issuingParty"]["type"]
+                if "idScheme" in referencestandard["issuingParty"]:
+                    del referencestandard["issuingParty"]["idScheme"]
+
+            # credentialSubject - conformityClaim - administeredBy structure change (Regulation schema)
+            # Removes Type and idScheme from referenceStandard.issuingParty and referenceRegulation.administeredBy
+            referenceregulation = claim.get("referenceRegulation", {})
+            if "administeredBy" in referenceregulation:
+                clean_data = self._clean_identifier_list(referenceregulation["administeredBy"])
+                referenceregulation["administeredBy"] = clean_data
+
+            
+            ##### RESOLVE UNTP SCHEMA VALIDATION ISSUE #####
+            # Location: credentialSubject → conformityClaim → 0 → declaredValue → 0 → metricValue
+            # Issue: must have required property 'value' - add value in metricValue
+            if "declaredValues" in claim:
+                claim["declaredValue"] = claim.pop("declaredValues")
+            
+            declaredValues = claim.get('declaredValue', [])
+            for declaredValue in declaredValues:
+                # if metricvalue in declaredvalue is metricvalue: {}, add "value":0 and "unit":""
+                if declaredValue.get("metricValue") == {} or not declaredValue.get("metricValue"):
+                    declaredValue["metricValue"] = {"unit": "", "value": 0}
+
+            ### RESOLVE JSON-LD SCHEMA VALIDATION ISSUE ###
+            '''
+            Location: credentialSubject → conformityClaim → 0 → conformityTopic Issue: must be equal to one of the allowed values
+            Must be one of: environment.energy, environment.emissions, environment.water, environment.waste, environment.deforestation, environment.biodiversity, circularity.content, circularity.design, social.labour, social.rights, social.community, social.safety, governance.ethics, governance.compliance, governance.transparency
+            #   */ 6*. Criterion Structure Enhancement
+            '''
+            conformityTopic = claim.get('conformityTopic', '')
+            if conformityTopic not in ["environment.energy", "environment.emissions", "environment.water", "environment.waste", "environment.deforestation", "environment.biodiversity", "circularity.content", "circularity.design", "social.labour", "social.rights", "social.community", "social.safety", "governance.ethics", "governance.compliance", "governance.transparency"]:
+                claim['conformityTopic'] = "environment.emissions" # sets a default/choose one
+
+            '''
+            6. Criterion Structure Enhancement
+            Key Changes:
+
+            Criterion now includes additional fields: description, conformityTopic, status, subCriterion, thresholdValue (replacing thresholdValues), performanceLevel, and tags. The thresholdValues property has been renamed to thresholdValue to reflect a singular metric focus per criterion. The subCriterion property allows for hierarchical structuring, enabling a criterion to reference subordinate criteria.
+            issuingParty in the Standard and administeredBy in Regulation by removing the nested idScheme structure.
+
+            '''
+            assessmentCriteria = claim.get('assessmentCriteria', {})
+            for assessment in assessmentCriteria:
+                new_column_added = {
+                    "description":"",
+                    "conformityTopic":"environment.emissions",
+                    "status":"active",
+                    "subCriterion":[],
+                    "performanceLevel":"",
+                    "tags": ""
+                }
+                assessment.update(new_column_added)
+                if "thresholdValues" in assessment:
+                    assessment["thresholdValue"] = assessment.pop("thresholdValues", [])[0]
+    
+        
+        # Flatten credentialSubject and clean top-level data
+        component_data = self.component["props"]["data"]
+        self._clean_identifier_list(component_data, ['type', '@context', 'issuer'])
+        self._flatten_credential_subject(component_data, 'credentialSubject')
+        # RESOLVE UNTP SCHEMA VALIDATION ISSUE
+        
+        '''
+        Issue: Properties "credentialSubject/product/granularityLevel, credentialSubject/product/dueDiligenceDeclaration, credentialSubject/product/materialsProvenance, credentialSubject/product/circularityScorecard, credentialSubject/product/emissionsScorecard, credentialSubject/product/traceabilityInformation, credentialSubject/product/characteristics" are defined in the credential but missing from the context.
+        Incorrect value: credentialSubject/product/granularityLevel, credentialSubject/product/dueDiligenceDeclaration, credentialSubject/product/materialsProvenance, credentialSubject/product/circularityScorecard, credentialSubject/product/emissionsScorecard, credentialSubject/product/traceabilityInformation, credentialSubject/product/characteristics
+        '''
+        list_flatten = ['granularityLevel', 'dueDiligenceDeclaration', 'materialsProvenance', 'circularityScorecard', 'emissionsScorecard', 'traceabilityInformation']
+
+        product = component_data.get('product', {})
+        for key in list_flatten:
+            if key in product:
+                component_data[key] = product.pop(key)
+        '''
+        if traceabilityInformation in product and it is not a list, convert to list
+        '''
+        if "traceabilityInformation" in component_data:
+            if not isinstance(component_data["traceabilityInformation"], list):
+                component_data["traceabilityInformation"] = [component_data["traceabilityInformation"]]
+
+
+        '''
+        Resolve issues:
+        Location: credentialSubject → product
+        Issue: must have required property 'name'
+        Missing field: name
+        Location: credentialSubject → product → producedAtFacility
+        Issue: must have required property 'id'
+        Missing field: id
+        Location: credentialSubject → emissionsScorecard
+        Issue: must have required property 'carbonFootprint'
+        Missing field: carbonFootprint
+        '''
+        # Ensure 'name' exists in product
+        product.setdefault("name", "")
+
+        # Ensure 'producedAtFacility' is a dict with default keys
+        producedAtFacility = product.setdefault("producedAtFacility", {})
+        producedAtFacility.setdefault("id", "")
+        producedAtFacility.setdefault("name", "")
+
+        # Ensure 'emissionsScorecard' is a dict with default keys
+        emissionsScorecard = component_data.setdefault("emissionsScorecard", {})
+        emissionsScorecard.setdefault("declaredUnit", "kg")
+        emissionsScorecard.setdefault("carbonFootprint", 0)
+        emissionsScorecard.setdefault("operationalScope", "CradleToGate")
+        emissionsScorecard.setdefault("primarySourcedRatio", 0)
 
         return self.component
-    
     
     def transform_services(self) -> Dict[str, Any]:
         '''
@@ -71,7 +239,7 @@ class DPPTransformer(CredentialTransformer):
         '''
         # 2. Context in Services updates
         parameters = self.component.get('parameters', [])
-        for param in parameters: #iterate through services
+        for param in parameters: #iterate through param -> services
             context_configuration = param.get('dpp')
             if context_configuration:
                 context_configuration['context'] = ["https://test.uncefact.org/vocabulary/untp/dpp/0.6.0/"]
@@ -94,7 +262,6 @@ class DPPTransformer(CredentialTransformer):
                 vckit_issuer = vckit.get('issuer', {})
                 if "otherIdentifier" in vckit_issuer: # Updates 'otherIdentifier' to 'issuerAlsoKnownAs' and retains the position
                     self._pop_and_replace_key(vckit_issuer, "otherIdentifier", "issuerAlsoKnownAs")
-
         return self.component
 
     

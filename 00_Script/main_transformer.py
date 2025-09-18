@@ -69,10 +69,8 @@ class AppConfigProcessor:
                         if component.get("name") == "LocalStorageLoader": 
                             nestedcomponents = component['props']['nestedComponents']
                             if len(nestedcomponents) == 1: # Assumes single nested component
-                                #print('inside nested components')
                                 schema_url = nestedcomponents[0]["props"]["schema"]["url"]
                             else:
-                                #print('Multiple nested components found. Please investigate')
                                 break
                         else:
                             schema_url = component["props"]["schema"]["url"]
@@ -80,40 +78,34 @@ class AppConfigProcessor:
                         if "DigitalFacilityRecord" in schema_url:
                             credential_type = "DFR"
                             count['DFR'] += 1
-                            print("DFR FOUND")
-                            print(schema_url)
+                            print("DFR found, continue to transform.")
                         elif "traceabilityEvents" in schema_url:
                             credential_type = "DTE"
                             count['DTE'] += 1
-                            print("DTE FOUND")
+                            print("DTE found, continue to transform.")
                         elif "DigitalProductPassport" in schema_url:
-                            print(schema_url)
                             credential_type = "DPP"
                             count['DPP'] += 1
-                            print("DPP FOUND")
+                            print("DPP found, continue to transform.")
                         # elif "DigitalConformityCredential" in schema_url:
                         #      credential_type = "DCC"
+                        #      print("DCC found, continue to transform.")
                         # elif "DigitalIdentityAnchor" in schema_url:
                         #     credential_type = "DIA"
+                        #     print("DIA found, continue to transform.")
                         else:
                             print('Unknown type of credential. Please investigate')
                             continue  # Skip unknown
+
+                        transformer = TransformerFactory.get_transformer(credential_type, component) # Gets the transformer name, such as DFRTransformer
+                        transformed_component = transformer.transform()
                         
-                        # This transformer applies structural changes to "apps" -> "features" -> "components"
-                        if component.get("name") == 'LocalStorageLoader': # If nestedcomponent, then pass the nestedcomponents. Change the type from localstorageloader to standard jsonform 
-                            transformer = TransformerFactory.get_transformer(credential_type, nestedcomponents[0]) # Gets the transformer name, such as DFRTransformer
-                            transformed_component = transformer.transform()
-                            nestedcomponents[0].update(transformed_component)
-                            # Update the component in place
-                            print('transformed_component', nestedcomponents)
-                        else: # If standard JsonForm, then pass the component
-                            transformer = TransformerFactory.get_transformer(credential_type, component) # Gets the transformer name, such as DFRTransformer
-                            transformed_component = transformer.transform()
-                            
-                            # Update the component in place
-                            component.update(transformed_component)
-                            
-                            #print('component updated', component)
+                        # Update the component in place
+                        component.update(transformed_component)
+                        
+                #### UPDATE SERVICES ######
+
+                updated_services = []
                 if credential_type: # If a valid credential type was found
                     # The below transformer applies structural changes to "apps" -> "features" -> "services"
                     for service in services: # update services 
@@ -121,7 +113,6 @@ class AppConfigProcessor:
                             # Apply transformation for services specific to the credential types
                             transformer = TransformerFactory.get_transformer(credential_type, service)
                             # initialize the class
-                            print('transformer', transformer)
                             transformed_component = transformer.transform_services()
                             # Update the component in place
                             service.update(transformed_component)
@@ -129,6 +120,10 @@ class AppConfigProcessor:
                             transformed_component = GeneralMigrator.migrate_general_v_050_to_v_060(service)
                             # Update the component in place
                             service.update(transformed_component)
+                            updated_services.append(service)
+                        else: # if service['name'] not in ['mergeToLocalStorage', 'getValueFromLocalStorage'], remove them from services
+                            continue  
+                    services[:] = updated_services
                 else:
                     print("No valid credential type found.")
         return self.config_data, count #, json_list
@@ -173,7 +168,7 @@ if __name__ == "__main__":
     brand_name = 'RBTP'
     file_name = "app-config.json"
     testing_folder = 'DPP'
-    output_file_name = f"transformed-{testing_folder}-app-config-test.json"
+    output_file_name = f"transformed-{testing_folder}-app-config-test-v8.json"
     
     ###########################################################
 
