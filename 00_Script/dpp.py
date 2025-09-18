@@ -25,14 +25,11 @@ class DPPTransformer(CredentialTransformer):
         
         ## TO RESOLVE: NestedComponents / LocalStorageLoader showing blank on issuing page. remove name, type, props, storagekey and flattens nestedcomponents to component
         if self.component['name'] == 'LocalStorageLoader':
-            print('inside LocalStorageLoader', self.component)
             clean_data = self._clean_identifier_list(self.component, ['name', 'type'])
             self.component = clean_data
             self.component = self.component['props']['nestedComponents'][0]
-            print("after", self.component)
 
         # Specific DFR data model changes for "component"
-        print(self.component["props"])
         data = self.component["props"]["data"]
 
         ## Reference Implementation Updates
@@ -40,15 +37,8 @@ class DPPTransformer(CredentialTransformer):
         schema = self.component["props"]["schema"]
         schema["url"] = "https://jargon.sh/user/unece/DigitalProductPassport/v/0.6.0/artefacts/jsonSchemas/ProductPassport.json?class=ProductPassport"
         
-        # # 2. Context configuration changes
-        # data['@context'] = ["https://test.uncefact.org/vocabulary/untp/dpp/0.6.0/"]
 
-
-
-        print("after", self.component)
         ## Data Model Changes 
-        print("schema['url']:", schema["url"])
-    
         # 2*. Credential Subject Structure: adds "type": ["ProductPassport"] to the original structure, added "granularityLevel": "item" to product
         credential_subject = data.get("credentialSubject", {})
         if credential_subject == {}:
@@ -63,7 +53,7 @@ class DPPTransformer(CredentialTransformer):
             "conformityClaim": credential_subject.get("conformityClaim", [])
         }
         data["credentialSubject"] = new_credential_subject
-        print("after", self.component)
+
         # 3*. Issuer Identifier Structure: The issuer’s otherIdentifier property is replaced with issuerAlsoKnownAs, simplifying the structure by removing the idScheme reference.
         issuer = data.get('issuer', {})
         if "otherIdentifier" in issuer:
@@ -82,18 +72,10 @@ class DPPTransformer(CredentialTransformer):
         removed 'type' and 'idscheme' from producedByParty and producedAtFacility.
         '''
         producedByParty = product.get('producedByParty', {})
-        if "type" in producedByParty:
-            del producedByParty["type"]
-            print('deleted')
-        if "idScheme" in producedByParty:
-            del producedByParty["idScheme"]
-        # new_credential_subject["producedByParty"] = producedByParty
+        self._clean_identifier_list(producedByParty)
 
         producedAtFacility = product.get('producedAtFacility', {})
-        if "type" in producedAtFacility:
-            del producedAtFacility["type"]
-        if "idScheme" in producedAtFacility:
-            del producedAtFacility["idScheme"]
+        self._clean_identifier_list(producedAtFacility)
         
         # Added characteristics property as an extension point for industry-specific attributes.
         new_credential_subject["product"]["characteristics"] = {
@@ -110,7 +92,6 @@ class DPPTransformer(CredentialTransformer):
 
         '''
         materialsProvenance = product.get('materialsProvenance', {})
-        #print('!!!!!!!!!!!!materialsProvenance', materialsProvenance)
         for material in materialsProvenance:
             if "type" in material:
                 del material["type"]
@@ -121,17 +102,14 @@ class DPPTransformer(CredentialTransformer):
             if "recycledAmount" in material:
                 material["recycledMassFraction"] = material.pop("recycledAmount")
 
-
+        # Change CredentialSubject
         # credentialSubject - conformityClaim - issuingParty structure change (Standard schema)
         # changes issuingParty to issuerAlsoKnownAs
         # Removes Type and idScheme
         conformityClaim = new_credential_subject.get('conformityClaim', {})
-        #print("!!!!!!!!!!!!conformityClaim", conformityClaim)
         for claim in conformityClaim:
             referencestandard = claim.get("referenceStandard", {})
-            #print('!!!!! referencestandard', referencestandard)
             if "issuingParty" in referencestandard:
-                #print("!!!!!!!!!! inside")
                 # referencestandard["issuerAlsoKnownAs"] = referencestandard.pop("issuingParty")
                 clean_data = self._clean_identifier_list(referencestandard["issuingParty"])
                 referencestandard["issuingParty"] = clean_data
@@ -160,17 +138,7 @@ class DPPTransformer(CredentialTransformer):
                 if declaredValue.get("metricValue") == {} or not declaredValue.get("metricValue"):
                     declaredValue["metricValue"] = {"unit": "", "value": 0}
 
-            print("after", self.component)
-#  # UNTP Schema Validation: adds credentialSubject -> ConformityClaim -> declaredValue -> metricValue (if empty, add "unit" and "value")
-#         for claim in conformity_claim:
-#             # JSON-LD schema: if the name is declaredValues instead of declaredValue, change the name
-#             if "declaredValues" in claim:
-#                 claim["declaredValue"] = claim.pop("declaredValues")
-#             declared_value = claim.get('declaredValue', {})
-#             for declared in declared_value:
-#                 if not declared.get("metricValue"):
-#                     declared["metricValue"] = {"unit": "", "value": 0}
-
+            ### RESOLVE JSON-LD SCHEMA VALIDATION ISSUE ###
             '''
             Location: credentialSubject → conformityClaim → 0 → conformityTopic Issue: must be equal to one of the allowed values
             Must be one of: environment.energy, environment.emissions, environment.water, environment.waste, environment.deforestation, environment.biodiversity, circularity.content, circularity.design, social.labour, social.rights, social.community, social.safety, governance.ethics, governance.compliance, governance.transparency
@@ -190,7 +158,6 @@ class DPPTransformer(CredentialTransformer):
             '''
             assessmentCriteria = claim.get('assessmentCriteria', {})
             for assessment in assessmentCriteria:
-                print('!!!!!!!!!!!!!!!assessment', assessment)
                 new_column_added = {
                     "description":"",
                     "conformityTopic":"environment.emissions",
@@ -208,7 +175,6 @@ class DPPTransformer(CredentialTransformer):
         component_data = self.component["props"]["data"]
         self._clean_identifier_list(component_data, ['type', '@context', 'issuer'])
         self._flatten_credential_subject(component_data, 'credentialSubject')
-        print(component_data)
         # RESOLVE UNTP SCHEMA VALIDATION ISSUE
         
         '''
@@ -241,25 +207,21 @@ class DPPTransformer(CredentialTransformer):
         Issue: must have required property 'carbonFootprint'
         Missing field: carbonFootprint
         '''
-        if "name" not in product:
-            product["name"] = ""
-        producedAtFacility = product.get('producedAtFacility', {})
-        if 'id' not in producedAtFacility:
-            producedAtFacility['id'] = ""
-        if 'name' not in producedAtFacility:
-            producedAtFacility['name'] = ""
-        product['producedAtFacility'] = producedAtFacility
-        emissionsScorecard = component_data.get('emissionsScorecard', {})
-        if 'declaredUnit' not in emissionsScorecard:
-            emissionsScorecard['declaredUnit'] = "kg"
-        if 'carbonFootprint' not in emissionsScorecard:
-            emissionsScorecard['carbonFootprint'] = 0
-        if 'operationalScope' not in emissionsScorecard:
-            emissionsScorecard['operationalScope'] = "CradleToGate"
-        if 'primarySourcedRatio' not in emissionsScorecard:
-            emissionsScorecard['primarySourcedRatio'] = 0
+        # Ensure 'name' exists in product
+        product.setdefault("name", "")
 
-        print("after", self.component)
+        # Ensure 'producedAtFacility' is a dict with default keys
+        producedAtFacility = product.setdefault("producedAtFacility", {})
+        producedAtFacility.setdefault("id", "")
+        producedAtFacility.setdefault("name", "")
+
+        # Ensure 'emissionsScorecard' is a dict with default keys
+        emissionsScorecard = component_data.setdefault("emissionsScorecard", {})
+        emissionsScorecard.setdefault("declaredUnit", "kg")
+        emissionsScorecard.setdefault("carbonFootprint", 0)
+        emissionsScorecard.setdefault("operationalScope", "CradleToGate")
+        emissionsScorecard.setdefault("primarySourcedRatio", 0)
+
         return self.component
     
     def transform_services(self) -> Dict[str, Any]:
