@@ -8732,8 +8732,8 @@
               },
               "producedAtFacility": {
                 "registeredId": "",
-                "id": "",
-                "name": ""
+                "id": "http://localhost:3000/gs1/414/123456",
+                "name": "Sample Facility"
               },
               "productionDate": "2024-11-11",
               "productImage": {
@@ -8896,8 +8896,8 @@
               },
               "producedAtFacility": {
                 "registeredId": "",
-                "id": "",
-                "name": ""
+                "id": "http://localhost:3000/gs1/414/123456",
+                "name": "Sample Facility"
               },
               "productionDate": "2025-11-11",
               "productImage": {
@@ -9051,8 +9051,8 @@
               },
               "producedAtFacility": {
                 "registeredId": "",
-                "id": "",
-                "name": ""
+                "id": "http://localhost:3000/gs1/414/123456",
+                "name": "Sample Facility"
               },
               "productionDate": "2025-11-11",
               "productImage": {
@@ -9206,8 +9206,8 @@
               },
               "producedAtFacility": {
                 "registeredId": "",
-                "id": "",
-                "name": ""
+                "id": "http://localhost:3000/gs1/414/123456",
+                "name": "Sample Facility"
               },
               "productionDate": "2024-11-11",
               "productImage": {
@@ -9376,8 +9376,8 @@
               },
               "producedAtFacility": {
                 "registeredId": "",
-                "id": "",
-                "name": ""
+                "id": "http://localhost:3000/gs1/414/123456",
+                "name": "Sample Facility"
               },
               "productionDate": "2025-11-11",
               "productImage": {
@@ -9531,8 +9531,8 @@
               },
               "producedAtFacility": {
                 "registeredId": "",
-                "id": "",
-                "name": ""
+                "id": "http://localhost:3000/gs1/414/123456",
+                "name": "Sample Facility"
               },
               "productionDate": "2025-11-11",
               "productImage": {
@@ -9699,8 +9699,8 @@
               },
               "producedAtFacility": {
                 "registeredId": "",
-                "id": "",
-                "name": ""
+                "id": "http://localhost:3000/gs1/414/123456",
+                "name": "Sample Facility"
               },
               "dimensions": {
                 "weight": {
