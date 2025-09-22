@@ -77,11 +77,13 @@ class DPPTransformer(CredentialTransformer):
         producedAtFacility = product.get('producedAtFacility', {})
         self._clean_identifier_list(producedAtFacility)
         
-        # Added characteristics property as an extension point for industry-specific attributes.
-        new_credential_subject["product"]["characteristics"] = {
-            "type": ["Characteristics"],
-            "capacity": "0 Ah"
-        }
+        # # Added characteristics property as an extension point for industry-specific attributes.
+        # After confirming with Ash, this is only for industry-specific DPP extensions, such as DBP, Lifestock Passport, etc.
+        # Thus, we don't need to add this line to the generic DPP transformer.
+        # new_credential_subject["product"]["characteristics"] = {
+        #     "type": ["Characteristics"],
+        #     "capacity": "0 Ah"
+        # }
 
         '''
         5. Material Structure Changes
@@ -169,6 +171,10 @@ class DPPTransformer(CredentialTransformer):
                 assessment.update(new_column_added)
                 if "thresholdValues" in assessment:
                     assessment["thresholdValue"] = assessment.pop("thresholdValues", [])[0]
+
+            ### RESOLVE JSON-LD SCHEMA VALIDATION ISSUE: removes assessedProduct as no longer relevant to 0.6.0###
+            if "assessedProduct" in claim:
+                del claim['assessedProduct']
     
         
         # Flatten credentialSubject and clean top-level data
@@ -208,12 +214,12 @@ class DPPTransformer(CredentialTransformer):
         Missing field: carbonFootprint
         '''
         # Ensure 'name' exists in product
-        product.setdefault("name", "")
+        product.setdefault("name", "Example")
 
         # Ensure 'producedAtFacility' is a dict with default keys
         producedAtFacility = product.setdefault("producedAtFacility", {})
-        producedAtFacility.setdefault("id", "")
-        producedAtFacility.setdefault("name", "")
+        producedAtFacility.setdefault("id", "http://localhost:3000/gs1/414/123456") # producedAtFacility needs to be an URI and has to have value
+        producedAtFacility.setdefault("name", "Sample Facility")
 
         # Ensure 'emissionsScorecard' is a dict with default keys
         emissionsScorecard = component_data.setdefault("emissionsScorecard", {})
@@ -221,6 +227,19 @@ class DPPTransformer(CredentialTransformer):
         emissionsScorecard.setdefault("carbonFootprint", 0)
         emissionsScorecard.setdefault("operationalScope", "CradleToGate")
         emissionsScorecard.setdefault("primarySourcedRatio", 0)
+
+        # Remove "type" in "emissionsScorecard"."reportingStandard"."issuingParty" 
+        reportingStandard = emissionsScorecard.get("reportingStandard", {})
+        issuingParty = reportingStandard.get("issuingParty", {})
+        if "type" in issuingParty:
+            del issuingParty["type"]
+        # clean_data = self._clean_identifier_list(reportingStandard["issuingParty"])
+        # reportingStandard["issuingParty"] = clean_data
+
+        # Remove "type" in "dimensions"
+        dimensions = product.get("dimensions", {})
+        if "type" in dimensions:
+            del dimensions["type"]
 
         return self.component
     
