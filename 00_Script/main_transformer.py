@@ -5,6 +5,8 @@ from dfr import CredentialTransformer
 from dfr import DFRTransformer
 from dte import DTETransformer
 from dpp import DPPTransformer
+from dcc import DCCTransformer
+from dia import DIATransformer
 from collections import defaultdict
 import pandas as pd
 
@@ -87,9 +89,10 @@ class AppConfigProcessor:
                             credential_type = "DPP"
                             count['DPP'] += 1
                             print("DPP found, continue to transform.")
-                        # elif "DigitalConformityCredential" in schema_url:
-                        #      credential_type = "DCC"
-                        #      print("DCC found, continue to transform.")
+                        elif "DigitalConformityCredential" in schema_url:
+                             credential_type = "DCC"
+                             count['DCC'] += 1
+                             print("DCC found, continue to transform.")
                         # elif "DigitalIdentityAnchor" in schema_url:
                         #     credential_type = "DIA"
                         #     print("DIA found, continue to transform.")
@@ -149,8 +152,8 @@ class TransformerFactory:
         transformers = {
             "DFR": DFRTransformer,
             "DTE": DTETransformer,
-            "DPP": DPPTransformer
-            # "DCC": DCCTransformer,
+            "DPP": DPPTransformer,
+            "DCC": DCCTransformer
             # "DIA": DIATransformer,
         }
         # If the credential type is in the dictionary keys, extracts the value to get transformer name
@@ -176,8 +179,8 @@ if __name__ == "__main__":
     input_folder_name = "01_Input/app-config"
     brand_name = 'RBTP'
     file_name = "app-config.json"
-    testing_folder = 'DPP'
-    output_file_name = f"transformed-{testing_folder}-app-config-test-v10.json"
+    testing_folder = 'DCC'
+    output_file_name = f"transformed-{testing_folder}-app-config-test.json"
     
     ###########################################################
 

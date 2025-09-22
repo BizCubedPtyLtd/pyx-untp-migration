@@ -11,7 +11,7 @@ from typing import Dict, Any, List
 ############## PARAMETERS & VARIABLES #####################
 
 current_dir = Path(__file__).resolve().parent
-credential_request = 'DPP'
+credential_request = 'DCC'
 
 input_folder_name = "01_Input/app-config"
 brand_name = 'RBTP'
