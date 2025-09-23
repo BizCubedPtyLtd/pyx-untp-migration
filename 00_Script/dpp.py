@@ -55,9 +55,16 @@ class DPPTransformer(CredentialTransformer):
         data["credentialSubject"] = new_credential_subject
 
         # 3*. Issuer Identifier Structure: The issuer’s otherIdentifier property is replaced with issuerAlsoKnownAs, simplifying the structure by removing the idScheme reference.
-        issuer = data.get('issuer', {})
+        # issuer = data.get('issuer', {})
+        # if "otherIdentifier" in issuer:
+        #     self._pop_and_replace_key(issuer, "otherIdentifier", "issuerAlsoKnownAs")
+
+        # 3*. Issuer Identifier Structure: The issuer’s otherIdentifier property is replaced with issuerAlsoKnownAs, simplifying the structure by removing the idScheme reference.
+        issuer = new_credential_subject.get('issuer', {})
         if "otherIdentifier" in issuer:
-            self._pop_and_replace_key(issuer, "otherIdentifier", "issuerAlsoKnownAs")
+            clean_data_0 = self._pop_and_replace_key(issuer, "otherIdentifier", "issuerAlsoKnownAs")
+            clean_data_0 = self._clean_identifier_list(clean_data_0, ["type", "idScheme"]) 
+            issuer["issuerAlsoKnownAs"] = clean_data_0
         
         # 4.* Party Structure Changes:
         product = new_credential_subject.get('product', {})
@@ -172,7 +179,7 @@ class DPPTransformer(CredentialTransformer):
                 if "thresholdValues" in assessment:
                     assessment["thresholdValue"] = assessment.pop("thresholdValues", [])[0]
 
-            ### RESOLVE JSON-LD SCHEMA VALIDATION ISSUE: removes assessedProduct as no longer relevant to 0.6.0###
+            ### RESOLVE JSON-LD SCHEMA VALIDATION ISSUE: removes assessedProduct as not relevant to dpp###
             if "assessedProduct" in claim:
                 del claim['assessedProduct']
     

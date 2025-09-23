@@ -15,8 +15,8 @@ credential_request = 'DCC'
 
 input_folder_name = "01_Input/app-config"
 brand_name = 'RBTP'
-input_file_name = f"transformed-{credential_request}-app-config-test-v10.json"
-output_file_name = f"transformed-app-config-{credential_request}-only-v10.json"
+input_file_name = f"transformed-{credential_request}-app-config-test-v2.json"
+output_file_name = f"transformed-app-config-{credential_request}-only-v2.json"
 
 input_path = (current_dir.parent.parent / input_folder_name / brand_name / credential_request / input_file_name)
 print('input_path', input_path)
@@ -56,11 +56,10 @@ for app in apps:
                     credential_type = "DTE"
                 elif "DigitalProductPassport" in schema_url:
                     credential_type = "DPP"
-                    print('DPP FOUND')
-                # elif "DigitalConformityCredential" in schema_url:
-                #     credential_type = "DCC"
-                # elif "DigitalIdentityAnchor" in schema_url:
-                #     credential_type = "DIA"
+                elif "ConformityCredential" in schema_url:
+                    credential_type = "DCC"
+                elif "DigitalIdentityAnchor" in schema_url:
+                    credential_type = "DIA"
                 else:
                     continue  # Skip unknown
         

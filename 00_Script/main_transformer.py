@@ -89,7 +89,7 @@ class AppConfigProcessor:
                             credential_type = "DPP"
                             count['DPP'] += 1
                             print("DPP found, continue to transform.")
-                        elif "DigitalConformityCredential" in schema_url:
+                        elif "ConformityCredential" in schema_url:
                              credential_type = "DCC"
                              count['DCC'] += 1
                              print("DCC found, continue to transform.")
@@ -180,14 +180,16 @@ if __name__ == "__main__":
     brand_name = 'RBTP'
     file_name = "app-config.json"
     testing_folder = 'DCC'
-    output_file_name = f"transformed-{testing_folder}-app-config-test.json"
+    output_file_name = f"transformed-{testing_folder}-app-config-test-v2.json"
     
+    input_path = current_dir.parent / input_folder_name / brand_name  / file_name
+    output_path = current_dir.parent / input_folder_name / brand_name / testing_folder / output_file_name
+
     ###########################################################
 
-    processor = AppConfigProcessor(current_dir.parent / input_folder_name / brand_name / file_name)
+    processor = AppConfigProcessor(input_path)
     output, count = processor.process()
 
-    output_path = current_dir.parent / input_folder_name / brand_name / testing_folder / output_file_name
     with open(output_path, "w") as f:
         json.dump(output, f, indent=2)
 
