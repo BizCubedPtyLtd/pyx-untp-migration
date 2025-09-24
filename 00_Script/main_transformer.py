@@ -5,6 +5,8 @@ from dfr import CredentialTransformer
 from dfr import DFRTransformer
 from dte import DTETransformer
 from dpp import DPPTransformer
+from dcc import DCCTransformer
+from dia import DIATransformer
 from collections import defaultdict
 import pandas as pd
 
@@ -61,7 +63,7 @@ class AppConfigProcessor:
 
                 # Initialize credential_type to None
                 credential_type = None
-
+                updated_components = []
                 for component in components: # update component
                     if component.get("type") == "EntryData": #only process 
                         # Identifies either 2 types of JSON structures: "LocalStorageLoader/NestedComponents" and standard "JsonForm"
@@ -87,9 +89,10 @@ class AppConfigProcessor:
                             credential_type = "DPP"
                             count['DPP'] += 1
                             print("DPP found, continue to transform.")
-                        # elif "DigitalConformityCredential" in schema_url:
-                        #      credential_type = "DCC"
-                        #      print("DCC found, continue to transform.")
+                        elif "ConformityCredential" in schema_url:
+                             credential_type = "DCC"
+                             count['DCC'] += 1
+                             print("DCC found, continue to transform.")
                         # elif "DigitalIdentityAnchor" in schema_url:
                         #     credential_type = "DIA"
                         #     print("DIA found, continue to transform.")
@@ -102,6 +105,15 @@ class AppConfigProcessor:
                         
                         # Update the component in place
                         component.update(transformed_component)
+                        updated_components.append(component)
+                    # If name = 'BarcodeGenerator', remove it
+                    elif component.get('name') == 'BarcodeGenerator':
+                        print('inside remove BarcodeGenerator')
+                        continue
+                    else:
+                        updated_components.append(component)
+                components[:] = updated_components
+                print('components', components)
                         
                 #### UPDATE SERVICES ######
 
@@ -140,8 +152,8 @@ class TransformerFactory:
         transformers = {
             "DFR": DFRTransformer,
             "DTE": DTETransformer,
-            "DPP": DPPTransformer
-            # "DCC": DCCTransformer,
+            "DPP": DPPTransformer,
+            "DCC": DCCTransformer
             # "DIA": DIATransformer,
         }
         # If the credential type is in the dictionary keys, extracts the value to get transformer name
@@ -164,18 +176,20 @@ if __name__ == "__main__":
 
     current_dir = Path(__file__).resolve().parent
 
-    input_folder_name = "01_Data/app-config"
-    brand_name = 'RBTP'
+    input_folder_name = "01_Input/app-config"
+    brand_name = 'BCMine'
     file_name = "app-config.json"
-    testing_folder = 'DPP'
-    output_file_name = f"transformed-{testing_folder}-app-config-test-v8.json"
+    testing_folder = 'DCC'
+    output_file_name = f"transformed-{testing_folder}-app-config-test-v5.json"
     
+    input_path = current_dir.parent / input_folder_name / brand_name  / file_name
+    output_path = current_dir.parent / input_folder_name / brand_name / testing_folder / output_file_name
+
     ###########################################################
 
-    processor = AppConfigProcessor(current_dir.parent / input_folder_name / brand_name / file_name)
+    processor = AppConfigProcessor(input_path)
     output, count = processor.process()
 
-    output_path = current_dir.parent / input_folder_name / brand_name / testing_folder / output_file_name
     with open(output_path, "w") as f:
         json.dump(output, f, indent=2)
 

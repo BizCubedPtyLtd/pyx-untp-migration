@@ -43,9 +43,16 @@ class DFRTransformer(CredentialTransformer):
         data["credentialSubject"] = new_credential_subject
         
         # 3. Issuer Identifier Structure: updates "otherIdentifier" to "facilityAlsoKnownAs"
-        issuer = data.get('issuer', {})
+        # issuer = data.get('issuer', {})
+        # if "otherIdentifier" in issuer:
+        #     clean_data = self._pop_and_replace_key(issuer, "otherIdentifier", "facilityAlsoKnownAs")
+         
+        # 3. Issuer Identifier Structure: updates "otherIdentifier" to "facilityAlsoKnownAs"
+        issuer = new_credential_subject.get('issuer', {})
         if "otherIdentifier" in issuer:
-            self._pop_and_replace_key(issuer, "otherIdentifier", "facilityAlsoKnownAs")
+            clean_data_0 = self._pop_and_replace_key(issuer, "otherIdentifier", "issuerAlsoKnownAs")
+            clean_data_0 = self._clean_identifier_list(clean_data_0, ["type", "idScheme"]) 
+            issuer["issuerAlsoKnownAs"] = clean_data_0
         
         # 4. Facility Structure: 
         facility_new = new_credential_subject.get('facility', {})

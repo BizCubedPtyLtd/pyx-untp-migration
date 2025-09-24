@@ -55,9 +55,16 @@ class DPPTransformer(CredentialTransformer):
         data["credentialSubject"] = new_credential_subject
 
         # 3*. Issuer Identifier Structure: The issuer’s otherIdentifier property is replaced with issuerAlsoKnownAs, simplifying the structure by removing the idScheme reference.
-        issuer = data.get('issuer', {})
+        # issuer = data.get('issuer', {})
+        # if "otherIdentifier" in issuer:
+        #     self._pop_and_replace_key(issuer, "otherIdentifier", "issuerAlsoKnownAs")
+
+        # 3*. Issuer Identifier Structure: The issuer’s otherIdentifier property is replaced with issuerAlsoKnownAs, simplifying the structure by removing the idScheme reference.
+        issuer = new_credential_subject.get('issuer', {})
         if "otherIdentifier" in issuer:
-            self._pop_and_replace_key(issuer, "otherIdentifier", "issuerAlsoKnownAs")
+            clean_data_0 = self._pop_and_replace_key(issuer, "otherIdentifier", "issuerAlsoKnownAs")
+            clean_data_0 = self._clean_identifier_list(clean_data_0, ["type", "idScheme"]) 
+            issuer["issuerAlsoKnownAs"] = clean_data_0
         
         # 4.* Party Structure Changes:
         product = new_credential_subject.get('product', {})
@@ -77,11 +84,13 @@ class DPPTransformer(CredentialTransformer):
         producedAtFacility = product.get('producedAtFacility', {})
         self._clean_identifier_list(producedAtFacility)
         
-        # Added characteristics property as an extension point for industry-specific attributes.
-        new_credential_subject["product"]["characteristics"] = {
-            "type": ["Characteristics"],
-            "capacity": "0 Ah"
-        }
+        # # Added characteristics property as an extension point for industry-specific attributes.
+        # After confirming with Ash, this is only for industry-specific DPP extensions, such as DBP, Lifestock Passport, etc.
+        # Thus, we don't need to add this line to the generic DPP transformer.
+        # new_credential_subject["product"]["characteristics"] = {
+        #     "type": ["Characteristics"],
+        #     "capacity": "0 Ah"
+        # }
 
         '''
         5. Material Structure Changes
@@ -169,6 +178,10 @@ class DPPTransformer(CredentialTransformer):
                 assessment.update(new_column_added)
                 if "thresholdValues" in assessment:
                     assessment["thresholdValue"] = assessment.pop("thresholdValues", [])[0]
+
+            ### RESOLVE JSON-LD SCHEMA VALIDATION ISSUE: removes assessedProduct as not relevant to dpp###
+            if "assessedProduct" in claim:
+                del claim['assessedProduct']
     
         
         # Flatten credentialSubject and clean top-level data
@@ -208,12 +221,12 @@ class DPPTransformer(CredentialTransformer):
         Missing field: carbonFootprint
         '''
         # Ensure 'name' exists in product
-        product.setdefault("name", "")
+        product.setdefault("name", "Example")
 
         # Ensure 'producedAtFacility' is a dict with default keys
         producedAtFacility = product.setdefault("producedAtFacility", {})
-        producedAtFacility.setdefault("id", "")
-        producedAtFacility.setdefault("name", "")
+        producedAtFacility.setdefault("id", "http://localhost:3000/gs1/414/123456") # producedAtFacility needs to be an URI and has to have value
+        producedAtFacility.setdefault("name", "Sample Facility")
 
         # Ensure 'emissionsScorecard' is a dict with default keys
         emissionsScorecard = component_data.setdefault("emissionsScorecard", {})
@@ -221,6 +234,19 @@ class DPPTransformer(CredentialTransformer):
         emissionsScorecard.setdefault("carbonFootprint", 0)
         emissionsScorecard.setdefault("operationalScope", "CradleToGate")
         emissionsScorecard.setdefault("primarySourcedRatio", 0)
+
+        # Remove "type" in "emissionsScorecard"."reportingStandard"."issuingParty" 
+        reportingStandard = emissionsScorecard.get("reportingStandard", {})
+        issuingParty = reportingStandard.get("issuingParty", {})
+        if "type" in issuingParty:
+            del issuingParty["type"]
+        # clean_data = self._clean_identifier_list(reportingStandard["issuingParty"])
+        # reportingStandard["issuingParty"] = clean_data
+
+        # Remove "type" in "dimensions"
+        dimensions = product.get("dimensions", {})
+        if "type" in dimensions:
+            del dimensions["type"]
 
         return self.component
     

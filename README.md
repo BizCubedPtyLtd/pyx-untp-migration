@@ -1,6 +1,9 @@
 # pyx-untp-migration
 Code to upgrade credentials version.
 
+# Pre-requisites
+1. Latest version of VSCode (Ensure it is up-to-date)
+
 # Getting Started
 1. Clone the repository /pyx-apps/ in Ubuntu 24.04
 2. Install Python Extensions:
