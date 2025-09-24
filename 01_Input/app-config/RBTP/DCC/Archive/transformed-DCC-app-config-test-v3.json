@@ -762,7 +762,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502222154/21/DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Responsible Minerals Assurance Process for TEST Refinery in China",
                   "assessorLevel": "3rdParty",
@@ -1606,7 +1607,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502222054/21/VAP_DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "VAP for Refinery in China",
                   "assessorLevel": "3rdParty",
@@ -2671,19 +2673,9 @@
                   "attestationType": "certification",
                   "description": "The Specialty Validated Assessment Program (SVAP) on Chemical Management is an assessment process used to evaluate the risks of hazardous occupational exposures and chemical emergencies. The RBA developed the SVAP on Chemical Management protocol and facilitates assessments performed by approved, independent third-party auditors that have unique expertise in industrial hygiene and occupational safety. The elements of the SVAP on Chemical Management were carefully developed by the RBA with input from stakeholders, members, and thirdparty subject matter experts to create a specialized assessment program. It is limited in scope to focus exclusively on provisions of the RBA\u2019s Validated Assessment Program (VAP) that are related to chemical management. This unique assessment program is ideal for facilities that house chemical-intensive operations and have relatively high chemical management risks.",
                   "issuedToParty": {
-                    "type": [
-                      "Party"
-                    ],
                     "id": "http://localhost:3000/gs1/01/09359502000034/21/LINK_TO_FACILITY",
                     "name": "Facility A",
                     "registeredId": "123456789",
-                    "idScheme": {
-                      "type": [
-                        "IdentifierScheme"
-                      ],
-                      "id": "https://id.gs1.org/01/",
-                      "name": "Global Trade Identification Number (GTIN)"
-                    },
                     "description": "Facility A manufactures electronics"
                   },
                   "authorisation": [
@@ -2699,19 +2691,9 @@
                         "file": ""
                       },
                       "issuingAuthority": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "https://www.responsiblebusiness.org/",
                         "name": "Responsible Business Alliance",
-                        "registeredId": "123456789",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "123456789"
                       }
                     }
                   ],
@@ -2723,19 +2705,9 @@
                     "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
                     "name": "RBA VAP Standard V8.0.1 - Jan 2024 ",
                     "issuingParty": {
-                      "type": [
-                        "Identifier"
-                      ],
                       "id": "https://www.responsiblebusiness.org/",
                       "name": "Responsible Business Alliance",
-                      "registeredId": "123456789",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      }
+                      "registeredId": "123456789"
                     },
                     "issueDate": "2024-01-01",
                     "trustmark": {
@@ -2758,19 +2730,9 @@
                         "id": "https://www.responsiblebusiness.org/media/docs/RBA-SVAP-CM-Overview.pdf",
                         "name": "OVERVIEW OF SPECIALTY VALIDATED ASSESSMENT PROGRAM (SVAP) ON CHEMICAL MANAGEMENT",
                         "issuingParty": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
-                          }
+                          "registeredId": "123456789"
                         },
                         "issueDate": "2024-04-10"
                       },
@@ -2782,9 +2744,6 @@
                         "name": "REACH (Registration, Evaluation, Authorization, and Restriction of Chemicals)",
                         "jurisdictionCountry": "European Union",
                         "administeredBy": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://ec.europa.eu/environment",
                           "name": "European Commission"
                         },
@@ -2796,58 +2755,36 @@
                             "Criterion"
                           ],
                           "id": "https://www.responsiblebusiness.org/media/docs/RBA-SVAP-CM-Overview.pdf",
-                          "name": "SVAP - Health & Safety"
+                          "name": "SVAP - Health & Safety",
+                          "description": "",
+                          "conformityTopic": "environment.emissions",
+                          "status": "active",
+                          "subCriterion": [],
+                          "performanceLevel": "",
+                          "tags": ""
                         }
                       ],
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
                       "assessedFacility": [
                         {
-                          "type": [
-                            "Facility"
-                          ],
-                          "id": "http://localhost:3000/gs1/01/09359502000034/21/LINK_TO_FACILITY",
-                          "name": "Facility A",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
+                          "facility": {
+                            "id": "http://localhost:3000/gs1/01/09359502000034/21/LINK_TO_FACILITY",
+                            "name": "Facility A",
+                            "registeredId": "123456789"
                           }
                         }
                       ],
                       "assessedOrganisation": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "http://localhost:3000/gs1/01/09359502000034/21/LINK_TO_ORGANISATION",
                         "name": "Organisation X",
                         "registeredId": "12345",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        },
                         "description": "Organisation X oversees Facility A, B, and C"
                       },
                       "auditor": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "https://www.anewglobal.net/en/",
                         "name": "Anew Global Consulting",
                         "registeredId": "Auditor-1634",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.anewglobal.net/en/services_page77.html",
-                          "name": "Environment Health & Safey Management Audit"
-                        },
                         "description": "Independent Auditors approved by REI who make the assessments."
                       },
                       "assessmentDate": "2024-03-18"
@@ -2865,19 +2802,9 @@
                         "id": "https://www.responsiblebusiness.org/media/docs/RBA-SVAP-CM-Overview.pdf",
                         "name": "OVERVIEW OF SPECIALTY VALIDATED ASSESSMENT PROGRAM (SVAP) ON CHEMICAL MANAGEMENT",
                         "issuingParty": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
-                          }
+                          "registeredId": "123456789"
                         },
                         "issueDate": "2024-04-10"
                       },
@@ -2889,9 +2816,6 @@
                         "name": "Globally Harmonized System of Classification and Labelling of Chemicals (GHS)",
                         "jurisdictionCountry": "Global",
                         "administeredBy": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.unece.org",
                           "name": "United Nations Economic Commission for Europe (UNECE)"
                         },
@@ -2903,58 +2827,36 @@
                             "Criterion"
                           ],
                           "id": "https://www.responsiblebusiness.org/media/docs/RBA-SVAP-CM-Overview.pdf",
-                          "name": "SVAP - Environment"
+                          "name": "SVAP - Environment",
+                          "description": "",
+                          "conformityTopic": "environment.emissions",
+                          "status": "active",
+                          "subCriterion": [],
+                          "performanceLevel": "",
+                          "tags": ""
                         }
                       ],
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
                       "assessedFacility": [
                         {
-                          "type": [
-                            "Facility"
-                          ],
-                          "id": "http://localhost:3000/gs1/01/09359502000034/21/LINK_TO_FACILITY",
-                          "name": "Facility A",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
+                          "facility": {
+                            "id": "http://localhost:3000/gs1/01/09359502000034/21/LINK_TO_FACILITY",
+                            "name": "Facility A",
+                            "registeredId": "123456789"
                           }
                         }
                       ],
                       "assessedOrganisation": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "http://localhost:3000/gs1/01/09359502000034/21/LINK_TO_ORGANISATION",
                         "name": "Organisation X",
                         "registeredId": "12345",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        },
                         "description": "Organisation X oversees Facility A, B, and C"
                       },
                       "auditor": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "https://www.anewglobal.net/en/",
                         "name": "Anew Global Consulting",
                         "registeredId": "Auditor-1634",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.anewglobal.net/en/services_page77.html",
-                          "name": "Environment Health & Safey Management Audit"
-                        },
                         "description": "Independent Auditors approved by REI who make the assessments."
                       },
                       "assessmentDate": "2024-03-18"
@@ -2972,19 +2874,9 @@
                         "id": "https://www.responsiblebusiness.org/media/docs/RBA-SVAP-CM-Overview.pdf",
                         "name": "OVERVIEW OF SPECIALTY VALIDATED ASSESSMENT PROGRAM (SVAP) ON CHEMICAL MANAGEMENT",
                         "issuingParty": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
-                          }
+                          "registeredId": "123456789"
                         },
                         "issueDate": "2024-04-10"
                       },
@@ -2996,9 +2888,6 @@
                         "name": "REACH (Registration, Evaluation, Authorization, and Restriction of Chemicals)",
                         "jurisdictionCountry": "European Union",
                         "administeredBy": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://ec.europa.eu/environment",
                           "name": "European Commission"
                         },
@@ -3010,58 +2899,36 @@
                             "Criterion"
                           ],
                           "id": "https://www.responsiblebusiness.org/media/docs/RBA-SVAP-CM-Overview.pdf",
-                          "name": "SVAP - Health & Safety Management Systems"
+                          "name": "SVAP - Health & Safety Management Systems",
+                          "description": "",
+                          "conformityTopic": "environment.emissions",
+                          "status": "active",
+                          "subCriterion": [],
+                          "performanceLevel": "",
+                          "tags": ""
                         }
                       ],
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
                       "assessedFacility": [
                         {
-                          "type": [
-                            "Facility"
-                          ],
-                          "id": "http://localhost:3000/gs1/01/09359502000034/21/LINK_TO_FACILITY",
-                          "name": "Facility A",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
+                          "facility": {
+                            "id": "http://localhost:3000/gs1/01/09359502000034/21/LINK_TO_FACILITY",
+                            "name": "Facility A",
+                            "registeredId": "123456789"
                           }
                         }
                       ],
                       "assessedOrganisation": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "http://localhost:3000/gs1/01/09359502000034/21/LINK_TO_ORGANISATION",
                         "name": "Organisation X",
                         "registeredId": "12345",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        },
                         "description": "Organisation X oversees Facility A, B, and C"
                       },
                       "auditor": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "https://www.anewglobal.net/en/",
                         "name": "Anew Global Consulting",
                         "registeredId": "Auditor-1634",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.anewglobal.net/en/services_page77.html",
-                          "name": "Environment Health & Safey Management Audit"
-                        },
                         "description": "Independent Auditors approved by REI who make the assessments."
                       },
                       "assessmentDate": "2024-03-18"
@@ -3190,19 +3057,9 @@
                   "attestationType": "certification",
                   "description": "The objective of this audit is to attests that Facility A complies with the elements of the RBA Code of Conduct that apply to ethical recruitment and employment of workers, such as Freely Chosen Employment, Young Workers, Working Hours, Wages and Benefits, Humane Treatment, Non-Discrimination/Harassment and Freedom of Association.The Specialty Validated Assessment Program (SVAP) on Forced labor is an assessment program based exclusively on identifying the risk of forced labor at an Employment Site (e.g., factory) or Labor Provider (e.g., labor agent or recruitment agency). The elements of the SVAP were carefully constructed to create a specialized assessment program, limited in scope to only focus on provisions related to forced labor. This unique program provides a variety of benefits to companies and their suppliers.",
                   "issuedToParty": {
-                    "type": [
-                      "Party"
-                    ],
                     "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_FACILITY",
                     "name": "Facility A",
                     "registeredId": "123456789",
-                    "idScheme": {
-                      "type": [
-                        "IdentifierScheme"
-                      ],
-                      "id": "https://id.gs1.org/01/",
-                      "name": "Global Trade Identification Number (GTIN)"
-                    },
                     "description": "Facility A manufactures electronics"
                   },
                   "authorisation": [
@@ -3218,19 +3075,9 @@
                         "file": ""
                       },
                       "issuingAuthority": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "https://www.responsiblebusiness.org/",
                         "name": "Responsible Business Alliance (RBA)",
-                        "registeredId": "123456789",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "123456789"
                       }
                     }
                   ],
@@ -3242,19 +3089,9 @@
                     "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
                     "name": "RBA VAP Standard V8.0.1 - Jan 2024",
                     "issuingParty": {
-                      "type": [
-                        "Identifier"
-                      ],
                       "id": "https://www.responsiblebusiness.org/",
                       "name": "Responsible Business Alliance (RBA)",
-                      "registeredId": "123456789",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      }
+                      "registeredId": "123456789"
                     },
                     "issueDate": "2024-04-10",
                     "trustmark": {
@@ -3277,19 +3114,9 @@
                         "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
                         "name": "RBA VAP Standard V8.0.1",
                         "issuingParty": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance (RBA)",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
-                          }
+                          "registeredId": "123456789"
                         },
                         "issueDate": "2024-01-01"
                       },
@@ -3301,9 +3128,6 @@
                         "name": "RESPONSIBLE BUSINESS ALLIANCE CODE OF CONDUCT - LABOR",
                         "jurisdictionCountry": "Global",
                         "administeredBy": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance (RBA)"
                         },
@@ -3315,65 +3139,46 @@
                             "Criterion"
                           ],
                           "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
-                          "name": "Prohibition of Forced Labor"
+                          "name": "Prohibition of Forced Labor",
+                          "description": "",
+                          "conformityTopic": "environment.emissions",
+                          "status": "active",
+                          "subCriterion": [],
+                          "performanceLevel": "",
+                          "tags": ""
                         }
                       ],
                       "declaredValue": [
                         {
                           "metricName": "Have a detailed, comprehensive documented policy prohibiting the use of any type of forced, bonded (including debt bondage) or indentured labor, involuntary or exploitative prison labor, slavery, or trafficking of persons.",
-                          "metricValue": {},
+                          "metricValue": {
+                            "unit": "",
+                            "value": 0
+                          },
                           "score": "No"
                         }
                       ],
                       "conformance": true,
-                      "conformityTopic": "social.labor",
+                      "conformityTopic": "environment.emissions",
                       "assessedFacility": [
                         {
-                          "type": [
-                            "Facility"
-                          ],
-                          "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_FACILITY",
-                          "name": "Facility A",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
+                          "facility": {
+                            "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_FACILITY",
+                            "name": "Facility A",
+                            "registeredId": "123456789"
                           }
                         }
                       ],
                       "assessedOrganisation": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_ORGANISATION",
                         "name": "Organisation X",
                         "registeredId": "12345",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        },
                         "description": "Organisation X oversees Facility A, B, and C"
                       },
                       "auditor": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "https://www.fairlabor.org/",
                         "name": "Fair Labor Association",
                         "registeredId": "Auditor-1634",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.fairlabor.org/accountability/fair-labor-accreditation/",
-                          "name": "FLA Workplace Code of Conduct Audit"
-                        },
                         "description": "FLA evaluates business practices against the highest international labor standards to ensure they advance the rights of workers throughout global supply chains."
                       },
                       "assessmentDate": "2025-03-18"
@@ -3391,19 +3196,9 @@
                         "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
                         "name": "RBA VAP Standard V8.0.1",
                         "issuingParty": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance (RBA)",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
-                          }
+                          "registeredId": "123456789"
                         },
                         "issueDate": "2024-01-01"
                       },
@@ -3415,9 +3210,6 @@
                         "name": "RESPONSIBLE BUSINESS ALLIANCE CODE OF CONDUCT - LABOR",
                         "jurisdictionCountry": "Global",
                         "administeredBy": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance (RBA)"
                         },
@@ -3429,65 +3221,46 @@
                             "Criterion"
                           ],
                           "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
-                          "name": "Young workers"
+                          "name": "Young workers",
+                          "description": "",
+                          "conformityTopic": "environment.emissions",
+                          "status": "active",
+                          "subCriterion": [],
+                          "performanceLevel": "",
+                          "tags": ""
                         }
                       ],
                       "declaredValue": [
                         {
                           "metricName": "Have a detailed, comprehensive documented young worker policy",
-                          "metricValue": {},
+                          "metricValue": {
+                            "unit": "",
+                            "value": 0
+                          },
                           "score": "No"
                         }
                       ],
                       "conformance": true,
-                      "conformityTopic": "social.labor",
+                      "conformityTopic": "environment.emissions",
                       "assessedFacility": [
                         {
-                          "type": [
-                            "Facility"
-                          ],
-                          "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_FACILITY",
-                          "name": "Facility A",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
+                          "facility": {
+                            "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_FACILITY",
+                            "name": "Facility A",
+                            "registeredId": "123456789"
                           }
                         }
                       ],
                       "assessedOrganisation": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_ORGANISATION",
                         "name": "Organisation X",
                         "registeredId": "12345",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        },
                         "description": "Organisation X oversees Facility A, B, and C"
                       },
                       "auditor": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "https://www.fairlabor.org/",
                         "name": "Fair Labor Association",
                         "registeredId": "Auditor-1634",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.fairlabor.org/accountability/fair-labor-accreditation/",
-                          "name": "FLA Workplace Code of Conduct Audit"
-                        },
                         "description": "FLA evaluates business practices against the highest international labor standards to ensure they advance the rights of workers throughout global supply chains."
                       },
                       "assessmentDate": "2025-03-18"
@@ -3505,19 +3278,9 @@
                         "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
                         "name": "RBA VAP Standard V8.0.1",
                         "issuingParty": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance (RBA)",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
-                          }
+                          "registeredId": "123456789"
                         },
                         "issueDate": "2024-01-01"
                       },
@@ -3529,9 +3292,6 @@
                         "name": "RESPONSIBLE BUSINESS ALLIANCE CODE OF CONDUCT - LABOR",
                         "jurisdictionCountry": "Global",
                         "administeredBy": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance (RBA)"
                         },
@@ -3543,65 +3303,46 @@
                             "Criterion"
                           ],
                           "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
-                          "name": "Working Hours"
+                          "name": "Working Hours",
+                          "description": "",
+                          "conformityTopic": "environment.emissions",
+                          "status": "active",
+                          "subCriterion": [],
+                          "performanceLevel": "",
+                          "tags": ""
                         }
                       ],
                       "declaredValue": [
                         {
                           "metricName": "Have a detailed, comprehensive documented working hour policy",
-                          "metricValue": {},
+                          "metricValue": {
+                            "unit": "",
+                            "value": 0
+                          },
                           "score": "No"
                         }
                       ],
                       "conformance": true,
-                      "conformityTopic": "social.labor",
+                      "conformityTopic": "environment.emissions",
                       "assessedFacility": [
                         {
-                          "type": [
-                            "Facility"
-                          ],
-                          "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_FACILITY",
-                          "name": "Facility A",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
+                          "facility": {
+                            "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_FACILITY",
+                            "name": "Facility A",
+                            "registeredId": "123456789"
                           }
                         }
                       ],
                       "assessedOrganisation": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_ORGANISATION",
                         "name": "Organisation X",
                         "registeredId": "12345",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        },
                         "description": "Organisation X oversees Facility A, B, and C"
                       },
                       "auditor": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "https://www.fairlabor.org/",
                         "name": "Fair Labor Association",
                         "registeredId": "Auditor-1634",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.fairlabor.org/accountability/fair-labor-accreditation/",
-                          "name": "FLA Workplace Code of Conduct Audit"
-                        },
                         "description": "FLA evaluates business practices against the highest international labor standards to ensure they advance the rights of workers throughout global supply chains."
                       },
                       "assessmentDate": "2025-03-18"
@@ -3619,19 +3360,9 @@
                         "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
                         "name": "RBA VAP Standard V8.0.1",
                         "issuingParty": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance (RBA)",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
-                          }
+                          "registeredId": "123456789"
                         },
                         "issueDate": "2024-01-01"
                       },
@@ -3643,9 +3374,6 @@
                         "name": "RESPONSIBLE BUSINESS ALLIANCE CODE OF CONDUCT - LABOR",
                         "jurisdictionCountry": "Global",
                         "administeredBy": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance (RBA)"
                         },
@@ -3657,65 +3385,46 @@
                             "Criterion"
                           ],
                           "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
-                          "name": "Wages and Benefits"
+                          "name": "Wages and Benefits",
+                          "description": "",
+                          "conformityTopic": "environment.emissions",
+                          "status": "active",
+                          "subCriterion": [],
+                          "performanceLevel": "",
+                          "tags": ""
                         }
                       ],
                       "declaredValue": [
                         {
                           "metricName": "Have a detailed, comprehensive documented wage and benefits policy",
-                          "metricValue": {},
+                          "metricValue": {
+                            "unit": "",
+                            "value": 0
+                          },
                           "score": "No"
                         }
                       ],
                       "conformance": true,
-                      "conformityTopic": "social.labor",
+                      "conformityTopic": "environment.emissions",
                       "assessedFacility": [
                         {
-                          "type": [
-                            "Facility"
-                          ],
-                          "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_FACILITY",
-                          "name": "Facility A",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
+                          "facility": {
+                            "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_FACILITY",
+                            "name": "Facility A",
+                            "registeredId": "123456789"
                           }
                         }
                       ],
                       "assessedOrganisation": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_ORGANISATION",
                         "name": "Organisation X",
                         "registeredId": "12345",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        },
                         "description": "Organisation X oversees Facility A, B, and C"
                       },
                       "auditor": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "https://www.fairlabor.org/",
                         "name": "Fair Labor Association",
                         "registeredId": "Auditor-1634",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.fairlabor.org/accountability/fair-labor-accreditation/",
-                          "name": "FLA Workplace Code of Conduct Audit"
-                        },
                         "description": "FLA evaluates business practices against the highest international labor standards to ensure they advance the rights of workers throughout global supply chains."
                       },
                       "assessmentDate": "2025-03-18"
@@ -3733,19 +3442,9 @@
                         "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
                         "name": "RBA VAP Standard V8.0.1",
                         "issuingParty": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance (RBA)",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
-                          }
+                          "registeredId": "123456789"
                         },
                         "issueDate": "2024-01-01"
                       },
@@ -3757,9 +3456,6 @@
                         "name": "RESPONSIBLE BUSINESS ALLIANCE CODE OF CONDUCT - LABOR",
                         "jurisdictionCountry": "Global",
                         "administeredBy": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance (RBA)"
                         },
@@ -3771,65 +3467,46 @@
                             "Criterion"
                           ],
                           "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
-                          "name": "Non-Discrimination, Non-Harassment, Humane Treatment"
+                          "name": "Non-Discrimination, Non-Harassment, Humane Treatment",
+                          "description": "",
+                          "conformityTopic": "environment.emissions",
+                          "status": "active",
+                          "subCriterion": [],
+                          "performanceLevel": "",
+                          "tags": ""
                         }
                       ],
                       "declaredValue": [
                         {
                           "metricName": "Have a detailed, comprehensive documented non-discrimination and non-harassment policy",
-                          "metricValue": {},
+                          "metricValue": {
+                            "unit": "",
+                            "value": 0
+                          },
                           "score": "No"
                         }
                       ],
                       "conformance": true,
-                      "conformityTopic": "social.labor",
+                      "conformityTopic": "environment.emissions",
                       "assessedFacility": [
                         {
-                          "type": [
-                            "Facility"
-                          ],
-                          "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_FACILITY",
-                          "name": "Facility A",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
+                          "facility": {
+                            "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_FACILITY",
+                            "name": "Facility A",
+                            "registeredId": "123456789"
                           }
                         }
                       ],
                       "assessedOrganisation": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_ORGANISATION",
                         "name": "Organisation X",
                         "registeredId": "12345",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        },
                         "description": "Organisation X oversees Facility A, B, and C"
                       },
                       "auditor": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "https://www.fairlabor.org/",
                         "name": "Fair Labor Association",
                         "registeredId": "Auditor-1634",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.fairlabor.org/accountability/fair-labor-accreditation/",
-                          "name": "FLA Workplace Code of Conduct Audit"
-                        },
                         "description": "FLA evaluates business practices against the highest international labor standards to ensure they advance the rights of workers throughout global supply chains."
                       },
                       "assessmentDate": "2025-03-18"
@@ -3847,19 +3524,9 @@
                         "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
                         "name": "RBA VAP Standard V8.0.1",
                         "issuingParty": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance (RBA)",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
-                          }
+                          "registeredId": "123456789"
                         },
                         "issueDate": "2024-01-01"
                       },
@@ -3871,9 +3538,6 @@
                         "name": "RESPONSIBLE BUSINESS ALLIANCE CODE OF CONDUCT - LABOR",
                         "jurisdictionCountry": "Global",
                         "administeredBy": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance (RBA)"
                         },
@@ -3885,65 +3549,46 @@
                             "Criterion"
                           ],
                           "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
-                          "name": "Freedom of Association and Collective Bargaining"
+                          "name": "Freedom of Association and Collective Bargaining",
+                          "description": "",
+                          "conformityTopic": "environment.emissions",
+                          "status": "active",
+                          "subCriterion": [],
+                          "performanceLevel": "",
+                          "tags": ""
                         }
                       ],
                       "declaredValue": [
                         {
                           "metricName": "Have a detailed, comprehensive documented freedom of association and collective bargaining policy with elements.",
-                          "metricValue": {},
+                          "metricValue": {
+                            "unit": "",
+                            "value": 0
+                          },
                           "score": "No"
                         }
                       ],
                       "conformance": true,
-                      "conformityTopic": "social.labor",
+                      "conformityTopic": "environment.emissions",
                       "assessedFacility": [
                         {
-                          "type": [
-                            "Facility"
-                          ],
-                          "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_FACILITY",
-                          "name": "Facility A",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
+                          "facility": {
+                            "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_FACILITY",
+                            "name": "Facility A",
+                            "registeredId": "123456789"
                           }
                         }
                       ],
                       "assessedOrganisation": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_ORGANISATION",
                         "name": "Organisation X",
                         "registeredId": "12345",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        },
                         "description": "Organisation X oversees Facility A, B, and C"
                       },
                       "auditor": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "https://www.fairlabor.org/",
                         "name": "Fair Labor Association",
                         "registeredId": "Auditor-1634",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.fairlabor.org/accountability/fair-labor-accreditation/",
-                          "name": "FLA Workplace Code of Conduct Audit"
-                        },
                         "description": "FLA evaluates business practices against the highest international labor standards to ensure they advance the rights of workers throughout global supply chains."
                       },
                       "assessmentDate": "2025-03-18"
@@ -4072,19 +3717,9 @@
                   "attestationType": "certification",
                   "description": "The Validated Assessment Program (VAP) contains areas covering environmental, social and governance aspects of factory operations. The goal of the VAP is to measure and foster improvement in environmental social and governance performance and build capability within the supply base.",
                   "issuedToParty": {
-                    "type": [
-                      "Party"
-                    ],
                     "id": "http://localhost:3000/gs1/01/09359502000157/21/LINK_TO_FACILITY",
                     "name": "Facility A",
                     "registeredId": "123456789",
-                    "idScheme": {
-                      "type": [
-                        "IdentifierScheme"
-                      ],
-                      "id": "https://id.gs1.org/01/",
-                      "name": "Global Trade Identification Number (GTIN)"
-                    },
                     "description": "Facility A manufactures electronics"
                   },
                   "authorisation": [
@@ -4100,19 +3735,9 @@
                         "file": ""
                       },
                       "issuingAuthority": {
-                        "type": [
-                          "Identifier"
-                        ],
                         "id": "https://www.responsiblebusiness.org/",
                         "name": " Responsible Business Alliance",
-                        "registeredId": "123456789",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        }
+                        "registeredId": "123456789"
                       }
                     }
                   ],
@@ -4124,19 +3749,9 @@
                     "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
                     "name": "RBA VAP Standard V8.0.1 - Jan 2024",
                     "issuingParty": {
-                      "type": [
-                        "Identifier"
-                      ],
                       "id": "https://www.responsiblebusiness.org/",
                       "name": "Responsible Business Alliance (RBA)",
-                      "registeredId": "123456789",
-                      "idScheme": {
-                        "type": [
-                          "IdentifierScheme"
-                        ],
-                        "id": "https://id.gs1.org/01/",
-                        "name": "Global Trade Identification Number (GTIN)"
-                      }
+                      "registeredId": "123456789"
                     },
                     "issueDate": "2024-04-10",
                     "trustmark": {
@@ -4159,19 +3774,9 @@
                         "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
                         "name": "RBA VAP Standard V8.0.1",
                         "issuingParty": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance (RBA)",
-                          "registeredId": "12370476",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
-                          }
+                          "registeredId": "12370476"
                         },
                         "issueDate": "2024-01-01"
                       },
@@ -4183,9 +3788,6 @@
                         "name": "RESPONSIBLE BUSINESS ALLIANCE CODE OF CONDUCT - ENVIRONMENT",
                         "jurisdictionCountry": "Global",
                         "administeredBy": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance (RBA)"
                         },
@@ -4197,58 +3799,36 @@
                             "Criterion"
                           ],
                           "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
-                          "name": "Environment"
+                          "name": "Environment",
+                          "description": "",
+                          "conformityTopic": "environment.emissions",
+                          "status": "active",
+                          "subCriterion": [],
+                          "performanceLevel": "",
+                          "tags": ""
                         }
                       ],
                       "conformance": true,
                       "conformityTopic": "environment.emissions",
                       "assessedFacility": [
                         {
-                          "type": [
-                            "Facility"
-                          ],
-                          "id": "http://localhost:3000/gs1/01/09359502000157/21/LINK_TO_FACILITY",
-                          "name": "Facility A",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
+                          "facility": {
+                            "id": "http://localhost:3000/gs1/01/09359502000157/21/LINK_TO_FACILITY",
+                            "name": "Facility A",
+                            "registeredId": "123456789"
                           }
                         }
                       ],
                       "assessedOrganisation": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "http://localhost:3000/gs1/01/09359502000157/21/LINK_TO_ORGANISATION",
                         "name": "Organisation X",
                         "registeredId": "12345",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        },
                         "description": "Organisation X oversees Facility A, B, and C"
                       },
                       "auditor": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "https://www.responsiblefactory.org/programs/factory-of-choice/",
                         "name": "RBA",
                         "registeredId": "12370476",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.responsiblefactory.org/programs/factory-of-choice/",
-                          "name": "FoC Workplace Code of Conduct Audit"
-                        },
                         "description": "FoC evaluates that business fully commit to the RBA Code of Conduct and demonstrate leadership through impact and transparency"
                       },
                       "assessmentDate": "2025-03-18"
@@ -4266,19 +3846,9 @@
                         "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
                         "name": "RBA VAP Standard V8.0.1",
                         "issuingParty": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance (RBA)",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
-                          }
+                          "registeredId": "123456789"
                         },
                         "issueDate": "2024-01-01"
                       },
@@ -4290,9 +3860,6 @@
                         "name": "RESPONSIBLE BUSINESS ALLIANCE CODE OF CONDUCT - HEALTH AND SAFETY",
                         "jurisdictionCountry": "Global",
                         "administeredBy": {
-                          "type": [
-                            "Identifier"
-                          ],
                           "id": "https://www.responsiblebusiness.org/",
                           "name": "Responsible Business Alliance (RBA)"
                         },
@@ -4304,58 +3871,36 @@
                             "Criterion"
                           ],
                           "id": "https://www.responsiblebusiness.org/media/docs/RBA-VAP-Standard.pdf",
-                          "name": "Health and Safety"
+                          "name": "Health and Safety",
+                          "description": "",
+                          "conformityTopic": "environment.emissions",
+                          "status": "active",
+                          "subCriterion": [],
+                          "performanceLevel": "",
+                          "tags": ""
                         }
                       ],
                       "conformance": true,
                       "conformityTopic": "social.safety",
                       "assessedFacility": [
                         {
-                          "type": [
-                            "Facility"
-                          ],
-                          "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_FACILITY",
-                          "name": "Facility A",
-                          "registeredId": "123456789",
-                          "idScheme": {
-                            "type": [
-                              "IdentifierScheme"
-                            ],
-                            "id": "https://id.gs1.org/01/",
-                            "name": "Global Trade Identification Number (GTIN)"
+                          "facility": {
+                            "id": "http://localhost:3000/gs1/01/09359502000249/21/LINK_TO_FACILITY",
+                            "name": "Facility A",
+                            "registeredId": "123456789"
                           }
                         }
                       ],
                       "assessedOrganisation": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "http://localhost:3000/gs1/01/09359502000157/21/LINK_TO_ORGANISATION",
                         "name": "Organisation X",
                         "registeredId": "12345",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.gs1.org/01/",
-                          "name": "Global Trade Identification Number (GTIN)"
-                        },
                         "description": "Organisation X oversees Facility A, B, and C"
                       },
                       "auditor": {
-                        "type": [
-                          "Party"
-                        ],
                         "id": "https://www.responsiblefactory.org/programs/factory-of-choice/",
                         "name": "RBA",
                         "registeredId": "12370476",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://www.responsiblefactory.org/programs/factory-of-choice/",
-                          "name": "FoC Workplace Code of Conduct Audit"
-                        },
                         "description": "FoC evaluates that business fully commit to the RBA Code of Conduct and demonstrate leadership through impact and transparency"
                       },
                       "assessmentDate": "2025-03-18"
@@ -5280,7 +4825,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502000119/21/DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "SAMPLE TEST: Mining Association of Canada Certification for TEST Copper Mine",
                   "assessorLevel": "3rdParty",
@@ -5538,7 +5084,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502000119/21/DCC_02",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST CopperMark Certification for  TEST Copper Mine",
                   "assessorLevel": "3rdParty",
@@ -8287,7 +7834,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502000126/21/RMAP_DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Responsible Minerals Assurance Process for TEST Copper Smelter",
                   "assessorLevel": "3rdParty",
@@ -9766,7 +9314,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502000164/21/RMAP_DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Responsible Minerals Assurance Process for TEST Lithium Refinery",
                   "assessorLevel": "3rdParty",
@@ -11141,7 +10690,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502000133/21/RMAP_DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Responsible Minerals Assurance Process for EV battery 300Ah",
                   "assessorLevel": "3rdParty",
@@ -14530,7 +14080,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502000119/21/DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "SAMPLE TEST: Mining Association of Canada Certification for TEST Copper Mine",
                   "assessorLevel": "3rdParty",
@@ -14788,7 +14339,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502000119/21/DCC_02",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST CopperMark Certification for  TEST Copper Mine",
                   "assessorLevel": "3rdParty",
@@ -17667,7 +17219,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502000126/21/RMAP_DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Responsible Minerals Assurance Process for TEST Copper Smelter",
                   "assessorLevel": "3rdParty",
@@ -18752,7 +18305,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502111164/21/RMAP_DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Responsible Minerals Assurance Process for TEST Lithium Refinery",
                   "assessorLevel": "3rdParty",
@@ -19723,7 +19277,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502111133/21/RMAP_DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Responsible Minerals Assurance Process for EV battery 300Ah",
                   "assessorLevel": "3rdParty",
@@ -23678,7 +23233,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502222016/21/DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Permit Credential for Kasala Mining Limited in DRC",
                   "assessorLevel": "3rdParty",
@@ -23904,7 +23460,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502222016/21/DCC_02",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Initiative for Responsible Mining Assurance Credential for Kasala Mining Limited in DRC",
                   "assessorLevel": "3rdParty",
@@ -24709,7 +24266,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502222023/21/DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Permit Credential for Atlas Cobalt SARL in Morocco",
                   "assessorLevel": "3rdParty",
@@ -24935,7 +24493,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502222023/21/DCC_02",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Initiative for Responsible Mining Assurance Credential for Atlas Cobalt SARL in Morocco",
                   "assessorLevel": "3rdParty",
@@ -25740,7 +25299,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502222085/21/DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Permit Credential for Okavango Cobalt Ltd. in Botswana",
                   "assessorLevel": "3rdParty",
@@ -25966,7 +25526,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502222085/21/DCC_02",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Initiative for Responsible Mining Assurance Credential for Okavango Cobalt Ltd. in Botswana",
                   "assessorLevel": "3rdParty",
@@ -26755,7 +26316,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502222030/21/DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Responsible Minerals Assurance Process for Northshore Smelting Corp.",
                   "assessorLevel": "3rdParty",
@@ -28083,7 +27645,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502222047/21/DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Responsible Minerals Assurance Process for FjordMetall AS",
                   "assessorLevel": "3rdParty",
@@ -29418,7 +28981,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502222054/21/DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Responsible Minerals Assurance Process for Zhongke Refining Ltd.",
                   "assessorLevel": "3rdParty",
@@ -30907,7 +30471,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502222061/21/DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Responsible Minerals Assurance Process for UrbanCore Recycling Inc.",
                   "assessorLevel": "3rdParty",
@@ -32388,7 +31953,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502233016/21/DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Permit Credential for Kasala Mining Limited in DRC",
                   "assessorLevel": "3rdParty",
@@ -32614,7 +32180,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502233016/21/DCC_02",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Initiative for Responsible Mining Assurance Credential for Kasala Mining Limited in DRC",
                   "assessorLevel": "3rdParty",
@@ -33394,7 +32961,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502233023/21/DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Permit Credential for Atlas Cobalt SARL in Morocco",
                   "assessorLevel": "3rdParty",
@@ -33620,7 +33188,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502233023/21/DCC_02",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Initiative for Responsible Mining Assurance Credential for Atlas Cobalt SARL in Morocco",
                   "assessorLevel": "3rdParty",
@@ -34400,7 +33969,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502233085/21/DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Permit Credential for Okavango Cobalt Ltd. in Botswana",
                   "assessorLevel": "3rdParty",
@@ -34626,7 +34196,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502233085/21/DCC_02",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Initiative for Responsible Mining Assurance Credential for Okavango Cobalt Ltd. in Botswana",
                   "assessorLevel": "3rdParty",
@@ -35390,7 +34961,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502233030/21/DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Responsible Minerals Assurance Process for Northshore Smelting Corp.",
                   "assessorLevel": "3rdParty",
@@ -36686,7 +36258,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502233047/21/DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Responsible Minerals Assurance Process for FjordMetall AS",
                   "assessorLevel": "3rdParty",
@@ -37982,7 +37555,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502233054/21/DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Responsible Minerals Assurance Process for Zhongke Refining Ltd.",
                   "assessorLevel": "3rdParty",
@@ -39446,7 +39020,8 @@
                 "data": {
                   "id": "http://localhost:3000/gs1/01/09359502233061/21/DCC_01",
                   "type": [
-                    "ConformityAttestation"
+                    "ConformityAttestation",
+                    "Attestation"
                   ],
                   "name": "TEST Responsible Minerals Assurance Process for UrbanCore Recycling Inc.",
                   "assessorLevel": "3rdParty",

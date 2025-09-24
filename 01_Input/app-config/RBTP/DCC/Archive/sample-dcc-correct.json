@@ -1,5 +1,5 @@
 {
-    "name": "(Recycling) Recycler in Canada - Issue DCC (RMAP)",
+    "name": "(Downstream) Refinery in China - Issue DCC (RMAP)",
     "id": "produce_product",
     "components": [
         {
@@ -18,7 +18,7 @@
                         "https://www.w3.org/ns/credentials/v2",
                         "https://vocabulary.uncefact.org/untp/dcc/0.5.0/"
                     ],
-                    "id": "http://localhost:3000/gs1/01/09359502233061/21/DCC_01",
+                    "id": "http://localhost:3000/gs1/01/09359502222054/21/DCC_01",
                     "issuer": {
                         "type": [
                             "CredentialIssuer"
@@ -31,19 +31,19 @@
                             "ConformityAttestation",
                             "Attestation"
                         ],
-                        "id": "http://localhost:3000/gs1/01/09359502233061/21/DCC_01",
-                        "name": "TEST Responsible Minerals Assurance Process for UrbanCore Recycling Inc.",
+                        "id": "http://localhost:3000/gs1/01/09359502222054/21/DCC_01",
+                        "name": "TEST Responsible Minerals Assurance Process for Zhongke Refining Ltd.",
                         "assessorLevel": "3rdParty",
                         "assessmentLevel": "Accredited",
                         "attestationType": "certification",
-                        "description": "TEST: RMI attests that UrbanCore Recycling Inc. complies with the requirements of the Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
+                        "description": "TEST: RMI attests that Zhongke Refining Ltd. complies with the requirements of the Global Responsible Sourcing Due Diligence Standard for Mineral Supply Chains All Minerals",
                         "issuedToParty": {
                             "type": [
                                 "Party"
                             ],
-                            "id": "http://localhost:3000/gs1/414/09359502233061",
-                            "name": "UrbanCore Recycling Inc.",
-                            "registeredId": "09359502233061",
+                            "id": "http://localhost:3000/gs1/414/09359502222054",
+                            "name": "Zhongke Refining Ltd.",
+                            "registeredId": "09359502222054",
                             "idScheme": {
                                 "type": [
                                     "IdentifierScheme"
@@ -51,7 +51,7 @@
                                 "id": "https://www.some_scheme_link.com/",
                                 "name": "Some Registry"
                             },
-                            "description": "UrbanCore Recycling Inc."
+                            "description": "Zhongke Refining Ltd."
                         },
                         "authorisation": [
                             {
@@ -69,7 +69,7 @@
                                     "type": [
                                         "Identifier"
                                     ],
-                                    "id": "http://localhost:3000/gs1/01/09359502233078?linkType=gs1:registryEntry",
+                                    "id": "http://localhost:3000/gs1/01/09359502222078?linkType=gs1:registryEntry",
                                     "name": "TEST Open Supply Hub",
                                     "registeredId": "123456789",
                                     "idScheme": {
@@ -173,9 +173,9 @@
                                         "type": [
                                             "Facility"
                                         ],
-                                        "id": "http://localhost:3000/gs1/414/09359502233061",
-                                        "name": "UrbanCore Recycling Inc.",
-                                        "registeredId": "09359502233061",
+                                        "id": "http://localhost:3000/gs1/414/09359502222054",
+                                        "name": "Zhongke Refining Ltd.",
+                                        "registeredId": "09359502222054",
                                         "idScheme": {
                                             "type": [
                                                 "IdentifierScheme"
@@ -270,9 +270,9 @@
                                         "type": [
                                             "Product"
                                         ],
-                                        "id": "http://localhost:3000/gs1/01/09359502233061/21/DPP_01",
+                                        "id": "http://localhost:3000/gs1/01/09359502222054/21/DPP_01",
                                         "name": "Refined Cobalt/Copper/Recycled Material",
-                                        "registeredId": "09359502233061.21.DPP_01",
+                                        "registeredId": "09359502222054.21.DPP_01",
                                         "idScheme": {
                                             "type": [
                                                 "IdentifierScheme"
@@ -299,16 +299,16 @@
                                         "id": "https://id.gs1.org/01/",
                                         "name": "Global Trade Identification Number (GTIN)"
                                     },
-                                    "description": "Organisation X oversees UrbanCore Recycling Inc."
+                                    "description": "Organisation X oversees Zhongke Refining Ltd."
                                 },
                                 "assessedFacility": [
                                     {
                                         "type": [
                                             "Facility"
                                         ],
-                                        "id": "http://localhost:3000/gs1/414/09359502233061",
-                                        "name": "UrbanCore Recycling Inc.",
-                                        "registeredId": "09359502233061",
+                                        "id": "http://localhost:3000/gs1/414/09359502222054",
+                                        "name": "Zhongke Refining Ltd.",
+                                        "registeredId": "09359502222054",
                                         "idScheme": {
                                             "type": [
                                                 "IdentifierScheme"
@@ -419,9 +419,9 @@
                                         "type": [
                                             "Facility"
                                         ],
-                                        "id": "http://localhost:3000/gs1/414/09359502233061",
-                                        "name": "UrbanCore Recycling Inc.",
-                                        "registeredId": "09359502233061",
+                                        "id": "http://localhost:3000/gs1/414/09359502222054",
+                                        "name": "Zhongke Refining Ltd.",
+                                        "registeredId": "09359502222054",
                                         "idScheme": {
                                             "type": [
                                                 "IdentifierScheme"
@@ -547,9 +547,9 @@
                                         "type": [
                                             "Facility"
                                         ],
-                                        "id": "http://localhost:3000/gs1/414/09359502233061",
-                                        "name": "UrbanCore Recycling Inc.",
-                                        "registeredId": "09359502233061",
+                                        "id": "http://localhost:3000/gs1/414/09359502222054",
+                                        "name": "Zhongke Refining Ltd.",
+                                        "registeredId": "09359502222054",
                                         "idScheme": {
                                             "type": [
                                                 "IdentifierScheme"
@@ -691,9 +691,9 @@
                                         "type": [
                                             "Facility"
                                         ],
-                                        "id": "http://localhost:3000/gs1/414/09359502233061",
-                                        "name": "UrbanCore Recycling Inc.",
-                                        "registeredId": "09359502233061",
+                                        "id": "http://localhost:3000/gs1/414/09359502222054",
+                                        "name": "Zhongke Refining Ltd.",
+                                        "registeredId": "09359502222054",
                                         "idScheme": {
                                             "type": [
                                                 "IdentifierScheme"
@@ -811,9 +811,9 @@
                                         "type": [
                                             "Facility"
                                         ],
-                                        "id": "http://localhost:3000/gs1/414/09359502233061",
-                                        "name": "UrbanCore Recycling Inc.",
-                                        "registeredId": "09359502233061",
+                                        "id": "http://localhost:3000/gs1/414/09359502222054",
+                                        "name": "Zhongke Refining Ltd.",
+                                        "registeredId": "09359502222054",
                                         "idScheme": {
                                             "type": [
                                                 "IdentifierScheme"
@@ -927,9 +927,9 @@
                                         "type": [
                                             "Facility"
                                         ],
-                                        "id": "http://localhost:3000/gs1/414/09359502233061",
-                                        "name": "UrbanCore Recycling Inc.",
-                                        "registeredId": "09359502233061",
+                                        "id": "http://localhost:3000/gs1/414/09359502222054",
+                                        "name": "Zhongke Refining Ltd.",
+                                        "registeredId": "09359502222054",
                                         "idScheme": {
                                             "type": [
                                                 "IdentifierScheme"

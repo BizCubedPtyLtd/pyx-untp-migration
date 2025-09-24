@@ -174,9 +174,9 @@ if __name__ == "__main__":
 
     input_folder_name = "01_Input/app-config"
     brand_name = 'BCMine'
-    file_name = "sample-dcc.json"
+    file_name = "sample-dcc-1.json"
     testing_folder = 'DCC'
-    output_file_name = f"sample-{testing_folder}-test-output-v3.json"
+    output_file_name = f"sample-{testing_folder}-test-output-1.json"
     input_path = current_dir.parent / input_folder_name / brand_name / testing_folder / file_name
     output_path = current_dir.parent / input_folder_name / brand_name / testing_folder / output_file_name
 

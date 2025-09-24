@@ -177,10 +177,10 @@ if __name__ == "__main__":
     current_dir = Path(__file__).resolve().parent
 
     input_folder_name = "01_Input/app-config"
-    brand_name = 'RBTP'
+    brand_name = 'BCMine'
     file_name = "app-config.json"
     testing_folder = 'DCC'
-    output_file_name = f"transformed-{testing_folder}-app-config-test-v2.json"
+    output_file_name = f"transformed-{testing_folder}-app-config-test-v5.json"
     
     input_path = current_dir.parent / input_folder_name / brand_name  / file_name
     output_path = current_dir.parent / input_folder_name / brand_name / testing_folder / output_file_name

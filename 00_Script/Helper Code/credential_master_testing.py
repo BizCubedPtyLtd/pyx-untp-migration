@@ -14,9 +14,9 @@ current_dir = Path(__file__).resolve().parent
 credential_request = 'DCC'
 
 input_folder_name = "01_Input/app-config"
-brand_name = 'RBTP'
-input_file_name = f"transformed-{credential_request}-app-config-test-v2.json"
-output_file_name = f"transformed-app-config-{credential_request}-only-v2.json"
+brand_name = 'BCMine'
+input_file_name = f"transformed-{credential_request}-app-config-test-v5.json"
+output_file_name = f"transformed-app-config-{credential_request}-only-v5.json"
 
 input_path = (current_dir.parent.parent / input_folder_name / brand_name / credential_request / input_file_name)
 print('input_path', input_path)
