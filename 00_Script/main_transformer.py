@@ -109,12 +109,10 @@ class AppConfigProcessor:
                         updated_components.append(component)
                     # If name = 'BarcodeGenerator', remove it
                     elif component.get('name') == 'BarcodeGenerator':
-                        print('inside remove BarcodeGenerator')
                         continue
                     else:
                         updated_components.append(component)
                 components[:] = updated_components
-                print('components', components)
                         
                 #### UPDATE SERVICES ######
 
@@ -177,10 +175,9 @@ if __name__ == "__main__":
 
     current_dir = Path(__file__).resolve().parent
 
-    input_folder_name = "01_Input/app-config"
+    input_folder_name = "01_Data/app-config"
     brand_name = 'RBTP'
     file_name = "app-config.json"
-    #testing_folder = 'DIA'
     version = '0.6.0'
     output_file_name = f"transformed-app-config-v{version}.json"
     

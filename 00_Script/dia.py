@@ -52,7 +52,6 @@ class DIATransformer(CredentialTransformer):
         data_type = data.get('type', {})
         if 'Identifier' in data_type:
             data_type.remove('Identifier')
-        print(data_type)
         
         # Resolve JSON-LD Issue
         self._clean_identifier_list(data, ['entityId', 'businessNumber'])

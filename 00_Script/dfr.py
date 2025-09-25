@@ -26,12 +26,6 @@ class DFRTransformer(CredentialTransformer):
         # Specific DFR data model changes for "component"
         data = self.component["props"]["data"]
 
-        # # 1. Update @context - not needed
-        # data["@context"] = [
-        #     "https://www.w3.org/ns/credentials/v2",
-        #     "https://test.uncefact.org/vocabulary/untp/dfr/0.6.0/"
-        # ]
-
         # 2. Credential Subject Structure: adds "type": ["FacilityRecord"] to the original structure
         credential_subject = data.get("credentialSubject", {})
         facility = {k: v for k, v in credential_subject.items() if k != "conformityClaim"}
@@ -42,11 +36,6 @@ class DFRTransformer(CredentialTransformer):
         }
         data["credentialSubject"] = new_credential_subject
         
-        # 3. Issuer Identifier Structure: updates "otherIdentifier" to "facilityAlsoKnownAs"
-        # issuer = data.get('issuer', {})
-        # if "otherIdentifier" in issuer:
-        #     clean_data = self._pop_and_replace_key(issuer, "otherIdentifier", "facilityAlsoKnownAs")
-         
         # 3. Issuer Identifier Structure: updates "otherIdentifier" to "facilityAlsoKnownAs"
         issuer = new_credential_subject.get('issuer', {})
         if "otherIdentifier" in issuer:

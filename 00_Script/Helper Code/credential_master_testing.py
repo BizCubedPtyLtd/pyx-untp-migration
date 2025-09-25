@@ -13,7 +13,7 @@ from typing import Dict, Any, List
 current_dir = Path(__file__).resolve().parent
 credential_request = 'DFR'
 
-input_folder_name = "01_Input/app-config"
+input_folder_name = "01_Data/app-config"
 brand_name = 'RegenFarmers'
 input_file_name = f"transformed-{credential_request}-app-config-test.json"
 output_file_name = f"transformed-app-config-{credential_request}-only.json"

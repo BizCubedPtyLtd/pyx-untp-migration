@@ -176,12 +176,10 @@ class DCCTransformer(CredentialTransformer):
         ###########################################
         # removes type if the value is not "attestation"
         cred_types = credential_subject.get('type', {})
-        print(cred_types)
         cred_type = [ct for ct in cred_types if ct == 'ConformityAttestation' or ct == 'Attestation']
         if 'Attestation' not in cred_type:
             cred_type.append('Attestation')
         cred_types[:] = cred_type
-        print(cred_types)
 
         if 'permitNumber' in credential_subject:
             del credential_subject['permitNumber']
