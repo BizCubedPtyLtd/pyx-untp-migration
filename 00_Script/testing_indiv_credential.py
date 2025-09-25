@@ -89,9 +89,9 @@ class AppConfigProcessor:
                         credential_type = "DCC"
                         count['DCC'] += 1
                         print("DCC found, continue to transform.")
-                # elif "DigitalIdentityAnchor" in schema_url:
-                #     credential_type = "DIA"
-                #     print("DIA found, continue to transform.")
+                elif "DigitalIdentityAnchor" in schema_url:
+                    credential_type = "DIA"
+                    print("DIA found, continue to transform.")
                 else:
                     print('Unknown type of credential. Please investigate')
                     continue  # Skip unknown
@@ -149,8 +149,8 @@ class TransformerFactory:
             "DFR": DFRTransformer,
             "DTE": DTETransformer,
             "DPP": DPPTransformer,
-            "DCC": DCCTransformer
-            # "DIA": DIATransformer,
+            "DCC": DCCTransformer,
+            "DIA": DIATransformer
         }
         # If the credential type is in the dictionary keys, extracts the value to get transformer name
         # For example: if "DFR" is in the dictionary keys, then get the transformer name
@@ -173,10 +173,10 @@ if __name__ == "__main__":
     current_dir = Path(__file__).resolve().parent
 
     input_folder_name = "01_Input/app-config"
-    brand_name = 'BCMine'
-    file_name = "sample-dcc-1.json"
-    testing_folder = 'DCC'
-    output_file_name = f"sample-{testing_folder}-test-output-1.json"
+    brand_name = 'RBTP'
+    file_name = "sample-dia.json"
+    testing_folder = 'DIA'
+    output_file_name = f"sample-{testing_folder}-test-output-3.json"
     input_path = current_dir.parent / input_folder_name / brand_name / testing_folder / file_name
     output_path = current_dir.parent / input_folder_name / brand_name / testing_folder / output_file_name
 

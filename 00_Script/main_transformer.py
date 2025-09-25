@@ -178,7 +178,7 @@ if __name__ == "__main__":
     current_dir = Path(__file__).resolve().parent
 
     input_folder_name = "01_Input/app-config"
-    brand_name = 'BCMine'
+    brand_name = 'RegenFarmers'
     file_name = "app-config.json"
     testing_folder = 'DIA'
     output_file_name = f"transformed-{testing_folder}-app-config-test.json"

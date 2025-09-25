@@ -256,23 +256,6 @@
             "identifierKeyPath": "/id"
           }
         ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "mine_dfr",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "mine_dfr"
-          }
-        ]
       }
     ]
   },
@@ -463,23 +446,6 @@
               }
             },
             "identifierKeyPath": "/id"
-          }
-        ]
-      },
-      {
-        "name": "mergeToLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "smelter_dfr",
-            "objectKeyPath": "/decodedEnvelopedVC/credentialSubject/0/id"
-          }
-        ]
-      },
-      {
-        "name": "getValueFromLocalStorage",
-        "parameters": [
-          {
-            "storageKey": "smelter_dfr"
           }
         ]
       }
