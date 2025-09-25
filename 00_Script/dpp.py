@@ -84,14 +84,6 @@ class DPPTransformer(CredentialTransformer):
         producedAtFacility = product.get('producedAtFacility', {})
         self._clean_identifier_list(producedAtFacility)
         
-        # # Added characteristics property as an extension point for industry-specific attributes.
-        # After confirming with Ash, this is only for industry-specific DPP extensions, such as DBP, Lifestock Passport, etc.
-        # Thus, we don't need to add this line to the generic DPP transformer.
-        # new_credential_subject["product"]["characteristics"] = {
-        #     "type": ["Characteristics"],
-        #     "capacity": "0 Ah"
-        # }
-
         '''
         5. Material Structure Changes
         Key Changes:

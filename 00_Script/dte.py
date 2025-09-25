@@ -42,7 +42,6 @@ class DTETransformer(CredentialTransformer):
             None
         )
         schema["url"] = schema_url_0_6_0[event_type]
-        print('event type:', event_type)
 
         # 3. Form Data Structure Updates (Transaction Event)
         if "type" in data:
@@ -59,7 +58,6 @@ class DTETransformer(CredentialTransformer):
 
         # JSON-LD issue: if event_type = 'TransformationEvent', then remove destinationparty and sourceparty if they are present
         if event_type == 'TransformationEvent':
-            print('inside json ld issue')
             for key in list(data.keys()):
                 if key.lower() in ['destinationparty', 'destinationpartyid']:
                     data.pop(key)
