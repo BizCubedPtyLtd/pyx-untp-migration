@@ -54,6 +54,7 @@ pyx-untp-migration/
    ```bash
    input_folder_name = "01_Data/app-config"
    brand_name = 'RBTP'
+   # comment out testing_folder
    file_name = "app-config.json"
    version = '0.6.0'
 

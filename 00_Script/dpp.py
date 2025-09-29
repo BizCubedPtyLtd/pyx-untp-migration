@@ -168,8 +168,11 @@ class DPPTransformer(CredentialTransformer):
                     "tags": ""
                 }
                 assessment.update(new_column_added)
-                if "thresholdValues" in assessment:
-                    assessment["thresholdValue"] = assessment.pop("thresholdValues", [])[0]
+                threshold_values = assessment.pop("thresholdValues",[])
+                if threshold_values:
+                    assessment["thresholdValue"] = threshold_values[0]
+                else:
+                    assessment['thresholdValue'] = []
 
             ### RESOLVE JSON-LD SCHEMA VALIDATION ISSUE: removes assessedProduct as not relevant to dpp###
             if "assessedProduct" in claim:

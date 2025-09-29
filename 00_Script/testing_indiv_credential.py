@@ -173,9 +173,9 @@ if __name__ == "__main__":
     current_dir = Path(__file__).resolve().parent
 
     input_folder_name = "01_Data/app-config"
-    brand_name = 'RBTP'
+    brand_name = 'DTMForestry'
     file_name = "sample-credential.json"
-    testing_folder = 'DIA'
+    testing_folder = 'DPP'
     version = '0.6.0'
     output_file_name = f"transformed-{testing_folder}-{file_name}-v0.6.0.json"
     input_path = current_dir.parent / input_folder_name / brand_name / testing_folder / file_name

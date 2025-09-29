@@ -176,7 +176,7 @@ if __name__ == "__main__":
     current_dir = Path(__file__).resolve().parent
 
     input_folder_name = "01_Data/app-config"
-    brand_name = 'RBTP'
+    brand_name = 'ACRS'
     file_name = "app-config.json"
     version = '0.6.0'
     output_file_name = f"transformed-app-config-v{version}.json"
