@@ -135,7 +135,8 @@
                           "status": "active",
                           "subCriterion": [],
                           "performanceLevel": "",
-                          "tags": ""
+                          "tags": "",
+                          "thresholdValue": []
                         }
                       ],
                       "conformance": true,
@@ -964,7 +965,8 @@
                           "status": "active",
                           "subCriterion": [],
                           "performanceLevel": "",
-                          "tags": ""
+                          "tags": "",
+                          "thresholdValue": []
                         }
                       ],
                       "conformance": true,
@@ -1194,7 +1196,8 @@
                           "status": "active",
                           "subCriterion": [],
                           "performanceLevel": "",
-                          "tags": ""
+                          "tags": "",
+                          "thresholdValue": []
                         }
                       ],
                       "conformance": true,
@@ -4606,7 +4609,7 @@
   ],
   "identifyProvider": {
     "type": "gs1",
-    "url": "http://localhost:3001",
+    "url": "http://localhost:3001/api/1.0.0",
     "namespace": "gs1"
   },
   "identifierSchemes": [
@@ -4644,5 +4647,10 @@
       "Authorization": "Bearer test123",
       "Content-Type": "application/json"
     }
+  },
+  "identityProvider": {
+    "type": "gs1",
+    "url": "http://localhost:3001/api/1.0.0",
+    "namespace": "gs1"
   }
 }

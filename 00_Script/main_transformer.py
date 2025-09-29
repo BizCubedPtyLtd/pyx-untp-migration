@@ -53,6 +53,15 @@ class AppConfigProcessor:
     def process(self) -> Dict[str, Any]:
         # This function processes the app configuration and applies necessary transformations.
         # json_list = []
+
+        # update identitiyProvider
+        identifyProvider = self.config_data.get("identifyProvider", [])
+        print(identifyProvider)
+        if "url" in identifyProvider:
+            identifyProvider['url'] = 'http://localhost:3001/api/1.0.0'
+            self.config_data['identityProvider'] = identifyProvider
+
+        # update apps
         apps = self.config_data.get("apps", [])
         count = defaultdict(int)
         for app in apps:
@@ -176,10 +185,10 @@ if __name__ == "__main__":
     current_dir = Path(__file__).resolve().parent
 
     input_folder_name = "01_Data/app-config"
-    brand_name = 'ACRS'
+    brand_name = 'RegenFarmers'
     file_name = "app-config.json"
     version = '0.6.0'
-    output_file_name = f"transformed-app-config-v{version}.json"
+    output_file_name = f"transformed-app-config-{brand_name}-v{version}.json"
     
     input_path = current_dir.parent / input_folder_name / brand_name  / file_name
     output_path = current_dir.parent / input_folder_name / brand_name / output_file_name #testing_folder / output_file_name
