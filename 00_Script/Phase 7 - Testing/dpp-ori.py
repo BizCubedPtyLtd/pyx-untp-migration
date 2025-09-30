@@ -11,7 +11,6 @@ class CredentialTransformer:
         Initialize with the entire component dict, as transformations may affect props, data, services, etc.
         """
         self.component = component
-        self.credential_indicator = None
 
     def transform(self) -> Dict[str, Any]:
         """Default transform, to be overridden by subclasses."""
@@ -54,42 +53,43 @@ class DPPTransformer(CredentialTransformer):
         if credential_subject == {} or not credential_subject: # fix for credentials without credential_subject, reassign data to credential_subject
             # component_data['credentialSubject'] = props.pop('data')
             credential_subject = component_data
-            print('inside')
-            #print(credential_subject)
-            self.credential_indicator = 0
+            # print('inside')
+            # #print(credential_subject)
+            # inside = 0
 
-            product = {k: v for k, v in credential_subject.items() if k not in ["conformityClaim","circularityScorecard","traceabilityInformation", ]}
-            product["granularityLevel"] = "item"
-            #print('product', product)
-            new_credential_subject = {
-                "type": ['ProductPassport'],
-                "id": credential_subject.get("id", ""),
-                "product": product,
-                "conformityClaim": credential_subject.get("conformityClaim", []),
-                "circularityScorecard": credential_subject.get('circularityScorecard',),
-                "traceabilityInformation": credential_subject.get("traceabilityInformation",[])
-            }
-            #print('product',)
-            self.component["props"]["data"] = new_credential_subject
-            component_data = new_credential_subject
-            print('new_credential_subject')
+            # product = {k: v for k, v in credential_subject.items() if k not in ["conformityClaim","circularityScorecard","traceabilityInformation", ]}
+            # product["granularityLevel"] = "item"
+            # #print('product', product)
+            # new_credential_subject = {
+            #     "type": ['ProductPassport'],
+            #     "id": credential_subject.get("id", ""),
+            #     "product": product,
+            #     "conformityClaim": credential_subject.get("conformityClaim", []),
+            #     "circularityScorecard": credential_subject.get('circularityScorecard',[]),
+            #     # "recyclingInformation": credential_subject.get("recyclingInformation",[]),
+            #     # "repairInformation": credential_subject.get("repairInformation",[]),
+            #     "traceabilityInformation": credential_subject.get("traceabilityInformation",[])
+            # }
+            # #print('product',)
+            # self.component["props"]["data"] = new_credential_subject
+            # component_data = new_credential_subject
+            # print('new_credential_subject')
             #print("component_data['data']",component_data['data'])
 
         else: # if there is credential subject, clean top-level data
             self._clean_identifier_list(component_data, ['type', '@context', 'issuer'])
             #print('notempty', credential_subject)
-            self.credential_indicator = 1
-
-            product = {k: v for k, v in credential_subject.items() if k != "conformityClaim"}
-            product["granularityLevel"] = "item"
-            new_credential_subject = {
-                "type": ["ProductPassport"],
-                "id": credential_subject.get("id", ""),
-                "product": product,
-                "conformityClaim": credential_subject.get("conformityClaim", [])
-            }
-            #print(new_credential_subject)
-            component_data["credentialSubject"] = new_credential_subject
+            # inside = 1
+        product = {k: v for k, v in credential_subject.items() if k != "conformityClaim"}
+        product["granularityLevel"] = "item"
+        new_credential_subject = {
+            "type": ["ProductPassport"],
+            "id": credential_subject.get("id", ""),
+            "product": product,
+            "conformityClaim": credential_subject.get("conformityClaim", [])
+        }
+        #print(new_credential_subject)
+        component_data["credentialSubject"] = new_credential_subject
 
         # if inside == 0: 
         #     component_data['data'] = new_credential_subject
@@ -235,9 +235,9 @@ class DPPTransformer(CredentialTransformer):
         # print(id(self.component["props"]["data"]))
         # print(id(component_data))
         #self._clean_identifier_list(component_data, ['type', '@context', 'issuer'])
-        if self.credential_indicator == 1:
-            self._flatten_credential_subject(component_data, 'credentialSubject')
-            print('inside flatten')
+        #if inside == 1:
+        self._flatten_credential_subject(component_data, 'credentialSubject')
+        print('inside flatten')
         # RESOLVE UNTP SCHEMA VALIDATION ISSUE
         #print(component_data['data'])
         '''
@@ -317,13 +317,6 @@ class DPPTransformer(CredentialTransformer):
         '''
         # 2. Context in Services updates
         parameters = self.component.get('parameters', [])
-                
-        # component_data = self.component["props"]["data"]
-        # Specific DFR data model changes for "component"
-        #data = self.component["props"]["data"]
-
-        #credential_subject = component_data.get("credentialSubject", {})
-
         for param in parameters: #iterate through param -> services
             context_configuration = param.get('dpp')
             if context_configuration:
@@ -347,15 +340,6 @@ class DPPTransformer(CredentialTransformer):
                 vckit_issuer = vckit.get('issuer', {})
                 if "otherIdentifier" in vckit_issuer: # Updates 'otherIdentifier' to 'issuerAlsoKnownAs' and retains the position
                     self._pop_and_replace_key(vckit_issuer, "otherIdentifier", "issuerAlsoKnownAs")
-
-            print('credential indicator', self.credential_indicator)
-            #if self.credential_indicator == 1: # fix for credentials without credential_subject, reassign data to credential_subject
-            print('inside credential-indicator!')
-            identifierKeyPath = param.get('identifierKeyPath',[])
-            if type(identifierKeyPath) is dict:
-                identifierKeyPath_name = identifierKeyPath.get('primary',[])
-                if identifierKeyPath_name['path']  == '/registeredId':
-                    identifierKeyPath_name['path'] = "/product/registeredId"
         return self.component
 
     

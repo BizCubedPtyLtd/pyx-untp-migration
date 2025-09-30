@@ -383,6 +383,173 @@
                     "ProductPassport"
                   ],
                   "id": "http://localhost:3000/gs1/01/09359502111112/10/001",
+                  "name": "Log from Harvest Teams",
+                  "registeredId": "09359502111112",
+                  "idScheme": {
+                    "id": "https://id.gs1.org/01/",
+                    "name": "Global Trade Identification Number (GTIN)"
+                  },
+                  "batchNumber": "001",
+                  "productImage": {
+                    "type": [
+                      "Link"
+                    ],
+                    "linkURL": "http://localhost:3003/dpi_forestry_qld_logs.png",
+                    "linkName": "Harvest Team's Log"
+                  },
+                  "productCategory": [
+                    {
+                      "type": [
+                        "Classification"
+                      ],
+                      "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/31310",
+                      "code": "31310",
+                      "name": "Wood in the rough, weather or not stripped of bark or sapwood",
+                      "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+                      "schemeName": "UN Central Product Classification (CPC)"
+                    }
+                  ],
+                  "furtherInformation": [
+                    {
+                      "type": [
+                        "Link"
+                      ],
+                      "linkURL": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+                      "linkName": "Central Product Classification (CPC) Version 2.1 "
+                    },
+                    {
+                      "type": [
+                        "Link"
+                      ],
+                      "linkURL": "http://localhost:3003/business_card_example.pdf",
+                      "linkName": "Seller Business Card - Example"
+                    }
+                  ],
+                  "producedByParty": {
+                    "id": "https://abr.business.gov.au/ABN/View?abn=66934348189",
+                    "name": "Department of Agriculture and Fisheries",
+                    "registeredId": "66934348189"
+                  },
+                  "producedAtFacility": {
+                    "id": "https://id.example-company.com/facility/123",
+                    "name": "Queensland State owned managed forest"
+                  },
+                  "dimensions": {
+                    "length": {
+                      "value": 11.9,
+                      "unit": "m"
+                    },
+                    "width": {
+                      "value": 30,
+                      "unit": "cm"
+                    }
+                  },
+                  "productionDate": "2025-01-24",
+                  "countryOfProduction": "Australia",
+                  "granularityLevel": "item",
+                  "materialsProvenance": [
+                    {
+                      "name": "Ironbark - Eucalyptus Paniculata",
+                      "originCountry": "AU",
+                      "materialType": {
+                        "type": [
+                          "Classification"
+                        ],
+                        "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/31310",
+                        "code": "31310",
+                        "name": "Wood in the rough, weather or not stripped of bark or sapwood",
+                        "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+                        "schemeName": "UN Central Product Classification (CPC)"
+                      },
+                      "mass": {
+                        "value": 5,
+                        "unit": "PCS"
+                      }
+                    }
+                  ],
+                  "conformityClaim": [
+                    {
+                      "type": [
+                        "Claim",
+                        "Declaration"
+                      ],
+                      "assessmentDate": "2025-01-25",
+                      "declaredValue": [],
+                      "referenceStandard": {
+                        "type": [
+                          "Standard"
+                        ],
+                        "id": "https://www.publications.qld.gov.au/ckan-publications-attachments-prod/resources/e118e5b9-78bf-4015-9fd7-4f39d33b53e7/afs-603520-certificate-registration.pdf?ETag=eb50d466e33597690616cd8fdae7754c",
+                        "name": "QLD Department of Resources Certificate",
+                        "issuingParty": {
+                          "id": "https://abr.business.gov.au/ABN/View/59020847551",
+                          "name": "QLD Department of Resources Certificate"
+                        },
+                        "issueDate": "2024-04-25"
+                      },
+                      "referenceRegulation": {
+                        "type": [
+                          "Regulation"
+                        ],
+                        "id": "https://www.legislation.qld.gov.au/view/html/inforce/current/sl-2024-0197",
+                        "name": "Forestry Regulation 2024",
+                        "jurisdictionCountry": "Australia",
+                        "administeredBy": {
+                          "id": "https://www.nrmmrrd.qld.gov.au/",
+                          "name": "QLD Department of Resources"
+                        },
+                        "effectiveDate": "2024-03-20"
+                      },
+                      "assessmentCriteria": [
+                        {
+                          "type": [
+                            "Criterion"
+                          ],
+                          "id": "https://www.publications.qld.gov.au/ckan-publications-attachments-prod/resources/e118e5b9-78bf-4015-9fd7-4f39d33b53e7/afs-603520-certificate-registration.pdf?ETag=eb50d466e33597690616cd8fdae7754c",
+                          "name": "Forest Management System - AS/NZS 4708:2021",
+                          "thresholdValues": [],
+                          "description": "",
+                          "conformityTopic": "environment.emissions",
+                          "status": "active",
+                          "subCriterion": [],
+                          "performanceLevel": "",
+                          "tags": ""
+                        }
+                      ],
+                      "conformance": true,
+                      "conformityTopic": "environment.deforestation",
+                      "conformityEvidence": {
+                        "type": [
+                          "SecureLink",
+                          "Link"
+                        ],
+                        "linkURL": "http://localhost:3000/gs1/01/09359502111112/10/001?linkType=gs1:certificationInfo",
+                        "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
+                        "hashMethod": "SHA-256",
+                        "linkName": "Private Native Forestry Approval",
+                        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+                        "encryptionMethod": "AES"
+                      },
+                      "id": "AFS 603520"
+                    }
+                  ],
+                  "traceabilityInformation": [
+                    {
+                      "valueChainProcess": "Tree Harvesting",
+                      "verifiedRatio": 1,
+                      "traceabilityEvent": [
+                        {
+                          "linkURL": "http://localhost:3000/gs1/01/09359502111112/10/001?linkType=gs1:traceability",
+                          "linkName": "Log Docket",
+                          "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dte",
+                          "hashDigest": "6239119",
+                          "hashMethod": "SHA-256",
+                          "encryptionMethod": "AES"
+                        }
+                      ]
+                    }
+                  ],
+                  "description": "Raw logs authorised for extraction from a Queensland State Managed Forest",
                   "product": {
                     "type": [
                       "Product"
@@ -453,110 +620,6 @@
                     "countryOfProduction": "Australia",
                     "description": "Raw logs authorised for extraction from a Queensland State Managed Forest"
                   },
-                  "conformityClaim": [
-                    {
-                      "type": [
-                        "Claim",
-                        "Declaration"
-                      ],
-                      "assessmentDate": "2025-01-25",
-                      "declaredValue": [],
-                      "referenceStandard": {
-                        "type": [
-                          "Standard"
-                        ],
-                        "id": "https://www.publications.qld.gov.au/ckan-publications-attachments-prod/resources/e118e5b9-78bf-4015-9fd7-4f39d33b53e7/afs-603520-certificate-registration.pdf?ETag=eb50d466e33597690616cd8fdae7754c",
-                        "name": "QLD Department of Resources Certificate",
-                        "issuingParty": {
-                          "id": "https://abr.business.gov.au/ABN/View/59020847551",
-                          "name": "QLD Department of Resources Certificate"
-                        },
-                        "issueDate": "2024-04-25"
-                      },
-                      "referenceRegulation": {
-                        "type": [
-                          "Regulation"
-                        ],
-                        "id": "https://www.legislation.qld.gov.au/view/html/inforce/current/sl-2024-0197",
-                        "name": "Forestry Regulation 2024",
-                        "jurisdictionCountry": "Australia",
-                        "administeredBy": {
-                          "id": "https://www.nrmmrrd.qld.gov.au/",
-                          "name": "QLD Department of Resources"
-                        },
-                        "effectiveDate": "2024-03-20"
-                      },
-                      "assessmentCriteria": [
-                        {
-                          "type": [
-                            "Criterion"
-                          ],
-                          "id": "https://www.publications.qld.gov.au/ckan-publications-attachments-prod/resources/e118e5b9-78bf-4015-9fd7-4f39d33b53e7/afs-603520-certificate-registration.pdf?ETag=eb50d466e33597690616cd8fdae7754c",
-                          "name": "Forest Management System - AS/NZS 4708:2021",
-                          "thresholdValues": [],
-                          "description": "",
-                          "conformityTopic": "environment.emissions",
-                          "status": "active",
-                          "subCriterion": [],
-                          "performanceLevel": "",
-                          "tags": ""
-                        }
-                      ],
-                      "conformance": true,
-                      "conformityTopic": "environment.deforestation",
-                      "conformityEvidence": {
-                        "type": [
-                          "SecureLink",
-                          "Link"
-                        ],
-                        "linkURL": "http://localhost:3000/gs1/01/09359502111112/10/001?linkType=gs1:certificationInfo",
-                        "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
-                        "hashMethod": "SHA-256",
-                        "linkName": "Private Native Forestry Approval",
-                        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
-                        "encryptionMethod": "AES"
-                      },
-                      "id": "AFS 603520"
-                    }
-                  ],
-                  "circularityScorecard": null,
-                  "traceabilityInformation": [
-                    {
-                      "valueChainProcess": "Tree Harvesting",
-                      "verifiedRatio": 1,
-                      "traceabilityEvent": [
-                        {
-                          "linkURL": "http://localhost:3000/gs1/01/09359502111112/10/001?linkType=gs1:traceability",
-                          "linkName": "Log Docket",
-                          "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dte",
-                          "hashDigest": "6239119",
-                          "hashMethod": "SHA-256",
-                          "encryptionMethod": "AES"
-                        }
-                      ]
-                    }
-                  ],
-                  "granularityLevel": "item",
-                  "materialsProvenance": [
-                    {
-                      "name": "Ironbark - Eucalyptus Paniculata",
-                      "originCountry": "AU",
-                      "materialType": {
-                        "type": [
-                          "Classification"
-                        ],
-                        "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/31310",
-                        "code": "31310",
-                        "name": "Wood in the rough, weather or not stripped of bark or sapwood",
-                        "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
-                        "schemeName": "UN Central Product Classification (CPC)"
-                      },
-                      "mass": {
-                        "value": 5,
-                        "unit": "PCS"
-                      }
-                    }
-                  ],
                   "emissionsScorecard": {
                     "declaredUnit": "kg",
                     "carbonFootprint": 0,

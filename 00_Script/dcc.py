@@ -101,13 +101,14 @@ class DCCTransformer(CredentialTransformer):
                     "tags": ""
                 }
                 criteria.update(new_column_added)
-                # if "thresholdValues" in criteria:
-                #     criteria["thresholdValue"] = criteria.pop("thresholdValues", [])[0]
-                threshold_values = criteria.pop("thresholdValues",[])
-                if threshold_values:
-                    criteria["thresholdValue"] = threshold_values[0]
-                else:
-                    criteria['thresholdValue'] = []
+                threshold_values = criteria.get('thresholdValues', [])
+                if "thresholdValues" in criteria and threshold_values != []:
+                    criteria["thresholdValue"] = criteria.pop("thresholdValues", [])[0]
+                # threshold_values = criteria.pop("thresholdValues",[])
+                # if threshold_values:
+                #     criteria["thresholdValue"] = threshold_values[0]
+                # elif threshold_values == []:
+                #     del criteria['thresholdValues']
             
             # Location: credentialSubject → assessment → 1 → declaredValue → 0 → metricValue
             # Issue: must have required property 'value' - add value in metricValue

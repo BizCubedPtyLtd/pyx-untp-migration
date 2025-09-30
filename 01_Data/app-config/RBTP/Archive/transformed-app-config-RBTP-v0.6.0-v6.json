@@ -120,6 +120,9 @@
                       "name": "Green Acres Battery Factory"
                     },
                     "dimensions": {
+                      "type": [
+                        "Dimension"
+                      ],
                       "weight": {
                         "value": 10,
                         "unit": "kg"
@@ -148,7 +151,126 @@
                       "Total energy": "100kwh"
                     },
                     "productionDate": "2024-04-24",
-                    "countryOfProduction": "Australia"
+                    "countryOfProduction": "Australia",
+                    "granularityLevel": "item",
+                    "dueDiligenceDeclaration": {
+                      "type": [
+                        "Link"
+                      ],
+                      "linkURL": "https://example-company.com/due-diligence/1234567",
+                      "linkName": "Due Diligence Declaration"
+                    },
+                    "materialsProvenance": [
+                      {
+                        "name": "Material",
+                        "originCountry": "AU",
+                        "materialType": {
+                          "type": [
+                            "Classification"
+                          ],
+                          "id": "https://unfc.org/material-type/Lithium",
+                          "name": "Lithium"
+                        },
+                        "massFraction": 20,
+                        "hazardous": false,
+                        "mass": {
+                          "value": 1.0,
+                          "unit": "kg"
+                        },
+                        "recycledMassFraction": 0
+                      },
+                      {
+                        "name": "Material",
+                        "originCountry": "AU",
+                        "materialType": {
+                          "type": [
+                            "Classification"
+                          ],
+                          "id": "https://unfc.org/material-type/Lithium",
+                          "name": "Lithium"
+                        },
+                        "massFraction": 20,
+                        "hazardous": true,
+                        "materialSafetyInformation": {
+                          "type": [
+                            "Link"
+                          ],
+                          "linkURL": "https://example.com/safety-info/lithium-spodumene.pdf",
+                          "linkName": "Material Safety Data Sheet",
+                          "linkType": "https://test.uncefact.org/vocabulary/linkTypes/safetyData"
+                        },
+                        "mass": {
+                          "value": 1.0,
+                          "unit": "kg"
+                        },
+                        "recycledMassFraction": 10
+                      },
+                      {
+                        "name": "Material",
+                        "originCountry": "AU",
+                        "materialType": {
+                          "type": [
+                            "Classification"
+                          ],
+                          "id": "https://unfc.org/material-type/Lithium",
+                          "name": "Lithium"
+                        },
+                        "massFraction": 20,
+                        "hazardous": false,
+                        "mass": {
+                          "value": 1.0,
+                          "unit": "kg"
+                        },
+                        "recycledMassFraction": 0
+                      },
+                      {
+                        "name": "Material",
+                        "originCountry": "AU",
+                        "materialType": {
+                          "type": [
+                            "Classification"
+                          ],
+                          "id": "https://unfc.org/material-type/Lithium",
+                          "name": "Lithium"
+                        },
+                        "massFraction": 20,
+                        "hazardous": false,
+                        "mass": {
+                          "value": 1.0,
+                          "unit": "kg"
+                        },
+                        "recycledMassFraction": 0
+                      }
+                    ],
+                    "emissionsScorecard": {
+                      "type": [
+                        "EmissionsPerformance"
+                      ],
+                      "carbonFootprint": 12.5,
+                      "declaredUnit": "kg",
+                      "operationalScope": "CradleToGate",
+                      "primarySourcedRatio": 75,
+                      "reportingStandard": {
+                        "type": [
+                          "Standard"
+                        ],
+                        "id": "https://www.ifrs.org/standards/issb/s2",
+                        "name": "WBSCD Pathfinder framework - V.2.0",
+                        "issuingParty": {
+                          "id": "https://id.ifrs.org/issuing-party/123",
+                          "name": "International Financial Reporting Standards Foundation",
+                          "registeredId": "90664869327",
+                          "idScheme": {
+                            "type": [
+                              "IdentifierScheme"
+                            ],
+                            "id": "https://id.ifrs.org/issuing-party/",
+                            "name": "IFRS Issuing Party"
+                          }
+                        },
+                        "issueDate": "2024-04-25"
+                      }
+                    }
                   },
                   "conformityClaim": [
                     {
@@ -383,181 +505,6 @@
                     "recycledContent": 86,
                     "utilityFactor": 1.2,
                     "materialCircularityIndicator": 0.67
-                  },
-                  "traceabilityInformation": [
-                    {
-                      "valueChainProcess": "Spinning",
-                      "verifiedRatio": 0.5,
-                      "traceabilityEvent": [
-                        {
-                          "linkURL": "https://files.example-certifier.com/1234567.json",
-                          "linkName": "Object Event",
-                          "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
-                          "hashDigest": "6239119",
-                          "hashMethod": "SHA-256",
-                          "encryptionMethod": "AES"
-                        },
-                        {
-                          "linkURL": "https://files.example-certifier.com/1234567.json",
-                          "linkName": "Transformation Event",
-                          "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
-                          "hashDigest": "6239119",
-                          "hashMethod": "SHA-256",
-                          "encryptionMethod": "AES"
-                        },
-                        {
-                          "linkURL": "https://files.example-certifier.com/1234567.json",
-                          "linkName": "Transaction Event",
-                          "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
-                          "hashDigest": "6239119",
-                          "hashMethod": "SHA-256",
-                          "encryptionMethod": "AES"
-                        },
-                        {
-                          "linkURL": "https://files.example-certifier.com/1234567.json",
-                          "linkName": "Aggregation Event",
-                          "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
-                          "hashDigest": "6239119",
-                          "hashMethod": "SHA-256",
-                          "encryptionMethod": "AES"
-                        },
-                        {
-                          "linkURL": "https://files.example-certifier.com/1234567.json",
-                          "linkName": "Association Event",
-                          "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
-                          "hashDigest": "6239119",
-                          "hashMethod": "SHA-256",
-                          "encryptionMethod": "AES"
-                        },
-                        {
-                          "linkURL": "https://files.example-certifier.com/1234567.json",
-                          "linkName": "Object Event",
-                          "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
-                          "hashDigest": "6239119",
-                          "hashMethod": "SHA-256",
-                          "encryptionMethod": "AES"
-                        }
-                      ]
-                    }
-                  ],
-                  "granularityLevel": "item",
-                  "dueDiligenceDeclaration": {
-                    "type": [
-                      "Link"
-                    ],
-                    "linkURL": "https://example-company.com/due-diligence/1234567",
-                    "linkName": "Due Diligence Declaration"
-                  },
-                  "materialsProvenance": [
-                    {
-                      "name": "Material",
-                      "originCountry": "AU",
-                      "materialType": {
-                        "type": [
-                          "Classification"
-                        ],
-                        "id": "https://unfc.org/material-type/Lithium",
-                        "name": "Lithium"
-                      },
-                      "massFraction": 20,
-                      "hazardous": false,
-                      "mass": {
-                        "value": 1.0,
-                        "unit": "kg"
-                      },
-                      "recycledMassFraction": 0
-                    },
-                    {
-                      "name": "Material",
-                      "originCountry": "AU",
-                      "materialType": {
-                        "type": [
-                          "Classification"
-                        ],
-                        "id": "https://unfc.org/material-type/Lithium",
-                        "name": "Lithium"
-                      },
-                      "massFraction": 20,
-                      "hazardous": true,
-                      "materialSafetyInformation": {
-                        "type": [
-                          "Link"
-                        ],
-                        "linkURL": "https://example.com/safety-info/lithium-spodumene.pdf",
-                        "linkName": "Material Safety Data Sheet",
-                        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/safetyData"
-                      },
-                      "mass": {
-                        "value": 1.0,
-                        "unit": "kg"
-                      },
-                      "recycledMassFraction": 10
-                    },
-                    {
-                      "name": "Material",
-                      "originCountry": "AU",
-                      "materialType": {
-                        "type": [
-                          "Classification"
-                        ],
-                        "id": "https://unfc.org/material-type/Lithium",
-                        "name": "Lithium"
-                      },
-                      "massFraction": 20,
-                      "hazardous": false,
-                      "mass": {
-                        "value": 1.0,
-                        "unit": "kg"
-                      },
-                      "recycledMassFraction": 0
-                    },
-                    {
-                      "name": "Material",
-                      "originCountry": "AU",
-                      "materialType": {
-                        "type": [
-                          "Classification"
-                        ],
-                        "id": "https://unfc.org/material-type/Lithium",
-                        "name": "Lithium"
-                      },
-                      "massFraction": 20,
-                      "hazardous": false,
-                      "mass": {
-                        "value": 1.0,
-                        "unit": "kg"
-                      },
-                      "recycledMassFraction": 0
-                    }
-                  ],
-                  "emissionsScorecard": {
-                    "type": [
-                      "EmissionsPerformance"
-                    ],
-                    "carbonFootprint": 12.5,
-                    "declaredUnit": "kg",
-                    "operationalScope": "CradleToGate",
-                    "primarySourcedRatio": 75,
-                    "reportingStandard": {
-                      "type": [
-                        "Standard"
-                      ],
-                      "id": "https://www.ifrs.org/standards/issb/s2",
-                      "name": "WBSCD Pathfinder framework - V.2.0",
-                      "issuingParty": {
-                        "id": "https://id.ifrs.org/issuing-party/123",
-                        "name": "International Financial Reporting Standards Foundation",
-                        "registeredId": "90664869327",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.ifrs.org/issuing-party/",
-                          "name": "IFRS Issuing Party"
-                        }
-                      },
-                      "issueDate": "2024-04-25"
-                    }
                   }
                 },
                 "constructData": {

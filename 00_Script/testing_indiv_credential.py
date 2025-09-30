@@ -173,7 +173,7 @@ if __name__ == "__main__":
     current_dir = Path(__file__).resolve().parent
 
     input_folder_name = "01_Data/app-config"
-    brand_name = 'DTMForestry'
+    brand_name = 'RBTP'
     file_name = "sample-credential.json"
     testing_folder = 'DPP'
     version = '0.6.0'

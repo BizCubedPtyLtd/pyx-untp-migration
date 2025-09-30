@@ -444,7 +444,7 @@
                       }
                     }
                   ],
-                  "circularityScorecard": null,
+                  "circularityScorecard": [],
                   "traceabilityInformation": [
                     {
                       "traceabilityEvent": []
@@ -716,7 +716,7 @@
                       }
                     }
                   ],
-                  "circularityScorecard": null,
+                  "circularityScorecard": [],
                   "traceabilityInformation": [
                     {
                       "traceabilityEvent": [

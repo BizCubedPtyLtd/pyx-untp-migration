@@ -49,107 +49,194 @@
                 },
                 "data": {
                   "type": [
-                    "ProductPassport"
+                    "Product"
                   ],
                   "id": "http://localhost:3000/gs1/01/09520123456788/21/TEST_DPP01",
-                  "product": {
+                  "name": "TEST: EcoCharge Lithium-Ion Battery",
+                  "registeredId": "09359502000034",
+                  "idScheme": {
+                    "id": "https://id.gs1.org/01/",
+                    "name": "Global Trade Identification Number (GTIN)"
+                  },
+                  "serialNumber": "12345678",
+                  "batchNumber": "6789",
+                  "productImage": {
                     "type": [
-                      "Product"
+                      "Link"
                     ],
-                    "id": "http://localhost:3000/gs1/01/09520123456788/21/TEST_DPP01",
-                    "name": "TEST: EcoCharge Lithium-Ion Battery",
-                    "registeredId": "09359502000034",
-                    "idScheme": {
-                      "id": "https://id.gs1.org/01/",
-                      "name": "Global Trade Identification Number (GTIN)"
+                    "linkURL": "https://c.animaapp.com/b3vf2M20/img/pp-header@2x.png",
+                    "linkName": "EV Battery 300Ah Image"
+                  },
+                  "description": "The EcoCharge EC-5000 Lithium-Ion Battery is a high-capacity, 5000mAh battery designed for performance and sustainability. Manufactured with responsibly sourced materials and a 95% recyclability rate, it reduces lifecycle emissions through eco-friendly production and verified recycling programs.",
+                  "productCategory": [
+                    {
+                      "type": [
+                        "Classification"
+                      ],
+                      "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/46410",
+                      "code": "46410",
+                      "name": "Primary cells",
+                      "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+                      "schemeName": "UN Central Product Classification (CPC)"
                     },
-                    "serialNumber": "12345678",
-                    "batchNumber": "6789",
-                    "productImage": {
+                    {
+                      "type": [
+                        "Classification"
+                      ],
+                      "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/46410",
+                      "code": "46410",
+                      "name": "Primary batteries",
+                      "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+                      "schemeName": "UN Central Product Classification (CPC)"
+                    }
+                  ],
+                  "furtherInformation": [
+                    {
                       "type": [
                         "Link"
                       ],
-                      "linkURL": "https://c.animaapp.com/b3vf2M20/img/pp-header@2x.png",
-                      "linkName": "EV Battery 300Ah Image"
+                      "linkURL": "https://example-company.com/product-information/1234567",
+                      "linkName": "Name of document that is further information"
                     },
-                    "description": "The EcoCharge EC-5000 Lithium-Ion Battery is a high-capacity, 5000mAh battery designed for performance and sustainability. Manufactured with responsibly sourced materials and a 95% recyclability rate, it reduces lifecycle emissions through eco-friendly production and verified recycling programs.",
-                    "productCategory": [
-                      {
+                    {
+                      "type": [
+                        "Link"
+                      ],
+                      "linkURL": "https://example-company.com/product-information/1234567",
+                      "linkName": "Name of additional document that is further information"
+                    }
+                  ],
+                  "producedByParty": {
+                    "id": "https://id.example-company.com/party/6789",
+                    "name": "Example Manufacturing Co."
+                  },
+                  "producedAtFacility": {
+                    "id": "https://id.example-company.com/facility/123",
+                    "name": "Green Acres Battery Factory"
+                  },
+                  "dimensions": {
+                    "type": [
+                      "Dimension"
+                    ],
+                    "weight": {
+                      "value": 10,
+                      "unit": "kg"
+                    },
+                    "length": {
+                      "value": 90,
+                      "unit": "mm"
+                    },
+                    "width": {
+                      "value": 60,
+                      "unit": "mm"
+                    },
+                    "height": {
+                      "value": 10,
+                      "unit": "mm"
+                    },
+                    "volume": {
+                      "value": 7.5,
+                      "unit": "L"
+                    }
+                  },
+                  "characteristic": {
+                    "Battery status": "Recycled",
+                    "Battery cell type": "Prismatic",
+                    "Number of cells per battery": "180",
+                    "Total energy": "100kwh"
+                  },
+                  "productionDate": "2024-04-24",
+                  "countryOfProduction": "Australia",
+                  "granularityLevel": "item",
+                  "dueDiligenceDeclaration": {
+                    "type": [
+                      "Link"
+                    ],
+                    "linkURL": "https://example-company.com/due-diligence/1234567",
+                    "linkName": "Due Diligence Declaration"
+                  },
+                  "materialsProvenance": [
+                    {
+                      "name": "Material",
+                      "originCountry": "AU",
+                      "materialType": {
                         "type": [
                           "Classification"
                         ],
-                        "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/46410",
-                        "code": "46410",
-                        "name": "Primary cells",
-                        "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
-                        "schemeName": "UN Central Product Classification (CPC)"
+                        "id": "https://unfc.org/material-type/Lithium",
+                        "name": "Lithium"
                       },
-                      {
-                        "type": [
-                          "Classification"
-                        ],
-                        "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/46410",
-                        "code": "46410",
-                        "name": "Primary batteries",
-                        "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
-                        "schemeName": "UN Central Product Classification (CPC)"
-                      }
-                    ],
-                    "furtherInformation": [
-                      {
-                        "type": [
-                          "Link"
-                        ],
-                        "linkURL": "https://example-company.com/product-information/1234567",
-                        "linkName": "Name of document that is further information"
-                      },
-                      {
-                        "type": [
-                          "Link"
-                        ],
-                        "linkURL": "https://example-company.com/product-information/1234567",
-                        "linkName": "Name of additional document that is further information"
-                      }
-                    ],
-                    "producedByParty": {
-                      "id": "https://id.example-company.com/party/6789",
-                      "name": "Example Manufacturing Co."
-                    },
-                    "producedAtFacility": {
-                      "id": "https://id.example-company.com/facility/123",
-                      "name": "Green Acres Battery Factory"
-                    },
-                    "dimensions": {
-                      "weight": {
-                        "value": 10,
+                      "massFraction": 20,
+                      "hazardous": false,
+                      "mass": {
+                        "value": 1.0,
                         "unit": "kg"
                       },
-                      "length": {
-                        "value": 90,
-                        "unit": "mm"
-                      },
-                      "width": {
-                        "value": 60,
-                        "unit": "mm"
-                      },
-                      "height": {
-                        "value": 10,
-                        "unit": "mm"
-                      },
-                      "volume": {
-                        "value": 7.5,
-                        "unit": "L"
-                      }
+                      "recycledMassFraction": 0
                     },
-                    "characteristic": {
-                      "Battery status": "Recycled",
-                      "Battery cell type": "Prismatic",
-                      "Number of cells per battery": "180",
-                      "Total energy": "100kwh"
+                    {
+                      "name": "Material",
+                      "originCountry": "AU",
+                      "materialType": {
+                        "type": [
+                          "Classification"
+                        ],
+                        "id": "https://unfc.org/material-type/Lithium",
+                        "name": "Lithium"
+                      },
+                      "massFraction": 20,
+                      "hazardous": true,
+                      "materialSafetyInformation": {
+                        "type": [
+                          "Link"
+                        ],
+                        "linkURL": "https://example.com/safety-info/lithium-spodumene.pdf",
+                        "linkName": "Material Safety Data Sheet",
+                        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/safetyData"
+                      },
+                      "mass": {
+                        "value": 1.0,
+                        "unit": "kg"
+                      },
+                      "recycledMassFraction": 10
                     },
-                    "productionDate": "2024-04-24",
-                    "countryOfProduction": "Australia"
-                  },
+                    {
+                      "name": "Material",
+                      "originCountry": "AU",
+                      "materialType": {
+                        "type": [
+                          "Classification"
+                        ],
+                        "id": "https://unfc.org/material-type/Lithium",
+                        "name": "Lithium"
+                      },
+                      "massFraction": 20,
+                      "hazardous": false,
+                      "mass": {
+                        "value": 1.0,
+                        "unit": "kg"
+                      },
+                      "recycledMassFraction": 0
+                    },
+                    {
+                      "name": "Material",
+                      "originCountry": "AU",
+                      "materialType": {
+                        "type": [
+                          "Classification"
+                        ],
+                        "id": "https://unfc.org/material-type/Lithium",
+                        "name": "Lithium"
+                      },
+                      "massFraction": 20,
+                      "hazardous": false,
+                      "mass": {
+                        "value": 1.0,
+                        "unit": "kg"
+                      },
+                      "recycledMassFraction": 0
+                    }
+                  ],
                   "conformityClaim": [
                     {
                       "type": [
@@ -384,6 +471,35 @@
                     "utilityFactor": 1.2,
                     "materialCircularityIndicator": 0.67
                   },
+                  "emissionsScorecard": {
+                    "type": [
+                      "EmissionsPerformance"
+                    ],
+                    "carbonFootprint": 12.5,
+                    "declaredUnit": "kg",
+                    "operationalScope": "CradleToGate",
+                    "primarySourcedRatio": 75,
+                    "reportingStandard": {
+                      "type": [
+                        "Standard"
+                      ],
+                      "id": "https://www.ifrs.org/standards/issb/s2",
+                      "name": "WBSCD Pathfinder framework - V.2.0",
+                      "issuingParty": {
+                        "id": "https://id.ifrs.org/issuing-party/123",
+                        "name": "International Financial Reporting Standards Foundation",
+                        "registeredId": "90664869327",
+                        "idScheme": {
+                          "type": [
+                            "IdentifierScheme"
+                          ],
+                          "id": "https://id.ifrs.org/issuing-party/",
+                          "name": "IFRS Issuing Party"
+                        }
+                      },
+                      "issueDate": "2024-04-25"
+                    }
+                  },
                   "traceabilityInformation": [
                     {
                       "valueChainProcess": "Spinning",
@@ -439,126 +555,7 @@
                         }
                       ]
                     }
-                  ],
-                  "granularityLevel": "item",
-                  "dueDiligenceDeclaration": {
-                    "type": [
-                      "Link"
-                    ],
-                    "linkURL": "https://example-company.com/due-diligence/1234567",
-                    "linkName": "Due Diligence Declaration"
-                  },
-                  "materialsProvenance": [
-                    {
-                      "name": "Material",
-                      "originCountry": "AU",
-                      "materialType": {
-                        "type": [
-                          "Classification"
-                        ],
-                        "id": "https://unfc.org/material-type/Lithium",
-                        "name": "Lithium"
-                      },
-                      "massFraction": 20,
-                      "hazardous": false,
-                      "mass": {
-                        "value": 1.0,
-                        "unit": "kg"
-                      },
-                      "recycledMassFraction": 0
-                    },
-                    {
-                      "name": "Material",
-                      "originCountry": "AU",
-                      "materialType": {
-                        "type": [
-                          "Classification"
-                        ],
-                        "id": "https://unfc.org/material-type/Lithium",
-                        "name": "Lithium"
-                      },
-                      "massFraction": 20,
-                      "hazardous": true,
-                      "materialSafetyInformation": {
-                        "type": [
-                          "Link"
-                        ],
-                        "linkURL": "https://example.com/safety-info/lithium-spodumene.pdf",
-                        "linkName": "Material Safety Data Sheet",
-                        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/safetyData"
-                      },
-                      "mass": {
-                        "value": 1.0,
-                        "unit": "kg"
-                      },
-                      "recycledMassFraction": 10
-                    },
-                    {
-                      "name": "Material",
-                      "originCountry": "AU",
-                      "materialType": {
-                        "type": [
-                          "Classification"
-                        ],
-                        "id": "https://unfc.org/material-type/Lithium",
-                        "name": "Lithium"
-                      },
-                      "massFraction": 20,
-                      "hazardous": false,
-                      "mass": {
-                        "value": 1.0,
-                        "unit": "kg"
-                      },
-                      "recycledMassFraction": 0
-                    },
-                    {
-                      "name": "Material",
-                      "originCountry": "AU",
-                      "materialType": {
-                        "type": [
-                          "Classification"
-                        ],
-                        "id": "https://unfc.org/material-type/Lithium",
-                        "name": "Lithium"
-                      },
-                      "massFraction": 20,
-                      "hazardous": false,
-                      "mass": {
-                        "value": 1.0,
-                        "unit": "kg"
-                      },
-                      "recycledMassFraction": 0
-                    }
-                  ],
-                  "emissionsScorecard": {
-                    "type": [
-                      "EmissionsPerformance"
-                    ],
-                    "carbonFootprint": 12.5,
-                    "declaredUnit": "kg",
-                    "operationalScope": "CradleToGate",
-                    "primarySourcedRatio": 75,
-                    "reportingStandard": {
-                      "type": [
-                        "Standard"
-                      ],
-                      "id": "https://www.ifrs.org/standards/issb/s2",
-                      "name": "WBSCD Pathfinder framework - V.2.0",
-                      "issuingParty": {
-                        "id": "https://id.ifrs.org/issuing-party/123",
-                        "name": "International Financial Reporting Standards Foundation",
-                        "registeredId": "90664869327",
-                        "idScheme": {
-                          "type": [
-                            "IdentifierScheme"
-                          ],
-                          "id": "https://id.ifrs.org/issuing-party/",
-                          "name": "IFRS Issuing Party"
-                        }
-                      },
-                      "issueDate": "2024-04-25"
-                    }
-                  }
+                  ]
                 },
                 "constructData": {
                   "mappingFields": [],
