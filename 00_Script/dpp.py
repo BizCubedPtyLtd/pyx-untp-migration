@@ -11,7 +11,6 @@ class CredentialTransformer:
         Initialize with the entire component dict, as transformations may affect props, data, services, etc.
         """
         self.component = component
-        self.credential_indicator = None
 
     def transform(self) -> Dict[str, Any]:
         """Default transform, to be overridden by subclasses."""
@@ -37,13 +36,6 @@ class DPPTransformer(CredentialTransformer):
         schema["url"] = "https://jargon.sh/user/unece/DigitalProductPassport/v/0.6.0/artefacts/jsonSchemas/ProductPassport.json?class=ProductPassport"
         
 
-        ## Data Model Changes 
-        # 2*. Credential Subject Structure: adds "type": ["ProductPassport"] to the original structure, added "granularityLevel": "item" to product
-        # credential_subject = data.get("credentialSubject", {})
-        # if credential_subject == {}:
-        #     # get the credential_subject data from data
-        #     credential_subject = data
-
         # Flatten credentialSubject and clean top-level data
         props = self.component['props']
         component_data = self.component["props"]["data"]
@@ -54,13 +46,10 @@ class DPPTransformer(CredentialTransformer):
         if credential_subject == {} or not credential_subject: # fix for credentials without credential_subject, reassign data to credential_subject
             # component_data['credentialSubject'] = props.pop('data')
             credential_subject = component_data
-            print('inside')
-            #print(credential_subject)
             self.credential_indicator = 0
 
             product = {k: v for k, v in credential_subject.items() if k not in ["conformityClaim","circularityScorecard","traceabilityInformation", ]}
             product["granularityLevel"] = "item"
-            #print('product', product)
             new_credential_subject = {
                 "type": ['ProductPassport'],
                 "id": credential_subject.get("id", ""),
@@ -69,11 +58,8 @@ class DPPTransformer(CredentialTransformer):
                 "circularityScorecard": credential_subject.get('circularityScorecard',),
                 "traceabilityInformation": credential_subject.get("traceabilityInformation",[])
             }
-            #print('product',)
             self.component["props"]["data"] = new_credential_subject
             component_data = new_credential_subject
-            print('new_credential_subject')
-            #print("component_data['data']",component_data['data'])
 
         else: # if there is credential subject, clean top-level data
             self._clean_identifier_list(component_data, ['type', '@context', 'issuer'])
@@ -90,21 +76,6 @@ class DPPTransformer(CredentialTransformer):
             }
             #print(new_credential_subject)
             component_data["credentialSubject"] = new_credential_subject
-
-        # if inside == 0: 
-        #     component_data['data'] = new_credential_subject
-        #     print('component_data', component_data)
-        # else:
-        #     component_data["credentialSubject"] = new_credential_subject
-        # print(component_data['credentialSubject'])
-        # print(id(self.component["props"]["data"]))
-        # print(id(component_data))
-
-
-        # 3*. Issuer Identifier Structure: The issuer’s otherIdentifier property is replaced with issuerAlsoKnownAs, simplifying the structure by removing the idScheme reference.
-        # issuer = data.get('issuer', {})
-        # if "otherIdentifier" in issuer:
-        #     self._pop_and_replace_key(issuer, "otherIdentifier", "issuerAlsoKnownAs")
 
         # 3*. Issuer Identifier Structure: The issuer’s otherIdentifier property is replaced with issuerAlsoKnownAs, simplifying the structure by removing the idScheme reference.
         issuer = new_credential_subject.get('issuer', {})
@@ -231,10 +202,6 @@ class DPPTransformer(CredentialTransformer):
                 del claim['assessedProduct']
     
         
-        # print(component_data['credentialSubject'])
-        # print(id(self.component["props"]["data"]))
-        # print(id(component_data))
-        #self._clean_identifier_list(component_data, ['type', '@context', 'issuer'])
         if self.credential_indicator == 1:
             self._flatten_credential_subject(component_data, 'credentialSubject')
             print('inside flatten')
@@ -290,8 +257,6 @@ class DPPTransformer(CredentialTransformer):
         issuingParty = reportingStandard.get("issuingParty", {})
         if "type" in issuingParty:
             del issuingParty["type"]
-        # clean_data = self._clean_identifier_list(reportingStandard["issuingParty"])
-        # reportingStandard["issuingParty"] = clean_data
 
         # Remove "type" in "dimensions"
         dimensions = product.get("dimensions", {})
