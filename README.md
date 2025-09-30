@@ -54,6 +54,7 @@ pyx-untp-migration/
    ```bash
    input_folder_name = "01_Data/app-config"
    brand_name = 'RBTP'
+   # comment out testing_folder
    file_name = "app-config.json"
    version = '0.6.0'
 
@@ -80,6 +81,22 @@ pyx-untp-migration/
    python3 00_Script/testing_indiv_credential.py
    ```
 ---
+
+## 🚀 Testing
+
+To test the credentials:
+1. Place the upgraded app-config.json to the upgraded server.
+2. If you would like to change the name of the app-config.json for testing purposes, update the `<app-config-name>` in package.json:
+```bash
+  "scripts": {
+    "copy-config": "cp <app-config-name>.json packages/mock-app/src/constants/app-config.json && cp <app-config-name>.json packages/components/src/constants/app-config.json",
+```
+2. Run the below commands:
+   ```bash
+   yarn build
+   yarn start
+   ```
+3. Ensure credentials are issued successfully.
 
 ## 📂 Input & Output Examples
 

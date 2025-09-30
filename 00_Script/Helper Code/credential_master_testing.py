@@ -11,14 +11,14 @@ from typing import Dict, Any, List
 ############## PARAMETERS & VARIABLES #####################
 
 current_dir = Path(__file__).resolve().parent
-credential_request = 'DFR'
+credential_request = 'DPP'
 
 input_folder_name = "01_Data/app-config"
-brand_name = 'RegenFarmers'
-input_file_name = f"transformed-{credential_request}-app-config-test.json"
-output_file_name = f"transformed-app-config-{credential_request}-only.json"
+brand_name = 'RBTP'
+input_file_name = f"transformed-app-config-{brand_name}-v0.6.0.json"
+output_file_name = f"transformed-app-config-only-{brand_name}-v0.6.0.json"
 
-input_path = (current_dir.parent.parent / input_folder_name / brand_name / credential_request / input_file_name)
+input_path = (current_dir.parent.parent / input_folder_name / brand_name  / input_file_name)
 print('input_path', input_path)
 ###########################################################
 

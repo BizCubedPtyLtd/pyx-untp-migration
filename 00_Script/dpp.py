@@ -29,8 +29,6 @@ class DPPTransformer(CredentialTransformer):
             self.component = clean_data
             self.component = self.component['props']['nestedComponents'][0]
 
-        # Specific DFR data model changes for "component"
-        data = self.component["props"]["data"]
 
         ## Reference Implementation Updates
         # 1. Updates Schema URL to v0.6.0
@@ -38,26 +36,46 @@ class DPPTransformer(CredentialTransformer):
         schema["url"] = "https://jargon.sh/user/unece/DigitalProductPassport/v/0.6.0/artefacts/jsonSchemas/ProductPassport.json?class=ProductPassport"
         
 
-        ## Data Model Changes 
-        # 2*. Credential Subject Structure: adds "type": ["ProductPassport"] to the original structure, added "granularityLevel": "item" to product
-        credential_subject = data.get("credentialSubject", {})
-        if credential_subject == {}:
-            # get the credential_subject data from data
-            credential_subject = data
-        product = {k: v for k, v in credential_subject.items() if k != "conformityClaim"}
-        product["granularityLevel"] = "item"
-        new_credential_subject = {
-            "type": ["ProductPassport"],
-            "id": credential_subject.get("id", ""),
-            "product": product,
-            "conformityClaim": credential_subject.get("conformityClaim", [])
-        }
-        data["credentialSubject"] = new_credential_subject
+        # Flatten credentialSubject and clean top-level data
+        props = self.component['props']
+        component_data = self.component["props"]["data"]
+        # Specific DFR data model changes for "component"
+        #data = self.component["props"]["data"]
 
-        # 3*. Issuer Identifier Structure: The issuer’s otherIdentifier property is replaced with issuerAlsoKnownAs, simplifying the structure by removing the idScheme reference.
-        # issuer = data.get('issuer', {})
-        # if "otherIdentifier" in issuer:
-        #     self._pop_and_replace_key(issuer, "otherIdentifier", "issuerAlsoKnownAs")
+        credential_subject = component_data.get("credentialSubject", {})
+        if credential_subject == {} or not credential_subject: # fix for credentials without credential_subject, reassign data to credential_subject
+            # component_data['credentialSubject'] = props.pop('data')
+            credential_subject = component_data
+            self.credential_indicator = 0
+
+            product = {k: v for k, v in credential_subject.items() if k not in ["conformityClaim","circularityScorecard","traceabilityInformation", ]}
+            product["granularityLevel"] = "item"
+            new_credential_subject = {
+                "type": ['ProductPassport'],
+                "id": credential_subject.get("id", ""),
+                "product": product,
+                "conformityClaim": credential_subject.get("conformityClaim", []),
+                "circularityScorecard": credential_subject.get('circularityScorecard',),
+                "traceabilityInformation": credential_subject.get("traceabilityInformation",[])
+            }
+            self.component["props"]["data"] = new_credential_subject
+            component_data = new_credential_subject
+
+        else: # if there is credential subject, clean top-level data
+            self._clean_identifier_list(component_data, ['type', '@context', 'issuer'])
+            #print('notempty', credential_subject)
+            self.credential_indicator = 1
+
+            product = {k: v for k, v in credential_subject.items() if k != "conformityClaim"}
+            product["granularityLevel"] = "item"
+            new_credential_subject = {
+                "type": ["ProductPassport"],
+                "id": credential_subject.get("id", ""),
+                "product": product,
+                "conformityClaim": credential_subject.get("conformityClaim", [])
+            }
+            #print(new_credential_subject)
+            component_data["credentialSubject"] = new_credential_subject
 
         # 3*. Issuer Identifier Structure: The issuer’s otherIdentifier property is replaced with issuerAlsoKnownAs, simplifying the structure by removing the idScheme reference.
         issuer = new_credential_subject.get('issuer', {})
@@ -168,20 +186,27 @@ class DPPTransformer(CredentialTransformer):
                     "tags": ""
                 }
                 assessment.update(new_column_added)
-                if "thresholdValues" in assessment:
+                # threshold_values = assessment.pop("thresholdValues",[])
+                # if threshold_values:
+                #     assessment["thresholdValue"] = threshold_values[0]
+                # elif threshold_values == []:
+                #     del assessment['thresholdValues']
+                threshold_values = assessment.get('thresholdValues', [])
+                if "thresholdValues" in assessment and threshold_values != []:
                     assessment["thresholdValue"] = assessment.pop("thresholdValues", [])[0]
+                # else:
+                #     assessment['thresholdValue'] = None
 
             ### RESOLVE JSON-LD SCHEMA VALIDATION ISSUE: removes assessedProduct as not relevant to dpp###
             if "assessedProduct" in claim:
                 del claim['assessedProduct']
     
         
-        # Flatten credentialSubject and clean top-level data
-        component_data = self.component["props"]["data"]
-        self._clean_identifier_list(component_data, ['type', '@context', 'issuer'])
-        self._flatten_credential_subject(component_data, 'credentialSubject')
+        if self.credential_indicator == 1:
+            self._flatten_credential_subject(component_data, 'credentialSubject')
+            print('inside flatten')
         # RESOLVE UNTP SCHEMA VALIDATION ISSUE
-        
+        #print(component_data['data'])
         '''
         Issue: Properties "credentialSubject/product/granularityLevel, credentialSubject/product/dueDiligenceDeclaration, credentialSubject/product/materialsProvenance, credentialSubject/product/circularityScorecard, credentialSubject/product/emissionsScorecard, credentialSubject/product/traceabilityInformation, credentialSubject/product/characteristics" are defined in the credential but missing from the context.
         Incorrect value: credentialSubject/product/granularityLevel, credentialSubject/product/dueDiligenceDeclaration, credentialSubject/product/materialsProvenance, credentialSubject/product/circularityScorecard, credentialSubject/product/emissionsScorecard, credentialSubject/product/traceabilityInformation, credentialSubject/product/characteristics
@@ -232,13 +257,13 @@ class DPPTransformer(CredentialTransformer):
         issuingParty = reportingStandard.get("issuingParty", {})
         if "type" in issuingParty:
             del issuingParty["type"]
-        # clean_data = self._clean_identifier_list(reportingStandard["issuingParty"])
-        # reportingStandard["issuingParty"] = clean_data
 
         # Remove "type" in "dimensions"
         dimensions = product.get("dimensions", {})
         if "type" in dimensions:
             del dimensions["type"]
+        
+        
 
         return self.component
     
@@ -257,6 +282,13 @@ class DPPTransformer(CredentialTransformer):
         '''
         # 2. Context in Services updates
         parameters = self.component.get('parameters', [])
+                
+        # component_data = self.component["props"]["data"]
+        # Specific DFR data model changes for "component"
+        #data = self.component["props"]["data"]
+
+        #credential_subject = component_data.get("credentialSubject", {})
+
         for param in parameters: #iterate through param -> services
             context_configuration = param.get('dpp')
             if context_configuration:
@@ -280,6 +312,15 @@ class DPPTransformer(CredentialTransformer):
                 vckit_issuer = vckit.get('issuer', {})
                 if "otherIdentifier" in vckit_issuer: # Updates 'otherIdentifier' to 'issuerAlsoKnownAs' and retains the position
                     self._pop_and_replace_key(vckit_issuer, "otherIdentifier", "issuerAlsoKnownAs")
+
+            print('credential indicator', self.credential_indicator)
+            #if self.credential_indicator == 1: # fix for credentials without credential_subject, reassign data to credential_subject
+            print('inside credential-indicator!')
+            identifierKeyPath = param.get('identifierKeyPath',[])
+            if type(identifierKeyPath) is dict:
+                identifierKeyPath_name = identifierKeyPath.get('primary',[])
+                if identifierKeyPath_name['path']  == '/registeredId':
+                    identifierKeyPath_name['path'] = "/product/registeredId"
         return self.component
 
     
