@@ -314,10 +314,14 @@ class DPPTransformer(CredentialTransformer):
                     self._pop_and_replace_key(vckit_issuer, "otherIdentifier", "issuerAlsoKnownAs")
 
             identifierKeyPath = param.get('identifierKeyPath',[])
-            if type(identifierKeyPath) is dict:
+            if type(identifierKeyPath) is dict: # resolve issue where IDR link is not accessible 
                 identifierKeyPath_name = identifierKeyPath.get('primary',[])
                 if identifierKeyPath_name['path']  == '/registeredId':
                     identifierKeyPath_name['path'] = "/product/registeredId"
+                identifierKeyPathqualifer = identifierKeyPath.get('qualifiers', [])
+                for i in identifierKeyPathqualifer:
+                    if i['path'] == '/batchNumber':
+                        i['path'] = "/product/batchNumber"
         return self.component
 
     

@@ -294,7 +294,7 @@
                     "qualifiers": [
                       {
                         "ai": "10",
-                        "path": "/batchNumber"
+                        "path": "/product/batchNumber"
                       }
                     ]
                   }
@@ -566,7 +566,7 @@
                     "qualifiers": [
                       {
                         "ai": "10",
-                        "path": "/batchNumber"
+                        "path": "/product/batchNumber"
                       }
                     ]
                   }
@@ -844,7 +844,7 @@
                     "qualifiers": [
                       {
                         "ai": "10",
-                        "path": "/batchNumber"
+                        "path": "/product/batchNumber"
                       }
                     ]
                   }
