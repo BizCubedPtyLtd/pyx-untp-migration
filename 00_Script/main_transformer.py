@@ -36,6 +36,40 @@ class GeneralMigrator:
         
         return services
 
+    def update_migrated_url(app_config_data, lookup_urls, added_path):
+        """
+        This function takes the upgraded app-config data and replaces all matches of:
+        http://localhost:3000/gs1/... → http://localhost:3000/api/1.0.0/gs1/...
+        http://localhost:3000/osh/... → http://localhost:3000/api/1.0.0/osh/...
+        """
+
+        def replace_url(value):
+            if isinstance(value, str):
+                for base_url in lookup_urls:
+                    if value.startswith(base_url + "/"):
+                        # Split into domain and service path
+                        domain = "http://localhost:3000"
+                        service_path = base_url.replace(domain, "", 1).lstrip("/")
+                        # Rewrite: domain + added_path + "/" + service_path + "/..."
+                        return value.replace(
+                            base_url + "/",
+                            f"{domain}{added_path}/{service_path}/",
+                            1
+                        )
+            return value
+
+        def recursive_replace(data):
+            if isinstance(data, dict):
+                return {k: recursive_replace(v) for k, v in data.items()}
+            elif isinstance(data, list):
+                return [recursive_replace(item) for item in data]
+            else:
+                return replace_url(data)
+
+        return recursive_replace(app_config_data)
+
+        
+
 
 
 # ---------- Orchestrator / Master Function ----------
@@ -190,7 +224,7 @@ if __name__ == "__main__":
     brand_name = 'ACRS'
     file_name = "app-config.json"
     version = '0.6.0'
-    output_file_name = f"transformed-app-config-{brand_name}-v{version}.json"
+    output_file_name = f"transformed-app-config-{brand_name}-v{version}-v1.json"
     
     input_path = current_dir.parent / input_folder_name / brand_name  / file_name
     output_path = current_dir.parent / input_folder_name / brand_name / output_file_name #testing_folder / output_file_name
@@ -200,8 +234,11 @@ if __name__ == "__main__":
     processor = AppConfigProcessor(input_path)
     output, count = processor.process()
 
+    
+    output_processed = GeneralMigrator.update_migrated_url(output, ['http://localhost:3000/gs1', 'http://localhost:3000/osh'], '/api/1.0.0')
+
     with open(output_path, "w") as f:
-        json.dump(output, f, indent=2)
+        json.dump(output_processed, f, indent=2)
 
     df = pd.DataFrame(list(count.items()), columns=['Type', 'Count'])
     print('List of transformed credential types: \n', df)

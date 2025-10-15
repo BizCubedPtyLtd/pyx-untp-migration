@@ -155,7 +155,7 @@ class DPPTransformer(CredentialTransformer):
             for declaredValue in declaredValues:
                 # if metricvalue in declaredvalue is metricvalue: {}, add "value":0 and "unit":""
                 if declaredValue.get("metricValue") == {} or not declaredValue.get("metricValue"):
-                    declaredValue["metricValue"] = {"unit": "", "value": 0}
+                    declaredValue["metricValue"] = {"unit": "", "value": declaredValue.get("score", "0")}
 
             ### RESOLVE JSON-LD SCHEMA VALIDATION ISSUE ###
             '''
@@ -313,9 +313,6 @@ class DPPTransformer(CredentialTransformer):
                 if "otherIdentifier" in vckit_issuer: # Updates 'otherIdentifier' to 'issuerAlsoKnownAs' and retains the position
                     self._pop_and_replace_key(vckit_issuer, "otherIdentifier", "issuerAlsoKnownAs")
 
-            print('credential indicator', self.credential_indicator)
-            #if self.credential_indicator == 1: # fix for credentials without credential_subject, reassign data to credential_subject
-            print('inside credential-indicator!')
             identifierKeyPath = param.get('identifierKeyPath',[])
             if type(identifierKeyPath) is dict:
                 identifierKeyPath_name = identifierKeyPath.get('primary',[])
