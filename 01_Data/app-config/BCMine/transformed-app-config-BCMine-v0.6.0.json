@@ -47,19 +47,19 @@
                     "TransformationEvent",
                     "Event"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502000034/21/20001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/20001",
                   "processType": "Ore Mined",
                   "eventTime": "2024-09-01T12:00:00",
                   "action": "observe",
                   "disposition": "https://ref.gs1.org/cbv/Disp-active",
                   "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
-                  "bizLocation": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                  "bizLocation": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                   "outputEPCList": [
                     {
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502000034/21/10001?linkType=gs1:sustainabilityInfo",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/10001?linkType=gs1:sustainabilityInfo",
                       "name": "Copper Concentrate"
                     }
                   ],
@@ -172,7 +172,7 @@
                   "url": "https://jargon.sh/user/unece/DigitalProductPassport/v/0.6.0/artefacts/jsonSchemas/ProductPassport.json?class=ProductPassport"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502000034/21/10001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/10001",
                   "type": [
                     "ProductPassport"
                   ],
@@ -180,7 +180,7 @@
                     "type": [
                       "Product"
                     ],
-                    "id": "http://localhost:3000/gs1/01/09359502000034/21/10001",
+                    "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/10001",
                     "name": "Copper Concentrate",
                     "registeredId": "09359502000034",
                     "idScheme": {
@@ -202,12 +202,12 @@
                       }
                     ],
                     "producedByParty": {
-                      "id": "http://localhost:3000/gs1/01/09359502000034/21/34001?linkType=gs1:registryEntry",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/34001?linkType=gs1:registryEntry",
                       "name": "TEST Copper Mine",
                       "registeredId": "119632693"
                     },
                     "producedAtFacility": {
-                      "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                       "name": "TEST Copper Mine",
                       "registeredId": "9359502000034"
                     },
@@ -245,7 +245,7 @@
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
                       "conformityEvidence": {
-                        "linkURL": "http://localhost:3000/gs1/01/09359502000034/21/32001?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/32001?linkType=gs1:certificationInfo",
                         "linkName": "Copper Concentrate Produced at CopperMark Certified Facility",
                         "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
                         "hashDigest": "6239119",
@@ -278,7 +278,7 @@
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
                       "conformityEvidence": {
-                        "linkURL": "http://localhost:3000/gs1/01/09359502000034/21/31001?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/31001?linkType=gs1:certificationInfo",
                         "linkName": "Copper Concentrate Produced at Towards Sustainable Mining (TSM) Certified Facility",
                         "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
                         "hashDigest": "6239119",
@@ -311,7 +311,7 @@
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
                       "conformityEvidence": {
-                        "linkURL": "http://localhost:3000/gs1/01/09359502000034/21/33001?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/33001?linkType=gs1:certificationInfo",
                         "linkName": "Copper Concentrate produced at a Facility the holds an active Mines Permit",
                         "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
                         "hashDigest": "6239119",
@@ -369,7 +369,7 @@
                       "verifiedRatio": 0.5,
                       "traceabilityEvent": [
                         {
-                          "linkURL": "http://localhost:3000/gs1/01/09359502000034/21/20001?linkType=gs1:traceability",
+                          "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/20001?linkType=gs1:traceability",
                           "linkName": "Transformation Event",
                           "linkType": "https://test.uncefact.org/vocabulary/untp/dte/0.5.0/",
                           "hashDigest": "6239119",
@@ -475,26 +475,26 @@
                     "TransformationEvent",
                     "Event"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502000034/21/10001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/10001",
                   "processType": "Sale",
                   "eventTime": "2024-09-01T12:00:00",
                   "action": "add",
                   "disposition": "https://ref.gs1.org/cbv/Disp-active",
                   "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
-                  "bizLocation": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                  "bizLocation": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                   "sensorElementList": [],
                   "outputEPCList": [
                     {
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502000041/21/20001?linkType=gs1:traceability",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000041/21/20001?linkType=gs1:traceability",
                       "name": "Transform Copper Concentrate"
                     }
                   ],
                   "inputQuantityList": [
                     {
-                      "productId": "http://localhost:3000/gs1/01/09359502000034/21/10001?linkType=gs1:sustainabilityInfo",
+                      "productId": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/10001?linkType=gs1:sustainabilityInfo",
                       "productName": "Copper Concentrate",
                       "quantity": 20,
                       "uom": "KGM"
@@ -601,7 +601,7 @@
                   "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/414/9359502000034",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034",
                   "type": [
                     "FacilityRecord"
                   ],
@@ -609,7 +609,7 @@
                     "type": [
                       "Facility"
                     ],
-                    "id": "http://localhost:3000/gs1/414/9359502000034",
+                    "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034",
                     "registeredId": "9359502000034",
                     "description": "TEST Copper Mine Produces Copper Concentrate",
                     "name": "TEST Copper Mine",
@@ -634,13 +634,13 @@
                       }
                     ],
                     "operatedByParty": {
-                      "id": "http://localhost:3000/gs1/01/09359502000034/21/34001?linkType=gs1:registryEntry",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/34001?linkType=gs1:registryEntry",
                       "name": "TEST Mining Permitted Entity",
                       "registeredId": "90664869327"
                     },
                     "facilityAlsoKnownAs": [
                       {
-                        "id": "http://localhost:3000/gs1/01/09359502000034/21/33001?linkType=gs1:certificationInfo",
+                        "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/33001?linkType=gs1:certificationInfo",
                         "name": "Mine Permit Number",
                         "registeredId": "M-199"
                       }
@@ -698,7 +698,7 @@
                       "conformance": true,
                       "conformityTopic": "environment.emissions",
                       "conformityEvidence": {
-                        "linkURL": "http://localhost:3000/gs1/01/09359502000034/21/32001?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/32001?linkType=gs1:certificationInfo",
                         "linkName": "CopperMark Certified Facility",
                         "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
                         "hashDigest": "6239119",
@@ -729,7 +729,7 @@
                       "conformance": true,
                       "conformityTopic": "environment.emissions",
                       "conformityEvidence": {
-                        "linkURL": "http://localhost:3000/gs1/01/09359502000034/21/31001?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/31001?linkType=gs1:certificationInfo",
                         "linkName": "Towards Sustainable Mining (TSM) Certified Facility",
                         "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
                         "hashDigest": "6239119",
@@ -760,7 +760,7 @@
                       "conformance": true,
                       "conformityTopic": "environment.emissions",
                       "conformityEvidence": {
-                        "linkURL": "http://localhost:3000/gs1/01/09359502000034/21/33001?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/33001?linkType=gs1:certificationInfo",
                         "linkName": "Facility permitted to operate in BC under Mines Act",
                         "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
                         "hashDigest": "6239119",
@@ -880,20 +880,20 @@
                     "TransformationEvent",
                     "Event"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502000041/21/20001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000041/21/20001",
                   "processType": "Smeltering",
                   "eventTime": "2024-09-01T12:00:00",
                   "action": "add",
                   "disposition": "https://ref.gs1.org/cbv/Disp-active",
                   "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
-                  "bizLocation": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                  "bizLocation": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                   "sensorElementList": [],
                   "outputEPCList": [
                     {
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/gtin/09359502000041/21/10001?linkType=gs1:sustainabilityInfo",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/gtin/09359502000041/21/10001?linkType=gs1:sustainabilityInfo",
                       "name": "Copper Cathode"
                     }
                   ],
@@ -902,7 +902,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/gtin/09359502000034/21/10001?linkType=gs1:traceability",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/gtin/09359502000034/21/10001?linkType=gs1:traceability",
                       "name": "Copper Concentrate"
                     }
                   ],
@@ -1008,7 +1008,7 @@
                   "url": "https://jargon.sh/user/unece/DigitalProductPassport/v/0.6.0/artefacts/jsonSchemas/ProductPassport.json?class=ProductPassport"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502000041/21/10001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000041/21/10001",
                   "type": [
                     "ProductPassport"
                   ],
@@ -1016,7 +1016,7 @@
                     "type": [
                       "Product"
                     ],
-                    "id": "http://localhost:3000/gs1/01/09359502000041/21/10001",
+                    "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000041/21/10001",
                     "name": "Copper Cathode",
                     "registeredId": "09359502000041",
                     "idScheme": {
@@ -1043,7 +1043,7 @@
                       "registeredId": "119632691"
                     },
                     "producedAtFacility": {
-                      "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                       "name": "TEST Copper Smelter",
                       "registeredId": "9359502000041"
                     },
@@ -1094,7 +1094,7 @@
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
                       "conformityEvidence": {
-                        "linkURL": "http://localhost:3000/gs1/01/09359502000041/21/32001?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502000041/21/32001?linkType=gs1:certificationInfo",
                         "linkName": "CopperMark Certificate",
                         "linkType": "https://test.uncefact.org/vocabulary/untp/dcc/0.5.0/",
                         "hashDigest": "6239119",
@@ -1164,7 +1164,7 @@
                       "verifiedRatio": 0.5,
                       "traceabilityEvent": [
                         {
-                          "linkURL": "http://localhost:3000/gs1/01/09359502000041/21/20001?linkType=gs1:traceability",
+                          "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502000041/21/20001?linkType=gs1:traceability",
                           "linkName": "Transformation Event",
                           "linkType": "https://test.uncefact.org/vocabulary/untp/dte/0.5.0/",
                           "hashDigest": "6239119",
@@ -1270,26 +1270,26 @@
                     "TransformationEvent",
                     "Event"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502000041/21/10001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000041/21/10001",
                   "processType": "Sale",
                   "eventTime": "2024-09-01T12:00:00",
                   "action": "add",
                   "disposition": "https://ref.gs1.org/cbv/Disp-active",
                   "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
-                  "bizLocation": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                  "bizLocation": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                   "sensorElementList": [],
                   "outputEPCList": [
                     {
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502000058/21/20001?linkType=gs1:traceability",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000058/21/20001?linkType=gs1:traceability",
                       "name": "Transform Copper Cathodes"
                     }
                   ],
                   "inputQuantityList": [
                     {
-                      "productId": "http://localhost:3000/gs1/gtin/09359502000041/21/10001?linkType=gs1:sustainabilityInfo",
+                      "productId": "http://localhost:3000/api/1.0.0/gs1/gtin/09359502000041/21/10001?linkType=gs1:sustainabilityInfo",
                       "productName": "Copper Cathode",
                       "quantity": 20,
                       "uom": "KGM"
@@ -1396,7 +1396,7 @@
                   "url": "https://jargon.sh/user/unece/DigitalFacilityRecord/v/0.6.0/artefacts/jsonSchemas/FacilityRecord.json?class=FacilityRecord"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/414/9359502000041",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041",
                   "type": [
                     "FacilityRecord"
                   ],
@@ -1404,7 +1404,7 @@
                     "type": [
                       "Facility"
                     ],
-                    "id": "http://localhost:3000/gs1/414/9359502000041",
+                    "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041",
                     "registeredId": "9359502000041",
                     "description": "TEST Copper Smelter Produces Copper Cathodes",
                     "name": "TEST Copper Smelter",
@@ -1487,7 +1487,7 @@
                       "conformance": true,
                       "conformityTopic": "environment.emissions",
                       "conformityEvidence": {
-                        "linkURL": "http://localhost:3000/gs1/01/09359502000041/21/32001?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502000041/21/32001?linkType=gs1:certificationInfo",
                         "linkName": "CopperMark Certified Facility",
                         "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
                         "hashDigest": "6239119",
@@ -1607,20 +1607,20 @@
                     "TransformationEvent",
                     "Event"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502000058/21/20001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000058/21/20001",
                   "processType": "manufacturing",
                   "eventTime": "2024-09-01T12:00:00",
                   "action": "add",
                   "disposition": "https://ref.gs1.org/cbv/Disp-active",
                   "bizStep": "https://ref.gs1.org/cbv/BizStep-commissioning",
-                  "bizLocation": "http://localhost:3000/gs1/414/9359502000058?linkType=gs1:locationInfo",
+                  "bizLocation": "http://localhost:3000/api/1.0.0/gs1/414/9359502000058?linkType=gs1:locationInfo",
                   "sensorElementList": [],
                   "outputEPCList": [
                     {
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/gtin/09359502000058/21/10001?linkType=gs1:sustainabilityInfo",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/gtin/09359502000058/21/10001?linkType=gs1:sustainabilityInfo",
                       "name": "Battery"
                     }
                   ],
@@ -1629,7 +1629,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/gtin/09359502000041/21/10001?linkType=gs1:traceability",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/gtin/09359502000041/21/10001?linkType=gs1:traceability",
                       "name": "Copper Cathode"
                     }
                   ],
@@ -1735,7 +1735,7 @@
                   "url": "https://jargon.sh/user/unece/DigitalProductPassport/v/0.6.0/artefacts/jsonSchemas/ProductPassport.json?class=ProductPassport"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502000058/21/10001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000058/21/10001",
                   "type": [
                     "ProductPassport"
                   ],
@@ -1743,7 +1743,7 @@
                     "type": [
                       "Product"
                     ],
-                    "id": "http://localhost:3000/gs1/01/09359502000058/21/10001",
+                    "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000058/21/10001",
                     "name": "EV battery 300Ah.",
                     "registeredId": "09359502000058",
                     "idScheme": {
@@ -2008,7 +2008,7 @@
                       "verifiedRatio": 0.5,
                       "traceabilityEvent": [
                         {
-                          "linkURL": "http://localhost:3000/gs1/01/09359502000058/21/20001?linkType=gs1:traceability",
+                          "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502000058/21/20001?linkType=gs1:traceability",
                           "linkName": "Transformation Event",
                           "linkType": "https://test.uncefact.org/vocabulary/untp/dte/0.5.0/",
                           "hashDigest": "6239119",
@@ -2125,7 +2125,7 @@
                   "url": "https://jargon.sh/user/unece/ConformityCredential/v/0.6.0/artefacts/jsonSchemas/ConformityAttestation.json?class=ConformityAttestation"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502000034/21/32001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/32001",
                   "type": [
                     "ConformityAttestation",
                     "Attestation"
@@ -2136,7 +2136,7 @@
                   "attestationType": "certification",
                   "description": "TEST: TEST: TEST: The Risk Readiness Assessment (RRA) contains 32 issue areas covering environmental, social and governance aspects of mining and refining operations. The RRA is widely used in the metals value chain having been formally adopted by the Responsible Minerals Initiative (RMI). It condenses over 50 international standards and guidelines into 32 issue areas and provides an online platform for companies to complete self-assessments of their performance and provide evidence to substantiate their assessment. Table 1 lists the 32 issue areas of the RRA.",
                   "issuedToParty": {
-                    "id": "http://localhost:3000/gs1/01/09359502000034/21/34001",
+                    "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/34001",
                     "name": "TEST Copper Mine",
                     "registeredId": "9359502000034",
                     "description": "TEST Copper Mine"
@@ -2219,7 +2219,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -2271,7 +2271,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -2323,7 +2323,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -2375,7 +2375,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -2427,7 +2427,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -2479,7 +2479,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -2531,7 +2531,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -2583,7 +2583,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -2635,7 +2635,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -2687,7 +2687,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -2739,7 +2739,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -2791,7 +2791,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -2843,7 +2843,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -2895,7 +2895,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -2947,7 +2947,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -2999,7 +2999,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -3051,7 +3051,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -3103,7 +3103,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -3155,7 +3155,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -3207,7 +3207,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -3259,7 +3259,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -3311,7 +3311,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -3363,7 +3363,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -3415,7 +3415,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -3467,7 +3467,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -3519,7 +3519,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -3571,7 +3571,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -3623,7 +3623,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -3675,7 +3675,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -3727,7 +3727,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -3779,7 +3779,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -3831,7 +3831,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }
@@ -3937,7 +3937,7 @@
                   "url": "https://jargon.sh/user/unece/ConformityCredential/v/0.6.0/artefacts/jsonSchemas/ConformityAttestation.json?class=ConformityAttestation"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502000041/21/32001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000041/21/32001",
                   "type": [
                     "ConformityAttestation",
                     "Attestation"
@@ -4031,7 +4031,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4083,7 +4083,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4135,7 +4135,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4187,7 +4187,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4239,7 +4239,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4291,7 +4291,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4343,7 +4343,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4395,7 +4395,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4447,7 +4447,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4499,7 +4499,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4551,7 +4551,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4603,7 +4603,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4655,7 +4655,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4707,7 +4707,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4759,7 +4759,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4811,7 +4811,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4863,7 +4863,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4915,7 +4915,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -4967,7 +4967,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -5019,7 +5019,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -5071,7 +5071,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -5123,7 +5123,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -5175,7 +5175,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -5227,7 +5227,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -5279,7 +5279,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -5331,7 +5331,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -5383,7 +5383,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -5435,7 +5435,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -5487,7 +5487,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -5539,7 +5539,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -5591,7 +5591,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -5643,7 +5643,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000041?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000041?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000041"
                           }
@@ -5764,7 +5764,7 @@
                   "url": "https://jargon.sh/user/unece/ConformityCredential/v/0.6.0/artefacts/jsonSchemas/ConformityAttestation.json?class=ConformityAttestation"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502000034/21/33001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/33001",
                   "type": [
                     "ConformityAttestation",
                     "Attestation"
@@ -5773,7 +5773,7 @@
                   "assessmentLevel": "GovtApproval",
                   "attestationType": "certification",
                   "issuedToParty": {
-                    "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                    "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                     "name": "TEST COPPER MINE",
                     "registeredId": "9359502000034"
                   },
@@ -5815,7 +5815,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST CopperMine",
                             "registeredId": "9359502000034",
                             "IDverifiedByCAB": true
@@ -5921,7 +5921,7 @@
                   "type": [
                     "RegisteredIdentity"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502000034/21/34001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/34001",
                   "name": "TEST COPPER MINE",
                   "registeredId": "BC00001",
                   "idScheme": {
@@ -6035,7 +6035,7 @@
                   "url": "https://jargon.sh/user/unece/ConformityCredential/v/0.6.0/artefacts/jsonSchemas/ConformityAttestation.json?class=ConformityAttestation"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502000034/21/31001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/31001",
                   "type": [
                     "ConformityAttestation",
                     "Attestation"
@@ -6046,7 +6046,7 @@
                   "attestationType": "certification",
                   "description": "SAMPLE TEST: The Mining Association of Canada attests that products manufactured at Sample Facility have reported scores and feedback that conform to the Towards Sustainable Mining standard.",
                   "issuedToParty": {
-                    "id": "http://localhost:3000/gs1/01/09359502000034/21/34001?linkType=gs1:registryEntry",
+                    "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/21/34001?linkType=gs1:registryEntry",
                     "name": "TEST Copper Mine",
                     "registeredId": "9359502000034",
                     "description": "TEST Copper Mine"
@@ -6111,7 +6111,7 @@
                         "issueDate": "2020-03-01"
                       },
                       "assessedOrganisation": {
-                        "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                        "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                         "name": "TEST Copper Mine",
                         "registeredId": "9359502000034",
                         "description": "Canadian-based Copper Miner"
@@ -6165,7 +6165,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/9359502000034?linkType=gs1:locationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/9359502000034?linkType=gs1:locationInfo",
                             "name": "TEST Copper Mine",
                             "registeredId": "9359502000034"
                           }

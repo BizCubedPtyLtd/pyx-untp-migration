@@ -221,10 +221,10 @@ if __name__ == "__main__":
     current_dir = Path(__file__).resolve().parent
 
     input_folder_name = "01_Data/app-config"
-    brand_name = 'ACRS'
+    brand_name = 'BCMine'
     file_name = "app-config.json"
     version = '0.6.0'
-    output_file_name = f"transformed-app-config-{brand_name}-v{version}-v1.json"
+    output_file_name = f"transformed-app-config-{brand_name}-v{version}.json"
     
     input_path = current_dir.parent / input_folder_name / brand_name  / file_name
     output_path = current_dir.parent / input_folder_name / brand_name / output_file_name #testing_folder / output_file_name

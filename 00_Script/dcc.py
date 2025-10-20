@@ -119,7 +119,7 @@ class DCCTransformer(CredentialTransformer):
             for declaredValue in declaredValues:
                 # if metricvalue in declaredvalue is metricvalue: {}, add "value":0 and "unit":""
                 if declaredValue.get("metricValue") == {} or not declaredValue.get("metricValue"):
-                    declaredValue["metricValue"] = {"unit": "", "value": declaredValue.get("score", "0")}
+                    declaredValue["metricValue"] = {"unit": "", "value": "0"}
 
             ######################################
             ## Resolve JSON-LD context
