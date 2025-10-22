@@ -233,7 +233,7 @@ class DPPTransformer(CredentialTransformer):
                 threshold_values = assessment.get('thresholdValues', [])
                 if "thresholdValues" in assessment and threshold_values != []:
                     assessment["thresholdValue"] = assessment.pop("thresholdValues", [])[0]
-                elif threshold_values == []:
+                elif 'thresholdValues' in assessment:
                     del assessment['thresholdValues']
                 # else:
                 #     assessment['thresholdValue'] = None
