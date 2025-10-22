@@ -47,158 +47,6 @@
                     "ProductPassport"
                   ],
                   "id": "http://localhost:3000/gs1/01/09359502000010/10/67890",
-                  "name": "Steel Rods",
-                  "registeredId": "09359502000010",
-                  "idScheme": {
-                    "id": "https://id.gs1.org/01/",
-                    "name": "Global Trade Identification Number (GTIN)"
-                  },
-                  "batchNumber": "67890",
-                  "productImage": {
-                    "linkURL": "http://localhost:3000/top_steel_x.png",
-                    "linkName": "Steel Rods",
-                    "linkType": "https://vocabulary.uncefact.org/untp/dpp/0.5.0/"
-                  },
-                  "description": "High-quality steel rods for construction.",
-                  "productCategory": [
-                    {
-                      "type": [
-                        "Classification"
-                      ],
-                      "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/41231",
-                      "code": "41231",
-                      "name": "Steel Rods",
-                      "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
-                      "schemeName": "UN Central Product Classification (CPC)"
-                    }
-                  ],
-                  "furtherInformation": [
-                    {
-                      "type": [
-                        "Link"
-                      ],
-                      "linkURL": "https://example.org/products/steel_model_x",
-                      "linkName": "High-quality steel rods for construction."
-                    }
-                  ],
-                  "producedByParty": {
-                    "id": "did:example:123456789abcdefghi",
-                    "name": "Steel Manufacturer Inc.",
-                    "registeredId": "COMP-56789"
-                  },
-                  "producedAtFacility": {
-                    "id": "https://identifier.example.org/facility",
-                    "name": "Main Steel Plant",
-                    "registeredId": "FAC-1234"
-                  },
-                  "dimensions": {
-                    "weight": {
-                      "value": 1499.8,
-                      "unit": "kg"
-                    },
-                    "length": {
-                      "value": 6,
-                      "unit": "MTR"
-                    },
-                    "width": {
-                      "value": 0.1,
-                      "unit": "MTR"
-                    },
-                    "height": {
-                      "value": -0.1,
-                      "unit": "MTR"
-                    },
-                    "volume": {
-                      "value": 0.6,
-                      "unit": "CMT"
-                    }
-                  },
-                  "productionDate": "2024-05-20",
-                  "countryOfProduction": "AU",
-                  "granularityLevel": "item",
-                  "dueDiligenceDeclaration": {
-                    "type": [
-                      "Link"
-                    ]
-                  },
-                  "materialsProvenance": [
-                    {
-                      "name": "STEEL",
-                      "originCountry": "AU",
-                      "materialType": {
-                        "type": [
-                          "Classification"
-                        ],
-                        "id": "https://textileexchange.org/materials",
-                        "name": "Carbon Steel",
-                        "schemeID": "https://textileexchange.org/materials"
-                      },
-                      "massFraction": 100,
-                      "hazardous": false,
-                      "mass": {
-                        "value": 10,
-                        "unit": "kg"
-                      },
-                      "recycledMassFraction": 0
-                    }
-                  ],
-                  "conformityClaim": [
-                    {
-                      "type": [
-                        "Claim",
-                        "Declaration"
-                      ],
-                      "assessmentDate": "2024-04-25",
-                      "id": "https://example.org/standards/environment",
-                      "referenceStandard": {
-                        "type": [
-                          "Standard"
-                        ],
-                        "id": "https://example.org/standards/environment",
-                        "name": "Standard",
-                        "issuingParty": {
-                          "id": "https://iso.org/issuing-party/123",
-                          "name": "Steel Certifier"
-                        },
-                        "issueDate": "2024-04-25"
-                      },
-                      "conformance": true,
-                      "conformityTopic": "governance.compliance",
-                      "conformityEvidence": {
-                        "type": [
-                          "SecureLink",
-                          "Link"
-                        ],
-                        "linkURL": "http://localhost:3000/gs1/01/09359502000010/10/67890?linkType=gs1:certificationInfo",
-                        "hashMethod": "SHA-256",
-                        "linkName": "Structural Steel Certification",
-                        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
-                        "encryptionMethod": "AES"
-                      }
-                    }
-                  ],
-                  "circularityScorecard": {
-                    "type": [
-                      "CircularityPerformance"
-                    ],
-                    "recyclingInformation": {
-                      "type": [
-                        "Link"
-                      ],
-                      "linkURL": "https://example.org/recycling/steel_model_x",
-                      "linkName": "Recycling Information"
-                    },
-                    "repairInformation": {
-                      "type": [
-                        "Link"
-                      ]
-                    }
-                  },
-                  "traceabilityInformation": [
-                    {
-                      "traceabilityEvent": []
-                    }
-                  ],
                   "product": {
                     "type": [
                       "Product"
@@ -273,6 +121,90 @@
                     "productionDate": "2024-05-20",
                     "countryOfProduction": "AU"
                   },
+                  "conformityClaim": [
+                    {
+                      "type": [
+                        "Claim",
+                        "Declaration"
+                      ],
+                      "assessmentDate": "2024-04-25",
+                      "id": "https://example.org/standards/environment",
+                      "referenceStandard": {
+                        "type": [
+                          "Standard"
+                        ],
+                        "id": "https://example.org/standards/environment",
+                        "name": "Standard",
+                        "issuingParty": {
+                          "id": "https://iso.org/issuing-party/123",
+                          "name": "Steel Certifier"
+                        },
+                        "issueDate": "2024-04-25"
+                      },
+                      "conformance": true,
+                      "conformityTopic": "governance.compliance",
+                      "conformityEvidence": {
+                        "type": [
+                          "SecureLink",
+                          "Link"
+                        ],
+                        "linkURL": "http://localhost:3000/gs1/01/09359502000010/10/67890?linkType=gs1:certificationInfo",
+                        "hashMethod": "SHA-256",
+                        "linkName": "Structural Steel Certification",
+                        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+                        "encryptionMethod": "AES"
+                      }
+                    }
+                  ],
+                  "circularityScorecard": {
+                    "type": [
+                      "CircularityPerformance"
+                    ],
+                    "recyclingInformation": {
+                      "type": [
+                        "Link"
+                      ],
+                      "linkURL": "https://example.org/recycling/steel_model_x",
+                      "linkName": "Recycling Information"
+                    },
+                    "repairInformation": {
+                      "type": [
+                        "Link"
+                      ]
+                    }
+                  },
+                  "traceabilityInformation": [
+                    {
+                      "traceabilityEvent": []
+                    }
+                  ],
+                  "granularityLevel": "item",
+                  "dueDiligenceDeclaration": {
+                    "type": [
+                      "Link"
+                    ]
+                  },
+                  "materialsProvenance": [
+                    {
+                      "name": "STEEL",
+                      "originCountry": "AU",
+                      "materialType": {
+                        "type": [
+                          "Classification"
+                        ],
+                        "id": "https://textileexchange.org/materials",
+                        "name": "Carbon Steel",
+                        "schemeID": "https://textileexchange.org/materials"
+                      },
+                      "massFraction": 100,
+                      "hazardous": false,
+                      "mass": {
+                        "value": 10,
+                        "unit": "kg"
+                      },
+                      "recycledMassFraction": 0
+                    }
+                  ],
                   "emissionsScorecard": {
                     "declaredUnit": "kg",
                     "carbonFootprint": 0,
@@ -357,7 +289,7 @@
                   "identifierKeyPath": {
                     "primary": {
                       "ai": "01",
-                      "path": "/registeredId"
+                      "path": "/product/registeredId"
                     },
                     "qualifiers": [
                       {
@@ -402,142 +334,6 @@
                     "ProductPassport"
                   ],
                   "id": "http://localhost:3000/gs1/01/09359502000041/10/54321",
-                  "name": "Steel Coil",
-                  "registeredId": "09359502000041",
-                  "idScheme": {
-                    "id": "https://id.gs1.org/01/",
-                    "name": "Global Trade Identification Number (GTIN)"
-                  },
-                  "batchNumber": "54321",
-                  "serialNumber": "445566",
-                  "productImage": {
-                    "linkURL": "http://localhost:3000/quality_steel_y.png",
-                    "linkName": "Steel Coils",
-                    "linkType": "https://vocabulary.uncefact.org/untp/dpp/0.5.0/"
-                  },
-                  "description": "Steel Coil for construction and infrastructure projects.",
-                  "productCategory": [
-                    {
-                      "type": [
-                        "Classification"
-                      ],
-                      "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/41232",
-                      "code": "41232",
-                      "name": "Steel Coil",
-                      "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
-                      "schemeName": "UN Central Product Classification (CPC)"
-                    }
-                  ],
-                  "furtherInformation": [
-                    {
-                      "type": [
-                        "Link"
-                      ],
-                      "linkURL": "https://example.org/products/steel_model_y",
-                      "linkName": "Steel Coil for construction and infrastructure projects."
-                    }
-                  ],
-                  "producedByParty": {
-                    "id": "did:example:abcdef1234567890",
-                    "name": "Global Steel Co.",
-                    "registeredId": "COMP-12345"
-                  },
-                  "producedAtFacility": {
-                    "id": "https://identifier.example.org/facility",
-                    "name": "Advanced Steel Plant",
-                    "registeredId": "FAC-6789"
-                  },
-                  "dimensions": {
-                    "weight": {
-                      "value": 2500,
-                      "unit": "kg"
-                    },
-                    "length": {
-                      "value": 100,
-                      "unit": "MTR"
-                    },
-                    "width": {
-                      "value": 0.8,
-                      "unit": "MTR"
-                    },
-                    "height": {
-                      "value": 0.005,
-                      "unit": "MTR"
-                    },
-                    "volume": {
-                      "value": 1.8,
-                      "unit": "CMT"
-                    }
-                  },
-                  "productionDate": "2024-06-01",
-                  "countryOfProduction": "AU",
-                  "granularityLevel": "item",
-                  "dueDiligenceDeclaration": {
-                    "type": [
-                      "Link"
-                    ]
-                  },
-                  "materialsProvenance": [
-                    {
-                      "name": "STEEL",
-                      "originCountry": "AU",
-                      "materialType": {
-                        "type": [
-                          "Classification"
-                        ],
-                        "id": "https://textileexchange.org/materials",
-                        "name": "Alloy Steel",
-                        "schemeID": "https://textileexchange.org/materials"
-                      },
-                      "massFraction": 100,
-                      "hazardous": false,
-                      "mass": {
-                        "value": 10,
-                        "unit": "kg"
-                      },
-                      "recycledMassFraction": 0
-                    }
-                  ],
-                  "conformityClaim": [
-                    {
-                      "type": [
-                        "Claim",
-                        "Declaration"
-                      ],
-                      "assessmentDate": "2024-04-25",
-                      "id": "https://example.org/standards/environment",
-                      "referenceStandard": {
-                        "type": [
-                          "Standard"
-                        ],
-                        "id": "https://example.org/standards/environment",
-                        "name": "Standard",
-                        "issuingParty": {
-                          "id": "https://iso.org/issuing-party/123",
-                          "name": "Steel Certifier"
-                        },
-                        "issueDate": "2024-04-25"
-                      },
-                      "conformance": true,
-                      "conformityTopic": "governance.compliance",
-                      "conformityEvidence": {
-                        "type": [
-                          "SecureLink",
-                          "Link"
-                        ],
-                        "linkURL": "http://localhost:3000/gs1/01/09359502000041/10/54321?linkType=gs1:certificationInfo",
-                        "hashMethod": "SHA-256",
-                        "linkName": "Structural Steel Certification",
-                        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
-                        "encryptionMethod": "AES"
-                      }
-                    }
-                  ],
-                  "traceabilityInformation": [
-                    {
-                      "traceabilityEvent": []
-                    }
-                  ],
                   "product": {
                     "type": [
                       "Product"
@@ -613,6 +409,74 @@
                     "productionDate": "2024-06-01",
                     "countryOfProduction": "AU"
                   },
+                  "conformityClaim": [
+                    {
+                      "type": [
+                        "Claim",
+                        "Declaration"
+                      ],
+                      "assessmentDate": "2024-04-25",
+                      "id": "https://example.org/standards/environment",
+                      "referenceStandard": {
+                        "type": [
+                          "Standard"
+                        ],
+                        "id": "https://example.org/standards/environment",
+                        "name": "Standard",
+                        "issuingParty": {
+                          "id": "https://iso.org/issuing-party/123",
+                          "name": "Steel Certifier"
+                        },
+                        "issueDate": "2024-04-25"
+                      },
+                      "conformance": true,
+                      "conformityTopic": "governance.compliance",
+                      "conformityEvidence": {
+                        "type": [
+                          "SecureLink",
+                          "Link"
+                        ],
+                        "linkURL": "http://localhost:3000/gs1/01/09359502000041/10/54321?linkType=gs1:certificationInfo",
+                        "hashMethod": "SHA-256",
+                        "linkName": "Structural Steel Certification",
+                        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+                        "encryptionMethod": "AES"
+                      }
+                    }
+                  ],
+                  "circularityScorecard": null,
+                  "traceabilityInformation": [
+                    {
+                      "traceabilityEvent": []
+                    }
+                  ],
+                  "granularityLevel": "item",
+                  "dueDiligenceDeclaration": {
+                    "type": [
+                      "Link"
+                    ]
+                  },
+                  "materialsProvenance": [
+                    {
+                      "name": "STEEL",
+                      "originCountry": "AU",
+                      "materialType": {
+                        "type": [
+                          "Classification"
+                        ],
+                        "id": "https://textileexchange.org/materials",
+                        "name": "Alloy Steel",
+                        "schemeID": "https://textileexchange.org/materials"
+                      },
+                      "massFraction": 100,
+                      "hazardous": false,
+                      "mass": {
+                        "value": 10,
+                        "unit": "kg"
+                      },
+                      "recycledMassFraction": 0
+                    }
+                  ],
                   "emissionsScorecard": {
                     "declaredUnit": "kg",
                     "carbonFootprint": 0,
@@ -697,7 +561,7 @@
                   "identifierKeyPath": {
                     "primary": {
                       "ai": "01",
-                      "path": "/registeredId"
+                      "path": "/product/registeredId"
                     },
                     "qualifiers": [
                       {
@@ -742,148 +606,6 @@
                     "ProductPassport"
                   ],
                   "id": "http://localhost:3000/gs1/01/09359502000034/10/725774099",
-                  "name": "Pile Cage",
-                  "registeredId": "09359502000034",
-                  "idScheme": {
-                    "id": "https://id.gs1.org/01/",
-                    "name": "Global Trade Identification Number (GTIN)"
-                  },
-                  "batchNumber": "725774099",
-                  "serialNumber": "998877",
-                  "productImage": {
-                    "linkURL": "http://localhost:3000/pile_cage.png",
-                    "linkName": "Pile Cage",
-                    "linkType": "https://vocabulary.uncefact.org/untp/dpp/0.5.0/"
-                  },
-                  "description": "High-strength pile cage suitable for construction and industrial applications.",
-                  "productCategory": [
-                    {
-                      "type": [
-                        "Classification"
-                      ],
-                      "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/31254",
-                      "code": "31254",
-                      "name": "Pile Cage",
-                      "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
-                      "schemeName": "UN Central Product Classification (CPC)"
-                    }
-                  ],
-                  "furtherInformation": [
-                    {
-                      "type": [
-                        "Link"
-                      ],
-                      "linkURL": "https://example.com/products/PileCage",
-                      "linkName": "Pile Cage Product Info"
-                    }
-                  ],
-                  "producedByParty": {
-                    "id": "did:example:123456789abcdefghi",
-                    "name": "SteelWorks Ltd.",
-                    "registeredId": "SW-001"
-                  },
-                  "producedAtFacility": {
-                    "id": "https://example.com/facility-scheme",
-                    "name": "SteelWorks Manufacturing Plant 2",
-                    "registeredId": "FAC-002"
-                  },
-                  "dimensions": {
-                    "weight": {
-                      "value": 1500,
-                      "unit": "kg"
-                    },
-                    "length": {
-                      "value": 2.44,
-                      "unit": "MTR"
-                    },
-                    "width": {
-                      "value": 1.22,
-                      "unit": "MTR"
-                    },
-                    "height": {
-                      "value": 0.018,
-                      "unit": "MTR"
-                    },
-                    "volume": {
-                      "value": 0.053,
-                      "unit": "CMT"
-                    }
-                  },
-                  "productionDate": "2024-05-15",
-                  "countryOfProduction": "AU",
-                  "granularityLevel": "item",
-                  "materialsProvenance": [
-                    {
-                      "name": "Steel",
-                      "originCountry": "AU",
-                      "materialType": {
-                        "type": [
-                          "Classification"
-                        ],
-                        "id": "https://example.com/material-scheme",
-                        "name": "steel"
-                      },
-                      "massFraction": 100,
-                      "hazardous": false,
-                      "mass": {
-                        "value": 20,
-                        "unit": "kg"
-                      },
-                      "recycledMassFraction": 0
-                    }
-                  ],
-                  "conformityClaim": [
-                    {
-                      "type": [
-                        "Claim",
-                        "Declaration"
-                      ],
-                      "assessmentDate": "2024-04-25",
-                      "id": "https://steel-industry.org/standards/sustainability",
-                      "referenceStandard": {
-                        "type": [
-                          "Standard"
-                        ],
-                        "id": "https://steel-industry.org/standards/sustainability",
-                        "name": "Structural Steel Sustainability Certification",
-                        "issuingParty": {
-                          "id": "https://iso.org/issuing-party/123",
-                          "name": "Steel Certifier"
-                        },
-                        "issueDate": "2024-04-25"
-                      },
-                      "conformance": true,
-                      "conformityTopic": "governance.compliance",
-                      "conformityEvidence": {
-                        "type": [
-                          "SecureLink",
-                          "Link"
-                        ],
-                        "linkURL": "http://localhost:3000/gs1/01/09359502000034/10/725774099?linkType=gs1:certificationInfo",
-                        "hashMethod": "SHA-256",
-                        "linkName": "Structural Steel Certification",
-                        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
-                        "encryptionMethod": "AES"
-                      }
-                    }
-                  ],
-                  "traceabilityInformation": [
-                    {
-                      "traceabilityEvent": [
-                        {
-                          "type": [
-                            "SecureLink",
-                            "Link"
-                          ],
-                          "linkName": "Transformation Event",
-                          "linkURL": "http://localhost:3000/gs1/01/09359502000034/10/725774099?linkType=gs1:traceability",
-                          "linkType": "https://test.uncefact.org/vocabulary/untp/dte/0.5.0/",
-                          "hashMethod": "SHA-256",
-                          "encryptionMethod": "AES"
-                        }
-                      ]
-                    }
-                  ],
                   "product": {
                     "type": [
                       "Product"
@@ -959,6 +681,80 @@
                     "productionDate": "2024-05-15",
                     "countryOfProduction": "AU"
                   },
+                  "conformityClaim": [
+                    {
+                      "type": [
+                        "Claim",
+                        "Declaration"
+                      ],
+                      "assessmentDate": "2024-04-25",
+                      "id": "https://steel-industry.org/standards/sustainability",
+                      "referenceStandard": {
+                        "type": [
+                          "Standard"
+                        ],
+                        "id": "https://steel-industry.org/standards/sustainability",
+                        "name": "Structural Steel Sustainability Certification",
+                        "issuingParty": {
+                          "id": "https://iso.org/issuing-party/123",
+                          "name": "Steel Certifier"
+                        },
+                        "issueDate": "2024-04-25"
+                      },
+                      "conformance": true,
+                      "conformityTopic": "governance.compliance",
+                      "conformityEvidence": {
+                        "type": [
+                          "SecureLink",
+                          "Link"
+                        ],
+                        "linkURL": "http://localhost:3000/gs1/01/09359502000034/10/725774099?linkType=gs1:certificationInfo",
+                        "hashMethod": "SHA-256",
+                        "linkName": "Structural Steel Certification",
+                        "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
+                        "encryptionMethod": "AES"
+                      }
+                    }
+                  ],
+                  "circularityScorecard": null,
+                  "traceabilityInformation": [
+                    {
+                      "traceabilityEvent": [
+                        {
+                          "type": [
+                            "SecureLink",
+                            "Link"
+                          ],
+                          "linkName": "Transformation Event",
+                          "linkURL": "http://localhost:3000/gs1/01/09359502000034/10/725774099?linkType=gs1:traceability",
+                          "linkType": "https://test.uncefact.org/vocabulary/untp/dte/0.5.0/",
+                          "hashMethod": "SHA-256",
+                          "encryptionMethod": "AES"
+                        }
+                      ]
+                    }
+                  ],
+                  "granularityLevel": "item",
+                  "materialsProvenance": [
+                    {
+                      "name": "Steel",
+                      "originCountry": "AU",
+                      "materialType": {
+                        "type": [
+                          "Classification"
+                        ],
+                        "id": "https://example.com/material-scheme",
+                        "name": "steel"
+                      },
+                      "massFraction": 100,
+                      "hazardous": false,
+                      "mass": {
+                        "value": 20,
+                        "unit": "kg"
+                      },
+                      "recycledMassFraction": 0
+                    }
+                  ],
                   "emissionsScorecard": {
                     "declaredUnit": "kg",
                     "carbonFootprint": 0,
@@ -1043,7 +839,7 @@
                   "identifierKeyPath": {
                     "primary": {
                       "ai": "01",
-                      "path": "/registeredId"
+                      "path": "/product/registeredId"
                     },
                     "qualifiers": [
                       {

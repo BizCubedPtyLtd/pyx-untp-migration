@@ -55,7 +55,7 @@ class DPPTransformer(CredentialTransformer):
                 "id": credential_subject.get("id", ""),
                 "product": product,
                 "conformityClaim": credential_subject.get("conformityClaim", []),
-                "circularityScorecard": credential_subject.get('circularityScorecard',),
+                "circularityScorecard": credential_subject.get('circularityScorecard',{}),
                 "traceabilityInformation": credential_subject.get("traceabilityInformation",[])
             }
             self.component["props"]["data"] = new_credential_subject
@@ -102,6 +102,41 @@ class DPPTransformer(CredentialTransformer):
         producedAtFacility = product.get('producedAtFacility', {})
         self._clean_identifier_list(producedAtFacility)
         
+        # furtherInformaiton
+        furtherInformation = product.get('furtherInformation', {})
+        print('furtherInformation', furtherInformation)
+        for information in furtherInformation:
+            if "type" in information:
+                del information["type"]
+
+        # circularityScorecard
+        circularityScorecard = new_credential_subject.get('circularityScorecard', {})
+        print('circularityScorecard', circularityScorecard)
+        if "type" in circularityScorecard:
+            del circularityScorecard["type"]
+        # recyclingInformation
+        recyclingInformation = circularityScorecard.get('recyclingInformation', {})
+        if "type" in recyclingInformation:
+            del recyclingInformation["type"]
+
+        # repairInformation
+        repairInformation = circularityScorecard.get('repairInformation', {})
+        if "type" in repairInformation:
+            del repairInformation["type"]
+
+        # traceabilityInformation
+        traceabilityInformation = new_credential_subject.get('traceabilityInformation', {})
+        print('traceabilityInformation', traceabilityInformation)
+        
+        if 'traceabilityEvent' in traceabilityInformation:
+            traceabilityEvent = traceabilityInformation.get('traceabilityEvent', {})
+            for event in traceabilityEvent:
+                print('event:', event)
+                if event:
+                    if "type" in event:
+                        del event["type"]
+
+
         '''
         5. Material Structure Changes
         Key Changes:
@@ -136,6 +171,10 @@ class DPPTransformer(CredentialTransformer):
                     del referencestandard["issuingParty"]["type"]
                 if "idScheme" in referencestandard["issuingParty"]:
                     del referencestandard["issuingParty"]["idScheme"]
+            if "conformityEvidence" in claim:
+                conformityEvidence = claim.get("conformityEvidence", [])
+                if "type" in conformityEvidence:
+                    del conformityEvidence["type"]
 
             # credentialSubject - conformityClaim - administeredBy structure change (Regulation schema)
             # Removes Type and idScheme from referenceStandard.issuingParty and referenceRegulation.administeredBy
@@ -194,6 +233,8 @@ class DPPTransformer(CredentialTransformer):
                 threshold_values = assessment.get('thresholdValues', [])
                 if "thresholdValues" in assessment and threshold_values != []:
                     assessment["thresholdValue"] = assessment.pop("thresholdValues", [])[0]
+                elif threshold_values == []:
+                    del assessment['thresholdValues']
                 # else:
                 #     assessment['thresholdValue'] = None
 
@@ -201,7 +242,7 @@ class DPPTransformer(CredentialTransformer):
             if "assessedProduct" in claim:
                 del claim['assessedProduct']
     
-        
+
         if self.credential_indicator == 1:
             self._flatten_credential_subject(component_data, 'credentialSubject')
             print('inside flatten')
@@ -262,9 +303,14 @@ class DPPTransformer(CredentialTransformer):
         dimensions = product.get("dimensions", {})
         if "type" in dimensions:
             del dimensions["type"]
-        
-        
 
+        
+        # remove "type" in "dueDiligenceDeclaration"
+        dueDiligenceDeclaration = component_data.get("dueDiligenceDeclaration", {})
+        if "type" in dueDiligenceDeclaration:
+            del dueDiligenceDeclaration["type"]
+
+        
         return self.component
     
     def transform_services(self) -> Dict[str, Any]:

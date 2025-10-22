@@ -46,12 +46,12 @@
                   "type": [
                     "ProductPassport"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502000010/10/67890",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000010/10/67890",
                   "product": {
                     "type": [
                       "Product"
                     ],
-                    "id": "http://localhost:3000/gs1/01/09359502000010/10/67890",
+                    "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000010/10/67890",
                     "name": "Steel Rods",
                     "registeredId": "09359502000010",
                     "idScheme": {
@@ -79,9 +79,6 @@
                     ],
                     "furtherInformation": [
                       {
-                        "type": [
-                          "Link"
-                        ],
                         "linkURL": "https://example.org/products/steel_model_x",
                         "linkName": "High-quality steel rods for construction."
                       }
@@ -144,11 +141,7 @@
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
                       "conformityEvidence": {
-                        "type": [
-                          "SecureLink",
-                          "Link"
-                        ],
-                        "linkURL": "http://localhost:3000/gs1/01/09359502000010/10/67890?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502000010/10/67890?linkType=gs1:certificationInfo",
                         "hashMethod": "SHA-256",
                         "linkName": "Structural Steel Certification",
                         "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -157,21 +150,11 @@
                     }
                   ],
                   "circularityScorecard": {
-                    "type": [
-                      "CircularityPerformance"
-                    ],
                     "recyclingInformation": {
-                      "type": [
-                        "Link"
-                      ],
                       "linkURL": "https://example.org/recycling/steel_model_x",
                       "linkName": "Recycling Information"
                     },
-                    "repairInformation": {
-                      "type": [
-                        "Link"
-                      ]
-                    }
+                    "repairInformation": {}
                   },
                   "traceabilityInformation": [
                     {
@@ -179,11 +162,7 @@
                     }
                   ],
                   "granularityLevel": "item",
-                  "dueDiligenceDeclaration": {
-                    "type": [
-                      "Link"
-                    ]
-                  },
+                  "dueDiligenceDeclaration": {},
                   "materialsProvenance": [
                     {
                       "name": "STEEL",
@@ -294,7 +273,7 @@
                     "qualifiers": [
                       {
                         "ai": "10",
-                        "path": "/batchNumber"
+                        "path": "/product/batchNumber"
                       }
                     ]
                   }
@@ -333,12 +312,12 @@
                   "type": [
                     "ProductPassport"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502000041/10/54321",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000041/10/54321",
                   "product": {
                     "type": [
                       "Product"
                     ],
-                    "id": "http://localhost:3000/gs1/01/09359502000041/10/54321",
+                    "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000041/10/54321",
                     "name": "Steel Coil",
                     "registeredId": "09359502000041",
                     "idScheme": {
@@ -367,9 +346,6 @@
                     ],
                     "furtherInformation": [
                       {
-                        "type": [
-                          "Link"
-                        ],
                         "linkURL": "https://example.org/products/steel_model_y",
                         "linkName": "Steel Coil for construction and infrastructure projects."
                       }
@@ -432,11 +408,7 @@
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
                       "conformityEvidence": {
-                        "type": [
-                          "SecureLink",
-                          "Link"
-                        ],
-                        "linkURL": "http://localhost:3000/gs1/01/09359502000041/10/54321?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502000041/10/54321?linkType=gs1:certificationInfo",
                         "hashMethod": "SHA-256",
                         "linkName": "Structural Steel Certification",
                         "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -444,18 +416,14 @@
                       }
                     }
                   ],
-                  "circularityScorecard": null,
+                  "circularityScorecard": {},
                   "traceabilityInformation": [
                     {
                       "traceabilityEvent": []
                     }
                   ],
                   "granularityLevel": "item",
-                  "dueDiligenceDeclaration": {
-                    "type": [
-                      "Link"
-                    ]
-                  },
+                  "dueDiligenceDeclaration": {},
                   "materialsProvenance": [
                     {
                       "name": "STEEL",
@@ -566,7 +534,7 @@
                     "qualifiers": [
                       {
                         "ai": "10",
-                        "path": "/batchNumber"
+                        "path": "/product/batchNumber"
                       }
                     ]
                   }
@@ -605,12 +573,12 @@
                   "type": [
                     "ProductPassport"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502000034/10/725774099",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/10/725774099",
                   "product": {
                     "type": [
                       "Product"
                     ],
-                    "id": "http://localhost:3000/gs1/01/09359502000034/10/725774099",
+                    "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/10/725774099",
                     "name": "Pile Cage",
                     "registeredId": "09359502000034",
                     "idScheme": {
@@ -639,9 +607,6 @@
                     ],
                     "furtherInformation": [
                       {
-                        "type": [
-                          "Link"
-                        ],
                         "linkURL": "https://example.com/products/PileCage",
                         "linkName": "Pile Cage Product Info"
                       }
@@ -704,11 +669,7 @@
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
                       "conformityEvidence": {
-                        "type": [
-                          "SecureLink",
-                          "Link"
-                        ],
-                        "linkURL": "http://localhost:3000/gs1/01/09359502000034/10/725774099?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/10/725774099?linkType=gs1:certificationInfo",
                         "hashMethod": "SHA-256",
                         "linkName": "Structural Steel Certification",
                         "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -716,17 +677,13 @@
                       }
                     }
                   ],
-                  "circularityScorecard": null,
+                  "circularityScorecard": {},
                   "traceabilityInformation": [
                     {
                       "traceabilityEvent": [
                         {
-                          "type": [
-                            "SecureLink",
-                            "Link"
-                          ],
                           "linkName": "Transformation Event",
-                          "linkURL": "http://localhost:3000/gs1/01/09359502000034/10/725774099?linkType=gs1:traceability",
+                          "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/10/725774099?linkType=gs1:traceability",
                           "linkType": "https://test.uncefact.org/vocabulary/untp/dte/0.5.0/",
                           "hashMethod": "SHA-256",
                           "encryptionMethod": "AES"
@@ -844,7 +801,7 @@
                     "qualifiers": [
                       {
                         "ai": "10",
-                        "path": "/batchNumber"
+                        "path": "/product/batchNumber"
                       }
                     ]
                   }
@@ -877,7 +834,7 @@
                     "TransformationEvent",
                     "Event"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502000034/10/725774099",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/10/725774099",
                   "processType": "Pile cage",
                   "eventTime": "2025-01-03T00:01:00.000+11:00",
                   "action": "observe",
@@ -890,7 +847,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502000034/10/725774099?linkType=gs1:sustainabilityInfo",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/10/725774099?linkType=gs1:sustainabilityInfo",
                       "name": "Pile Cage"
                     }
                   ],
@@ -899,7 +856,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502000041/10/54321?linkType=gs1:sustainabilityInfo",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000041/10/54321?linkType=gs1:sustainabilityInfo",
                       "name": "Steel Coil"
                     },
                     {
@@ -907,7 +864,7 @@
                         "Item"
                       ],
                       "name": "Steel Rods",
-                      "id": "http://localhost:3000/gs1/01/09359502000010/10/67890?linkType=gs1:sustainabilityInfo"
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000010/10/67890?linkType=gs1:sustainabilityInfo"
                     }
                   ],
                   "inputQuantityList": [],
@@ -1031,7 +988,7 @@
                     "ConformityAttestation",
                     "Attestation"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502000010/10/67890",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000010/10/67890",
                   "name": "Traceability Certification Scheme",
                   "assessorLevel": "3rdParty",
                   "assessmentLevel": "Accredited",
@@ -1050,28 +1007,16 @@
                       ],
                       "id": "https://abr.business.gov.au/ABN/View?abn=40096692545",
                       "name": "AUSTRALASIAN CERTIFICATION AUTHORITY FOR REINFORCING AND STRUCTURAL STEELS LTD",
-                      "trustmark": {
-                        "type": [
-                          "BinaryFile"
-                        ]
-                      },
+                      "trustmark": {},
                       "issuingAuthority": {
                         "id": "https://www.abr.business.gov.au/ABN/View/49614982550",
                         "name": "JOINT ACCREDITATION SYSTEM OF AUSTRALIA & NEW ZEALAND",
                         "registeredId": "49614982550"
                       },
-                      "endorsementEvidence": {
-                        "type": [
-                          "Link"
-                        ]
-                      }
+                      "endorsementEvidence": {}
                     }
                   ],
                   "conformityCertificate": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
                     "linkURL": "http://example.com/AS_NZS_4671_2001_evidence.pdf",
                     "linkName": "Compliance evidence",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -1080,10 +1025,6 @@
                     "hashDigest": "hash_4671_2001"
                   },
                   "auditableEvidence": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
                     "linkURL": "http://example.com/AS_NZS_4671_2001_evidence.pdf",
                     "linkName": "AS/NZS 4671:2001",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -1105,9 +1046,6 @@
                     },
                     "issueDate": "2023-12-05",
                     "trustmark": {
-                      "type": [
-                        "BinaryFile"
-                      ],
                       "fileName": "JOINT ACCREDITATION SYSTEM OF AUSTRALIA & NEW ZEALAND",
                       "fileType": "image/webp",
                       "file": "https://upload.wikimedia.org/wikipedia/en/7/7d/Joint_Accreditation_System_of_Australia_and_New_Zealand.jpg"
@@ -1155,7 +1093,6 @@
                           ],
                           "id": "https://www.standards.org.au/standards-catalogue/standard-details?designation=as-nzs-4671-2001",
                           "name": "AS/NZS 4671:2001",
-                          "thresholdValues": [],
                           "description": "",
                           "conformityTopic": "environment.emissions",
                           "status": "active",
@@ -1170,7 +1107,7 @@
                       "assessedProduct": [
                         {
                           "product": {
-                            "id": "http://localhost:3000/gs1/01/09359502000010/10/67890?linkType=gs1:sustainabilityInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000010/10/67890?linkType=gs1:sustainabilityInfo",
                             "name": "Steel Rods",
                             "batchNumber": "67890"
                           }
@@ -1182,42 +1119,6 @@
                             "id": "https://identifier.example.org/facility",
                             "name": "Main Steel Plant",
                             "registeredId": "FAC-1234",
-                            "locationInformation": {
-                              "type": [
-                                "Location"
-                              ],
-                              "plusCode": "https://plus.codes/4RRG6RJX+W3",
-                              "geoLocation": {
-                                "type": "Point",
-                                "coordinates": [
-                                  12.34,
-                                  56.78,
-                                  90.12
-                                ]
-                              },
-                              "geoBoundary": {
-                                "type": "Polygon",
-                                "coordinates": [
-                                  [
-                                    [
-                                      12.34,
-                                      56.78,
-                                      90.12
-                                    ]
-                                  ]
-                                ]
-                              }
-                            },
-                            "address": {
-                              "type": [
-                                "Address"
-                              ],
-                              "streetAddress": "level 11, 15 Example Street",
-                              "postalCode": "2601",
-                              "addressRegion": "ACT",
-                              "addressCountry": "AU",
-                              "addressLocality": "Example City"
-                            },
                             "IDverifiedByCAB": true
                           }
                         }
@@ -1250,7 +1151,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "issueDate": "2001-01-01"
+                        "issueDate": "2001-01-01",
+                        "type": [
+                          "Standard"
+                        ]
                       },
                       "referenceRegulation": {
                         "id": "https://www.standards.org.au/standards-catalogue/standard-details?designation=as-nzs-3678-2011",
@@ -1261,7 +1165,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "effectiveDate": "2024-03-20"
+                        "effectiveDate": "2024-03-20",
+                        "type": [
+                          "Regulation"
+                        ]
                       },
                       "assessmentCriteria": [
                         {
@@ -1283,7 +1190,7 @@
                       "assessedProduct": [
                         {
                           "product": {
-                            "id": "http://localhost:3000/gs1/01/09359502000010/10/67890?linkType=gs1:sustainabilityInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000010/10/67890?linkType=gs1:sustainabilityInfo",
                             "name": "Steel Rods",
                             "batchNumber": "67890"
                           }
@@ -1318,7 +1225,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "issueDate": "2011-01-01"
+                        "issueDate": "2011-01-01",
+                        "type": [
+                          "Standard"
+                        ]
                       },
                       "referenceRegulation": {
                         "id": "https://www.standards.org.au/standards-catalogue/standard-details?designation=as-nzs-1594-2002",
@@ -1329,7 +1239,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "effectiveDate": "2011-01-01"
+                        "effectiveDate": "2011-01-01",
+                        "type": [
+                          "Regulation"
+                        ]
                       },
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
@@ -1362,7 +1275,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "issueDate": "2010-01-01"
+                        "issueDate": "2010-01-01",
+                        "type": [
+                          "Standard"
+                        ]
                       },
                       "referenceRegulation": {
                         "id": "https://www.standards.org.au/standards-catalogue/standard-details?designation=as-nzs-3679-1-2010",
@@ -1373,7 +1289,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "effectiveDate": "2010-01-01"
+                        "effectiveDate": "2010-01-01",
+                        "type": [
+                          "Regulation"
+                        ]
                       },
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
@@ -1488,7 +1407,7 @@
                     "ConformityAttestation",
                     "Attestation"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502000041/10/54321",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000041/10/54321",
                   "name": "Traceability Certification Scheme",
                   "assessorLevel": "3rdParty",
                   "assessmentLevel": "Accredited",
@@ -1507,28 +1426,16 @@
                       ],
                       "id": "https://abr.business.gov.au/ABN/View?abn=40096692545",
                       "name": "AUSTRALASIAN CERTIFICATION AUTHORITY FOR REINFORCING AND STRUCTURAL STEELS LTD",
-                      "trustmark": {
-                        "type": [
-                          "BinaryFile"
-                        ]
-                      },
+                      "trustmark": {},
                       "issuingAuthority": {
                         "id": "https://www.abr.business.gov.au/ABN/View/49614982550",
                         "name": "JOINT ACCREDITATION SYSTEM OF AUSTRALIA & NEW ZEALAND",
                         "registeredId": "49614982550"
                       },
-                      "endorsementEvidence": {
-                        "type": [
-                          "Link"
-                        ]
-                      }
+                      "endorsementEvidence": {}
                     }
                   ],
                   "conformityCertificate": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
                     "linkURL": "http://example.com/AS_NZS_4671_2001_evidence.pdf",
                     "linkName": "Compliance evidence",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -1537,10 +1444,6 @@
                     "hashDigest": "hash_4671_2001"
                   },
                   "auditableEvidence": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
                     "linkURL": "http://example.com/AS_NZS_4671_2001_evidence.pdf",
                     "linkName": "AS/NZS 4671:2001",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -1562,9 +1465,6 @@
                     },
                     "issueDate": "2023-12-05",
                     "trustmark": {
-                      "type": [
-                        "BinaryFile"
-                      ],
                       "fileName": "JOINT ACCREDITATION SYSTEM OF AUSTRALIA & NEW ZEALAND",
                       "fileType": "image/webp",
                       "file": "https://upload.wikimedia.org/wikipedia/en/7/7d/Joint_Accreditation_System_of_Australia_and_New_Zealand.jpg"
@@ -1612,7 +1512,6 @@
                           ],
                           "id": "https://www.standards.org.au/standards-catalogue/standard-details?designation=as-nzs-4671-2001",
                           "name": "AS/NZS 4671:2001",
-                          "thresholdValues": [],
                           "description": "",
                           "conformityTopic": "environment.emissions",
                           "status": "active",
@@ -1627,7 +1526,7 @@
                       "assessedProduct": [
                         {
                           "product": {
-                            "id": "http://localhost:3000/gs1/01/09359502000041/10/54321?linkType=gs1:certificationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000041/10/54321?linkType=gs1:certificationInfo",
                             "name": "Steel Coil",
                             "batchNumber": "54321"
                           }
@@ -1639,42 +1538,6 @@
                             "id": "https://identifier.example.org/facility",
                             "name": "Main Steel Plant",
                             "registeredId": "FAC-1234",
-                            "locationInformation": {
-                              "type": [
-                                "Location"
-                              ],
-                              "plusCode": "https://plus.codes/4RRG6RJX+W3",
-                              "geoLocation": {
-                                "type": "Point",
-                                "coordinates": [
-                                  12.34,
-                                  56.78,
-                                  90.12
-                                ]
-                              },
-                              "geoBoundary": {
-                                "type": "Polygon",
-                                "coordinates": [
-                                  [
-                                    [
-                                      12.34,
-                                      56.78,
-                                      90.12
-                                    ]
-                                  ]
-                                ]
-                              }
-                            },
-                            "address": {
-                              "type": [
-                                "Address"
-                              ],
-                              "streetAddress": "level 11, 15 Example Street",
-                              "postalCode": "2601",
-                              "addressRegion": "ACT",
-                              "addressCountry": "AU",
-                              "addressLocality": "Example City"
-                            },
                             "IDverifiedByCAB": true
                           }
                         }
@@ -1707,7 +1570,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "issueDate": "2001-01-01"
+                        "issueDate": "2001-01-01",
+                        "type": [
+                          "Standard"
+                        ]
                       },
                       "referenceRegulation": {
                         "id": "https://www.standards.org.au/standards-catalogue/standard-details?designation=as-nzs-3678-2011",
@@ -1718,7 +1584,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "effectiveDate": "2024-03-20"
+                        "effectiveDate": "2024-03-20",
+                        "type": [
+                          "Regulation"
+                        ]
                       },
                       "assessmentCriteria": [
                         {
@@ -1740,7 +1609,7 @@
                       "assessedProduct": [
                         {
                           "product": {
-                            "id": "http://localhost:3000/gs1/01/09359502000041/10/54321?linkType=gs1:certificationInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000041/10/54321?linkType=gs1:certificationInfo",
                             "name": "Steel Coil",
                             "batchNumber": "54321"
                           }
@@ -1775,7 +1644,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "issueDate": "2011-01-01"
+                        "issueDate": "2011-01-01",
+                        "type": [
+                          "Standard"
+                        ]
                       },
                       "referenceRegulation": {
                         "id": "https://www.standards.org.au/standards-catalogue/standard-details?designation=as-nzs-1594-2002",
@@ -1786,7 +1658,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "effectiveDate": "2011-01-01"
+                        "effectiveDate": "2011-01-01",
+                        "type": [
+                          "Regulation"
+                        ]
                       },
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
@@ -1819,7 +1694,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "issueDate": "2010-01-01"
+                        "issueDate": "2010-01-01",
+                        "type": [
+                          "Standard"
+                        ]
                       },
                       "referenceRegulation": {
                         "id": "https://www.standards.org.au/standards-catalogue/standard-details?designation=as-nzs-3679-1-2010",
@@ -1830,7 +1708,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "effectiveDate": "2010-01-01"
+                        "effectiveDate": "2010-01-01",
+                        "type": [
+                          "Regulation"
+                        ]
                       },
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
@@ -1945,7 +1826,7 @@
                     "ConformityAttestation",
                     "Attestation"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502000034/10/725774099",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/10/725774099",
                   "name": "Traceability Certification Scheme",
                   "assessorLevel": "3rdParty",
                   "assessmentLevel": "Accredited",
@@ -1964,28 +1845,16 @@
                       ],
                       "id": "https://abr.business.gov.au/ABN/View?abn=40096692545",
                       "name": "AUSTRALASIAN CERTIFICATION AUTHORITY FOR REINFORCING AND STRUCTURAL STEELS LTD",
-                      "trustmark": {
-                        "type": [
-                          "BinaryFile"
-                        ]
-                      },
+                      "trustmark": {},
                       "issuingAuthority": {
                         "id": "https://www.abr.business.gov.au/ABN/View/49614982550",
                         "name": "JOINT ACCREDITATION SYSTEM OF AUSTRALIA & NEW ZEALAND",
                         "registeredId": "49614982550"
                       },
-                      "endorsementEvidence": {
-                        "type": [
-                          "Link"
-                        ]
-                      }
+                      "endorsementEvidence": {}
                     }
                   ],
                   "conformityCertificate": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
                     "linkURL": "http://example.com/AS_NZS_4671_2001_evidence.pdf",
                     "linkName": "Compliance evidence",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -1994,10 +1863,6 @@
                     "hashDigest": "hash_4671_2001"
                   },
                   "auditableEvidence": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
                     "linkURL": "http://example.com/AS_NZS_4671_2001_evidence.pdf",
                     "linkName": "AS/NZS 4671:2001",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -2019,9 +1884,6 @@
                     },
                     "issueDate": "2023-12-05",
                     "trustmark": {
-                      "type": [
-                        "BinaryFile"
-                      ],
                       "fileName": "JOINT ACCREDITATION SYSTEM OF AUSTRALIA & NEW ZEALAND",
                       "fileType": "image/webp",
                       "file": "https://upload.wikimedia.org/wikipedia/en/7/7d/Joint_Accreditation_System_of_Australia_and_New_Zealand.jpg"
@@ -2069,7 +1931,6 @@
                           ],
                           "id": "https://www.standards.org.au/standards-catalogue/standard-details?designation=as-nzs-4671-2001",
                           "name": "AS/NZS 4671:2001",
-                          "thresholdValues": [],
                           "description": "",
                           "conformityTopic": "environment.emissions",
                           "status": "active",
@@ -2084,7 +1945,7 @@
                       "assessedProduct": [
                         {
                           "product": {
-                            "id": "http://localhost:3000/gs1/01/09359502000034/10/725774099?linkType=gsi:sustainabilityInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/10/725774099?linkType=gsi:sustainabilityInfo",
                             "name": "Pile Cage",
                             "batchNumber": "725774099"
                           }
@@ -2096,42 +1957,6 @@
                             "id": "https://identifier.example.org/facility",
                             "name": "Main Steel Plant",
                             "registeredId": "FAC-1234",
-                            "locationInformation": {
-                              "type": [
-                                "Location"
-                              ],
-                              "plusCode": "https://plus.codes/4RRG6RJX+W3",
-                              "geoLocation": {
-                                "type": "Point",
-                                "coordinates": [
-                                  12.34,
-                                  56.78,
-                                  90.12
-                                ]
-                              },
-                              "geoBoundary": {
-                                "type": "Polygon",
-                                "coordinates": [
-                                  [
-                                    [
-                                      12.34,
-                                      56.78,
-                                      90.12
-                                    ]
-                                  ]
-                                ]
-                              }
-                            },
-                            "address": {
-                              "type": [
-                                "Address"
-                              ],
-                              "streetAddress": "level 11, 15 Example Street",
-                              "postalCode": "2601",
-                              "addressRegion": "ACT",
-                              "addressCountry": "AU",
-                              "addressLocality": "Example City"
-                            },
                             "IDverifiedByCAB": true
                           }
                         }
@@ -2164,7 +1989,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "issueDate": "2001-01-01"
+                        "issueDate": "2001-01-01",
+                        "type": [
+                          "Standard"
+                        ]
                       },
                       "referenceRegulation": {
                         "id": "https://www.standards.org.au/standards-catalogue/standard-details?designation=as-nzs-3678-2011",
@@ -2175,7 +2003,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "effectiveDate": "2024-03-20"
+                        "effectiveDate": "2024-03-20",
+                        "type": [
+                          "Regulation"
+                        ]
                       },
                       "assessmentCriteria": [
                         {
@@ -2197,7 +2028,7 @@
                       "assessedProduct": [
                         {
                           "product": {
-                            "id": "http://localhost:3000/gs1/01/09359502000034/10/725774099?linkType=gsi:sustainabilityInfo",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502000034/10/725774099?linkType=gsi:sustainabilityInfo",
                             "name": "Pile Cage",
                             "batchNumber": "725774099"
                           }
@@ -2232,7 +2063,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "issueDate": "2011-01-01"
+                        "issueDate": "2011-01-01",
+                        "type": [
+                          "Standard"
+                        ]
                       },
                       "referenceRegulation": {
                         "id": "https://www.standards.org.au/standards-catalogue/standard-details?designation=as-nzs-1594-2002",
@@ -2243,7 +2077,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "effectiveDate": "2011-01-01"
+                        "effectiveDate": "2011-01-01",
+                        "type": [
+                          "Regulation"
+                        ]
                       },
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
@@ -2276,7 +2113,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "issueDate": "2010-01-01"
+                        "issueDate": "2010-01-01",
+                        "type": [
+                          "Standard"
+                        ]
                       },
                       "referenceRegulation": {
                         "id": "https://www.standards.org.au/standards-catalogue/standard-details?designation=as-nzs-3679-1-2010",
@@ -2287,7 +2127,10 @@
                           "name": "STANDARDS AUSTRALIA LIMITED",
                           "registeredId": "85087326690"
                         },
-                        "effectiveDate": "2010-01-01"
+                        "effectiveDate": "2010-01-01",
+                        "type": [
+                          "Regulation"
+                        ]
                       },
                       "conformance": true,
                       "conformityTopic": "governance.compliance",

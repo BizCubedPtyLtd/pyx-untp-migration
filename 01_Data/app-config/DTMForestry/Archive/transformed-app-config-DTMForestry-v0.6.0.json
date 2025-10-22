@@ -43,7 +43,7 @@
                   "url": "https://jargon.sh/user/unece/ConformityCredential/v/0.6.0/artefacts/jsonSchemas/ConformityAttestation.json?class=ConformityAttestation"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502111112/10/001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111112/10/001",
                   "type": [
                     "ConformityAttestation",
                     "Attestation"
@@ -67,9 +67,6 @@
                       "id": "https://www.lls.nsw.gov.au/__data/assets/pdf_file/0019/1401661/PNF-Code-Northern-NSW.pdf",
                       "name": "Private Native Forestry Code of Practice for Northern NSW",
                       "trustmark": {
-                        "type": [
-                          "BinaryFile"
-                        ],
                         "fileName": "GHG protocol trust mark",
                         "fileType": "image/png",
                         "file": "iVBORw0KGgoAAAANSUhEUgAAADkAAAA2CAYAAAB9TjFQAAAABGdBTUEAAi/9H3pWy6vI9uFdAAAAAElFTkSuQmCC"
@@ -95,9 +92,6 @@
                     },
                     "issueDate": "2024-12-05",
                     "trustmark": {
-                      "type": [
-                        "BinaryFile"
-                      ],
                       "fileName": "GHG protocol trust mark",
                       "fileType": "image/png",
                       "file": "iVBORw0KGgoAAAANSUhEUgAAADkAAAA2CAYAAAB9TjFQAAAABGdBTUEAAi/9H3pWy6vI9uFdAAAAAElFTkSuQmCC"
@@ -143,7 +137,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/add_locationInfo_link_here",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/add_locationInfo_link_here",
                             "name": "Private Forest",
                             "registeredId": "123456791011"
                           }
@@ -253,7 +247,7 @@
                     "TransformationEvent",
                     "Event"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502111112/10/001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111112/10/001",
                   "processType": "Tree Harvesting",
                   "eventTime": "2024-09-01T12:00:00",
                   "action": "observe",
@@ -266,7 +260,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502111112/10/001?linkType=gs1:sustainabilityInfo",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111112/10/001?linkType=gs1:sustainabilityInfo",
                       "name": "Log Passport"
                     }
                   ],
@@ -382,76 +376,28 @@
                   "type": [
                     "ProductPassport"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502111112/10/001",
-                  "name": "Log from Harvest Teams",
-                  "registeredId": "09359502111112",
-                  "idScheme": {
-                    "id": "https://id.gs1.org/01/",
-                    "name": "Global Trade Identification Number (GTIN)"
-                  },
-                  "batchNumber": "001",
-                  "productImage": {
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111112/10/001",
+                  "product": {
                     "type": [
-                      "Link"
+                      "Product"
                     ],
-                    "linkURL": "http://localhost:3003/dpi_forestry_qld_logs.png",
-                    "linkName": "Harvest Team's Log"
-                  },
-                  "productCategory": [
-                    {
-                      "type": [
-                        "Classification"
-                      ],
-                      "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/31310",
-                      "code": "31310",
-                      "name": "Wood in the rough, weather or not stripped of bark or sapwood",
-                      "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
-                      "schemeName": "UN Central Product Classification (CPC)"
-                    }
-                  ],
-                  "furtherInformation": [
-                    {
+                    "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111112/10/001",
+                    "name": "Log from Harvest Teams",
+                    "registeredId": "09359502111112",
+                    "idScheme": {
+                      "id": "https://id.gs1.org/01/",
+                      "name": "Global Trade Identification Number (GTIN)"
+                    },
+                    "batchNumber": "001",
+                    "productImage": {
                       "type": [
                         "Link"
                       ],
-                      "linkURL": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
-                      "linkName": "Central Product Classification (CPC) Version 2.1 "
+                      "linkURL": "http://localhost:3003/dpi_forestry_qld_logs.png",
+                      "linkName": "Harvest Team's Log"
                     },
-                    {
-                      "type": [
-                        "Link"
-                      ],
-                      "linkURL": "http://localhost:3003/business_card_example.pdf",
-                      "linkName": "Seller Business Card - Example"
-                    }
-                  ],
-                  "producedByParty": {
-                    "id": "https://abr.business.gov.au/ABN/View?abn=66934348189",
-                    "name": "Department of Agriculture and Fisheries",
-                    "registeredId": "66934348189"
-                  },
-                  "producedAtFacility": {
-                    "id": "https://id.example-company.com/facility/123",
-                    "name": "Queensland State owned managed forest"
-                  },
-                  "dimensions": {
-                    "length": {
-                      "value": 11.9,
-                      "unit": "m"
-                    },
-                    "width": {
-                      "value": 30,
-                      "unit": "cm"
-                    }
-                  },
-                  "productionDate": "2025-01-24",
-                  "countryOfProduction": "Australia",
-                  "granularityLevel": "item",
-                  "materialsProvenance": [
-                    {
-                      "name": "Ironbark - Eucalyptus Paniculata",
-                      "originCountry": "AU",
-                      "materialType": {
+                    "productCategory": [
+                      {
                         "type": [
                           "Classification"
                         ],
@@ -460,13 +406,41 @@
                         "name": "Wood in the rough, weather or not stripped of bark or sapwood",
                         "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
                         "schemeName": "UN Central Product Classification (CPC)"
-                      },
-                      "mass": {
-                        "value": 5,
-                        "unit": "PCS"
                       }
-                    }
-                  ],
+                    ],
+                    "furtherInformation": [
+                      {
+                        "linkURL": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+                        "linkName": "Central Product Classification (CPC) Version 2.1 "
+                      },
+                      {
+                        "linkURL": "http://localhost:3003/business_card_example.pdf",
+                        "linkName": "Seller Business Card - Example"
+                      }
+                    ],
+                    "producedByParty": {
+                      "id": "https://abr.business.gov.au/ABN/View?abn=66934348189",
+                      "name": "Department of Agriculture and Fisheries",
+                      "registeredId": "66934348189"
+                    },
+                    "producedAtFacility": {
+                      "id": "https://id.example-company.com/facility/123",
+                      "name": "Queensland State owned managed forest"
+                    },
+                    "dimensions": {
+                      "length": {
+                        "value": 11.9,
+                        "unit": "m"
+                      },
+                      "width": {
+                        "value": 30,
+                        "unit": "cm"
+                      }
+                    },
+                    "productionDate": "2025-01-24",
+                    "countryOfProduction": "Australia",
+                    "description": "Raw logs authorised for extraction from a Queensland State Managed Forest"
+                  },
                   "conformityClaim": [
                     {
                       "type": [
@@ -519,11 +493,7 @@
                       "conformance": true,
                       "conformityTopic": "environment.deforestation",
                       "conformityEvidence": {
-                        "type": [
-                          "SecureLink",
-                          "Link"
-                        ],
-                        "linkURL": "http://localhost:3000/gs1/01/09359502111112/10/001?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502111112/10/001?linkType=gs1:certificationInfo",
                         "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
                         "hashMethod": "SHA-256",
                         "linkName": "Private Native Forestry Approval",
@@ -533,13 +503,14 @@
                       "id": "AFS 603520"
                     }
                   ],
+                  "circularityScorecard": {},
                   "traceabilityInformation": [
                     {
                       "valueChainProcess": "Tree Harvesting",
                       "verifiedRatio": 1,
                       "traceabilityEvent": [
                         {
-                          "linkURL": "http://localhost:3000/gs1/01/09359502111112/10/001?linkType=gs1:traceability",
+                          "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502111112/10/001?linkType=gs1:traceability",
                           "linkName": "Log Docket",
                           "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dte",
                           "hashDigest": "6239119",
@@ -549,28 +520,12 @@
                       ]
                     }
                   ],
-                  "description": "Raw logs authorised for extraction from a Queensland State Managed Forest",
-                  "product": {
-                    "type": [
-                      "Product"
-                    ],
-                    "id": "http://localhost:3000/gs1/01/09359502111112/10/001",
-                    "name": "Log from Harvest Teams",
-                    "registeredId": "09359502111112",
-                    "idScheme": {
-                      "id": "https://id.gs1.org/01/",
-                      "name": "Global Trade Identification Number (GTIN)"
-                    },
-                    "batchNumber": "001",
-                    "productImage": {
-                      "type": [
-                        "Link"
-                      ],
-                      "linkURL": "http://localhost:3003/dpi_forestry_qld_logs.png",
-                      "linkName": "Harvest Team's Log"
-                    },
-                    "productCategory": [
-                      {
+                  "granularityLevel": "item",
+                  "materialsProvenance": [
+                    {
+                      "name": "Ironbark - Eucalyptus Paniculata",
+                      "originCountry": "AU",
+                      "materialType": {
                         "type": [
                           "Classification"
                         ],
@@ -579,47 +534,13 @@
                         "name": "Wood in the rough, weather or not stripped of bark or sapwood",
                         "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
                         "schemeName": "UN Central Product Classification (CPC)"
-                      }
-                    ],
-                    "furtherInformation": [
-                      {
-                        "type": [
-                          "Link"
-                        ],
-                        "linkURL": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
-                        "linkName": "Central Product Classification (CPC) Version 2.1 "
                       },
-                      {
-                        "type": [
-                          "Link"
-                        ],
-                        "linkURL": "http://localhost:3003/business_card_example.pdf",
-                        "linkName": "Seller Business Card - Example"
+                      "mass": {
+                        "value": 5,
+                        "unit": "PCS"
                       }
-                    ],
-                    "producedByParty": {
-                      "id": "https://abr.business.gov.au/ABN/View?abn=66934348189",
-                      "name": "Department of Agriculture and Fisheries",
-                      "registeredId": "66934348189"
-                    },
-                    "producedAtFacility": {
-                      "id": "https://id.example-company.com/facility/123",
-                      "name": "Queensland State owned managed forest"
-                    },
-                    "dimensions": {
-                      "length": {
-                        "value": 11.9,
-                        "unit": "m"
-                      },
-                      "width": {
-                        "value": 30,
-                        "unit": "cm"
-                      }
-                    },
-                    "productionDate": "2025-01-24",
-                    "countryOfProduction": "Australia",
-                    "description": "Raw logs authorised for extraction from a Queensland State Managed Forest"
-                  },
+                    }
+                  ],
                   "emissionsScorecard": {
                     "declaredUnit": "kg",
                     "carbonFootprint": 0,
@@ -723,7 +644,7 @@
                     "TransformationEvent",
                     "Event"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502111112/10/0011",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111112/10/0011",
                   "processType": "Sale Invoice to Export Yard",
                   "eventTime": "2024-09-01T12:00:00",
                   "action": "observe",
@@ -736,7 +657,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502111136/10/002?linkType=gs1:traceability",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111136/10/002?linkType=gs1:traceability",
                       "name": "Logs aggregation into Container"
                     }
                   ],
@@ -745,7 +666,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502111112/10/001?linkType=gs1:sustainabilityInfo",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111112/10/001?linkType=gs1:sustainabilityInfo",
                       "name": "Log Passport"
                     }
                   ]
@@ -864,7 +785,7 @@
                   "url": "https://jargon.sh/user/unece/ConformityCredential/v/0.6.0/artefacts/jsonSchemas/ConformityAttestation.json?class=ConformityAttestation"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502111129/10/001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111129/10/001",
                   "type": [
                     "ConformityAttestation",
                     "Attestation"
@@ -888,9 +809,6 @@
                       "id": "https://www.lls.nsw.gov.au/__data/assets/pdf_file/0019/1401661/PNF-Code-Northern-NSW.pdf",
                       "name": "Private Native Forestry Code of Practice for Northern NSW",
                       "trustmark": {
-                        "type": [
-                          "BinaryFile"
-                        ],
                         "fileName": "GHG protocol trust mark",
                         "fileType": "image/png",
                         "file": "iVBORw0KGgoAAAANSUhEUgAAADkAAAA2CAYAAAB9TjFQAAAABGdBTUEAAi/9H3pWy6vI9uFdAAAAAElFTkSuQmCC"
@@ -903,10 +821,6 @@
                     }
                   ],
                   "conformityCertificate": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
                     "linkURL": "http://localhost:3003/add_conformity_cert_here.pdf",
                     "linkName": "Conformity certificate",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -915,10 +829,6 @@
                     "encryptionMethod": "none"
                   },
                   "auditableEvidence": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
                     "linkURL": "http://localhost:3003/add_cert_here.pdf",
                     "linkName": "Auditable Evidence",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -940,9 +850,6 @@
                     },
                     "issueDate": "2024-12-05",
                     "trustmark": {
-                      "type": [
-                        "BinaryFile"
-                      ],
                       "fileName": "GHG protocol trust mark",
                       "fileType": "image/png",
                       "file": "iVBORw0KGgoAAAANSUhEUgAAADkAAAA2CAYAAAB9TjFQAAAABGdBTUEAAi/9H3pWy6vI9uFdAAAAAElFTkSuQmCC"
@@ -988,7 +895,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/add_locationInfo_link_here",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/add_locationInfo_link_here",
                             "name": "Private Forest",
                             "registeredId": "123456791011"
                           }
@@ -1094,7 +1001,7 @@
                   "url": "https://jargon.sh/user/unece/ConformityCredential/v/0.6.0/artefacts/jsonSchemas/ConformityAttestation.json?class=ConformityAttestation"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502111129/10/002",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111129/10/002",
                   "type": [
                     "ConformityAttestation",
                     "Attestation"
@@ -1118,9 +1025,6 @@
                       "id": "https://cdn.pefc.org/pefc.org/media/2020-02/66954288-f67f-4297-9912-5a62fcc50ddf/23621b7b-3a5d-55c9-be4d-4e6a5f61c789.pdf",
                       "name": "Chain of Custody of Forest and Tree Based Products Requirements",
                       "trustmark": {
-                        "type": [
-                          "BinaryFile"
-                        ],
                         "fileName": "GHG protocol trust mark",
                         "fileType": "image/png",
                         "file": "iVBORw0KGgoAAAANSUhEUgAAADkAAAA2CAYAAAB9TjFQAAAABGdBTUEAAi/9H3pWy6vI9uFdAAAAAElFTkSuQmCC"
@@ -1133,10 +1037,6 @@
                     }
                   ],
                   "conformityCertificate": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
                     "linkURL": "http://localhost:3003/pefc_certificate.pdf",
                     "linkName": "Conformity certificate",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -1145,10 +1045,6 @@
                     "encryptionMethod": "none"
                   },
                   "auditableEvidence": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
                     "linkURL": "http://localhost:3003/supplier_pefc_certificate.pdf",
                     "linkName": "Responsible Wood Certificate",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -1170,9 +1066,6 @@
                     },
                     "issueDate": "2020-01-05",
                     "trustmark": {
-                      "type": [
-                        "BinaryFile"
-                      ],
                       "fileName": "GHG protocol trust mark",
                       "fileType": "image/png",
                       "file": "iVBORw0KGgoAAAANSUhEUgAAADkAAAA2CAYAAAB9TjFQAAAABGdBTUEAAi/9H3pWy6vI9uFdAAAAAElFTkSuQmCC"
@@ -1218,7 +1111,7 @@
                       "assessedFacility": [
                         {
                           "facility": {
-                            "id": "http://localhost:3000/gs1/414/add_locationInfo_link_here",
+                            "id": "http://localhost:3000/api/1.0.0/gs1/414/add_locationInfo_link_here",
                             "name": "Timber Supply Company managed forest",
                             "registeredId": "123456791011"
                           }
@@ -1328,7 +1221,7 @@
                     "TransformationEvent",
                     "Event"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502111129/10/001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111129/10/001",
                   "processType": "Tree cutting",
                   "eventTime": "2024-09-01T12:00:00",
                   "action": "observe",
@@ -1341,7 +1234,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502111129/10/001?linkType=gs1:sustainabilityInfo",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111129/10/001?linkType=gs1:sustainabilityInfo",
                       "name": "Log Passport"
                     }
                   ],
@@ -1350,7 +1243,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/add_tree_id_here?linkType=gs1:traceability",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/add_tree_id_here?linkType=gs1:traceability",
                       "name": "A Tree"
                     }
                   ]
@@ -1454,7 +1347,7 @@
                   "url": "https://jargon.sh/user/unece/DigitalProductPassport/v/0.6.0/artefacts/jsonSchemas/ProductPassport.json?class=ProductPassport"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502111129/10/001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111129/10/001",
                   "type": [
                     "ProductPassport"
                   ],
@@ -1462,7 +1355,7 @@
                     "type": [
                       "Product"
                     ],
-                    "id": "http://localhost:3000/gs1/01/09359502111129/10/001",
+                    "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111129/10/001",
                     "name": "Logs from Timber Supply Company",
                     "registeredId": "09359502111129",
                     "idScheme": {
@@ -1491,16 +1384,10 @@
                     ],
                     "furtherInformation": [
                       {
-                        "type": [
-                          "Link"
-                        ],
                         "linkURL": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
                         "linkName": "Central Product Classification (CPC) Version 2.1 "
                       },
                       {
-                        "type": [
-                          "Link"
-                        ],
                         "linkURL": "http://localhost:3003/business_card_example.pdf",
                         "linkName": "Seller Business Card - Example"
                       }
@@ -1554,11 +1441,7 @@
                       "conformance": true,
                       "conformityTopic": "environment.deforestation",
                       "conformityEvidence": {
-                        "type": [
-                          "SecureLink",
-                          "Link"
-                        ],
-                        "linkURL": "http://localhost:3000/gs1/01/09359502111129/10/002?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502111129/10/002?linkType=gs1:certificationInfo",
                         "linkName": "Responsible Wood Certificate",
                         "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc"
                       }
@@ -1627,7 +1510,7 @@
                       "verifiedRatio": 1,
                       "traceabilityEvent": [
                         {
-                          "linkURL": "http://localhost:3000/gs1/01/09359502111129/10/001?linkType=gs1:traceability",
+                          "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502111129/10/001?linkType=gs1:traceability",
                           "linkName": "Log Docket Cutter",
                           "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dte",
                           "hashDigest": "6239119",
@@ -1740,7 +1623,7 @@
                     "TransformationEvent",
                     "Event"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502111129/10/0011",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111129/10/0011",
                   "processType": "Sales Invoice to Export Yard",
                   "eventTime": "2024-09-01T12:00:00",
                   "action": "observe",
@@ -1753,7 +1636,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502111136/10/002?linkType=gs1:traceability",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111136/10/002?linkType=gs1:traceability",
                       "name": "Logs aggregation into Container"
                     }
                   ],
@@ -1762,7 +1645,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502111129/10/001?linkType=gs1:sustainabilityInfo",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111129/10/001?linkType=gs1:sustainabilityInfo",
                       "name": "Log Passport"
                     }
                   ]
@@ -1881,7 +1764,7 @@
                   "url": "https://jargon.sh/user/unece/ConformityCredential/v/0.6.0/artefacts/jsonSchemas/ConformityAttestation.json?class=ConformityAttestation"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502111136/10/001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111136/10/001",
                   "type": [
                     "ConformityAttestation",
                     "Attestation"
@@ -1905,9 +1788,6 @@
                       "id": "https://www.publications.qld.gov.au/ckan-publications-attachments-prod/resources/e118e5b9-78bf-4015-9fd7-4f39d33b53e7/afs-603520-certificate-registration.pdf?ETag=eb50d466e33597690616cd8fdae7754c",
                       "name": "certificate of registration Forest Management System - AS/NZS 4708:2021",
                       "trustmark": {
-                        "type": [
-                          "BinaryFile"
-                        ],
                         "fileName": "Responsble Wood Logo",
                         "fileType": "image/png",
                         "file": "http://localhost:3003/responsible_wood_logo.png"
@@ -1920,10 +1800,6 @@
                     }
                   ],
                   "conformityCertificate": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
                     "linkURL": "http://localhost:3003/add_conformity_cert_here.pdf",
                     "linkName": "DAFF Commonwealth conformity certificate",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -1932,10 +1808,6 @@
                     "encryptionMethod": "none"
                   },
                   "auditableEvidence": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
                     "linkURL": "http://localhost:3003/add_cert_here.pdf",
                     "linkName": "DAFF Commonwealth Export License",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -1957,9 +1829,6 @@
                     },
                     "issueDate": "2024-12-05",
                     "trustmark": {
-                      "type": [
-                        "BinaryFile"
-                      ],
                       "fileName": "GHG protocol trust mark",
                       "fileType": "image/png",
                       "file": "iVBORw0KGgoAAAANSUhEUgAAADkAAAA2CAYAAAB9TjFQAAAABGdBTUEAAi/9H3pWy6vI9uFdAAAAAElFTkSuQmCC"
@@ -2057,7 +1926,7 @@
                   "url": "https://jargon.sh/user/unece/ConformityCredential/v/0.6.0/artefacts/jsonSchemas/ConformityAttestation.json?class=ConformityAttestation"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502111136/10/002",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111136/10/002",
                   "type": [
                     "ConformityAttestation",
                     "Attestation"
@@ -2081,9 +1950,6 @@
                       "id": "https://abr.business.gov.au/ABN/View/65051866409",
                       "name": "Pacific International Lines (PTE) LTD",
                       "trustmark": {
-                        "type": [
-                          "BinaryFile"
-                        ],
                         "fileName": "Responsble Wood Logo",
                         "fileType": "image/png",
                         "file": "http://localhost:3003/responsible_wood_logo.png"
@@ -2096,10 +1962,6 @@
                     }
                   ],
                   "conformityCertificate": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
                     "linkURL": "http://localhost:3003/add_conformity_cert_here.pdf",
                     "linkName": "Conformity certificate",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -2108,10 +1970,6 @@
                     "encryptionMethod": "none"
                   },
                   "auditableEvidence": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
                     "linkURL": "http://localhost:3003/au_to_cn_bill_of_lading.pdf",
                     "linkName": "Bill of Lading",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -2133,9 +1991,6 @@
                     },
                     "issueDate": "2018-12-11",
                     "trustmark": {
-                      "type": [
-                        "BinaryFile"
-                      ],
                       "fileName": "GHG protocol trust mark",
                       "fileType": "image/png",
                       "file": "iVBORw0KGgoAAAANSUhEUgAAADkAAAA2CAYAAAB9TjFQAAAABGdBTUEAAi/9H3pWy6vI9uFdAAAAAElFTkSuQmCC"
@@ -2237,7 +2092,7 @@
                     "TransformationEvent",
                     "Event"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502111136/10/002",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111136/10/002",
                   "processType": "Logs aggregation into Container",
                   "eventTime": "2024-09-01T12:00:00",
                   "action": "observe",
@@ -2250,7 +2105,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502111136/10/PCIU8757515?linkType=gs1:sustainabilityInfo",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111136/10/PCIU8757515?linkType=gs1:sustainabilityInfo",
                       "name": "Log Container for Export"
                     }
                   ],
@@ -2259,7 +2114,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502111129/10/0011?linkType=gs1:traceability",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111129/10/0011?linkType=gs1:traceability",
                       "name": "Sales Invoice to Export Yard"
                     }
                   ]
@@ -2363,7 +2218,7 @@
                   "url": "https://jargon.sh/user/unece/DigitalProductPassport/v/0.6.0/artefacts/jsonSchemas/ProductPassport.json?class=ProductPassport"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502111136/10/PCIU8757515",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111136/10/PCIU8757515",
                   "type": [
                     "ProductPassport"
                   ],
@@ -2371,7 +2226,7 @@
                     "type": [
                       "Product"
                     ],
-                    "id": "http://localhost:3000/gs1/01/09359502111136/10/PCIU8757515",
+                    "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111136/10/PCIU8757515",
                     "name": "Logs Container for Export to China",
                     "registeredId": "09359502111136",
                     "idScheme": {
@@ -2400,16 +2255,10 @@
                     ],
                     "furtherInformation": [
                       {
-                        "type": [
-                          "Link"
-                        ],
                         "linkURL": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
                         "linkName": "Central Product Classification (CPC) Version 2.1 "
                       },
                       {
-                        "type": [
-                          "Link"
-                        ],
                         "linkURL": "http://localhost:3003/business_card_example.pdf",
                         "linkName": "Seller Business Card - Example"
                       }
@@ -2459,11 +2308,7 @@
                       "conformance": true,
                       "conformityTopic": "environment.deforestation",
                       "conformityEvidence": {
-                        "type": [
-                          "SecureLink",
-                          "Link"
-                        ],
-                        "linkURL": "http://localhost:3000/gs1/01/09359502111129/10/002?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502111129/10/002?linkType=gs1:certificationInfo",
                         "linkName": "Responsible Wood Certificate",
                         "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc"
                       }
@@ -2519,11 +2364,7 @@
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
                       "conformityEvidence": {
-                        "type": [
-                          "SecureLink",
-                          "Link"
-                        ],
-                        "linkURL": "http://localhost:3000/gs1/01/09359502111136/10/001?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502111136/10/001?linkType=gs1:certificationInfo",
                         "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
                         "hashMethod": "SHA-256",
                         "linkName": "DAF Commonwealth Export License",
@@ -2557,7 +2398,7 @@
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
                       "conformityEvidence": {
-                        "linkURL": "http://localhost:3000/gs1/01/09359502111136/10/002?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502111136/10/002?linkType=gs1:certificationInfo",
                         "linkName": "Bill of Lading - Export Yard",
                         "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
                         "hashDigest": "6239119",
@@ -2629,7 +2470,7 @@
                       "verifiedRatio": 1,
                       "traceabilityEvent": [
                         {
-                          "linkURL": "http://localhost:3000/gs1/01/09359502111136/10/002?linkType=gs1:traceability",
+                          "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502111136/10/002?linkType=gs1:traceability",
                           "linkName": "Logs aggregation into Container",
                           "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dte",
                           "hashDigest": "6239119",
@@ -2753,7 +2594,7 @@
                   "url": "https://jargon.sh/user/unece/ConformityCredential/v/0.6.0/artefacts/jsonSchemas/ConformityAttestation.json?class=ConformityAttestation"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502111150/10/001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111150/10/001",
                   "type": [
                     "ConformityAttestation",
                     "Attestation"
@@ -2775,11 +2616,7 @@
                       ],
                       "id": "https://english.www.gov.cn/archive/whitepaper/202112/29/content_WS61cc01b8c6d09c94e48a2df0.html",
                       "name": "China's Export Controls",
-                      "trustmark": {
-                        "type": [
-                          "BinaryFile"
-                        ]
-                      },
+                      "trustmark": {},
                       "issuingAuthority": {
                         "id": "https://www.gov.cn/",
                         "name": "Chinese Government"
@@ -2787,21 +2624,13 @@
                     }
                   ],
                   "conformityCertificate": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
-                    "linkURL": "http://localhost:3000/gs1/01/09359502111150/10/001_add_license_here.json",
+                    "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502111150/10/001_add_license_here.json",
                     "linkName": "Chinese Government Export License",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
                     "hashMethod": "SHA-256",
                     "encryptionMethod": "none"
                   },
                   "auditableEvidence": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
                     "linkURL": "http://localhost:3003/add_cert_here.pdf",
                     "linkName": "Auditable Evidence",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -2822,9 +2651,6 @@
                     },
                     "issueDate": "2023-12-05",
                     "trustmark": {
-                      "type": [
-                        "BinaryFile"
-                      ],
                       "fileName": "GHG protocol trust mark",
                       "fileType": "image/png",
                       "file": "iVBORw0KGgoAAAANSUhEUgAAADkAAAA2CAYAAAB9TjFQAAAABGdBTUEAAi/9H3pWy6vI9uFdAAAAAElFTkSuQmCC"
@@ -2923,7 +2749,7 @@
                   "url": "https://jargon.sh/user/unece/ConformityCredential/v/0.6.0/artefacts/jsonSchemas/ConformityAttestation.json?class=ConformityAttestation"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502111150/10/SH19D00038",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111150/10/SH19D00038",
                   "type": [
                     "ConformityAttestation",
                     "Attestation"
@@ -2945,11 +2771,7 @@
                       ],
                       "id": "https://english.www.gov.cn/archive/whitepaper/202112/29/content_WS61cc01b8c6d09c94e48a2df0.html",
                       "name": "China's Export Controls",
-                      "trustmark": {
-                        "type": [
-                          "BinaryFile"
-                        ]
-                      },
+                      "trustmark": {},
                       "issuingAuthority": {
                         "id": "https://www.gov.cn/",
                         "name": "Chinese Government"
@@ -2957,21 +2779,13 @@
                     }
                   ],
                   "conformityCertificate": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
-                    "linkURL": "http://localhost:3000/gs1/01/09359502111150/10/add_license_here.json",
+                    "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502111150/10/add_license_here.json",
                     "linkName": "Chinese Government Export License",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
                     "hashMethod": "SHA-256",
                     "encryptionMethod": "none"
                   },
                   "auditableEvidence": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
                     "linkURL": "http://localhost:3003/cn_to_au_bill_of_lading.pdf",
                     "linkName": "Auditable Evidence",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -2992,9 +2806,6 @@
                     },
                     "issueDate": "2023-12-05",
                     "trustmark": {
-                      "type": [
-                        "BinaryFile"
-                      ],
                       "fileName": "GHG protocol trust mark",
                       "fileType": "image/png",
                       "file": "iVBORw0KGgoAAAANSUhEUgAAADkAAAA2CAYAAAB9TjFQAAAABGdBTUEAAi/9H3pWy6vI9uFdAAAAAElFTkSuQmCC"
@@ -3097,7 +2908,7 @@
                     "TransformationEvent",
                     "Event"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502111150/10/EVP1811",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111150/10/EVP1811",
                   "processType": "Slicing Logs into veneers",
                   "eventTime": "2024-09-01T12:00:00",
                   "action": "observe",
@@ -3110,7 +2921,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502111150/10/MAT19001?linkType=gs1:traceability",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111150/10/MAT19001?linkType=gs1:traceability",
                       "name": "Sliced Veneers Bundles"
                     }
                   ],
@@ -3119,7 +2930,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502111136/10/PCIU8757515?linkType=gs1:sustainabilityInfo",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111136/10/PCIU8757515?linkType=gs1:sustainabilityInfo",
                       "name": "Log container"
                     }
                   ]
@@ -3227,7 +3038,7 @@
                     "TransformationEvent",
                     "Event"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502111150/10/MAT19001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111150/10/MAT19001",
                   "processType": "Bundling Veneers",
                   "eventTime": "2024-09-01T12:00:00",
                   "action": "observe",
@@ -3240,7 +3051,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502111150/10/MRSU4178379?linkType=gs1:sustainabilityInfo",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111150/10/MRSU4178379?linkType=gs1:sustainabilityInfo",
                       "name": "Veneer Bundles Container Export Passport"
                     }
                   ],
@@ -3249,7 +3060,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502111150/10/EVP1811?linkType=gs1:traceability",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111150/10/EVP1811?linkType=gs1:traceability",
                       "name": "Logs Slicing"
                     }
                   ]
@@ -3353,7 +3164,7 @@
                   "url": "https://jargon.sh/user/unece/DigitalProductPassport/v/0.6.0/artefacts/jsonSchemas/ProductPassport.json?class=ProductPassport"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502111150/10/MRSU4178379",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111150/10/MRSU4178379",
                   "type": [
                     "ProductPassport"
                   ],
@@ -3361,7 +3172,7 @@
                     "type": [
                       "Product"
                     ],
-                    "id": "http://localhost:3000/gs1/01/09359502111150/10/MRSU4178379",
+                    "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111150/10/MRSU4178379",
                     "name": "Veneer Bundles Container for Export to Australia",
                     "registeredId": "09359502111150",
                     "idScheme": {
@@ -3390,9 +3201,6 @@
                     ],
                     "furtherInformation": [
                       {
-                        "type": [
-                          "Link"
-                        ],
                         "linkURL": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
                         "linkName": "Central Product Classification (CPC) Version 2.1 "
                       }
@@ -3440,11 +3248,7 @@
                       "conformance": true,
                       "conformityTopic": "environment.deforestation",
                       "conformityEvidence": {
-                        "type": [
-                          "SecureLink",
-                          "Link"
-                        ],
-                        "linkURL": "http://localhost:3000/gs1/01/09359502111129/10/002?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502111129/10/002?linkType=gs1:certificationInfo",
                         "linkName": "Responsible Wood Certificate",
                         "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc"
                       }
@@ -3500,11 +3304,7 @@
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
                       "conformityEvidence": {
-                        "type": [
-                          "SecureLink",
-                          "Link"
-                        ],
-                        "linkURL": "http://localhost:3000/gs1/01/09359502111150/10/001?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502111150/10/001?linkType=gs1:certificationInfo",
                         "hashDigest": "6239119dda5bd4c8a6ffb832fe16feaa5c27b7dba154d24c53d4470a2c69adc2",
                         "hashMethod": "SHA-256",
                         "linkName": "Chinese Government Export License",
@@ -3598,7 +3398,7 @@
                       "verifiedRatio": 1,
                       "traceabilityEvent": [
                         {
-                          "linkURL": "http://localhost:3000/gs1/01/09359502111150/10/MAT19001?linkType=gs1:traceability",
+                          "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502111150/10/MAT19001?linkType=gs1:traceability",
                           "linkName": "Sliced Veneers Bundles",
                           "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dte",
                           "hashDigest": "6239119",
@@ -3722,7 +3522,7 @@
                   "url": "https://jargon.sh/user/unece/ConformityCredential/v/0.6.0/artefacts/jsonSchemas/ConformityAttestation.json?class=ConformityAttestation"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502111143/10/004",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111143/10/004",
                   "type": [
                     "ConformityAttestation",
                     "Attestation"
@@ -3744,11 +3544,7 @@
                       ],
                       "id": "https://www.agriculture.gov.au/biosecurity-trade/import/goods/timber",
                       "name": "Importing timber, wooden articles, bamboo and related products",
-                      "trustmark": {
-                        "type": [
-                          "BinaryFile"
-                        ]
-                      },
+                      "trustmark": {},
                       "issuingAuthority": {
                         "id": "https://www.agriculture.gov.au/",
                         "name": "DAFF Commonwealth"
@@ -3756,21 +3552,13 @@
                     }
                   ],
                   "conformityCertificate": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
-                    "linkURL": "http://localhost:3000/gs1/01/09359502111143/10/add_certificate_here.json",
+                    "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502111143/10/add_certificate_here.json",
                     "linkName": "DAFF Commonwealth Import License",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
                     "hashMethod": "SHA-256",
                     "encryptionMethod": "none"
                   },
                   "auditableEvidence": {
-                    "type": [
-                      "SecureLink",
-                      "Link"
-                    ],
                     "linkURL": "http://localhost:3003/add_cert_here.pdf",
                     "linkName": "Auditable Evidence",
                     "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc",
@@ -3791,9 +3579,6 @@
                     },
                     "issueDate": "2023-12-05",
                     "trustmark": {
-                      "type": [
-                        "BinaryFile"
-                      ],
                       "fileName": "GHG protocol trust mark",
                       "fileType": "image/png",
                       "file": "iVBORw0KGgoAAAANSUhEUgAAADkAAAA2CAYAAAB9TjFQAAAABGdBTUEAAi/9H3pWy6vI9uFdAAAAAElFTkSuQmCC"
@@ -3896,7 +3681,7 @@
                     "TransformationEvent",
                     "Event"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502111143/10/004",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111143/10/004",
                   "processType": "Unpacking Veneers Bundles",
                   "eventTime": "2024-09-01T12:00:00",
                   "action": "observe",
@@ -3909,7 +3694,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502111143/10/OR003771?linkType=gs1:sustainabilityInfo",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111143/10/OR003771?linkType=gs1:sustainabilityInfo",
                       "name": "Sliced Veneer"
                     }
                   ],
@@ -3918,7 +3703,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502111150/10/MRSU4178379?linkType=gs1:sustainabilityInfo",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111150/10/MRSU4178379?linkType=gs1:sustainabilityInfo",
                       "name": "Veneer Bundles Container"
                     }
                   ]
@@ -4022,7 +3807,7 @@
                   "url": "https://jargon.sh/user/unece/DigitalProductPassport/v/0.6.0/artefacts/jsonSchemas/ProductPassport.json?class=ProductPassport"
                 },
                 "data": {
-                  "id": "http://localhost:3000/gs1/01/09359502111143/10/OR003771",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111143/10/OR003771",
                   "type": [
                     "ProductPassport"
                   ],
@@ -4030,7 +3815,7 @@
                     "type": [
                       "Product"
                     ],
-                    "id": "http://localhost:3000/gs1/01/09359502111143/10/OR003771",
+                    "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111143/10/OR003771",
                     "name": "Sliced Veneer",
                     "registeredId": "09359502111143",
                     "idScheme": {
@@ -4080,7 +3865,7 @@
                     "productionDate": "2022-10-27",
                     "countryOfProduction": "Australia",
                     "producedAtFacility": {
-                      "id": "http://localhost:3000/gs1/414/123456",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/414/123456",
                       "name": "Sample Facility"
                     }
                   },
@@ -4135,11 +3920,7 @@
                       "conformance": true,
                       "conformityTopic": "governance.compliance",
                       "conformityEvidence": {
-                        "type": [
-                          "SecureLink",
-                          "Link"
-                        ],
-                        "linkURL": "http://localhost:3000/gs1/01/09359502111143/10/004?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502111143/10/004?linkType=gs1:certificationInfo",
                         "hashDigest": "",
                         "hashMethod": "SHA-256",
                         "linkName": "DAFF Commonwealth Import License",
@@ -4238,11 +4019,7 @@
                       "conformance": true,
                       "conformityTopic": "environment.deforestation",
                       "conformityEvidence": {
-                        "type": [
-                          "SecureLink",
-                          "Link"
-                        ],
-                        "linkURL": "http://localhost:3000/gs1/01/09359502111129/10/002?linkType=gs1:certificationInfo",
+                        "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502111129/10/002?linkType=gs1:certificationInfo",
                         "linkName": "Timber Supply Company's Responsible Wood Certificate",
                         "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dcc"
                       }
@@ -4308,7 +4085,7 @@
                       "verifiedRatio": 1,
                       "traceabilityEvent": [
                         {
-                          "linkURL": "http://localhost:3000/gs1/01/09359502111167/10/004?linkType=gs1:traceability",
+                          "linkURL": "http://localhost:3000/api/1.0.0/gs1/01/09359502111167/10/004?linkType=gs1:traceability",
                           "linkName": "Veneer Laminating",
                           "linkType": "https://test.uncefact.org/vocabulary/linkTypes/dte",
                           "hashDigest": "6239119",
@@ -4429,7 +4206,7 @@
                     "TransformationEvent",
                     "Event"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502111167/10/002",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111167/10/002",
                   "processType": "Selling Finshed Veneer Product",
                   "eventTime": "2024-09-01T12:00:00",
                   "action": "observe",
@@ -4442,7 +4219,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502111174/10/001?linkType=gs1:traceability",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111174/10/001?linkType=gs1:traceability",
                       "name": "Construction of New Performing Arts Center"
                     }
                   ],
@@ -4451,7 +4228,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502111167/10/001?linkType=gs1:sustainabilityInfo",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111167/10/001?linkType=gs1:sustainabilityInfo",
                       "name": " Finished Veneer Product"
                     }
                   ]
@@ -4574,7 +4351,7 @@
                     "TransformationEvent",
                     "Event"
                   ],
-                  "id": "http://localhost:3000/gs1/01/09359502111174/10/001",
+                  "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111174/10/001",
                   "processType": "Construction of New Center",
                   "eventTime": "2024-09-01T12:00:00",
                   "action": "observe",
@@ -4587,7 +4364,7 @@
                       "type": [
                         "Item"
                       ],
-                      "id": "http://localhost:3000/gs1/01/09359502111167/10/002?linkType=gs1:traceability",
+                      "id": "http://localhost:3000/api/1.0.0/gs1/01/09359502111167/10/002?linkType=gs1:traceability",
                       "name": "Finished Veneers Sale Invoice"
                     }
                   ]

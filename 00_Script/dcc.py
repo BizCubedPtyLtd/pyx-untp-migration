@@ -57,7 +57,17 @@ class DCCTransformer(CredentialTransformer):
             isasuedToParty = credential_subject.get('issuedToParty', {})
             clean_data_0 = self._clean_identifier_list(isasuedToParty, ["type", "idScheme"]) 
             credential_subject["issuedToParty"] = clean_data_0
-        
+
+        # Clean ConformityCertificate and ConformityEvidence type removal
+        if "conformityCertificate" in credential_subject:
+            conformityCertificate = credential_subject.get('conformityCertificate', {})
+            if "type" in conformityCertificate:
+                del conformityCertificate["type"]
+        if "auditableEvidence" in credential_subject:
+            auditableEvidence = credential_subject.get('auditableEvidence', {})
+            if "type" in auditableEvidence:
+                    del auditableEvidence["type"]
+
         # assessedOrganisation and auditor simplified to inline party objects, removing idScheme references.
         assessments = credential_subject.get("assessment", {})
         for assessment in assessments:
@@ -72,6 +82,16 @@ class DCCTransformer(CredentialTransformer):
             if "assessedEntity" in assessment:
                 ### RESOLVE JSON-LD SCHEMA VALIDATION ISSUE: removes assessedProduct as not relevant to dpp###
                 del assessment['assessedEntity']
+            if "assessedFacility" in assessment:
+                assessedFacility = assessment.get('assessedFacility', {})
+                for assessed in assessedFacility:
+                    print('assessedFacility before deletion:', assessed)
+                    if "locationInformation" in assessed:
+                        print('inside locationInformation')
+                        del assessed["locationInformation"]
+                    if "address" in assessed:
+                        print('inside address')
+                        del assessed["address"]
             # 4.4. Assessment Structure Updates
             # Key Changes:
 
@@ -86,6 +106,7 @@ class DCCTransformer(CredentialTransformer):
             # update assessedProduct
             assessed_facility_list = self._update_assessment_structure(assessment, 'assessedFacility', ['type', 'idScheme'], ['FacilityVerification'], 'facility')
             assessment['assessedFacility'] = assessed_facility_list
+
 
             #################################
             ## Resolve UNTP schema validation
@@ -102,8 +123,12 @@ class DCCTransformer(CredentialTransformer):
                 }
                 criteria.update(new_column_added)
                 threshold_values = criteria.get('thresholdValues', [])
-                if "thresholdValues" in criteria and threshold_values != []:
-                    criteria["thresholdValue"] = criteria.pop("thresholdValues", [])[0]
+                if "thresholdValues" in criteria:
+                    if threshold_values != []:
+                        criteria["thresholdValue"] = criteria.pop("thresholdValues", [])[0]
+                    elif threshold_values == []:
+                        del criteria['thresholdValues']
+
                 # threshold_values = criteria.pop("thresholdValues",[])
                 # if threshold_values:
                 #     criteria["thresholdValue"] = threshold_values[0]
@@ -117,10 +142,10 @@ class DCCTransformer(CredentialTransformer):
             
             declaredValues = assessment.get('declaredValue', [])
             for declaredValue in declaredValues:
+
                 # if metricvalue in declaredvalue is metricvalue: {}, add "value":0 and "unit":""
                 if declaredValue.get("metricValue") == {} or not declaredValue.get("metricValue"):
-                    declaredValue["metricValue"] = {"unit": "", "value": "0"}
-
+                    declaredValue["metricValue"] = {"unit": "", "value": 0}
             ######################################
             ## Resolve JSON-LD context
             ######################################
@@ -145,6 +170,8 @@ class DCCTransformer(CredentialTransformer):
                     del referencestandard["issuingParty"]["type"]
                 if "idScheme" in referencestandard["issuingParty"]:
                     del referencestandard["issuingParty"]["idScheme"]
+            if "type" not in referencestandard: # add it
+                referencestandard["type"] = ["Standard"]
 
             # credentialSubject - conformityClaim - administeredBy structure change (Regulation schema)
             # Removes Type and idScheme from referenceStandard.issuingParty and referenceRegulation.administeredBy
@@ -152,6 +179,8 @@ class DCCTransformer(CredentialTransformer):
             if "administeredBy" in referenceregulation:
                 clean_data = self._clean_identifier_list(referenceregulation["administeredBy"])
                 referenceregulation["administeredBy"] = clean_data
+            if "type" not in referenceregulation:
+                referenceregulation["type"] = ["Regulation"]
 
             if "assessedProduct" in assessment and len(assessment['assessedProduct']) == 0:
                 del assessment['assessedProduct']
@@ -169,10 +198,25 @@ class DCCTransformer(CredentialTransformer):
                 issuingAuthority = authorisation.get('issuingAuthority')
                 clean_data_0 = self._clean_identifier_list(issuingAuthority, ["type", "idScheme"]) 
                 authorisation["issuingAuthority"] = clean_data_0
+            if "trustmark" in authorisation:
+                trustmark = authorisation.get('trustmark', {})
+                if "type" in trustmark:
+                    del trustmark["type"]
+            if "endorsementEvidence" in authorisation:
+                endorsementEvidence = authorisation.get('endorsementEvidence', {})
+                if "type" in endorsementEvidence:
+                    del endorsementEvidence["type"]
+
+            
         if "issuingParty" in scope:
             issuingParty = scope.get('issuingParty')
             clean_data_0 = self._clean_identifier_list(issuingParty, ["type", "idScheme"]) 
             scope["issuingParty"] = clean_data_0
+
+        if "trustmark" in scope:
+            trustmark = scope.get('trustmark', {})
+            clean_data_0 = self._clean_identifier_list(trustmark, ["type", "idScheme"])
+            scope["trustmark"] = clean_data_0
 
         ###########################################
         #### JSON-LD issue resolution
