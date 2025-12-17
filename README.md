@@ -2,72 +2,69 @@
 
 # 📘 Pyx UNTP Migration Tool
 
-This project takes 0.5.0 credentials in app-config.json across projects and transforms them into the required 0.6.0 credential format based on [V0.6.0 Migration Guide](https://uncefact.github.io/tests-untp/docs/next/migration-guides/v0.6.0/)
-
-There are 2 types of code that are produced:
-1. main_transformer.py: reads full app-config.json and outputs all the transformed credentials within app-config.json
-2. testing_indiv_credential.py: reads a single credential and outputs the transformed credential
+.....
 
 ## 📂 Folder Structure
-```
-pyx-untp-migration/
-├── 00_Script/                  # main python scripts & transformation modules (main_transformer.py)
-├── 01_Data/app-config          # stores app-config.json for different Pyx projects
-├── 02_Documentation/           # contains project documentations
-└── 03_Test_UNTP-Playground/    # stores successful test files in tests-untp playground
-```
 
-## 🚀 Setup & Usage
+....
+
+# 🚀 Setup & Usage
 
 1. Clone the repository /pyx-apps/ in Ubuntu 24.04
 2. Install Python Extensions:
     - Python Debugger
     - Python
     - Pylance
-    - Python Environment
+    - Python Environment venv
+    - pip install flask in venve
 
-3. Create and activate a Python virtual environment (recommended):
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate   # Linux / macOS
-   .venv\Scripts\activate      # Windows
-   ```
+## CLI usage: untp_migrator.py
 
-4. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+Run migrations from the terminal:
 
-5. Place your files in `01_Data/app-config/<project_name>/`, e.g.:
-   - To transform app-config.json:
-   ```
-   01_Data/app-config/BCMine/app-config.json               
-   01_Data/app-config/RegenFarmers/app-config.json  
-   ```
-   - To transform individual credential:
-   ```bash
-   01_Data/app-config/BCMine/sample-credential.json
-   ```
+python3 untp_migrator.py \
+  -m mapping_file_path/mapping.json \
+  -i input_file_path/input.json \
+  -o output_file_path/out.json
 
-6. Update the parameters
-   - To transform app-config.json:
-   ```bash
-   input_folder_name = "01_Data/app-config"
-   brand_name = 'RBTP'
-   # comment out testing_folder
-   file_name = "app-config.json"
-   version = '0.6.0'
 
-   ```
+Options
 
-   - To transform individual credential:
-   ```bash
-   input_folder_name = "01_Data/app-config"
-   brand_name = 'RBTP'
-   file_name = "sample-credential.json"
-   testing_folder = 'DIA'
-   version = '0.6.0'
-   ```
+-m, --mapping: Path to the mapping rules JSON file.
+
+-i, --input: Path to the input JSON file to be transformed.
+
+-o, --output: Path where the transformed output JSON will be written.
+
+--strict (optional, if enabled in your wrapper): Fail if a move source path is missing (instead of skipping).
+
+Example:
+
+python3 untp_migrator.py -m examples/mapping.json -i examples/input.json -o out.json
+
+## Web UI usage: app.py
+
+Launch the local website:
+
+python3 app.py
+
+
+What happens:
+
+A local server starts on http://127.0.0.1:<port>/
+
+Your default browser opens automatically
+
+Upload mapping.json and input.json, click Transform
+
+The transformed JSON appears in the output area
+
+Click Download to save the output
+
+Stop the server with:
+
+Ctrl + C
+
 
 
 7. Run the tool:
