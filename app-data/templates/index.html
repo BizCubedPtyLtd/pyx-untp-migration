@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UNTP Migration Tool</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="page">
+    <h1>UNTP Migration Tool</h1>
+
+    <div class="uploads">
+      <div class="file-row">
+        <div class="drop" id="dropMapping">
+          <label class="btn">
+            Upload or drag drop
+            <input id="mappingFile" type="file" accept=".json,application/json" hidden />
+          </label>
+          <div class="filename" id="mappingName">mapping.json</div>
+        </div>
+      </div>
+
+      <div class="file-row">
+        <div class="drop" id="dropInput">
+          <label class="btn">
+            Upload or drag drop
+            <input id="inputFile" type="file" accept=".json,application/json" hidden />
+          </label>
+          <div class="filename" id="inputName">input.json</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="transformBtn" class="big-btn">Transform</button>
+      <div id="status" class="status"></div>
+    </div>
+
+    <div class="output-box">
+      <div class="output-header">
+        <div class="spacer"></div>
+        <a id="downloadBtn" class="btn download disabled" href="#" aria-disabled="true">Download</a>
+      </div>
+      <textarea id="outputArea" placeholder="Output JSON will appear here..." spellcheck="false"></textarea>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

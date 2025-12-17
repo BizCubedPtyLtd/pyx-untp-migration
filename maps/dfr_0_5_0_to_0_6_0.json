@@ -1,0 +1,23 @@
+{
+    "rules": [
+        {
+            "action": "move",
+            "from": "credentialSubject.type",
+            "to": "credentialSubject.facility.type"
+        }, {
+            "action": "move",
+            "from": "credentialSubject.id",
+            "to": "credentialSubject.facility.id"
+        },
+        {
+            "action": "move",
+            "from": "credentialSubject.name",
+            "to": "credentialSubject.facility.name"
+        },
+        {
+            "action": "change",
+            "path": "credentialSubject.type[1]",
+            "value": "FacilityRecord"
+        }
+    ]
+}

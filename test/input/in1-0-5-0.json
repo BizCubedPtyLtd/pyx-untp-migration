@@ -1,0 +1,8 @@
+{
+  "credentialSubject": {
+    "type": ["Facility"],
+    "id": "https://id.gs1.org/414/1321202290648",
+    "name": "Greenacres battery factory",
+    "conformityClaim": ["claim1", "claim2"]
+  }
+}
