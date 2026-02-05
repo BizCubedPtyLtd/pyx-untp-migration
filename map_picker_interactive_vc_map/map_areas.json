@@ -1,0 +1,59 @@
+[
+    {
+        "alt": "DFR - BC Mine - Location BC",
+        "title": "DFR - BC Mine - Location BC",
+        "links": [
+            {
+                "type": "internal",
+                "disabled": false,
+                "title": "DFR - BC Mine - Location BC",
+                "href": "",
+                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/9129870000034"
+            }
+        ],
+        "coords": "308,598,692,803",
+        "shape": "rect",
+        "documentation": {
+            "title": "About DFR",
+            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
+        }
+    },
+    {
+        "alt": "DCC - Coppermark - Location BC",
+        "title": "DCC - Coppermark - Location BC",
+        "links": [
+            {
+                "type": "internal",
+                "disabled": false,
+                "title": "DCC - Coppermark - Location BC",
+                "href": "",
+                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883099129872/21/DCC_01"
+            }
+        ],
+        "coords": "323,901,686,1090",
+        "shape": "rect",
+        "documentation": {
+            "title": "About DCC",
+            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
+        }
+    },
+    {
+        "alt": "DCC - Mines Act - Permit - Location BC",
+        "title": "DCC - Mines Act - Permit - Location BC",
+        "links": [
+            {
+                "type": "internal",
+                "disabled": false,
+                "title": "DCC - Mines Act - Permit - Location BC",
+                "href": "",
+                "sample_credential": "https://idr.bcmine.pyx.io/api/1.0.0/gs1/01/09359502111112/10/1"
+            }
+        ],
+        "coords": "807,899,1182,1091",
+        "shape": "rect",
+        "documentation": {
+            "title": "About DCC",
+            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
+        }
+    }
+]
