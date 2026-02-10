@@ -1,0 +1,159 @@
+{
+    "img": "/data/scenario_1_collab_pilot_vc_map_NMC.jpg",
+    "title": "Interactive Value Chain Map - Collaborative Pilot - Scenario 1 (NMC)",
+    "appConfigName": "",
+    "areas": [
+        {
+            "alt": "DFR - Copper Smelter/Refiner - Location N",
+            "title": "DFR - Copper Smelter/Refiner - Location N",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DFR - Copper Smelter/Refiner - Location N",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/8787870000006"
+                }
+            ],
+            "coords": "221,411,593,602",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DFR",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
+            }
+        },
+        {
+            "alt": "DCC - Copper Mark - Location N",
+            "title": "DCC - Copper Mark - Location N",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DCC - Copper Mark - Location N",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883098787877/21/DCC_01"
+                }
+            ],
+            "coords": "484,674,859,872",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DCC",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
+            }
+        },
+        {
+            "alt": "DTE - Transformation - Location N",
+            "title": "DTE - Transformation - Location N",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DTE - Transformation - Location N",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/87878702000162/21/DTE_01"
+                }
+            ],
+            "coords": "235,1067,606,1261",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DTE",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-traceability-event/"
+            }
+        },
+        {
+            "alt": "DPP - Copper Cathode - Location N",
+            "title": "DPP - Copper Cathode - Location N",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DPP - Copper Cathode - Location N",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/18787870000008/21/DPP_01"
+                }
+            ],
+            "coords": "755,1070,1120,1274",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DPP",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
+            }
+        },
+        {
+            "alt": "DFR - Battery Manufacturer - Location PC",
+            "title": "DFR - Battery Manufacturer - Location PC",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DFR - Battery Manufacturer - Location PC",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/9359502000133"
+                }
+            ],
+            "coords": "1803,441,2176,630",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DFR",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
+            }
+        },
+        {
+            "alt": "DCC - VAP - Location PC",
+            "title": "DCC - VAP - Location PC",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DCC - VAP - Location PC",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/09359502000133/21/VAP_DCC_01"
+                }
+            ],
+            "coords": "2010,692,2379,890",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DCC",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
+            }
+        },
+        {
+            "alt": "DTE - Associate input DPPs - Location PC",
+            "title": "DTE - Associate input DPPs - Location PC",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DTE - Associate input DPPs - Location PC",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/19359502000133/21/DTE_01"
+                }
+            ],
+            "coords": "1849,1065,2218,1245",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DTE",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-traceability-event/"
+            }
+        },
+        {
+            "alt": "DPP - Battery Passport - NMC",
+            "title": "DPP - Battery Passport - NMC",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DPP - Battery Passport - NMC",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/29359502000133/21/DPP_01"
+                }
+            ],
+            "coords": "2326,1062,2696,1265",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DPP",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
+            }
+        }
+    ]
+}

@@ -1,8 +1,14 @@
 import cv2
 import json
 
-IMAGE_PATH = "./scenario_2_collab_pilot_vc_map_v2.jpg"
-OUTPUT_JSON = "map_areas_v2.json"
+# create new env
+# cd map_picker_interactive_vc_map
+# source venv/bin/activate
+# python map_picker.py
+INPUT_FILE = input("Enter the path to the image file (with .jpg extension): ")
+BRAND_NAME = input("Enter the brand name")
+IMAGE_PATH = f"./images/{INPUT_FILE}"
+OUTPUT_JSON = f"./output/{INPUT_FILE.replace('.jpg', '.json')}"
 
 areas = []
 drawing = False
@@ -10,6 +16,12 @@ start_point = None
 img = cv2.imread(IMAGE_PATH)
 clone = img.copy()
 
+
+# create main .json
+main_json = {
+"img": f"/data/{INPUT_FILE}",
+"title": f"Interactive Value Chain Map - Collaborative Pilot - Scenario 1 ({BRAND_NAME})",
+"appConfigName": ""}
 
 def draw_rectangle(event, x, y, flags, param):
     global drawing, start_point, img, preview_img
@@ -66,7 +78,6 @@ def draw_rectangle(event, x, y, flags, param):
             "link": ""
         })
 
-
         area = {
             "alt": title,
             "title": title,
@@ -88,14 +99,15 @@ def draw_rectangle(event, x, y, flags, param):
         }
 
         areas.append(area)
-
+        
         # Draw final rectangle permanently on main image
         cv2.rectangle(img, start_point, end_point, (0, 255, 0), 2)
         cv2.imshow("Image", img)
-
+        
 def save_json():
+    main_json["areas"] = areas
     with open(OUTPUT_JSON, "w") as f:
-        json.dump(areas, f, indent=4)
+        json.dump(main_json, f, indent=4)
     print(f"\nSaved to {OUTPUT_JSON}")
 
 cv2.imshow("Image", img)

@@ -1,0 +1,192 @@
+[
+    {
+        "alt": "DFR - Mining Copper Mill - Location BC",
+        "title": "DFR - Mining Copper Mill - Location BC",
+        "links": [
+            {
+                "type": "external",
+                "disabled": false,
+                "title": "DFR - Mining Copper Mill - Location BC",
+                "href": "",
+                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/9129870000034"
+            }
+        ],
+        "coords": "173,385,373,494",
+        "shape": "rect",
+        "documentation": {
+            "title": "About DFR",
+            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
+        }
+    },
+    {
+        "alt": "DCC - Coppermark - Location BC",
+        "title": "DCC - Coppermark - Location BC",
+        "links": [
+            {
+                "type": "external",
+                "disabled": false,
+                "title": "DCC - Coppermark - Location BC",
+                "href": "",
+                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883099129872/21/DCC_01"
+            }
+        ],
+        "coords": "329,528,544,641",
+        "shape": "rect",
+        "documentation": {
+            "title": "About DCC",
+            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
+        }
+    },
+    {
+        "alt": "DFR - Copper Smelter/Refiner - Location N",
+        "title": "DFR - Copper Smelter/Refiner - Location N",
+        "links": [
+            {
+                "type": "external",
+                "disabled": false,
+                "title": "DFR - Copper Smelter/Refiner - Location N",
+                "href": "",
+                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/8787870000006"
+            }
+        ],
+        "coords": "1392,334,1607,449",
+        "shape": "rect",
+        "documentation": {
+            "title": "About DFR",
+            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
+        }
+    },
+    {
+        "alt": "DCC - Coppermark - Location N (NMC)",
+        "title": "DCC - Coppermark - Location N (NMC)",
+        "links": [
+            {
+                "type": "external",
+                "disabled": false,
+                "title": "DCC - Coppermark - Location N (NMC)",
+                "href": "",
+                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883098787877/21/DCC_01"
+            }
+        ],
+        "coords": "1400,503,1605,609",
+        "shape": "rect",
+        "documentation": {
+            "title": "About DCC",
+            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
+        }
+    },
+    {
+        "alt": "DPP - Copper Concentrate - Location BC",
+        "title": "DPP - Copper Concentrate - Location BC",
+        "links": [
+            {
+                "type": "external",
+                "disabled": false,
+                "title": "DPP - Copper Concentrate - Location BC",
+                "href": "",
+                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/19129870000037/21/DPP_01"
+            }
+        ],
+        "coords": "220,809,430,919",
+        "shape": "rect",
+        "documentation": {
+            "title": "About DPP",
+            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
+        }
+    },
+    {
+        "alt": "DTE - Transformation - Location N (NMC)",
+        "title": "DTE - Transformation - Location N (NMC)",
+        "links": [
+            {
+                "type": "external",
+                "disabled": false,
+                "title": "DTE - Transformation - Location N (NMC)",
+                "href": "",
+                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/87878702000162/21/DTE_01"
+            }
+        ],
+        "coords": "1399,794,1606,903",
+        "shape": "rect",
+        "documentation": {
+            "title": "About DTE",
+            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-traceability-event/"
+        }
+    },
+    {
+        "alt": "DPP - Copper Cathode - Location N (NMC)",
+        "title": "DPP - Copper Cathode - Location N (NMC)",
+        "links": [
+            {
+                "type": "external",
+                "disabled": false,
+                "title": "DPP - Copper Cathode - Location N (NMC)",
+                "href": "",
+                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/18787870000008/21/DPP_01"
+            }
+        ],
+        "coords": "1691,1075,1889,1180",
+        "shape": "rect",
+        "documentation": {
+            "title": "About DPP",
+            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
+        }
+    },
+    {
+        "alt": "DTE - Associate input - Location PC (Sample Battery)",
+        "title": "DTE - Associate input - Location PC (Sample Battery)",
+        "links": [
+            {
+                "type": "external",
+                "disabled": false,
+                "title": "DTE - Associate input - Location PC (Sample Battery)",
+                "href": "",
+                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/29359502000133/21/DTE_01"
+            }
+        ],
+        "coords": "2493,426,2703,547",
+        "shape": "rect",
+        "documentation": {
+            "title": "About DTE",
+            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-traceability-event/"
+        }
+    },
+    {
+        "alt": "DPP - Battery Passport NMC - Location PC (Sample Battery)",
+        "title": "DPP - Battery Passport NMC - Location PC (Sample Battery)",
+        "links": [
+            {
+                "type": "external",
+                "disabled": false,
+                "title": "DPP - Battery Passport NMC - Location PC (Sample Battery)",
+                "href": "",
+                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/29359502000133/21/DPP_01"
+            }
+        ],
+        "coords": "2801,544,3011,662",
+        "shape": "rect",
+        "documentation": {
+            "title": "About DPP",
+            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
+        }
+    },
+    {
+        "alt": "DPP - Copper Scrap - Recycler",
+        "title": "DPP - Copper Scrap - Recycler",
+        "links": [
+            {
+                "type": "external",
+                "disabled": false,
+                "title": "DPP - Copper Scrap - Recycler",
+                "href": "",
+                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/86753090000022/21/DPP_01"
+            }
+        ],
+        "coords": "917,258,1164,360",
+        "shape": "rect",
+        "documentation": {
+            "title": "About DPP",
+            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
+        }
+    }
+]
