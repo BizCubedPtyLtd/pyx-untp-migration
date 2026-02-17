@@ -4,18 +4,18 @@
     "appConfigName": "",
     "areas": [
         {
-            "alt": "DFR - Mine, Refiner - Location Moonville",
-            "title": "DFR - Mine, Refiner - Location Moonville",
+            "alt": "DFR - Mine, Refiner - Location M",
+            "title": "DFR - Mine, Refiner - Location M",
             "links": [
                 {
                     "type": "external",
                     "disabled": false,
-                    "title": "DFR - Mine, Refiner - Location Moonville",
+                    "title": "DFR - Mine, Refiner - Location M",
                     "href": "",
                     "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/9468240000012"
                 }
             ],
-            "coords": "257,423,581,577",
+            "coords": "95,379,556,584",
             "shape": "rect",
             "documentation": {
                 "title": "About DFR",
@@ -23,18 +23,18 @@
             }
         },
         {
-            "alt": "DCC - Coppermark - Location Moonville",
-            "title": "DCC - Coppermark - Location Moonville",
+            "alt": "DCC - Coppermark - Location M",
+            "title": "DCC - Coppermark - Location M",
             "links": [
                 {
                     "type": "external",
                     "disabled": false,
-                    "title": "DCC - Coppermark - Location Moonville",
+                    "title": "DCC - Coppermark - Location M",
                     "href": "",
                     "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883099468246/21/DCC_01"
                 }
             ],
-            "coords": "257,676,543,820",
+            "coords": "97,732,494,938",
             "shape": "rect",
             "documentation": {
                 "title": "About DCC",
@@ -42,18 +42,18 @@
             }
         },
         {
-            "alt": "DCC - RMAP - Location Moonville",
-            "title": "DCC - RMAP - Location Moonville",
+            "alt": "DCC - RMAP - Location M",
+            "title": "DCC - RMAP - Location M",
             "links": [
                 {
                     "type": "external",
                     "disabled": false,
-                    "title": "DCC - RMAP - Location Moonville",
+                    "title": "DCC - RMAP - Location M",
                     "href": "",
                     "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8882229468247/21/RMAP_DCC_01"
                 }
             ],
-            "coords": "648,665,936,829",
+            "coords": "646,733,1052,940",
             "shape": "rect",
             "documentation": {
                 "title": "About DCC",
@@ -61,18 +61,18 @@
             }
         },
         {
-            "alt": "DPP - Cobalt Hydroxide - Location Moonville",
-            "title": "DPP - Cobalt Hydroxide - Location Moonville",
+            "alt": "DPP - Cobalt Hydroxide - Location M",
+            "title": "DPP - Cobalt Hydroxide - Location M",
             "links": [
                 {
                     "type": "external",
                     "disabled": false,
-                    "title": "DPP - Cobalt Hydroxide - Location Moonville",
+                    "title": "DPP - Cobalt Hydroxide - Location M",
                     "href": "",
                     "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/09468240000008/21/DPP_01"
                 }
             ],
-            "coords": "257,944,550,1087",
+            "coords": "106,1110,497,1327",
             "shape": "rect",
             "documentation": {
                 "title": "About DPP",
@@ -80,18 +80,18 @@
             }
         },
         {
-            "alt": "DTE - Transaction - Location Moonville",
-            "title": "DTE - Transaction - Location Moonville",
+            "alt": "DTE - Transaction - Location M",
+            "title": "DTE - Transaction - Location M",
             "links": [
                 {
                     "type": "external",
                     "disabled": false,
-                    "title": "DTE - Transaction - Location Moonville",
+                    "title": "DTE - Transaction - Location M",
                     "href": "",
-                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/94682494682502/21/DTE_01"
+                    "sample_credential": "\"https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/94682494682502/21/DTE_01"
                 }
             ],
-            "coords": "665,946,945,1097",
+            "coords": "662,1120,1064,1321",
             "shape": "rect",
             "documentation": {
                 "title": "About DTE",
@@ -110,7 +110,7 @@
                     "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/9468250000014"
                 }
             ],
-            "coords": "1295,424,1597,585",
+            "coords": "1297,394,1724,604",
             "shape": "rect",
             "documentation": {
                 "title": "About DFR",
@@ -129,7 +129,7 @@
                     "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8882229468258/21/RMAP_DCC_01"
                 }
             ],
-            "coords": "1300,644,1591,805",
+            "coords": "1308,726,1713,939",
             "shape": "rect",
             "documentation": {
                 "title": "About DCC",
@@ -148,87 +148,11 @@
                     "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/94682555588865/21/DTE_01"
                 }
             ],
-            "coords": "1628,959,1916,1117",
+            "coords": "1774,1143,2180,1342",
             "shape": "rect",
             "documentation": {
                 "title": "About DTE",
                 "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-traceability-event/"
-            }
-        },
-        {
-            "alt": "DFR - Battery Manufacturer - Location PC",
-            "title": "DFR - Battery Manufacturer - Location PC",
-            "links": [
-                {
-                    "type": "external",
-                    "disabled": false,
-                    "title": "DFR - Battery Manufacturer - Location PC",
-                    "href": "",
-                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/9359502000133"
-                }
-            ],
-            "coords": "2801,421,3092,571",
-            "shape": "rect",
-            "documentation": {
-                "title": "About DFR",
-                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
-            }
-        },
-        {
-            "alt": "DCC - VAP - Location PC",
-            "title": "DCC - VAP - Location PC",
-            "links": [
-                {
-                    "type": "external",
-                    "disabled": false,
-                    "title": "DCC - VAP - Location PC",
-                    "href": "",
-                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/09359502000133/21/VAP_DCC_01"
-                }
-            ],
-            "coords": "2983,620,3266,767",
-            "shape": "rect",
-            "documentation": {
-                "title": "About DCC",
-                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
-            }
-        },
-        {
-            "alt": "DTE - Associate Input DPPs - Location PC",
-            "title": "DTE - Associate Input DPPs - Location PC",
-            "links": [
-                {
-                    "type": "external",
-                    "disabled": false,
-                    "title": "DTE - Associate Input DPPs - Location PC",
-                    "href": "",
-                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/19359502000133/21/DTE_01"
-                }
-            ],
-            "coords": "2830,861,3126,1008",
-            "shape": "rect",
-            "documentation": {
-                "title": "About DTE",
-                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-traceability-event/"
-            }
-        },
-        {
-            "alt": "DPP - Battery Passport - Location PC",
-            "title": "DPP - Battery Passport - Location PC",
-            "links": [
-                {
-                    "type": "external",
-                    "disabled": false,
-                    "title": "DPP - Battery Passport - Location PC",
-                    "href": "",
-                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/19359502000133/21/DPP_01"
-                }
-            ],
-            "coords": "3215,862,3501,1020",
-            "shape": "rect",
-            "documentation": {
-                "title": "About DPP",
-                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
             }
         }
     ]

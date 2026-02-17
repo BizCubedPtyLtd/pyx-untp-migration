@@ -1,7 +1,7 @@
 {
-    "img": "/data/scenario_5_collab_pilot_vc_map.jpg",
-    "title": "Interactive Value Chain Map - Collaborative Pilot - Scenario 1 (Greenville & Universal)",
-    "appConfigName": "",
+    "img": "/scenario_5_collab_pilot_vc_map.jpg",
+    "title": "VC Map",
+    "appConfigName": "VC Map",
     "areas": [
         {
             "alt": "DFR - Mine, Refiner - Greenville PLC",
@@ -111,25 +111,6 @@
                 }
             ],
             "coords": "1631,227,1850,347",
-            "shape": "rect",
-            "documentation": {
-                "title": "About DFR",
-                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
-            }
-        },
-        {
-            "alt": "DFR - CAM - Location PC (Universal)",
-            "title": "DFR - CAM - Location PC (Universal)",
-            "links": [
-                {
-                    "type": "external",
-                    "disabled": false,
-                    "title": "DFR - CAM - Location PC (Universal)",
-                    "href": "",
-                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/5558880000023"
-                }
-            ],
-            "coords": "2343,233,2557,347",
             "shape": "rect",
             "documentation": {
                 "title": "About DFR",
@@ -286,6 +267,32 @@
             "documentation": {
                 "title": "About DPP",
                 "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
+            }
+        },
+        {
+            "alt": "DFR -CAM - Location PC",
+            "title": "DFR -CAM - Location PC",
+            "links": [
+                {
+                    "type": "internal",
+                    "disabled": true,
+                    "title": "DFR -CAM - Location PC",
+                    "href": "",
+                    "sample_credential": ""
+                },
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DFR -CAM - Location PC",
+                    "href": "",
+                    "sample_credential": "Testing"
+                }
+            ],
+            "coords": "2349,234,2558,342",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DFR",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
             }
         }
     ]

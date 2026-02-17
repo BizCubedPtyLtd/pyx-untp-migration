@@ -1,0 +1,59 @@
+{
+    "img": "/scenario_3_collab_pilot_vc_map_greenville_universal_phase1.jpg",
+    "title": "VC Map",
+    "appConfigName": "VC Map",
+    "areas": [
+        {
+            "alt": "DFR - Mine, Refiner - Location M",
+            "title": "DFR - Mine, Refiner - Location M",
+            "links": [
+                {
+                    "type": "internal",
+                    "disabled": true,
+                    "title": "DFR - Mine, Refiner - Location M",
+                    "href": "",
+                    "sample_credential": ""
+                },
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DFR - Mine, Refiner - Location M",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/9468240000012"
+                }
+            ],
+            "coords": "68,350,472,533",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DFR",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
+            }
+        },
+        {
+            "alt": "DCC - Coppermark - Location M",
+            "title": "DCC - Coppermark - Location M",
+            "links": [
+                {
+                    "type": "internal",
+                    "disabled": true,
+                    "title": "DCC - Coppermark - Location M",
+                    "href": "",
+                    "sample_credential": ""
+                },
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DCC - Coppermark - Location M",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883099468246/21/DCC_01"
+                }
+            ],
+            "coords": "66,650,422,835",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DCC",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
+            }
+        }
+    ]
+}

@@ -1,0 +1,159 @@
+{
+  "img": "/data/scenario_3_collab_pilot_vc_map_greenville_universal_phase2.jpg",
+  "title": "Interactive Value Chain Map - Collaborative Pilot - Scenario 1 (Phase 2)",
+  "appConfigName": "",
+  "areas": [
+    {
+      "alt": "DFR - Mine, Refiner - Location M",
+      "title": "DFR - Mine, Refiner - Location M",
+      "links": [
+        {
+          "type": "external",
+          "disabled": false,
+          "title": "DFR - Mine, Refiner - Location M",
+          "href": "",
+          "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/9468240000012"
+        }
+      ],
+      "coords": "111,293,438,436",
+      "shape": "rect",
+      "documentation": {
+        "title": "About DFR",
+        "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
+      }
+    },
+    {
+      "alt": "DCC - Coppermark - Location M",
+      "title": "DCC - Coppermark - Location M",
+      "links": [
+        {
+          "type": "external",
+          "disabled": false,
+          "title": "DCC - Coppermark - Location M",
+          "href": "",
+          "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883099468246/21/DCC_01"
+        }
+      ],
+      "coords": "114,524,402,669",
+      "shape": "rect",
+      "documentation": {
+        "title": "About DCC",
+        "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
+      }
+    },
+    {
+      "alt": "DCC - RMAP - Location M",
+      "title": "DCC - RMAP - Location M",
+      "links": [
+        {
+          "type": "external",
+          "disabled": false,
+          "title": "DCC - RMAP - Location M",
+          "href": "",
+          "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8882229468247/21/RMAP_DCC_01"
+        }
+      ],
+      "coords": "492,530,783,679",
+      "shape": "rect",
+      "documentation": {
+        "title": "About DCC",
+        "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
+      }
+    },
+    {
+      "alt": "DPP - Cobalt Hydroxide - Location M",
+      "title": "DPP - Cobalt Hydroxide - Location M",
+      "links": [
+        {
+          "type": "external",
+          "disabled": false,
+          "title": "DPP - Cobalt Hydroxide - Location M",
+          "href": "",
+          "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/09468240000008/21/DPP_01"
+        }
+      ],
+      "coords": "116,830,401,967",
+      "shape": "rect",
+      "documentation": {
+        "title": "About DPP",
+        "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
+      }
+    },
+    {
+      "alt": "DTE - Transaction - Location M",
+      "title": "DTE - Transaction - Location M",
+      "links": [
+        {
+          "type": "external",
+          "disabled": false,
+          "title": "DTE - Transaction - Location M",
+          "href": "",
+          "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/94682494682502/21/DTE_01"
+        }
+      ],
+      "coords": "486,829,775,971",
+      "shape": "rect",
+      "documentation": {
+        "title": "About DTE",
+        "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-traceability-event/"
+      }
+    },
+    {
+      "alt": "DFR - Battery Manufacturer - Location PC",
+      "title": "DFR - Battery Manufacturer - Location PC",
+      "links": [
+        {
+          "type": "external",
+          "disabled": false,
+          "title": "DFR - Battery Manufacturer - Location PC",
+          "href": "",
+          "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/9359502000133"
+        }
+      ],
+      "coords": "3412,275,3705,438",
+      "shape": "rect",
+      "documentation": {
+        "title": "About DFR",
+        "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
+      }
+    },
+    {
+      "alt": "DCC - VAP - Location PC",
+      "title": "DCC - VAP - Location PC",
+      "links": [
+        {
+          "type": "external",
+          "disabled": false,
+          "title": "DCC - VAP - Location PC",
+          "href": "",
+          "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/09359502000133/21/VAP_DCC_01"
+        }
+      ],
+      "coords": "3570,490,3860,644",
+      "shape": "rect",
+      "documentation": {
+        "title": "About DCC",
+        "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
+      }
+    },
+    {
+      "alt": "DPP - Battery Passport - Location PC",
+      "title": "DPP - Battery Passport - Location PC",
+      "links": [
+        {
+          "type": "external",
+          "disabled": false,
+          "title": "DPP - Battery Passport - Location PC",
+          "href": "",
+          "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/19359502000133/21/DPP_01"
+        }
+      ],
+      "coords": "3799,731,4090,889",
+      "shape": "rect",
+      "documentation": {
+        "title": "About DPP",
+        "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
+      }
+    }
+  ]
+}

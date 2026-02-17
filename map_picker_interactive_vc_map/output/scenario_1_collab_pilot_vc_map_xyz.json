@@ -1,0 +1,102 @@
+{
+    "img": "/data/scenario_1_collab_pilot_vc_map_xyz.jpg",
+    "title": "Interactive Value Chain Map - Collaborative Pilot - Scenario 1 (XYZ)",
+    "appConfigName": "",
+    "areas": [
+        {
+            "alt": "DFR - Copper Smelter/Refiner - Location N (XYZ)",
+            "title": "DFR - Copper Smelter/Refiner - Location N (XYZ)",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DFR - Copper Smelter/Refiner - Location N (XYZ)",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/2112110000011"
+                }
+            ],
+            "coords": "1111,392,1542,622",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DFR",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
+            }
+        },
+        {
+            "alt": "DCC - RMAP (Active) - Location N",
+            "title": "DCC - RMAP (Active) - Location N",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DCC - RMAP (Active) - Location N",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8882222112110/21/RMAP_DCC_01"
+                }
+            ],
+            "coords": "1118,789,1543,1018",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DCC",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
+            }
+        },
+        {
+            "alt": "DCC - Coppermark - Location N",
+            "title": "DCC - Coppermark - Location N",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DCC - Coppermark - Location N",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883092112114/21/DCC_01"
+                }
+            ],
+            "coords": "1733,779,2152,1010",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DCC",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
+            }
+        },
+        {
+            "alt": "DTE - Transform - Location N",
+            "title": "DTE - Transform - Location N",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DTE - Transform - Location N",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/59359503875687/21/DTE_01"
+                }
+            ],
+            "coords": "1156,1484,1587,1684",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DTE",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-traceability-event/"
+            }
+        },
+        {
+            "alt": "DPP - Copper Cathode - Location N",
+            "title": "DPP - Copper Cathode - Location N",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DPP - Copper Cathode - Location N",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/12112110000126/21/DPP_01"
+                }
+            ],
+            "coords": "1725,2343,2156,2571",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DPP",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
+            }
+        }
+    ]
+}

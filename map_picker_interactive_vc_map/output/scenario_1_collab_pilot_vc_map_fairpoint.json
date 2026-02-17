@@ -1,78 +1,21 @@
 {
     "img": "/data/scenario_1_collab_pilot_vc_map_fairpoint.jpg",
-    "title": "Interactive Value Chain Map - Collaborative Pilot - Scenario 1 (BC Mine)",
+    "title": "Interactive Value Chain Map - Collaborative Pilot - Scenario 1 (Fairpoint)",
     "appConfigName": "",
     "areas": [
         {
-            "alt": "DTE - Digital Transformation Event - Location C",
-            "title": "DTE - Digital Transformation Event - Location C",
+            "alt": "DFR - Copper Mine - Location A",
+            "title": "DFR - Copper Mine - Location A",
             "links": [
                 {
                     "type": "external",
                     "disabled": false,
-                    "title": "DTE - Digital Transformation Event - Location C",
+                    "title": "DFR - Copper Mine - Location A",
                     "href": "",
-                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/04823171300019/21/DTE_01"
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/4823170110008"
                 }
             ],
-            "coords": "1960,842,2264,1004",
-            "shape": "rect",
-            "documentation": {
-                "title": "About DTE",
-                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-traceability-event/"
-            }
-        },
-        {
-            "alt": "DPP - Copper Cathode (ER) - Location C",
-            "title": "DPP - Copper Cathode (ER) - Location C",
-            "links": [
-                {
-                    "type": "external",
-                    "disabled": false,
-                    "title": "DPP - Copper Cathode (ER) - Location C",
-                    "href": "",
-                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/04823171200019/21/DPP_01"
-                }
-            ],
-            "coords": "2392,845,2698,1009",
-            "shape": "rect",
-            "documentation": {
-                "title": "About DPP",
-                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
-            }
-        },
-        {
-            "alt": "CC - Copper Mark CoC - Location C",
-            "title": "CC - Copper Mark CoC - Location C",
-            "links": [
-                {
-                    "type": "external",
-                    "disabled": false,
-                    "title": "CC - Copper Mark CoC - Location C",
-                    "href": "",
-                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883094828725/21/DCC_01"
-                }
-            ],
-            "coords": "2034,1064,2348,1217",
-            "shape": "rect",
-            "documentation": {
-                "title": "",
-                "link": ""
-            }
-        },
-        {
-            "alt": "DFR - Battery Manufacturer - Location PC",
-            "title": "DFR - Battery Manufacturer - Location PC",
-            "links": [
-                {
-                    "type": "external",
-                    "disabled": false,
-                    "title": "DFR - Battery Manufacturer - Location PC",
-                    "href": "",
-                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/9359502000133"
-                }
-            ],
-            "coords": "2823,335,3129,504",
+            "coords": "32,250,320,401",
             "shape": "rect",
             "documentation": {
                 "title": "About DFR",
@@ -80,18 +23,18 @@
             }
         },
         {
-            "alt": "DCC - VAP - Location PC",
-            "title": "DCC - VAP - Location PC",
+            "alt": "DCC - Coppermark - Location A",
+            "title": "DCC - Coppermark - Location A",
             "links": [
                 {
                     "type": "external",
                     "disabled": false,
-                    "title": "DCC - VAP - Location PC",
+                    "title": "DCC - Coppermark - Location A",
                     "href": "",
-                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/09359502000133/21/VAP_DCC_01"
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883094820338/21/DCC_01"
                 }
             ],
-            "coords": "3013,560,3320,713",
+            "coords": "29,505,324,657",
             "shape": "rect",
             "documentation": {
                 "title": "About DCC",
@@ -99,18 +42,75 @@
             }
         },
         {
-            "alt": "DTE - Associate Input DPPs",
-            "title": "DTE - Associate Input DPPs",
+            "alt": "DFR - Fairpoint - Location B",
+            "title": "DFR - Fairpoint - Location B",
             "links": [
                 {
                     "type": "external",
                     "disabled": false,
-                    "title": "DTE - Associate Input DPPs",
+                    "title": "DFR - Fairpoint - Location B",
                     "href": "",
-                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/9359502000133"
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/4823170211006"
                 }
             ],
-            "coords": "2846,822,3170,972",
+            "coords": "891,247,1186,407",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DFR",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
+            }
+        },
+        {
+            "alt": "DPP - Copper Concentrate - Location A",
+            "title": "DPP - Copper Concentrate - Location A",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DPP - Copper Concentrate - Location A",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/04823171700014/21/DPP_01"
+                }
+            ],
+            "coords": "406,1012,706,1160",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DPP",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
+            }
+        },
+        {
+            "alt": "DPP - Copper Cathode (EW) - Location A",
+            "title": "DPP - Copper Cathode (EW) - Location A",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DPP - Copper Cathode (EW) - Location A",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/04823171100012/21/DPP_01"
+                }
+            ],
+            "coords": "416,1201,706,1353",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DPP",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
+            }
+        },
+        {
+            "alt": "DTE - Transform - Location B",
+            "title": "DTE - Transform - Location B",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DTE - Transform - Location B",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/04823171300016/21/DTE_01"
+                }
+            ],
+            "coords": "910,1009,1201,1159",
             "shape": "rect",
             "documentation": {
                 "title": "About DTE",
@@ -118,196 +118,194 @@
             }
         },
         {
-            "alt": "DPP - Battery Passport - FP",
-            "title": "DPP - Battery Passport - FP",
+            "alt": "DPP - Copper Anode - Location B",
+            "title": "DPP - Copper Anode - Location B",
             "links": [
                 {
                     "type": "external",
                     "disabled": false,
-                    "title": "DPP - Battery Passport - FP",
+                    "title": "DPP - Copper Anode - Location B",
                     "href": "",
-                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/19359502000133/21/DPP_01"
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/04823171300016/21/DPP_01"
                 }
             ],
-            "coords": "3268,820,3578,976",
+            "coords": "1340,1000,1631,1143",
             "shape": "rect",
             "documentation": {
                 "title": "About DPP",
                 "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
             }
         },
-        
-    {
-        "alt": "DFR - Copper Mine - Location A",
-        "title": "DFR - Copper Mine - Location A",
-        "links": [
-            {
-                "type": "external",
-                "disabled": false,
-                "title": "DFR - Copper Mine - Location A",
-                "href": "",
-                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/4823170110008"
+        {
+            "alt": "DPP - Copper Cathode (EW) - Location B",
+            "title": "DPP - Copper Cathode (EW) - Location B",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DPP - Copper Cathode (EW) - Location B",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/04823171100029/21/DPP_01"
+                }
+            ],
+            "coords": "1340,1207,1620,1361",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DPP",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
             }
-        ],
-        "coords": "73,336,380,505",
-        "shape": "rect",
-        "documentation": {
-            "title": "About DFR",
-            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
-        }
-    },
-    {
-        "alt": "DCC - Coppermark - Location A",
-        "title": "DCC - Coppermark - Location A",
-        "links": [
-            {
-                "type": "external",
-                "disabled": false,
-                "title": "DCC - Coppermark - Location A",
-                "href": "",
-                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883094820338/21/DCC_01"
+        },
+        {
+            "alt": "DPP - Copper Rod - Location B",
+            "title": "DPP - Copper Rod - Location B",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DPP - Copper Rod - Location B",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/04823171500010"
+                }
+            ],
+            "coords": "1337,1409,1631,1555",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DPP",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
             }
-        ],
-        "coords": "258,576,568,736",
-        "shape": "rect",
-        "documentation": {
-            "title": "About DCC",
-            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
-        }
-    },
-    {
-        "alt": "DPP - Copper Concentrate - Location A",
-        "title": "DPP - Copper Concentrate - Location A",
-        "links": [
-            {
-                "type": "external",
-                "disabled": false,
-                "title": "DPP - Copper Concentrate - Location A",
-                "href": "",
-                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/04823171700014/21/DPP_01"
+        },
+        {
+            "alt": "DCC - Coppermark - Location B",
+            "title": "DCC - Coppermark - Location B",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DCC - Coppermark - Location B",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883094822114/21/DCC_01"
+                }
+            ],
+            "coords": "904,512,1197,662",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DCC",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
             }
-        ],
-        "coords": "321,863,637,1025",
-        "shape": "rect",
-        "documentation": {
-            "title": "About DPP",
-            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
-        }
-    },
-    {
-        "alt": "DFR - Copper Smelter - Location B",
-        "title": "DFR - Copper Smelter - Location B",
-        "links": [
-            {
-                "type": "external",
-                "disabled": false,
-                "title": "DFR - Copper Smelter - Location B",
-                "href": "",
-                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/4823170211006"
+        },
+        {
+            "alt": "DFR - Copper Refiner - Location C",
+            "title": "DFR - Copper Refiner - Location C",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DFR - Copper Refiner - Location C",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/4823170330005"
+                }
+            ],
+            "coords": "1755,253,2049,407",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DFR",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
             }
-        ],
-        "coords": "980,335,1294,498",
-        "shape": "rect",
-        "documentation": {
-            "title": "About DFR",
-            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
-        }
-    },
-    {
-        "alt": "DCC - Coppermark - Location B",
-        "title": "DCC - Coppermark - Location B",
-        "links": [
-            {
-                "type": "external",
-                "disabled": false,
-                "title": "DCC - Coppermark - Location B",
-                "href": "",
-                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883094822114/21/DCC_01"
+        },
+        {
+            "alt": "DCC - Coppermark - Location C",
+            "title": "DCC - Coppermark - Location C",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DCC - Coppermark - Location C",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883094823306/21/DCC_01"
+                }
+            ],
+            "coords": "1761,511,2049,664",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DCC",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
             }
-        ],
-        "coords": "1162,579,1484,736",
-        "shape": "rect",
-        "documentation": {
-            "title": "About DCC",
-            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
-        }
-    },
-    {
-        "alt": "DTE - Digital Transformation Event - Location B",
-        "title": "DTE - Digital Transformation Event - Location B",
-        "links": [
-            {
-                "type": "external",
-                "disabled": false,
-                "title": "DTE - Digital Transformation Event - Location B",
-                "href": "",
-                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/04823171300016/21/DTE_01"
+        },
+        {
+            "alt": "DCC - Coppermark CoC - Location C",
+            "title": "DCC - Coppermark CoC - Location C",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DCC - Coppermark CoC - Location C",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883094828725/21/DCC_01"
+                }
+            ],
+            "coords": "1857,954,2154,1101",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DCC",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
             }
-        ],
-        "coords": "1042,848,1352,1009",
-        "shape": "rect",
-        "documentation": {
-            "title": "About DTE",
-            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-traceability-event/"
-        }
-    },
-    {
-        "alt": "DPP - Copper Anode - Location B",
-        "title": "DPP - Copper Anode - Location B",
-        "links": [
-            {
-                "type": "external",
-                "disabled": false,
-                "title": "DPP - Copper Anode - Location B",
-                "href": "",
-                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/04823171300016/21/DPP_01"
+        },
+        {
+            "alt": "DTE - Transform - Location C",
+            "title": "DTE - Transform - Location C",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DTE - Transform - Location C",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/04823171300019/21/DTE_01"
+                }
+            ],
+            "coords": "1808,1155,2095,1309",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DTE",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-traceability-event/"
             }
-        ],
-        "coords": "1459,851,1771,1006",
-        "shape": "rect",
-        "documentation": {
-            "title": "About DPP",
-            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
-        }
-    },
-    {
-        "alt": "DFR - Copper Refiner - Location C",
-        "title": "DFR - Copper Refiner - Location C",
-        "links": [
-            {
-                "type": "external",
-                "disabled": false,
-                "title": "DFR - Copper Refiner - Location C",
-                "href": "",
-                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/4823170330005"
+        },
+        {
+            "alt": "DCC - Copper Cathode (ER) - Location C",
+            "title": "DCC - Copper Cathode (ER) - Location C",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DCC - Copper Cathode (ER) - Location C",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/04823171200019/21/DPP_01"
+                }
+            ],
+            "coords": "2217,1152,2504,1299",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DCC",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
             }
-        ],
-        "coords": "1901,339,2209,500",
-        "shape": "rect",
-        "documentation": {
-            "title": "About DFR",
-            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
-        }
-    },
-    {
-        "alt": "DCC - Copper Mark - Location C",
-        "title": "DCC - Copper Mark - Location C",
-        "links": [
-            {
-                "type": "external",
-                "disabled": false,
-                "title": "DCC - Copper Mark - Location C",
-                "href": "",
-                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883094823306/21/DCC_01"
+        },
+        {
+            "alt": "DPP - Copper Rod - Location C",
+            "title": "DPP - Copper Rod - Location C",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DPP - Copper Rod - Location C",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/04823171500027"
+                }
+            ],
+            "coords": "2211,1405,2507,1552",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DPP",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
             }
-        ],
-        "coords": "2104,570,2422,742",
-        "shape": "rect",
-        "documentation": {
-            "title": "About DCC",
-            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
         }
-    }
-
     ]
 }

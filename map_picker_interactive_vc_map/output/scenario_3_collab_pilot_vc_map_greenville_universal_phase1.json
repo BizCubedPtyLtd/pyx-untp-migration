@@ -1,0 +1,159 @@
+{
+    "img": "/data/scenario_3_collab_pilot_vc_map_greenville_universal_phase1.jpg",
+    "title": "Interactive Value Chain Map - Collaborative Pilot - Scenario 1 (Greenville)",
+    "appConfigName": "",
+    "areas": [
+        {
+            "alt": "DFR - Mine, Refiner - Location M",
+            "title": "DFR - Mine, Refiner - Location M",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DFR - Mine, Refiner - Location M",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/9468240000012"
+                }
+            ],
+            "coords": "64,342,474,540",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DFR",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
+            }
+        },
+        {
+            "alt": "DCC - Coppermark - Location M",
+            "title": "DCC - Coppermark - Location M",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DCC - Coppermark - Location M",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883099468246/21/DCC_01"
+                }
+            ],
+            "coords": "71,653,440,830",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DCC",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
+            }
+        },
+        {
+            "alt": "DCC - RMAP - Location M",
+            "title": "DCC - RMAP - Location M",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DCC - RMAP - Location M",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8882229468247/21/RMAP_DCC_01"
+                }
+            ],
+            "coords": "534,648,888,848",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DCC",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
+            }
+        },
+        {
+            "alt": "DPP - Cobalt Hydroxide - Location M",
+            "title": "DPP - Cobalt Hydroxide - Location M",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DPP - Cobalt Hydroxide - Location M",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/09468240000008/21/DPP_01"
+                }
+            ],
+            "coords": "323,1033,685,1227",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DPP",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
+            }
+        },
+        {
+            "alt": "DFR - Cobalt Refinery - Location FR",
+            "title": "DFR - Cobalt Refinery - Location FR",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DFR - Cobalt Refinery - Location FR",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/5558880000023"
+                }
+            ],
+            "coords": "2659,347,3026,527",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DFR",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
+            }
+        },
+        {
+            "alt": "DCC - RMAP - Location FR",
+            "title": "DCC - RMAP - Location FR",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DCC - RMAP - Location FR",
+                    "href": "",
+                    "sample_credential": "ttps://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8882225558885/21/RMAP_DCC_01"
+                }
+            ],
+            "coords": "3079,664,3434,851",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DCC",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
+            }
+        },
+        {
+            "alt": "DTE - Transform - Location FR",
+            "title": "DTE - Transform - Location FR",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DTE - Transform - Location FR",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/155588800000078/21/DTE_01"
+                }
+            ],
+            "coords": "2736,934,3097,1101",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DTE",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-traceability-event/"
+            }
+        },
+        {
+            "alt": "DPP - Cobalt Sulfate - Location FR",
+            "title": "DPP - Cobalt Sulfate - Location FR",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DPP - Cobalt Sulfate - Location FR",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/155588800000078/21/DPP_01"
+                }
+            ],
+            "coords": "3180,941,3551,1114",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DPP",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
+            }
+        }
+    ]
+}

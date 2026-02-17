@@ -1,154 +1,83 @@
-[
-    {
-        "alt": "DFR - BC Mine - Location BC",
-        "title": "DFR - BC Mine - Location BC",
-        "links": [
-            {
-                "type": "external",
-                "disabled": false,
-                "title": "DFR - BC Mine - Location BC",
-                "href": "",
-                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/9129870000034"
+{
+    "img": "/data/scenario_1_collab_pilot_vc_map_bcmine.jpg",
+    "title": "Interactive Value Chain Map - Collaborative Pilot - Scenario 1 (BCMine)",
+    "appConfigName": "",
+    "areas": [
+        {
+            "alt": "DFR - BC Mine - Location BC",
+            "title": "DFR - BC Mine - Location BC",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DFR - BC Mine - Location BC",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/9129870000034"
+                }
+            ],
+            "coords": "114,456,608,716",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DFR",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
             }
-        ],
-        "coords": "298,586,661,762",
-        "shape": "rect",
-        "documentation": {
-            "title": "About DFR",
-            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
-        }
-    },
-    {
-        "alt": "DCC - Coppermark - Location BC",
-        "title": "DCC - Coppermark - Location BC",
-        "links": [
-            {
-                "type": "external",
-                "disabled": false,
-                "title": "DCC - Coppermark - Location BC",
-                "href": "",
-                "sample_credential": "https://miro.com/app/board/uXjVGZVVBCw=/?moveToWidget=3458764658552789704&cot=10"
+        },
+        {
+            "alt": "DCC - Coppermark - Location BC",
+            "title": "DCC - Coppermark - Location BC",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DCC - Coppermark - Location BC",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8883099129872/21/DCC_01"
+                }
+            ],
+            "coords": "114,932,610,1193",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DCC",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
             }
-        ],
-        "coords": "303,859,653,1042",
-        "shape": "rect",
-        "documentation": {
-            "title": "About DCC",
-            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
-        }
-    },
-    {
-        "alt": "DCC - Mines Act Permit - Location BC",
-        "title": "DCC - Mines Act Permit - Location BC",
-        "links": [
-            {
-                "type": "external",
-                "disabled": false,
-                "title": "DCC - Mines Act Permit - Location BC",
-                "href": "",
-                "sample_credential": "https://idr.bcmine.pyx.io/api/1.0.0/gs1/01/09359502111112/10/1"
+        },
+        {
+            "alt": "DCC - Mines Act Permit - Location BC",
+            "title": "DCC - Mines Act Permit - Location BC",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DCC - Mines Act Permit - Location BC",
+                    "href": "",
+                    "sample_credential": "https://idr.bcmine.pyx.io/api/1.0.0/gs1/01/09359502111112/10/1"
+                }
+            ],
+            "coords": "770,940,1266,1189",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DCC",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
             }
-        ],
-        "coords": "770,851,1130,1050",
-        "shape": "rect",
-        "documentation": {
-            "title": "About DCC",
-            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
-        }
-    },
-    {
-        "alt": "DPP - Copper Concentrate - Location BC",
-        "title": "DPP - Copper Concentrate - Location BC",
-        "links": [
-            {
-                "type": "external",
-                "disabled": false,
-                "title": "DPP - Copper Concentrate - Location BC",
-                "href": "",
-                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/19129870000037/21/DPP_01"
+        },
+        {
+            "alt": "DPP - Copper Concentrate - Location BC",
+            "title": "DPP - Copper Concentrate - Location BC",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DPP - Copper Concentrate - Location BC",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/19129870000037/21/DPP_01"
+                }
+            ],
+            "coords": "472,1396,973,1669",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DPP",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
             }
-        ],
-        "coords": "550,1202,909,1400",
-        "shape": "rect",
-        "documentation": {
-            "title": "About DPP",
-            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
         }
-    },
-    {
-        "alt": "DFR - Battery Manufacturer - Location PC",
-        "title": "DFR - Battery Manufacturer - Location PC",
-        "links": [
-            {
-                "type": "external",
-                "disabled": false,
-                "title": "DFR - Battery Manufacturer - Location PC",
-                "href": "",
-                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/9359502000133"
-            }
-        ],
-        "coords": "2324,569,2686,763",
-        "shape": "rect",
-        "documentation": {
-            "title": "About DFR",
-            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
-        }
-    },
-    {
-        "alt": "DCC - VAP - Location PC",
-        "title": "DCC - VAP - Location PC",
-        "links": [
-            {
-                "type": "external",
-                "disabled": false,
-                "title": "DCC - VAP - Location PC",
-                "href": "",
-                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/09359502000133/21/VAP_DCC_01"
-            }
-        ],
-        "coords": "2700,824,3060,1017",
-        "shape": "rect",
-        "documentation": {
-            "title": "About DCC",
-            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
-        }
-    },
-    {
-        "alt": "DTE - Associate Input - Location PC",
-        "title": "DTE - Associate Input - Location PC",
-        "links": [
-            {
-                "type": "external",
-                "disabled": false,
-                "title": "DTE - Associate Input - Location PC",
-                "href": "",
-                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/29359502000133/21/DTE_01"
-            }
-        ],
-        "coords": "2377,1213,2735,1399",
-        "shape": "rect",
-        "documentation": {
-            "title": "About DTE",
-            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-traceability-event/"
-        }
-    },
-    {
-        "alt": "DPP - Battery Passport (NMC) - Location PC",
-        "title": "DPP - Battery Passport (NMC) - Location PC",
-        "links": [
-            {
-                "type": "external",
-                "disabled": false,
-                "title": "DPP - Battery Passport (NMC) - Location PC",
-                "href": "",
-                "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/29359502000133/21/DPP_01"
-            }
-        ],
-        "coords": "2834,1203,3196,1403",
-        "shape": "rect",
-        "documentation": {
-            "title": "About DPP",
-            "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
-        }
-    }
-]
+    ]
+}

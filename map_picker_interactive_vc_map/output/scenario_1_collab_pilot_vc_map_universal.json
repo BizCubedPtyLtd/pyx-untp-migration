@@ -1,0 +1,197 @@
+{
+    "img": "/data/scenario_1_collab_pilot_vc_map_universal.jpg",
+    "title": "Interactive Value Chain Map - Collaborative Pilot - Scenario 1 (Universal)",
+    "appConfigName": "",
+    "areas": [
+        {
+            "alt": "DFR - Cobalt Refinery - Location FR",
+            "title": "DFR - Cobalt Refinery - Location FR",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DFR - Cobalt Refinery - Location FR",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/5558880000030"
+                }
+            ],
+            "coords": "73,344,465,547",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DFR",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
+            }
+        },
+        {
+            "alt": "DCC - RMAP - Location FR",
+            "title": "DCC - RMAP - Location FR",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DCC - RMAP - Location FR",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/8882225558885/21/RMAP_DCC_01"
+                }
+            ],
+            "coords": "76,679,464,879",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DCC",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-conformity-credential/"
+            }
+        },
+        {
+            "alt": "DTE - Transform - Location FR",
+            "title": "DTE - Transform - Location FR",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DTE - Transform - Location FR",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/155588800000078/21/DTE_01"
+                }
+            ],
+            "coords": "98,1291,477,1467",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DTE",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-traceability-event/"
+            }
+        },
+        {
+            "alt": "DPP - Cobalt Sulfate - Location FR",
+            "title": "DPP - Cobalt Sulfate - Location FR",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DPP - Cobalt Sulfate - Location FR",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/155588800000078/21/DPP_01"
+                }
+            ],
+            "coords": "592,1285,981,1460",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DPP",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
+            }
+        },
+        {
+            "alt": "DFR - PCAM - Location CP",
+            "title": "DFR - PCAM - Location CP",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DFR - PCAM - Location CP",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/15558880000210/21/DPP_01"
+                }
+            ],
+            "coords": "1254,341,1638,551",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DFR",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
+            }
+        },
+        {
+            "alt": "DTE - Transform - Location CP",
+            "title": "DTE - Transform - Location CP",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DTE - Transform - Location CP",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/55588802000970/21/DTE_01"
+                }
+            ],
+            "coords": "1265,1274,1642,1471",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DTE",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-traceability-event/"
+            }
+        },
+        {
+            "alt": "DPP - PCAM - Location CP",
+            "title": "DPP - PCAM - Location CP",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DPP - PCAM - Location CP",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/15558880000210/21/DPP_01"
+                }
+            ],
+            "coords": "1752,1274,2134,1469",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DPP",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
+            }
+        },
+        {
+            "alt": "DFR - CAM - Location PC",
+            "title": "DFR - CAM - Location PC",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DFR - CAM - Location PC",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/414/5558880000023"
+                }
+            ],
+            "coords": "2392,341,2778,552",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DFR",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-facility-record/"
+            }
+        },
+        {
+            "alt": "DTE - Transform - Location PC",
+            "title": "DTE - Transform - Location PC",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DTE - Transform - Location PC",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/55588802000952/21/DTE_01"
+                }
+            ],
+            "coords": "2394,1270,2780,1458",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DTE",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-traceability-event/"
+            }
+        },
+        {
+            "alt": "DPP - CAM - Location PC",
+            "title": "DPP - CAM - Location PC",
+            "links": [
+                {
+                    "type": "external",
+                    "disabled": false,
+                    "title": "DPP - CAM - Location PC",
+                    "href": "",
+                    "sample_credential": "https://idr.rbtp.pyx.io/api/1.0.0/gs1/01/15558880000149/21/DPP_01"
+                }
+            ],
+            "coords": "2934,1272,3322,1475",
+            "shape": "rect",
+            "documentation": {
+                "title": "About DPP",
+                "link": "https://docs.rbtp.pyx.io/docs/credential-overviews/digital-product-passport/"
+            }
+        }
+    ]
+}
